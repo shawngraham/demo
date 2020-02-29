@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge"/> 
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+		<title>My Awesome Photos - test-erin</title>
+		<link href='https://fonts.googleapis.com/css?family=Lato:300,100' rel='stylesheet' type='text/css' />
+		<link type="text/css" rel="stylesheet" media="all" href="./global.css" />
+		<script src="./json.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="./cookie.js"></script>
+		<script src="./global.js"></script>
+	</head>
+<body data-resolution="1024" data-respath="./">
+	
+<ol id="marker">
+</ol>
+
+<div id="sidebar">
+	<div class="foreground">
+		<div id="profile" class="camera icon"></div>
+		<h1>My Awesome Photos</h1>
+		<ul id="nav">
+						 
+		</ul>
+	</div>
+	
+	<ul id="control">
+	<li><a href="#" id="resbutton"><span class="monitor icon"></span><span class="restext"></span></a></li>
+	<li style="display: block"><a href="#" id="textbutton" class="active"><span class="toggle icon"></span><span class="text">hide text</span></a></li>
+	<li style="display: block"><a href="#" id="sharebutton"><span class="heart icon"></span>share</a></li>
+	<li  style="display: none"><a href="#" id="download"><span class="download icon"></span>download</a></li>
+	</ul>
+			
+	<div class="background"></div>
+</div>
+
+<div id="resolution">
+</div>
+
+<div id="share">
+	<ul>
+	<li><a href="https://news.ycombinator.com/submit" target="_blank"><span class="icon hackernews"></span> Hackernews</a></li>
+	
+	<li><a href="#" onclick="window.open('https://www.facebook.com/sharer.php?u=' + encodeURIComponent(window.location)); return false">
+		<span class="icon facebook"></span> Facebook
+	</a></li>
+	
+	<li><a href="#" onclick="window.open('https://www.reddit.com/submit?url=' + encodeURIComponent(window.location)); return false">
+		<span class="icon reddit"></span> Reddit
+	</a></li>
+	
+	<li><a href="#" id="pinterest"><span class="icon pinterest"></span> Pinterest</a></li>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#pinterest').click(function(){
+				window.open('http://pinterest.com/pin/create/button/?url='+encodeURIComponent(window.location)+'&media='+encodeURIComponent(window.location)+($(current_slide).data('url')+'/'+$('#resolution li').eq(0).data('res')+'.jpg'));
+				return false;
+			});
+		});
+	</script>
+	
+	
+	<li><a href="#" onclick="window.open('https://twitter.com/intent/tweet?url=' + encodeURIComponent(window.location)); return false">
+		<span class="icon twitter"></span> Twitter
+	</a></li>
+	
+	</ul>
+</div>
+
+<div id="main">
+	<div class="slide" style="color: #000000; background-color: #AA684C" data-type="image" data-width="30" data-height="20" data-imagewidth="1024" data-imageheight="1323" data-textcolor="#000000" data-color1="#4E3949" data-color2="#AA684C" data-color3="#EE9B5E" data-color4="#745C88" data-color5="#917196" data-color6="#C9A4A1" data-color7="#EAB1A7" data-videoformats="h264" data-polygon=''> <a name="1" class="internal"></a> <div class="post" style="top: 20%; left: 5%; width: 30%; height: 20%"> <div class="content"> <h1>Classicist in Disguise</h1> <p>In April 1853, the Englishman Richard Burton changed his clothes in a hotel room in Southampton and became a Muslim man who called himself Abdullah. Abdullah boarded a steamer bound for Cairo, the first step on a pilgrimage to the sites of the Prophet Muhammad’s birth and burial, the holy cities of Medina and Mecca. This pilgrimage was forbidden to Burton and all other non-Muslims.</p> </div> </div> <img class="image blank" src="//:0" width="1024" height="1323" data-url="jockewulcanl3a88ev5agunsplash" /> </div> <div class="slide" style="color: #ffffff; background-color: #604C32" data-type="image" data-width="" data-height="" data-imagewidth="1024" data-imageheight="636" data-textcolor="#ffffff" data-color1="#363335" data-color2="#604C32" data-color3="#645548" data-color4="#986F31" data-color5="#93704A" data-color6="#B38947" data-color7="" data-videoformats="h264" data-polygon=''> <a name="2" class="internal"></a> <div class="post" style="top: 70%; left: 20%; width: 60%; height: 30%"> <div class="content"> <p>Burton had prepared to be Abdullah for years. He changed his language, his facial expressions, the way he walked and ate and slept. Since even a glass of water could expose him, he had to remember to praise Allah before and after drinking, gulp rather than sip, and clutch the tumbler “as though it were the throat of a foe.” He had himself circumcised so that his body would not wordlessly reveal him.</p> </div> </div> <img class="image blank" src="//:0" width="1024" height="636" data-url="farukkaymakcnvvdjvdiviunsplash" /> </div> <div class="slide" style="color: #ffffff; background-color: #112222" data-type="image" data-width="30" data-height="20" data-imagewidth="1024" data-imageheight="1536" data-textcolor="#ffffff" data-color1="#121120" data-color2="#112222" data-color3="#272527" data-color4="#493C35" data-color5="#625A54" data-color6="#7F7576" data-color7="#B3B8CB" data-videoformats="h264" data-polygon=''> <a name="3" class="internal"></a> <div class="post" style="top: 50%; left: 60%; width: 30%; height: 20%"> <div class="content"> <p>For the rest of his life, Burton signed letters to friends “Haji Abdullah” – Abdullah who has completed the Hajj, the pilgrimage to Mecca. The book he wrote when he returned, Personal Narrative of a Pilgrimage to Al-Madinah and Meccah, is the story of the birth of the Haji, the uneasy, twinned merging of Burton and Abdullah.</p> </div> </div> <img class="image blank" src="//:0" width="1024" height="1536" data-url="haidanbvue49xfxwunsplash" /> </div> <div class="slide" style="color: #000000; background-color: #A8A8A8" data-type="image" data-width="30" data-height="20" data-imagewidth="1024" data-imageheight="1433" data-textcolor="#000000" data-color1="#696969" data-color2="#A8A8A8" data-color3="#D6D6D6" data-color4="#EEEEEE" data-color5="#FFFFFF" data-color6="" data-color7="" data-videoformats="h264" data-polygon=''> <a name="4" class="internal"></a> <div class="post" style="top: 5%; left: 5%; width: 30%; height: 20%"> <div class="content"> <p>I first read the Personal Narrative during my first weeks at college, as I formulated a disguise of my own. I grew up in Tucson, Arizona, in an Evangelical Christian family. I was also sent to a private Evangelical school, where the teachers were chosen for the strength of their faith rather than their knowledge. We learned about the past so the teachers could warn us about the demons who controlled the ancient Egyptians, and might tempt us away from Christianity, too. I was intrigued by the images of the ancient world. I came to New York to study them from people who wouldn’t also tell me about sin. I spent eleven years at Columbia, completing my undergraduate degree and then a Ph.D. in ancient art history. I learned five languages along with libraries-worth of arcane knowledge. I learned how to drink prosecco at a reception alongside an Egyptian temple, rummage through museum storerooms, and eat asparagus at the high table at a Cambridge college. Yet I always feared that I would make some slip and be unmasked as the imposter I thought I was. <br> <br> My life was lived at a remove. I checked each impulse against the rules I had ascertained for each situation. I learned what to drink (red wine) and how much (two glasses). I learned that the “goat” in “goat cheese” is a factual descriptor of origin rather than, as I had believed, some sort of playful metaphor. I learned I shouldn’t wear my hair in braids when a fellow graduate student informed me he had heard a rumor that I was Amish. Like Burton training himself to be Abdullah, I changed what I wore, what I watched and read, what I knew, and what I said. I changed whom and why I loved. It worked. After a few years, if I admitted that I grew up in Tucson, people’s foreheads would wrinkle in confusion.</p> </div> </div> <img class="image blank" src="//:0" width="1024" height="1433" data-url="osmanranadi9khxi0ooeunsplash" /> </div> <div class="slide" style="color: #ffffff; background-color: #492E1D" data-type="video" data-width="" data-height="" data-imagewidth="1024" data-imageheight="1518" data-textcolor="#ffffff" data-color1="#1B140F" data-color2="#492E1D" data-color3="#6A6561" data-color4="#887661" data-color5="#868378" data-color6="#A19F98" data-color7="" data-videoformats="h264" data-polygon=''> <a name="5" class="internal"></a> <div class="post" style="top: 70%; left: 20%; width: 60%; height: 30%"> <div class="content"> <p>testing</p> </div> </div> <img class="image blank" src="//:0" width="1024" height="1518" data-url="out" /> </div> <div class="slide" style="color: #ffffff; background-color: #4B3C2F" data-type="image" data-width="" data-height="" data-imagewidth="1024" data-imageheight="768" data-textcolor="#ffffff" data-color1="#4C311C" data-color2="#4B3C2F" data-color3="#6C4B29" data-color4="#8D6638" data-color5="#A68D64" data-color6="#CDC0A6" data-color7="#E2F0F1" data-videoformats="h264" data-polygon=''> <a name="6" class="internal"></a> <div class="post" style="top: 70%; left: 20%; width: 60%; height: 30%"> <div class="content"> </div> </div> <img class="image blank" src="//:0" width="1024" height="768" data-url="jwilliams93bxwrci8i8unsplash" /> </div> 
+	
+	<div id="comments">
+	<div id="disqus_thread"></div>
+	</div>
+	
+	<script type="text/javascript">
+		var disqus_shortname = '';
+		var disqus_identifier = '.';
+		
+		if(disqus_shortname){
+			(function() {
+				var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+				dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+				(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+			})();
+		}
+	</script>
+</div>
+
+</body>
+</html>
