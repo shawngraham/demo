@@ -30,15 +30,15 @@ new L.GeoJSON("point-data.geojson").addTo(mymap);
  // }); 
   
   // adds GeoJSON layer to the map
-   data = L.GeoJSON(data ,{
+  // data = L.GeoJSON(data ,{
   
 	// converts a point feature into a map layer
-    pointToLayer: function(feature,latlng){
-		var marker = L.marker(latlng, {icon: digIcon});
-		marker.bindPopup("Team: " + feature.properties.Label + '<br/>');
-  return marker; 
-		} 
-      }).addTo(map);
+   // pointToLayer: function(feature,latlng){
+//		var marker = L.marker(latlng, {icon: digIcon});//
+//		marker.bindPopup("Team: " + feature.properties.Label + '<br/>');
+ // return marker; 
+//		} 
+//      }).addTo(map);
  
 </script>
 
