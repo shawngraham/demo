@@ -15,12 +15,9 @@
 <body>
 <div id="mapid" style="width: 600px; height: 400px;"></div>
 <script>
-var mymap = L.map('mapid', {
-    center: [47.5668, -52.7120],
-    zoom: 13,
-    layers:[
-      L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}.png'),
-    ]
+var mymap = L.map('mapid').setView([47.5668, -52.7120],13);
+L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}.png'),
+	{maxZoom: 19
 }).addTo(mymap);
 
 // load GeoJSON and save it as a thing called `data`
