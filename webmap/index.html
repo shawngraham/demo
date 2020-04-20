@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="leaflet.css" />
    <script src="leaflet.js"</script>
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+   <script type="text/javascript"></script>
 
 </head>
 
@@ -21,25 +22,17 @@ L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}.png',
 	{maxZoom: 19
 }).addTo(mymap);
 
-new L.GeoJSON("point-data.geojson").addTo(mymap);	
+
   // load a GeoJSON from external file
-//  $.getJSON("point-data.geojson", function(data) {
-//   var digIcon = L.icon({
-//    iconUrl: 'dig.png',
- //   iconSize: [50,40]
- // }); 
-  
-  // adds GeoJSON layer to the map
-  // data = L.GeoJSON(data ,{
-  
-	// converts a point feature into a map layer
-   // pointToLayer: function(feature,latlng){
-//		var marker = L.marker(latlng, {icon: digIcon});//
-//		marker.bindPopup("Team: " + feature.properties.Label + '<br/>');
- // return marker; 
-//		} 
-//      }).addTo(map);
- 
+  $.getJSON("point-data.geojson", function(data) {
+    // add GeoJSON layer to the map once the file is loaded
+    var datalayer = L.geoJson(data ,{
+    onEachFeature: function(feature, featureLayer) {
+    featureLayer.bindPopup(feature.properties.Label);
+    }
+  }).addTo(myMap);
+});
+
 </script>
 
 </body>
