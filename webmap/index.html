@@ -6,8 +6,6 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
-
   <link rel="stylesheet" href="leaflet.css" />
    <script src="leaflet.js"</script>
     </script>
@@ -27,7 +25,12 @@ var mymap = L.map('mapid', {
 
 // load GeoJSON and save it as a thing called `data`
 $.getJSON("point-data.geojson", function(data) {
-    // adds GeoJSON objects to layer
+    var digIcon = L.icon({
+      iconUrl: 'dig.png',
+      iconSize: [50,40]
+    });
+	
+	// adds GeoJSON objects to layer
     data = L.geoJson(data  ,{
 
     // converts point feature into a map layer
