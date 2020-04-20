@@ -20,26 +20,24 @@ L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}.png',
 	{maxZoom: 19
 }).addTo(mymap);
 
-// load GeoJSON and save it as a thing called `data`
-$.getJSON("point-data.geojson", function(data) {
-    var digIcon = L.icon({
-      iconUrl: 'dig.png',
-      iconSize: [50,40]
-    });
-	
-	// adds GeoJSON objects to layer
-    data = L.geoJson(data  ,{
-
-    // converts point feature into a map layer
+  // load a GeoJSON from external file
+  $.getJSON("point-data.geojson", function(data) {
+   var digIcon = L.icon({
+    iconUrl: 'dig.png',
+    iconSize: [50,40]
+  }); 
+  
+  // adds GeoJSON layer to the map
+   data = L.geoJson(data ,{
+  
+	// converts a point feature into a map layer
     pointToLayer: function(feature,latlng){
-    var marker = L.marker(latlng);
-// binds a popup to marker, assigns properties to display
-        marker.bindPopup(feature.properties.Label + '<br/>');
-        return marker;
-      }
-    }).addTo(mymap);
-});
-
+		var marker = L.marker(latlng, {icon: digIcon});
+		marker.bindPopup("Team: " + feature.properties.Label + '<br/>');
+  return marker; 
+		} 
+      }).addTo(map);
+    });
 </script>
 
 </body>
