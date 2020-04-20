@@ -1,0 +1,46 @@
+<meta charset="utf-8" />
+<head>
+
+	<title>Quick Start - Leaflet</title>
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
+
+  <link rel="stylesheet" href="leaflet.css" />
+   <script src="leaflet.js"</script>
+    </script>
+
+</head>
+
+<body>
+<div id="mapid" style="width: 600px; height: 400px;"></div>
+<script>
+var mymap = L.map('mapid', {
+    center: [47.5668, -52.7120],
+    zoom: 13,
+    layers:[
+      L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}.png'),
+    ]
+}).addTo(mymap);
+
+// load GeoJSON and save it as a thing called `data`
+$.getJSON("point-data.geojson", function(data) {
+    // adds GeoJSON objects to layer
+    data = L.geoJson(data  ,{
+
+    // converts point feature into a map layer
+    pointToLayer: function(feature,latlng){
+    var marker = L.marker(latlng);
+// binds a popup to marker, assigns properties to display
+        marker.bindPopup(feature.properties.Label + '<br/>');
+        return marker;
+      }
+    }).addTo(map);
+});
+
+</script>
+
+</body>
+</hmtl>
