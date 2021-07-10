@@ -1,0 +1,350 @@
+Zurich,IS_LOCATED_IN,Switzerland
+Geneva,IS_LOCATED_IN,Switzerland
+Rome,IS_LOCATED_IN,Italy
+Giacomo Medici,SOLD_ANTIQUITIES_IN,Rome
+Giacomo Medici,SOLD_ANTIQUITIES_TO,Robert Hecht
+Giacomo Medici,ESTABLISHED_IN,Antiquaria Romana
+Giacomo Medici,ESTABLISHED_IN,Hydra Gallery
+Christian Boursaud,ESTABLISHED_IN,Hydra Gallery
+Hydra Gallery,WAS_IN,Geneva
+Hydra Gallery,SOLD_ANTIQUITIES_TO,Sothebys
+Sothebys,SOLD_ANTIQUITIES_TO,J Paul Getty Museum
+J Paul Getty Museum,WAS_IN,United States of America
+Giacomo Medici,OPERATED_IN,Geneva
+Giacomo Medici,CLOSED_IN,Antiquaria Romana
+Antiquaria Romana,WAS_IN,Rome
+Robert Hecht,BOUGHT_FROM,Giacomo Medici
+Giacomo Medici,WORKED_WITH,Christian Boursaud
+Christian Boursaud,WORKED_WITH,Giacomo Medici
+Robert Hecht,WAS_IN,United States of America
+Christian Boursaud,WAS_IN,Geneva
+Christian Boursaud,SOLD_ANTIQUITIES_TO,Sothebys
+Sothebys,WAS_IN,England
+Giacomo Medici,LEFT,Christian Boursaud
+Giacomo Medici,ESTABLISHED_IN,Editions Services Inc
+Editions Services Inc,WAS_IN,Geneva
+Giacomo Medici,CONSIGNED_THROUGH,Mat Securitas
+Giacomo Medici,CONSIGNED_THROUGH,Arts Franc
+Giacomo Medici,CONSIGNED_THROUGH,Tecafin Fiduciaire
+Mat Securitas,WAS_IN,Geneva
+Arts Franc,WAS_IN,Geneva
+Tecafin Fiduciaire,WAS_IN,Geneva
+Giacomo Medici,SOLD_ANTIQUITIES_TO,Robin Symes
+Giacomo Medici,SOLD_ANTIQUITIES_TO,Freida Nussberger-Tchacos
+Giacomo Medici,SOLD_ANTIQUITIES_TO,Nicolas Koutoulakis
+Giacomo Medici,SOLD_ANTIQUITIES_TO,Ali Aboutaam
+Giacomo Medici,SOLD_ANTIQUITIES_TO,Hischam Aboutaam
+Ali Aboutaam,ESTABLISHED,Phoenix Ancient Art
+Hischam Aboutaam,ESTABLISHED,Phoenix Ancient Art
+Ali Aboutaam,WAS_BROTHER_OF,Hischam Aboutaam
+Hischam Aboutaam,WAS_BROTHER_OF,Ali Aboutaam
+Robin Symes,WAS_IN,England
+Freida Nussberger-Tchacos,WAS_IN,Zurich
+Nicolas Koutoulakis,WAS_IN,Geneva
+Ali Aboutaam,WAS_IN,Geneva
+Lawrence Fleischman,WAS_PARTNERS_WITH,Barbara Fleischman
+Barbara Fleischman,WAS_PARTNERS_WITH,Lawrence Fleischman
+Shelby White,WAS_PARTNERS_WITH,Leon Levy
+Leon Levy,WAS_PARTNERS_WITH,Shelby White
+Lawrence Fleischman,WAS_IN,United States of America
+Barbara Fleischman,WAS_IN,United States of America
+Maurice Tempelsman,WAS_IN,United States of America
+Shelby White,WAS_IN,United States of America
+Leon Levy,WAS_IN,United States of America
+Giacomo Medici,SOLD_ANTIQUITIES_TO,Lawrence Fleischman
+Giacomo Medici,SOLD_ANTIQUITIES_TO,Barbara Fleischman
+Giacomo Medici,SOLD_ANTIQUITIES_TO,Leon Levy
+Giacomo Medici,SOLD_ANTIQUITIES_TO,Shelby White
+Giacomo Medici,SOLD_ANTIQUITIES_TO,William Herbert Hunt
+Giacomo Medici,SOLD_ANTIQUITIES_TO,Ray L Hunt
+Giacomo Medici,SOLD_ANTIQUITIES_TO,Lamar Hunt
+Ray L Hunt,WAS_BROTHER_OF,William Herbert Hunt
+William Herbert Hunt,WAS_BROTHER_OF,Ray L Hunt
+Ray L Hunt,WAS_BROTHER_OF,Lamar Hunt
+Lamar Hunt,WAS_BROTHER_OF,Ray L Hunt
+Lamar Hunt,WAS_BROTHER_OF,William Herbert Hunt
+William Herbert Hunt,WAS_BROTHER_OF,Lamar Hunt
+Giacomo Medici,SOLD_ANTIQUITIES_TO,George Ortiz
+Giacomo Medici,SOLD_ANTIQUITIES_TO,Jos√© Luis V√†rez Fisa
+Giacomo Medici,SOLD_ANTIQUITIES_TO,Metropolitan Museum of Art
+Giacomo Medici,SOLD_ANTIQUITIES_TO,Cleveland Museum of Art
+Giacomo Medici,SOLD_ANTIQUITIES_TO,Boston Museum of Fine Arts
+Phoenix Ancient Art,WAS_IN,Geneva
+Lamar Hunt,WAS_IN,United States of America
+Ray L Hunt,WAS_IN,United States of America
+William Herbert Hunt,WAS_IN,United States of America
+Jos√© Luis V√†rez Fisa,WAS_IN,United States of America
+Metropolitan Museum of Art,WAS_IN,United States of America
+Cleveland Museum of Art,WAS_IN,United States of America
+Boston Museum of Fine Arts,WAS_IN,United States of America
+George Ortiz,WAS_IN,United States of America
+Giacomo Medici,SOLD_ANTIQUITIES_TO,Maurice Tempelsman
+Robert Hecht,WORKED_WITH,Nicolas Koutoulakis
+Nicolas Koutoulakis,WAS_IN,France
+Nicolas Koutoulakis,WAS_IN,Greece
+Robert Hecht,WORKED_WITH,Eli Borowsky
+Eli Borowsky,WAS_IN,Zurich
+Robert Hecht,SOLD_ANTIQUITIES_TO,George Ortiz
+George Ortiz,WAS_IN,Bolivia
+George Ortiz,WAS_IN,Geneva
+Robert Hecht,WORKED_WITH,Gianfranco Becchina
+Gianfranco Becchina,WAS_IN,Italy
+Gianfranco Becchina,SOLD_ANTIQUITIES_TO,Robert Hecht
+Giacomo Medici,WORKED_WITH,Nino Savoca
+Nino Savoca,WAS_IN,Italy
+Giacomo Medici,WORKED_WITH,Benedetto D‚ÄôAniello
+Benedetto D‚ÄôAniello,WAS_IN,Rome
+Giacomo Medici,WORKED_WITH,Pierluigi Manetti
+Naples,IS_LOCATED_IN,Italy
+Pierluigi Manetti,WAS_IN,Naples
+Giacomo Medici,WORKED_WITH,ELIO
+Santa Marinella,IS_LOCATED_IN,Italy
+ELIO,WAS_IN,Santa Marinella
+Giacomo Medici,WORKED_WITH,Alessandro Anedda
+Alessandro Anedda,WAS_IN,Rome
+Giacomo Medici,WORKED_WITH,Franco Luzzi
+Ladispoli,IS_LOCATED_IN,Italy
+Franco Luzzi,WAS_IN,Ladispoli
+Gianfranco Becchina,SOLD_ANTIQUITIES_THROUGH,Antike Kunst Palladion
+Gianfranco Becchina,WORKED_WITH,Sandro Cimichi
+Sandro Cimichi,WAS_IN,Basel
+Basel,IS_LOCATED_IN,Switzerland
+Gianfranco Becchina,WORKED_WITH,Mario Bruno
+Mario Bruno,SOLD_ANTIQUITIES_IN,Italy
+Mario Bruno,WORKED_WITH,Dino Brunetti
+Mario Bruno,WORKED_WITH,Alessandro Anedda
+Mario Bruno,WORKED_WITH,Franco Luzzi
+Dino Brunetti,WAS_IN,Italy
+Antike Kunst Palladion,WAS_IN,Switzerland
+Gianfranco Becchina,WAS_IN,Basel
+Ashmolean,WAS_IN,England
+Gianfranco Becchina,SOLD_ANTIQUITIES_TO,Ashmolean
+Louvre,WAS_IN,France
+Gianfranco Becchina,SOLD_ANTIQUITIES_TO,Louvre
+Gianfranco Becchina,SOLD_ANTIQUITIES_TO,Boston Museum of Fine Arts
+Gianfranco Becchina,SOLD_ANTIQUITIES_TO,Metropolitan Museum of Art
+Gianfranco Becchina,SOLD_ANTIQUITIES_TO,J Paul Getty Museum
+Gianfranco Becchina,SOLD_ANTIQUITIES_TO,George Ortiz
+Gianfranco Becchina,SOLD_ANTIQUITIES_TO,Leon Levy
+Gianfranco Becchina,SOLD_ANTIQUITIES_TO,Shelby White
+Toledo Museum of Art,WAS_IN,United States of America
+Gianfranco Becchina,SOLD_ANTIQUITIES_TO,Toledo Museum of Art
+Princeton University Art Museum,WAS_IN,United States of America
+Gianfranco Becchina,SOLD_ANTIQUITIES_TO,Princeton University Art Museum
+Merrin Gallery,WAS_IN,United States of America
+Gianfranco Becchina,SOLD_ANTIQUITIES_TO,Merrin Gallery
+Noriyoshi Horiuchi,WAS_IN,England
+Noriyoshi Horiuchi,WAS_IN,Japan
+Noriyoshi Horiuchi,WORKED_WITH,Eli Borowsky
+Gianfranco Becchina,SOLD_ANTIQUITIES_TO,Noriyoshi Horiuchi
+Noriyoshi Horiuchi,STORED_ANTIQUITIES_IN,Geneva
+Giacomo Medici,STORED_ANTIQUITIES_IN,Geneva
+Miho Museum,WAS_IN,Japan
+Noriyoshi Horiuchi,SOLD_ANTIQUITIES_TO,Miho Museum
+Dietrich von Bothmer,WAS_IN,United States of America
+Dietrich von Bothmer,WAS_CURATOR_OF,Metropolitan Museum of Art
+Gianfranco Becchina,WORKED_WITH,Eli Borowsky
+Gianfranco Becchina,WORKED_WITH,Mario Bruno
+Gianfranco Becchina,SOLD_ANTIQUITIES_TO,Sothebys
+Christies Auction House,WAS_IN,England
+Gianfranco Becchina,SOLD_ANTIQUITIES_TO,Christies Auction House
+Gianfranco Becchina,USED_AS_ALIAS,Anna Spinelli
+Gianfranco Becchina,IS_BROTHER_OF,Anna Spinelli
+Pasquale Camera,SOLD_ANTIQUITIES_TO,Gianfranco Becchina
+Raffaele Monticelli,SOLD_ANTIQUITIES_TO,Gianfranco Becchina
+Pasquale Camera,WAS_IN,Italy
+Raffaele Monticelli,WAS_IN,Italy
+Rosie Becchina,IS_MARRIED_TO,Gianfranco Becchina
+Rosie Becchina,WAS_IN,Basel
+Gianfranco Becchina,WAS_IN,Basel
+Gianfranco Becchina,WAS_IN,Castelvetrano
+Castelvetrano,IS_LOCATED_IN,Italy
+Gianfranco Becchina,STORED_ANTIQUITIES_IN,Basel
+Jiri Frel,WAS_CURATOR_OF,J Paul Getty Museum
+Jiri Frel,WAS_IN,United States of America
+Jiri Frel,WORKED_WITH,Bruce McNall
+Bruce McNall,WORKED_WITH,Robert Hecht
+Bruce McNall,SOLD_ANTIQUITIES_TO,Sy Weintraub
+Jiri Frel,APPRAISED_ART_FOR,Sy Weintraub
+Jiri Frel,APPRAISED_ART_FOR,J Paul Getty Museum
+Jerome Eisenberg,WAS_SECRETARY_FOR,Jiri Frel
+Jiri Frel,WORKED_WITH,Gianfranco Becchina
+Jerome Eisenberg,WAS_IN,United States of America
+Sy Weintraub,WAS_IN,United States of America
+Bruce McNall,WAS_IN,United States of America
+Jerome Eisenberg,WAS_SECRETARY_AT,J Paul Getty Museum
+Zurich,IS_LOCATED_IN,Switzerland
+Geneva,IS_LOCATED_IN,Switzerland
+Rome,IS_LOCATED_IN,Italy
+Giacomo Medici,SOLD_ANTIQUITIES_IN,Rome
+Giacomo Medici,SOLD_ANTIQUITIES_TO,Robert Hecht
+Giacomo Medici,ESTABLISHED_IN,Antiquaria Romana
+Giacomo Medici,ESTABLISHED_IN,Hydra Gallery
+Christian Boursaud,ESTABLISHED_IN,Hydra Gallery
+Hydra Gallery,WAS_IN,Geneva
+Hydra Gallery,SOLD_ANTIQUITIES_TO,Sothebys
+Sothebys,SOLD_ANTIQUITIES_TO,J Paul Getty Museum
+J Paul Getty Museum,WAS_IN,United States of America
+Giacomo Medici,OPERATED_IN,Geneva
+Giacomo Medici,CLOSED_IN,Antiquaria Romana
+Antiquaria Romana,WAS_IN,Rome
+Robert Hecht,BOUGHT_FROM,Giacomo Medici
+Giacomo Medici,WORKED_WITH,Christian Boursaud
+Christian Boursaud,WORKED_WITH,Giacomo Medici
+Robert Hecht,WAS_IN,United States of America
+Christian Boursaud,WAS_IN,Geneva
+Christian Boursaud,SOLD_ANTIQUITIES_TO,Sothebys
+Sothebys,WAS_IN,England
+Giacomo Medici,LEFT,Christian Boursaud
+Giacomo Medici,ESTABLISHED_IN,Editions Services Inc
+Editions Services Inc,WAS_IN,Geneva
+Giacomo Medici,CONSIGNED_THROUGH,Mat Securitas
+Giacomo Medici,CONSIGNED_THROUGH,Arts Franc
+Giacomo Medici,CONSIGNED_THROUGH,Tecafin Fiduciaire
+Mat Securitas,WAS_IN,Geneva
+Arts Franc,WAS_IN,Geneva
+Tecafin Fiduciaire,WAS_IN,Geneva
+Giacomo Medici,SOLD_ANTIQUITIES_TO,Robin Symes
+Giacomo Medici,SOLD_ANTIQUITIES_TO,Freida Nussberger-Tchacos
+Giacomo Medici,SOLD_ANTIQUITIES_TO,Nicolas Koutoulakis
+Giacomo Medici,SOLD_ANTIQUITIES_TO,Ali Aboutaam
+Giacomo Medici,SOLD_ANTIQUITIES_TO,Hischam Aboutaam
+Ali Aboutaam,ESTABLISHED,Phoenix Ancient Art
+Hischam Aboutaam,ESTABLISHED,Phoenix Ancient Art
+Ali Aboutaam,WAS_BROTHER_OF,Hischam Aboutaam
+Hischam Aboutaam,WAS_BROTHER_OF,Ali Aboutaam
+Robin Symes,WAS_IN,England
+Freida Nussberger-Tchacos,WAS_IN,Zurich
+Nicolas Koutoulakis,WAS_IN,Geneva
+Ali Aboutaam,WAS_IN,Geneva
+Lawrence Fleischman,WAS_PARTNERS_WITH,Barbara Fleischman
+Barbara Fleischman,WAS_PARTNERS_WITH,Lawrence Fleischman
+Shelby White,WAS_PARTNERS_WITH,Leon Levy
+Leon Levy,WAS_PARTNERS_WITH,Shelby White
+Lawrence Fleischman,WAS_IN,United States of America
+Barbara Fleischman,WAS_IN,United States of America
+Maurice Tempelsman,WAS_IN,United States of America
+Shelby White,WAS_IN,United States of America
+Leon Levy,WAS_IN,United States of America
+Giacomo Medici,SOLD_ANTIQUITIES_TO,Lawrence Fleischman
+Giacomo Medici,SOLD_ANTIQUITIES_TO,Barbara Fleischman
+Giacomo Medici,SOLD_ANTIQUITIES_TO,Leon Levy
+Giacomo Medici,SOLD_ANTIQUITIES_TO,Shelby White
+Giacomo Medici,SOLD_ANTIQUITIES_TO,William Herbert Hunt
+Giacomo Medici,SOLD_ANTIQUITIES_TO,Ray L Hunt
+Giacomo Medici,SOLD_ANTIQUITIES_TO,Lamar Hunt
+Ray L Hunt,WAS_BROTHER_OF,William Herbert Hunt
+William Herbert Hunt,WAS_BROTHER_OF,Ray L Hunt
+Ray L Hunt,WAS_BROTHER_OF,Lamar Hunt
+Lamar Hunt,WAS_BROTHER_OF,Ray L Hunt
+Lamar Hunt,WAS_BROTHER_OF,William Herbert Hunt
+William Herbert Hunt,WAS_BROTHER_OF,Lamar Hunt
+Giacomo Medici,SOLD_ANTIQUITIES_TO,George Ortiz
+Giacomo Medici,SOLD_ANTIQUITIES_TO,Jos√© Luis V√†rez Fisa
+Giacomo Medici,SOLD_ANTIQUITIES_TO,Metropolitan Museum of Art
+Giacomo Medici,SOLD_ANTIQUITIES_TO,Cleveland Museum of Art
+Giacomo Medici,SOLD_ANTIQUITIES_TO,Boston Museum of Fine Arts
+Phoenix Ancient Art,WAS_IN,Geneva
+Lamar Hunt,WAS_IN,United States of America
+Ray L Hunt,WAS_IN,United States of America
+William Herbert Hunt,WAS_IN,United States of America
+Jos√© Luis V√†rez Fisa,WAS_IN,United States of America
+Metropolitan Museum of Art,WAS_IN,United States of America
+Cleveland Museum of Art,WAS_IN,United States of America
+Boston Museum of Fine Arts,WAS_IN,United States of America
+George Ortiz,WAS_IN,United States of America
+Giacomo Medici,SOLD_ANTIQUITIES_TO,Maurice Tempelsman
+Robert Hecht,WORKED_WITH,Nicolas Koutoulakis
+Nicolas Koutoulakis,WAS_IN,France
+Nicolas Koutoulakis,WAS_IN,Greece
+Robert Hecht,WORKED_WITH,Eli Borowsky
+Eli Borowsky,WAS_IN,Zurich
+Robert Hecht,SOLD_ANTIQUITIES_TO,George Ortiz
+George Ortiz,WAS_IN,Bolivia
+George Ortiz,WAS_IN,Geneva
+Robert Hecht,WORKED_WITH,Gianfranco Becchina
+Gianfranco Becchina,WAS_IN,Italy
+Gianfranco Becchina,SOLD_ANTIQUITIES_TO,Robert Hecht
+Giacomo Medici,WORKED_WITH,Nino Savoca
+Nino Savoca,WAS_IN,Italy
+Giacomo Medici,WORKED_WITH,Benedetto D‚ÄôAniello
+Benedetto D‚ÄôAniello,WAS_IN,Rome
+Giacomo Medici,WORKED_WITH,Pierluigi Manetti
+Naples,IS_LOCATED_IN,Italy
+Pierluigi Manetti,WAS_IN,Naples
+Giacomo Medici,WORKED_WITH,ELIO
+Santa Marinella,IS_LOCATED_IN,Italy
+ELIO,WAS_IN,Santa Marinella
+Giacomo Medici,WORKED_WITH,Alessandro Anedda
+Alessandro Anedda,WAS_IN,Rome
+Giacomo Medici,WORKED_WITH,Franco Luzzi
+Ladispoli,IS_LOCATED_IN,Italy
+Franco Luzzi,WAS_IN,Ladispoli
+Gianfranco Becchina,SOLD_ANTIQUITIES_THROUGH,Antike Kunst Palladion
+Gianfranco Becchina,WORKED_WITH,Sandro Cimichi
+Sandro Cimichi,WAS_IN,Basel
+Basel,IS_LOCATED_IN,Switzerland
+Gianfranco Becchina,WORKED_WITH,Mario Bruno
+Mario Bruno,SOLD_ANTIQUITIES_IN,Italy
+Mario Bruno,WORKED_WITH,Dino Brunetti
+Mario Bruno,WORKED_WITH,Alessandro Anedda
+Mario Bruno,WORKED_WITH,Franco Luzzi
+Dino Brunetti,WAS_IN,Italy
+Antike Kunst Palladion,WAS_IN,Switzerland
+Gianfranco Becchina,WAS_IN,Basel
+Ashmolean,WAS_IN,England
+Gianfranco Becchina,SOLD_ANTIQUITIES_TO,Ashmolean
+Louvre,WAS_IN,France
+Gianfranco Becchina,SOLD_ANTIQUITIES_TO,Louvre
+Gianfranco Becchina,SOLD_ANTIQUITIES_TO,Boston Museum of Fine Arts
+Gianfranco Becchina,SOLD_ANTIQUITIES_TO,Metropolitan Museum of Art
+Gianfranco Becchina,SOLD_ANTIQUITIES_TO,J Paul Getty Museum
+Gianfranco Becchina,SOLD_ANTIQUITIES_TO,George Ortiz
+Gianfranco Becchina,SOLD_ANTIQUITIES_TO,Leon Levy
+Gianfranco Becchina,SOLD_ANTIQUITIES_TO,Shelby White
+Toledo Museum of Art,WAS_IN,United States of America
+Gianfranco Becchina,SOLD_ANTIQUITIES_TO,Toledo Museum of Art
+Princeton University Art Museum,WAS_IN,United States of America
+Gianfranco Becchina,SOLD_ANTIQUITIES_TO,Princeton University Art Museum
+Merrin Gallery,WAS_IN,United States of America
+Gianfranco Becchina,SOLD_ANTIQUITIES_TO,Merrin Gallery
+Noriyoshi Horiuchi,WAS_IN,England
+Noriyoshi Horiuchi,WAS_IN,Japan
+Noriyoshi Horiuchi,WORKED_WITH,Eli Borowsky
+Gianfranco Becchina,SOLD_ANTIQUITIES_TO,Noriyoshi Horiuchi
+Noriyoshi Horiuchi,STORED_ANTIQUITIES_IN,Geneva
+Giacomo Medici,STORED_ANTIQUITIES_IN,Geneva
+Miho Museum,WAS_IN,Japan
+Noriyoshi Horiuchi,SOLD_ANTIQUITIES_TO,Miho Museum
+Dietrich von Bothmer,WAS_IN,United States of America
+Dietrich von Bothmer,WAS_CURATOR_OF,Metropolitan Museum of Art
+Gianfranco Becchina,WORKED_WITH,Eli Borowsky
+Gianfranco Becchina,WORKED_WITH,Mario Bruno
+Gianfranco Becchina,SOLD_ANTIQUITIES_TO,Sothebys
+Christies Auction House,WAS_IN,England
+Gianfranco Becchina,SOLD_ANTIQUITIES_TO,Christies Auction House
+Gianfranco Becchina,USED_AS_ALIAS,Anna Spinelli
+Gianfranco Becchina,IS_BROTHER_OF,Anna Spinelli
+Pasquale Camera,SOLD_ANTIQUITIES_TO,Gianfranco Becchina
+Raffaele Monticelli,SOLD_ANTIQUITIES_TO,Gianfranco Becchina
+Pasquale Camera,WAS_IN,Italy
+Raffaele Monticelli,WAS_IN,Italy
+Rosie Becchina,IS_MARRIED_TO,Gianfranco Becchina
+Rosie Becchina,WAS_IN,Basel
+Gianfranco Becchina,WAS_IN,Basel
+Gianfranco Becchina,WAS_IN,Castelvetrano
+Castelvetrano,IS_LOCATED_IN,Italy
+Gianfranco Becchina,STORED_ANTIQUITIES_IN,Basel
+Jiri Frel,WAS_CURATOR_OF,J Paul Getty Museum
+Jiri Frel,WAS_IN,United States of America
+Jiri Frel,WORKED_WITH,Bruce McNall
+Bruce McNall,WORKED_WITH,Robert Hecht
+Bruce McNall,SOLD_ANTIQUITIES_TO,Sy Weintraub
+Jiri Frel,APPRAISED_ART_FOR,Sy Weintraub
+Jiri Frel,APPRAISED_ART_FOR,J Paul Getty Museum
+Jerome Eisenberg,WAS_SECRETARY_FOR,Jiri Frel
+Jiri Frel,WORKED_WITH,Gianfranco Becchina
+Jerome Eisenberg,WAS_IN,United States of America
+Sy Weintraub,WAS_IN,United States of America
+Bruce McNall,WAS_IN,United States of America
+Jerome Eisenberg,WAS_SECRETARY_AT,J Paul Getty Museum
