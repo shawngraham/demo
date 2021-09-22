@@ -10,7 +10,7 @@
      are thus available in all text.  Entity identifiers (QIDs) can be found in either
      Wikipedia or Wikidata (https://www.wikidata.org)> -->
 <param ve-entity eid="Q125414"> <!-- Pompey -->
-<param ve-entity eid="Q41264"> <!-- Johannes Vermeer -->
+<param ve-entity eid="Q336806"> <!-- Domenico Fontana -->
 <param ve-entity eid="Q43332"> <!-- Pompeii -->
 <param ve-entity eid="Q36600"> <!-- The Hague -->
 
@@ -18,13 +18,13 @@
 
 This is a sample visual essay demonstrating a few key features of a Visual Essay. Additional [Documentation](https://github.com/JSTOR-Labs/juncture/wiki) and [examples](https://jstor-labs.github.io/juncture-examples) are available for reference.
 <param ve-image 
-       manifest="https://iiif.juncture-digital.org/manifest/6dd738aed85597cac540ad31dd5818e86ef7f2918c7b43a9eb3123d5538e6e4c">
+       manifest="https://iiif.juncture-digital.org/banner/?url=https://upload.wikimedia.org/wikipedia/commons/7/7b/Via_dell%27Abbondanza_1.JPG">
 
 # Basic usage
 
 ## Image
 
-Not to be confused with the Roman leader Pompey, Pompeii is a city in Central Italy.[^1]
+Not to be confused with the Roman leader Pompey, Pompeii is a city in Central Italy.[^1] Domenico Fontana was one of the first to 'excavate' there.
 <param ve-image 
        label="Forum at Pompeii" 
        description="Photo from Wikicommons" 
@@ -34,7 +34,7 @@ Not to be confused with the Roman leader Pompey, Pompeii is a city in Central It
 ## Map
 
 Here, I've picked up the identifier number from the wikipedia page on Pompeii (under 'wikidata') and put it into the map code.
-<param ve-map center="Q43332" zoom="11" prefer-geojson>
+<param ve-map center="Q43332" zoom="13" prefer-geojson>
 
 ## Multiple viewers
 
