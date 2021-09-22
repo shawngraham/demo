@@ -14,7 +14,7 @@
 <param ve-entity eid="Q43332"> <!-- Pompeii -->
 <param ve-entity eid="Q36600"> <!-- The Hague -->
 <param ve-entity eid="Q3523"><!-- The Secret Museum -->
-<param ve-entity eid="Q524">,!-- Mt. Vesuvius -->
+<param ve-entity eid="Q524"><!-- Mt. Vesuvius -->
 
 # Pompeii - or, I'm changing the demo info to see what happens next
 
