@@ -46,10 +46,10 @@ Others are selectable using icons displayed in the top right margin of the parag
        url="https://upload.wikimedia.org/wikipedia/commons/5/56/Pan_copulating_with_goat_1.JPG">
 <param ve-map center="Q3523" zoom="11">
 <param ve-compare curtain 
-              url="https://raw.githubusercontent.com/shawngraham/demo/master/before.jpg" 
+              url="https://iiif.juncture-digital.org/banner/?url=https://raw.githubusercontent.com/shawngraham/demo/master/before.jpg" 
               label="slide 1">
 <param ve-compare 
-              url="https://raw.githubusercontent.com/shawngraham/demo/master/after.jpg" 
+              url="https://iiif.juncture-digital.org/banner/?url=https://raw.githubusercontent.com/shawngraham/demo/master/after.jpg" 
               label="slide2">
 
 
