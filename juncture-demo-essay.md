@@ -14,6 +14,7 @@
 <param ve-entity eid="Q43332"> <!-- Pompeii -->
 <param ve-entity eid="Q36600"> <!-- The Hague -->
 <param ve-entity eid="Q3523"><!-- The Secret Museum -->
+<param ve-entity eid="Q524">,!-- Mt. Vesuvius -->
 
 # Pompeii - or, I'm changing the demo info to see what happens next
 
@@ -25,7 +26,7 @@ This is a sample visual essay demonstrating a few key features of a Visual Essay
 
 ## Image
 
-Not to be confused with the Roman leader Pompey, Pompeii is a city in Central Italy.[^1] Domenico Fontana was one of the first to 'excavate' there.
+Not to be confused with the Roman leader Pompey, Pompeii was a Roman city famously destroyed by the eruption of Mt. Vesuvius.[^1] Domenico Fontana was one of the first to 'excavate' there.
 <param ve-image 
        label="Forum at Pompeii" 
        description="Photo from Wikicommons" 
@@ -45,10 +46,10 @@ Others are selectable using icons displayed in the top right margin of the parag
        url="https://upload.wikimedia.org/wikipedia/commons/5/56/Pan_copulating_with_goat_1.JPG">
 <param ve-map center="Q3523" zoom="11">
 <param ve-compare curtain 
-              url="https://vignette.wikia.nocookie.net/tardis/images/a/aa/Volcano_Day_(TFOP).jpg" 
+              url="before.jpg" 
               label="slide 1">
 <param ve-compare 
-              url="https://tanguay.info/learntracker/customImages/itemTypes/historyOfPompeii.jpg" 
+              url="after.jpg" 
               label="slide2">
 
 
