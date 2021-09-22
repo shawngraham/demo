@@ -2,7 +2,7 @@
 
 <param ve-config 
        title="SG Test: Pompeii"
-       author="JSTOR Labs team"
+       author="SG"
        banner="https://iiif.juncture-digital.org/banner/?url=https://upload.wikimedia.org/wikipedia/commons/a/a1/Garden_pompei_site.jpeg" 
        layout="vertical">
 
@@ -20,7 +20,7 @@
 
 This is a sample visual essay demonstrating a few key features of a Visual Essay. Additional [Documentation](https://github.com/JSTOR-Labs/juncture/wiki) and [examples](https://jstor-labs.github.io/juncture-examples) are available for reference.
 <param ve-image 
-       manifest="https://iiif.juncture-digital.org/banner/?url=https://upload.wikimedia.org/wikipedia/commons/7/7b/Via_dell%27Abbondanza_1.JPG">
+       url="https://upload.wikimedia.org/wikipedia/commons/7/7b/Via_dell%27Abbondanza_1.JPG">
 
 # Basic usage
 
@@ -28,7 +28,7 @@ This is a sample visual essay demonstrating a few key features of a Visual Essay
 
 Not to be confused with the Roman leader Pompey, Pompeii was a Roman city famously destroyed by the eruption of Mt. Vesuvius.[^1] Domenico Fontana was one of the first to 'excavate' there.
 <param ve-image 
-       label="Forum at Pompeii" 
+       label="An Atrium at Pompeii" 
        description="Photo from Wikicommons" 
        license="public domain" 
        url="https://upload.wikimedia.org/wikipedia/commons/3/32/Atrium%2C_Pompeii_%2814978508290%29.jpg">
@@ -46,11 +46,9 @@ Others are selectable using icons displayed in the top right margin of the parag
        url="https://upload.wikimedia.org/wikipedia/commons/5/56/Pan_copulating_with_goat_1.JPG">
 <param ve-map center="Q3523" zoom="11">
 <param ve-compare curtain 
-              url="https://iiif.juncture-digital.org/banner/?url=https://raw.githubusercontent.com/shawngraham/demo/master/before.jpg" 
-              label="slide 1">
+              url="https://raw.githubusercontent.com/shawngraham/demo/master/before.jpg">
 <param ve-compare 
-              url="https://iiif.juncture-digital.org/banner/?url=https://raw.githubusercontent.com/shawngraham/demo/master/after.jpg" 
-              label="slide2">
+              url="https://raw.githubusercontent.com/shawngraham/demo/master/after.jpg">
 
 
 # References
