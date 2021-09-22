@@ -42,10 +42,14 @@ Here, I've picked up the identifier number from the wikipedia page on Pompeii (u
 Multiple viewers may be defined for a single paragraph of text.  The first viewer defined is displayed as the default viewer.  
 Others are selectable using icons displayed in the top right margin of the paragraph. Here, you get a picture first; if you then click the 'location' icon, you get a map. I've given the 'map' parameter the wikidata identifier for the Secret Museum, where much of the erotic art found at Pompeii was kept safely away. I wonder if it'll display its location. Only one way to find out!
 <param ve-image 
-       url="ttps://upload.wikimedia.org/wikipedia/commons/5/56/Pan_copulating_with_goat_1.JPG">
+       url="https://upload.wikimedia.org/wikipedia/commons/5/56/Pan_copulating_with_goat_1.JPG">
 <param ve-map center="Q3523" zoom="11">
-<param ve-compare curtain url="https://vignette.wikia.nocookie.net/tardis/images/a/aa/Volcano_Day_(TFOP).jpg">
-<param ve-compare url="http://tanguay.info/learntracker/customImages/itemTypes/historyOfPompeii.jpg">
+<param ve-compare curtain 
+              url="https://vignette.wikia.nocookie.net/tardis/images/a/aa/Volcano_Day_(TFOP).jpg" 
+              label="slide 1">
+<param ve-compare 
+              url="https://tanguay.info/learntracker/customImages/itemTypes/historyOfPompeii.jpg" 
+              label="slide2">
 
 
 # References
