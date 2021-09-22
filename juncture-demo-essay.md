@@ -1,7 +1,7 @@
 <a href="https://juncture-digital.org"><img src="https://juncture-digital.org/images/ve-button.png"></a>
 
 <param ve-config 
-       title="SG Test: Girl with a Pearl Earring"
+       title="SG Test: Pompeii"
        author="JSTOR Labs team"
        banner="https://iiif.juncture-digital.org/banner/?url=https://upload.wikimedia.org/wikipedia/commons/a/a1/Garden_pompei_site.jpeg" 
        layout="vertical">
@@ -13,6 +13,7 @@
 <param ve-entity eid="Q336806"> <!-- Domenico Fontana -->
 <param ve-entity eid="Q43332"> <!-- Pompeii -->
 <param ve-entity eid="Q36600"> <!-- The Hague -->
+<param ve-entity eid="Q3523"><!-- The Secret Museum -->
 
 # Pompeii - or, I'm changing the demo info to see what happens next
 
@@ -41,8 +42,8 @@ Here, I've picked up the identifier number from the wikipedia page on Pompeii (u
 Multiple viewers may be defined for a single paragraph of text.  The first viewer defined is displayed as the default viewer.  
 Others are selectable using icons displayed in the top right margin of the paragraph.
 <param ve-image 
-       manifest="https://iiif.juncture-digital.org/manifest/6dd738aed85597cac540ad31dd5818e86ef7f2918c7b43a9eb3123d5538e6e4c">
-<param ve-map center="Q36600" zoom="11">
+       manifest="https://upload.wikimedia.org/wikipedia/commons/5/56/Pan_copulating_with_goat_1.JPG">
+<param ve-map center="Q3523" zoom="11">
 
 # References
 
