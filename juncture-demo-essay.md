@@ -3,13 +3,13 @@
 <param ve-config 
        title="SG Test: Girl with a Pearl Earring"
        author="JSTOR Labs team"
-       banner="https://iiif.juncture-digital.org/banner/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Ancient_Roman_frescos_in_Casa_del_Criptoportico_%28Pompeii%29.jpg/640px-Ancient_Roman_frescos_in_Casa_del_Criptoportico_%28Pompeii%29.jpg" 
+       banner="https://iiif.juncture-digital.org/banner/?url=https://upload.wikimedia.org/wikipedia/commons/a/a1/Garden_pompei_site.jpeg" 
        layout="vertical">
 
 <!-- Entities discussed throughout the essay are typically defined before the essay text and
      are thus available in all text.  Entity identifiers (QIDs) can be found in either
      Wikipedia or Wikidata (https://www.wikidata.org)> -->
-<param ve-entity eid="Q185372"> <!-- Girl with a Pearl Earring painting -->
+<param ve-entity eid="Q125414"> <!-- Pompey -->
 <param ve-entity eid="Q41264"> <!-- Johannes Vermeer -->
 <param ve-entity eid="Q43332"> <!-- Pompeii -->
 <param ve-entity eid="Q36600"> <!-- The Hague -->
@@ -24,9 +24,7 @@ This is a sample visual essay demonstrating a few key features of a Visual Essay
 
 ## Image
 
-_Girl with a Pearl Earring_ (Dutch: Meisje met de parel) is an oil painting by Dutch Golden Age painter Johannes Vermeer, 
-dated c. 1665. Going by various names over the centuries, it became known by its present title towards the end of the 
-20th century after the earring worn by the girl portrayed there.[^1]
+Not to be confused with the Roman leader Pompey, Pompeii is a city in Central Italy.[^1]
 <param ve-image 
        label="Forum at Pompeii" 
        description="Photo from Wikicommons" 
@@ -48,4 +46,4 @@ Others are selectable using icons displayed in the top right margin of the parag
 
 # References
 
-[^1]: [Wikipedia: Girl with a Pearl Earring](https://en.wikipedia.org/wiki/Girl_with_a_Pearl_Earring)
+[^1]: [Wikipedia: Pompeii](https://en.wikipedia.org/wiki/Pompeii)
