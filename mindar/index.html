@@ -23,6 +23,7 @@
       <a-assets>
         <a-asset-item id="bearModel" src="gravestone2/scene.gltf"></a-asset-item>
         <a-asset-item id="raccoonModel" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/examples/image-tracking/assets/band-example/raccoon/scene.gltf"></a-asset-item>
+        <a-video id="carletonMovie" src="https://www.youtube.com/watch?v=pDedFbQJag4" width="16" height="9" position="0 0 -20"></a-video>
       </a-assets>
 
       <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
@@ -36,6 +37,9 @@
       <a-entity mindar-image-target="targetIndex: 1">
         <a-gltf-model rotation="0 0 0 " position="0 -0.25 0" scale="0.05 0.05 0.05" src="#bearModel" animation-mixer>
       </a-entity>
+      <a-entity mindar-image-target="targetIndex: 2"> 
+        <a-video alpha-video width="1" height="1.32" rotation="0 0 0" position="0 0 0.3" src="#carletonMovie" material="transparent: true" play="true"></a-video>
+      </a-entity>  
     </a-scene>
   </body>
 </html>
