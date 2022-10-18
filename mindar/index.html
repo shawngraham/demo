@@ -11,6 +11,21 @@
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/dist/mindar-image-aframe.prod.js"></script>
+    <script>
+      AFRAME.registerComponent('video-handler',{
+  init: function(){
+   let el = this.el;
+   let video = document.querySelector("#myvideo");
+   vid.pause();
+   el.addEventListener('mouseenter',function(){
+      video.play();
+   });
+   el.addEventListener('mouseleave',function(){
+      video.pause();
+   });
+  }
+});
+    </script>
   </head>
   <body>
     
@@ -40,7 +55,7 @@
         <a-gltf-model rotation="90 0 0 " position="0 -0.25 0" scale="0.05 0.05 0.05" src="#bearModel" animation-mixer>
       </a-entity>
       <a-entity mindar-image-target="targetIndex: 2"> 
-          <a-video src="#testMovie" width="16" height="9" position="0 0 -20"></a-video>  
+          <a-plane material="src:#testMovie" video-handler></a-plane>  
       </a-entity>  
     </a-scene>
   </body>
