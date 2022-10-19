@@ -98,7 +98,12 @@ var LZString={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234
 		<div id="init-lacking"><p>Browser lacks capabilities required to play.</p><p>Upgrade or switch to another browser.</p></div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<tw-storydata name="Low-friction AR template" startnode="2" creator="Twine" creator-version="2.5.1" format="SugarCube" format-version="2.36.1" ifid="33804162-AAA3-4ACB-82E8-FEA0A789107B" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
+	<tw-storydata name="Low-friction AR template" startnode="2" creator="Twine" creator-version="2.5.1" format="SugarCube" format-version="2.36.1" ifid="33804162-AAA3-4ACB-82E8-FEA0A789107B" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">#ui-bar {
+display: none;
+}
+#story {
+margin-left:3.5em;
+}
 
 
 
@@ -164,7 +169,8 @@ var LZString={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234
 }());
 
 
-
+$('#ui-bar').remove();
+$(document.head).find('#style-ui-bar').remove();
 </script><tw-passagedata pid="1" name="Start" tags="" position="887,580" size="100,100">/%if you want to start a passage by playing audio, use this%/
 
 &lt;&lt;audio &quot;intro-ottawa&quot; play&gt;&gt;
@@ -185,23 +191,16 @@ First, you need to [[calibrate the scan]].
 
 
 
-</tw-passagedata><tw-passagedata pid="2" name="StoryInit" tags="" position="885,410" size="100,100">/%this is a comment. Below is the bit the player will see when the game starts%/
+</tw-passagedata><tw-passagedata pid="2" name="StoryInit" tags="" position="825,525" size="100,100">/%this is a comment. Below is the bit the player will see when the game starts%/
 
-[img[http://fc07.deviantart.net/fs25/f/2008/181/f/f/Trippy_Design_by_Cru_the_Dwarf.jpg]]
-[[Start]] 
+[img[startimage.jpg][Start]]
+[[Start]]
+
+
 
 /%this sets up our variables for our geotriggers%/
 
 &lt;&lt;set $buffer = 0.0005&gt;&gt;
-
-&lt;&lt;set $natsciencelat = 42.7314418&gt;&gt; 
-&lt;&lt;set $natsciencelong = -84.4769123&gt;&gt;
-
-&lt;&lt;set $horticulturelat = 42.731973&gt;&gt; 
-&lt;&lt;set $horticulutrelong = -84.478518&gt;&gt;
-
-&lt;&lt;set $benefactorsplazalat = 42.731785&gt;&gt; 
-&lt;&lt;set $benefactorsplazalong = -84.477802&gt;&gt;
 
 &lt;&lt;set $torylat = 45.382523&gt;&gt; 
 &lt;&lt;set $torylong = -75.698306&gt;&gt;
@@ -223,7 +222,7 @@ remember, decimal degrees. You can click on a google map, and the point you clic
 /%if you were going to use audio, put the files in the same folder as your html (this precludes us from useing the philome.la twine hosting service, by the way, since you can only load the html; you could use full http links to sound files stored somewhere else, but you&#39;ll run into loading and caching problems)%/
 
 &lt;&lt;cacheaudio &quot;childsnightmare&quot; &quot;ChildsNightmare.mp3&quot;&gt;&gt;
-&lt;&lt;cacheaudio &quot;akeley&quot; &quot;Akeleys_Wax_Cylinder_Recording/Akeley_MiGo_Ritual_64kb.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;akeley&quot; &quot;Akeleys_Wax_Cylinder_Recording/Akeley_MiGo_Ritual.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;intro-ottawa&quot; &quot;ottawa-intro.mp3&quot;&gt;&gt;
 </tw-passagedata><tw-passagedata pid="3" name="old-code calibrate the scan" tags="" position="1151,731" size="100,100">...calibrating...
 
@@ -254,8 +253,8 @@ Scanner Calibration Engaged.
 	&lt;&lt;display &quot;Tory Building&quot;&gt;&gt;
 	&lt;&lt;elseif approxEqual($Location.latitude, $macodrumlat) and approxEqual($Location.longitude, $macodrumlong)&gt;&gt;
     	&lt;&lt;display &quot;MacOdrum Library&quot;&gt;&gt;
-    &lt;elseif approxEqual($Location.latitude, $benefactorsplazalat) and approxEqual($Location.longitude, $benefactorsplazalong)&gt;&gt;
-    	&lt;&lt;display &quot;Benefactors&#39; Plaza&quot;&gt;&gt;    
+    &lt;elseif approxEqual($Location.latitude, $patersonlat) and approxEqual($Location.longitude, $patersonlong)&gt;&gt;
+    	&lt;&lt;display &quot;Paterson Hall&quot;&gt;&gt;    
 	&lt;&lt;else&gt;&gt;
 	&lt;&lt;display &quot;This zone is clear&quot;&gt;&gt;
 &lt;&lt;/if&gt;&gt;
