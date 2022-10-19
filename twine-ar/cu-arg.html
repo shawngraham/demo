@@ -191,7 +191,7 @@ First, you need to [[calibrate the scan]].
 
 
 
-</tw-passagedata><tw-passagedata pid="2" name="StoryInit" tags="" position="825,525" size="100,100">/%this is a comment. Below is the bit the player will see when the game starts%/
+</tw-passagedata><tw-passagedata pid="2" name="StoryInit" tags="" position="875,450" size="100,100">/%this is a comment. Below is the bit the player will see when the game starts%/
 
 [img[startimage.jpg][Start]]
 [[Start]]
@@ -223,27 +223,11 @@ remember, decimal degrees. You can click on a google map, and the point you clic
 
 &lt;&lt;cacheaudio &quot;childsnightmare&quot; &quot;ChildsNightmare.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;akeley&quot; &quot;Akeleys_Wax_Cylinder_Recording/Akeley_MiGo_Ritual.mp3&quot;&gt;&gt;
-&lt;&lt;cacheaudio &quot;intro-ottawa&quot; &quot;ottawa-intro.mp3&quot;&gt;&gt;
-</tw-passagedata><tw-passagedata pid="3" name="old-code calibrate the scan" tags="" position="1151,731" size="100,100">...calibrating...
-
- /%This is the nuts-and-bolts of a geotrigger. We come back to this passage again and again to obtain the latest location. Then, in a series of nested if-else statements we go through our list of potential locations. A more elegant version of this code is in the orphaned passage &#39;buffer-test&#39;. For a more elegant version see the &#39;calibrate the scan&#39; passage%/
- 
-    &lt;&lt;if $Location.latitude lte ($natsciencelat + $buffer) and $Location.latitude gte ($natsciencelong - $buffer) and $Location.longitude lte ($natsciencelong + $buffer) and $Location.longitude gte ($natsciencelong - $buffer)&gt;&gt;
-        &lt;&lt;display &quot;Natural Sciences Building&quot;&gt;&gt;
-    
-    &lt;&lt;elseif $Location.latitude lte ($horticulturelat + $buffer) and $Location.latitude gte ($horticulturelat - $buffer) and $Location.longitude lte ($horticulturelong + $buffer) and $Location.longitude gte ($horticulturelong - $buffer)&gt;&gt;
-        &lt;&lt;display &quot;Horticulture Building&quot;&gt;&gt;    
- 
-    &lt;&lt;elseif $Location.latitude lte ($benefactorsplazalat + $buffer) and $Location.latitude gte ($benefactorsplazalat - $buffer) and $Location.longitude lte ($benefactorsplazalong + $buffer) and $Location.longitude gte ($benefactorsplazalong - $buffer)&gt;&gt;
-        &lt;&lt;display &quot;Benefactors&#39; Plaza&quot;&gt;&gt;
-
-&lt;&lt;else&gt;&gt;
-	&lt;&lt;display &quot;This zone is clear&quot;&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="4" name="This zone is clear" tags="" position="739,553" size="100,100">This zone is clear. Move quickly. 
+&lt;&lt;cacheaudio &quot;intro-ottawa&quot; &quot;ottawa-intro.mp3&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="3" name="This zone is clear" tags="" position="739,553" size="100,100">This zone is clear. Move quickly. 
 
 You&#39;re wasting time.
 
-[[calibrate the scan]]</tw-passagedata><tw-passagedata pid="5" name="calibrate the scan" tags="" position="892,749" size="100,100">/%this bit of code does the same thing as the &#39;old-code calibrate the scan&#39; passage, but instead calls on the &#39;approxEqual&#39; function that we made in this story&#39;s javascript. The &#39;display&#39; command will display other passages when you put the desired passage&#39;s title within the quotation marks. Note we also make a passage for when the player is in a location we haven&#39;t coded for. That particular passage could contain hints etc%/
+[[calibrate the scan]]</tw-passagedata><tw-passagedata pid="4" name="calibrate the scan" tags="" position="892,749" size="100,100">/%this bit of code does the same thing as the &#39;old-code calibrate the scan&#39; passage, but instead calls on the &#39;approxEqual&#39; function that we made in this story&#39;s javascript. The &#39;display&#39; command will display other passages when you put the desired passage&#39;s title within the quotation marks. Note we also make a passage for when the player is in a location we haven&#39;t coded for. That particular passage could contain hints etc%/
 
 Currently you are at $Location.latitude and $Location.longitude
 
@@ -253,7 +237,7 @@ Scanner Calibration Engaged.
 	&lt;&lt;display &quot;Tory Building&quot;&gt;&gt;
 	&lt;&lt;elseif approxEqual($Location.latitude, $macodrumlat) and approxEqual($Location.longitude, $macodrumlong)&gt;&gt;
     	&lt;&lt;display &quot;MacOdrum Library&quot;&gt;&gt;
-    &lt;elseif approxEqual($Location.latitude, $patersonlat) and approxEqual($Location.longitude, $patersonlong)&gt;&gt;
+    &lt;&lt;elseif approxEqual($Location.latitude, $patersonlat) and approxEqual($Location.longitude, $patersonlong)&gt;&gt;
     	&lt;&lt;display &quot;Paterson Hall&quot;&gt;&gt;    
 	&lt;&lt;else&gt;&gt;
 	&lt;&lt;display &quot;This zone is clear&quot;&gt;&gt;
@@ -261,7 +245,7 @@ Scanner Calibration Engaged.
 
 
 
-</tw-passagedata><tw-passagedata pid="6" name="Tory Building" tags="" position="435,442" size="100,100">&lt;&lt;audio &quot;childsnightmare&quot; fadein &gt;&gt;
+</tw-passagedata><tw-passagedata pid="5" name="Tory Building" tags="" position="435,442" size="100,100">&lt;&lt;audio &quot;childsnightmare&quot; fadein &gt;&gt;
 [img[https://openclipart.org/image/300px/svg_to_png/28414/PBCrichton-Malware-Hazard-Symbol-Red.png]]
 
 Currently you are at $Location.latitude and $Location.longitude
@@ -270,12 +254,12 @@ Area of instability found. Current position: Tory building
 
 Getting a heavy impression of echoes of... thoughts? Words?
 
-[[Rescan]]</tw-passagedata><tw-passagedata pid="7" name="Rescan" tags="" position="436,611" size="100,100">&lt;iframe src=&quot;//giphy.com/embed/mRAu3P4p28KoU?html5=true&quot; width=&quot;480&quot; height=&quot;480&quot; frameBorder=&quot;0&quot; webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;&lt;/iframe&gt;
+[[Rescan]]</tw-passagedata><tw-passagedata pid="6" name="Rescan" tags="" position="436,611" size="100,100">&lt;iframe src=&quot;//giphy.com/embed/mRAu3P4p28KoU?html5=true&quot; width=&quot;480&quot; height=&quot;480&quot; frameBorder=&quot;0&quot; webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;&lt;/iframe&gt;
 [[Rescan for Geotriggers|calibrate the scan]]
 
 
-%/in the passage above, the player will see the text &#39;rescan for geotriggers, but the link will be to the passage called &#39;calibrate the scan&#39;%/</tw-passagedata><tw-passagedata pid="8" name="Paterson Hall" tags="" position="200,500" size="100,100">[img[https://openclipart.org/image/300px/svg_to_png/28414/PBCrichton-Malware-Hazard-Symbol-Red.png]]
-&lt;&lt;audio &quot;oldpiano&quot; play &gt;&gt;
+%/in the passage above, the player will see the text &#39;rescan for geotriggers, but the link will be to the passage called &#39;calibrate the scan&#39;%/</tw-passagedata><tw-passagedata pid="7" name="Paterson Hall" tags="" position="200,500" size="100,100">[img[https://openclipart.org/image/300px/svg_to_png/28414/PBCrichton-Malware-Hazard-Symbol-Red.png]]
+&lt;&lt;audio &quot;akeley&quot; play &gt;&gt;
 
 &lt;&lt;set $riddleanswer = &quot;Cthulu&quot;&gt;&gt;
 
@@ -289,18 +273,18 @@ RIFTKEY: &lt;&lt;textbox &quot;$playeranswer&quot; &quot;&quot; &quot;final-pass
 
 
 
-</tw-passagedata><tw-passagedata pid="9" name="MacOdrum Library" tags="" position="614,446" size="100,100">[img[https://openclipart.org/image/300px/svg_to_png/28414/PBCrichton-Malware-Hazard-Symbol-Red.png]]
+</tw-passagedata><tw-passagedata pid="8" name="MacOdrum Library" tags="" position="614,446" size="100,100">[img[https://openclipart.org/image/300px/svg_to_png/28414/PBCrichton-Malware-Hazard-Symbol-Red.png]]
 
 Currently you are at $Location.latitude and $Location.longitude
 
 Area of instability found. Current position: MacOdrum Library
-&lt;&lt;audio &quot;opendoor&quot; play&gt;&gt;
+&lt;&lt;audio &quot;childsnightmare&quot; play&gt;&gt;
 
 The signal is getting stronger. The rift appears to be opening. Something that bends time and space? It appears to be on a bearing south south-east. You&#39;ll need the key, though, that passes throught he flux. Perhaps a Secret Name...
 
 [[Rescan]]
 
-</tw-passagedata><tw-passagedata pid="10" name="Credits" tags="" position="890,902" size="100,100">Sound effects found at soundbible.com:
+</tw-passagedata><tw-passagedata pid="9" name="Credits" tags="" position="890,902" size="100,100">Sound effects found at soundbible.com:
 
 Gunfire_In_Crowd-KevanGC-1080318106.mp3
 Please%20Open%20The%20Door-SoundBible.com-1938859889.mp3
@@ -324,7 +308,7 @@ Remaining sound effects by Shawn Graham.
 Loading image: http://fc07.deviantart.net/fs25/f/2008/181/f/f/Trippy_Design_by_Cru_the_Dwarf.jpg
 
 Anomaly found image:
-https://openclipart.org/image/300px/svg_to_png/28414/PBCrichton-Malware-Hazard-Symbol-Red.png</tw-passagedata><tw-passagedata pid="11" name="passage w a 3d object" tags="" position="650,725" size="100,100">&lt;iframe src=&quot;https://p3d.in/e/O4Xyo&quot; width=&quot;640&quot; height=&quot;480&quot; frameborder=&quot;0&quot; seamless allowfullscreen webkitallowfullscreen&gt;&lt;/iframe&gt;</tw-passagedata><tw-passagedata pid="12" name="final-passage" tags="" position="225,675" size="100,100">&lt;&lt;if $playeranswer is $riddleanswer&gt;&gt;
+https://openclipart.org/image/300px/svg_to_png/28414/PBCrichton-Malware-Hazard-Symbol-Red.png</tw-passagedata><tw-passagedata pid="10" name="passage w a 3d object" tags="" position="650,725" size="100,100">&lt;iframe src=&quot;https://p3d.in/e/O4Xyo&quot; width=&quot;640&quot; height=&quot;480&quot; frameborder=&quot;0&quot; seamless allowfullscreen webkitallowfullscreen&gt;&lt;/iframe&gt;</tw-passagedata><tw-passagedata pid="11" name="final-passage" tags="" position="225,675" size="100,100">&lt;&lt;if $playeranswer is $riddleanswer&gt;&gt;
 	Correct. Yay, you saved the world!
 &lt;&lt;else&gt;&gt;
 	Wrong. Boom, world ends.
