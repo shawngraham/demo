@@ -1,0 +1,40 @@
+{
+  "nodes": [
+    {
+      "label": "London Antiquities Dealer",
+      "properties": {}
+    },
+    {
+      "label": "British Museum",
+      "properties": {}
+    },
+    {
+      "label": "Iron Age Bronze Miniature Shields",
+      "properties": {}
+    },
+    {
+      "label": "Unique and Archaeologically Significant Hoard",
+      "properties": {}
+    }
+  ],
+  "relationships": [
+    {
+      "startNode": "London Antiquities Dealer",
+      "endNode": "British Museum",
+      "type": "OFFERED",
+      "properties": {}
+    },
+    {
+      "startNode": "London Antiquities Dealer",
+      "endNode": "Iron Age Bronze Miniature Shields",
+      "type": "HAS",
+      "properties": {}
+    },
+    {
+      "startNode": "Iron Age Bronze Miniature Shields",
+      "endNode": "Unique and Archaeologically Significant Hoard",
+      "type": "TRACED_TO",
+      "properties": {}
+    }
+  ]
+}
