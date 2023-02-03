@@ -1,0 +1,154 @@
+{
+  "nodes": [
+    {
+      "label": "Krater",
+      "properties": {
+        "madeIn": "Athens",
+        "date": "515 BC",
+        "potter": "Euxitheos",
+        "painter": "Euphronios",
+        "price": "$1 million"
+      }
+    },
+    {
+      "label": "Metropolitan Museum of Art",
+      "properties": {
+        "location": "New York"
+      }
+    },
+    {
+      "label": "Italy",
+      "properties": {
+        "location": "Europe"
+      }
+    },
+    {
+      "label": "Thomas Hoving",
+      "properties": {
+        "title": "Director, Metropolitan Museum of Art"
+      }
+    },
+    {
+      "label": "Giacomo Medici",
+      "properties": {
+        "title": "Tombaroli"
+      }
+    },
+    {
+      "label": "Robert Hecht",
+      "properties": {
+        "title": "Dealer"
+      }
+    },
+    {
+      "label": "Fritz B√ºrki",
+      "properties": {
+        "title": "Restorer"
+      }
+    },
+    {
+      "label": "Dietrich von Bothmer",
+      "properties": {
+        "title": "Curator of Greek and Roman Art, Metropolitan Museum of Art"
+      }
+    },
+    {
+      "label": "Theodore Rousseau",
+      "properties": {
+        "title": "Deputy Director, Metropolitan Museum of Art"
+      }
+    },
+    {
+      "label": "Durkee and Ward Collections",
+      "properties": {
+        "contents": "11,000 coins and medals"
+      }
+    },
+    {
+      "label": "Sotheby's",
+      "properties": {
+        "title": "Auction House" 
+      }
+    },
+    {
+      "label": "Greeppe Sant Angelo",
+      "properties": {
+        "location": "Etruscan cemetery of Cerveteri"
+      }
+    },
+    {
+      "label": "Dikran Sarrafian",
+      "properties": {
+        "title": "Lebanese collector and dealer"
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "startNode": "Krater",
+      "endNode": "Metropolitan Museum of Art",
+      "type": "BOUGHT_BY",
+      "properties": {
+        "date": "1972"
+      }
+    },
+    {
+      "startNode": "Krater",
+      "endNode": "Italy",
+      "type": "EXCAVATED_FROM",
+      "properties": {
+        "date": "1971"
+      }
+    },
+    {
+      "startNode": "Krater",
+      "endNode": "Thomas Hoving",
+      "type": "DESCRIBED_BY"
+    },
+    {
+      "startNode": "Krater",
+      "endNode": "Giacomo Medici",
+      "type": "SOLD_BY"
+    },
+    {
+      "startNode": "Krater",
+      "endNode": "Robert Hecht",
+      "type": "SOLD_TO"
+    },
+    {
+      "startNode": "Krater",
+      "endNode": "Fritz B√ºrki",
+      "type": "RESTORED_BY"
+    },
+    {
+      "startNode": "Krater",
+      "endNode": "Dietrich von Bothmer",
+      "type": "VIEWED_BY"
+    },
+    {
+      "startNode": "Krater",
+      "endNode": "Theodore Rousseau",
+      "type": "VIEWED_BY"
+    },
+    {
+      "startNode": "Durkee and Ward Collections",
+      "endNode": "Metropolitan Museum of Art",
+      "type": "DONATED_TO"
+    },
+    {
+      "startNode": "Durkee and Ward Collections",
+      "endNode": "Sotheby's",
+      "type": "SOLD_BY"
+    },
+    {
+      "startNode": "Krater",
+      "endNode": "Greeppe Sant Angelo",
+      "type": "EXCAVATED_FROM"
+    },
+    {
+      "startNode": "Krater",
+      "endNode": "Dikran Sarrafian",
+      "type": "OWNED_BY"
+    }
+  ]
+}
