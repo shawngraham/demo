@@ -1,563 +1,281 @@
-{
-	"nodes": [
-
-		{
-
-			"label": "Robert Olson",
-
-			"properties": {}
-
-		},
-
-		{
-
-			"label": "Jonathan and Cari Markell",
-
-			"properties": {}
-
-		},
-
-		{
-
-			"label": "Los Angeles County Museum of Art (LACMA)",
-
-			"properties": {}
-
-		},
-
-		{
-
-			"label": "Bowers Museum",
-
-			"properties": {}
-
-		},
-
-		{
-
-			"label": "Pacific Asia Museum (PAM)",
-
-			"properties": {}
-
-		},
-
-		{
-
-			"label": "Mingei International Museum",
-
-			"properties": {}
-
-		},
-
-		{
-
-			"label": "Internal Revenue Service",
-
-			"properties": {}
-
-		},
-
-		{
-
-			"label": "Immigration and Customs Enforcement (ICE)",
-
-			"properties": {}
-
-		},
-
-		{
-
-			"label": "National Park Service",
-
-			"properties": {}
-
-		},
-
-		{
-
-			"label": "Armand Labbé",
-
-			"properties": {}
-
-		},
-
-		{
-
-			"label": "Bobbyo Imports",
-
-			"properties": {}
-
-		},
-
-		{
-
-			"label": "Barry MacLean",
-
-			"properties": {}
-
-		},
-
-		{
-
-			"label": "Joel Malter of Malter Galleries",
-
-			"properties": {}
-
-		},
-
-		{
-
-			"label": "Susan Lerer",
-
-			"properties": {}
-
-		},
-
-		{
-
-			"label": "Roxanna Brown",
-
-			"properties": {}
-
-		},
-
-		{
-
-			"label": "Buddha statue",
-
-			"properties": {}
-
-		},
-
-		{
-
-			"label": "Bronze drum",
-
-			"properties": {}
-
-		},
-
-		{
-
-			"label": "Chiang Mai",
-
-			"properties": {}
-
-		},
-
-		{
-
-			"label": "Singapore",
-
-			"properties": {}
-
-		},
-
-		{
-
-			"label": "Los Angeles",
-
-			"properties": {}
-
-		},
-
-		{
-
-			"label": "eBay",
-
-			"properties": {}
-
-		},
-
-		{
-
-			"label": "Tom Hoyt",
-
-			"properties": {}
-
-		},
-
-		{
-
-			"label": "Bangkok University’s Southeast Asian Ceramics Museum",
-
-			"properties": {}
-
-		},
-
-		{
-
-			"label": "Art Institute of Chicago",
-
-			"properties": {}
-
-		},
-
-		{
-
-			"label": "Malter Galleries",
-
-			"properties": {}
-
-		},
-
-		{
-
-			"label": "Michael Malter",
-
-			"properties": {}
-
-		},
-
-		{
-
-			"label": "Robert Perez",
-
-			"properties": {}
-
-		},
-
-		{
-
-			"label": "UCLA",
-
-			"properties": {}
-
-		}
-
-	],
-
-	"relationships": [
-
-		{
-
-			"startNode": "Robert Olson",
-
-			"endNode": "Bowers Museum",
-
-			"type": "PROVIDED_ARTEFACTS",
-
-			"properties": {}
-
-		},
-
-		{
-
-			"startNode": "Robert Olson",
-
-			"endNode": "Pacific Asia Museum (PAM)",
-
-			"type": "PROVIDED_ARTEFACTS",
-
-			"properties": {}
-
-		},
-
-		{
-
-			"startNode": "Robert Olson",
-
-			"endNode": "Mingei International Museum",
-
-			"type": "PROVIDED_ARTEFACTS",
-
-			"properties": {}
-
-		},
-
-		{
-
-			"startNode": "Robert Olson",
-
-			"endNode": "Internal Revenue Service",
-
-			"type": "INVESTIGATED_BY",
-
-			"properties": {}
-
-		},
-
-		{
-
-			"startNode": "Robert Olson",
-
-			"endNode": "Immigration and Customs Enforcement (ICE)",
-
-			"type": "INVESTIGATED_BY",
-
-			"properties": {}
-
-		},
-
-		{
-
-			"startNode": "Robert Olson",
-
-			"endNode": "National Park Service",
-
-			"type": "INVESTIGATED_BY",
-
-			"properties": {}
-
-		},
-
-		{
-
-			"startNode": "Robert Olson",
-
-			"endNode": "Armand Labbé",
-
-			"type": "MET_WITH",
-
-			"properties": {}
-
-		},
-
-		{
-
-			"startNode": "Robert Olson",
-
-			"endNode": "Bobbyo Imports",
-
-			"type": "OWNED",
-
-			"properties": {}
-
-		},
-
-		{
-
-			"startNode": "Robert Olson",
-
-			"endNode": "Barry MacLean",
-
-			"type": "SOLD_ARTEFACTS_TO",
-
-			"properties": {}
-
-		},
-
-		{
-
-			"startNode": "Robert Olson",
-
-			"endNode": "Joel Malter of Malter Galleries",
-
-			"type": "SOLD_ARTEFACTS_TO",
-
-			"properties": {}
-
-		},
-
-		{
-
-			"startNode": "Robert Olson",
-
-			"endNode": "Susan Lerer",
-
-			"type": "SOLD_ARTEFACTS_TO",
-
-			"properties": {}
-
-		},
-
-		{
-
-			"startNode": "Robert Olson",
-
-			"endNode": "Tom Hoyt",
-
-			"type": "SOLD_ARTEFACTS_TO",
-
-			"properties": {}
-
-		},
-
-		{
-
-			"startNode": "Robert Olson",
-
-			"endNode": "Chiang Mai",
-
-			"type": "VISITED",
-
-			"properties": {}
-
-		},
-
-		{
-
-			"startNode": "Robert Olson",
-
-			"endNode": "Singapore",
-
-			"type": "VISITED",
-
-			"properties": {}
-
-		},
-
-		{
-
-			"startNode": "Robert Olson",
-
-			"endNode": "Los Angeles",
-
-			"type": "VISITED",
-
-			"properties": {}
-
-		},
-
-		{
-
-			"startNode": "Robert Olson",
-
-			"endNode": "eBay",
-
-			"type": "SOLD_ARTEFACTS_TO",
-
-			"properties": {}
-
-		},
-
-		{
-
-			"startNode": "Jonathan and Cari Markell",
-
-			"endNode": "Pacific Asia Museum (PAM)",
-
-			"type": "PROVIDED_ARTEFACTS",
-
-			"properties": {}
-
-		},
-
-		{
-
-			"startNode": "Jonathan and Cari Markell",
-
-			"endNode": "Mingei International Museum",
-
-			"type": "PROVIDED_ARTEFACTS",
-
-			"properties": {}
-
-		},
-
-		{
-
-			"startNode": "Jonathan and Cari Markell",
-
-			"endNode": "Robert Olson",
-
-			"type": "BOUGHT_ARTEFACTS_FROM",
-
-			"properties": {}
-
-		},
-
-		{
-
-			"startNode": "Jonathan and Cari Markell",
-
-			"endNode": "Los Angeles County Museum of Art (LACMA)",
-
-			"type": "DONATED_ARTEFACTS_TO",
-
-			"properties": {}
-
-		},
-
-		{
-
-			"startNode": "Jonathan and Cari Markell",
-
-			"endNode": "Bangkok University’s Southeast Asian Ceramics Museum",
-
-			"type": "MET_WITH",
-
-			"properties": {}
-
-		},
-
-		{
-
-			"startNode": "Jonathan and Cari Markell",
-
-			"endNode": "UCLA",
-
-			"type": "VISITED",
-
-			"properties": {}
-
-		},
-
-		{
-
-			"startNode": "Barry MacLean",
-
-			"endNode": "Art Institute of Chicago",
-
-			"type": "TRUSTEE_AT",
-
-			"properties": {}
-
-		},
-
-		{
-
-			"startNode": "Barry MacLean",
-
-			"endNode": "Robert Olson",
-
-			"type": "BOUGHT_ARTEFACTS_FROM",
-
-			"properties": {}
-
-		},
-
-		{
-
-			"startNode": "Joel Malter of Malter Galleries",
-
-			"endNode": "Robert Olson",
-
-			"type": "PROVIDED_APPRAISALS_FOR",
-
-			"properties": {}
-
-		},
-
-		{
-
-			"startNode": "Joel Malter of Malter Galleries",
-
-			"endNode": "Robert Perez",
-
-			"type": "INTRODUCED_TO",
-
-			"properties": {}
-
-		},
-
-		{
-
-			"startNode": "Susan Lerer",
-
-			"endNode": "Robert Olson",
-
-			"type": "PROVIDED_APPRAISALS_FOR",
-
-			"properties": {}
-
-		},
-
-		{
-
-			"startNode": "Roxanna Brown",
-
-			"endNode": "Jonathan and Cari Markell"
-		}
-	]
+{"nodes": [
+	{
+		"label": "Robert Olson",
+		"properties": {}
+	},
+	{
+		"label": "Jonathan and Cari Markell",
+		"properties": {}
+	},
+	{
+		"label": "Los Angeles County Museum of Art (LACMA)",
+		"properties": {}
+	},
+	{
+		"label": "Bowers Museum",
+		"properties": {}
+	},
+	{
+		"label": "Pacific Asia Museum (PAM)",
+		"properties": {}
+	},
+	{
+		"label": "Mingei International Museum",
+		"properties": {}
+	},
+	{
+		"label": "Internal Revenue Service",
+		"properties": {}
+	},
+	{
+		"label": "Immigration and Customs Enforcement (ICE)",
+		"properties": {}
+	},
+	{
+		"label": "National Park Service",
+		"properties": {}
+	},
+	{
+		"label": "Armand Labbé",
+		"properties": {}
+	},
+	{
+		"label": "Bobbyo Imports",
+		"properties": {}
+	},
+	{
+		"label": "Barry MacLean",
+		"properties": {}
+	},
+	{
+		"label": "Joel Malter of Malter Galleries",
+		"properties": {}
+	},
+	{
+		"label": "Susan Lerer",
+		"properties": {}
+	},
+	{
+		"label": "Roxanna Brown",
+		"properties": {}
+	},
+	{
+		"label": "Buddha statue",
+		"properties": {}
+	},
+	{
+		"label": "Bronze drum",
+		"properties": {}
+	},
+	{
+		"label": "Chiang Mai",
+		"properties": {}
+	},
+	{
+		"label": "Singapore",
+		"properties": {}
+	},
+	{
+		"label": "Los Angeles",
+		"properties": {}
+	},
+	{
+		"label": "eBay",
+		"properties": {}
+	},
+	{
+		"label": "Tom Hoyt",
+		"properties": {}
+	},
+	{
+		"label": "Bangkok University’s Southeast Asian Ceramics Museum",
+		"properties": {}
+	},
+	{
+		"label": "Art Institute of Chicago",
+		"properties": {}
+	},
+	{
+		"label": "Malter Galleries",
+		"properties": {}
+	},
+	{
+		"label": "Michael Malter",
+		"properties": {}
+	},
+	{
+		"label": "Robert Perez",
+		"properties": {}
+	},
+	{
+		"label": "UCLA",
+		"properties": {}
+	}
+],
+"relationships": [
+	{
+		"startNode": "Robert Olson",
+		"endNode": "Bowers Museum",
+		"type": "PROVIDED_ARTEFACTS",
+		"properties": {}
+	},
+	{
+		"startNode": "Robert Olson",
+		"endNode": "Pacific Asia Museum (PAM)",
+		"type": "PROVIDED_ARTEFACTS",
+		"properties": {}
+	},
+	{
+		"startNode": "Robert Olson",
+		"endNode": "Mingei International Museum",
+		"type": "PROVIDED_ARTEFACTS",
+		"properties": {}
+	},
+	{
+		"startNode": "Robert Olson",
+		"endNode": "Internal Revenue Service",
+		"type": "INVESTIGATED_BY",
+		"properties": {}
+	},
+	{
+		"startNode": "Robert Olson",
+		"endNode": "Immigration and Customs Enforcement (ICE)",
+		"type": "INVESTIGATED_BY",
+		"properties": {}
+	},
+	{
+		"startNode": "Robert Olson",
+		"endNode": "National Park Service",
+		"type": "INVESTIGATED_BY",
+		"properties": {}
+	},
+	{
+		"startNode": "Robert Olson",
+		"endNode": "Armand Labbé",
+		"type": "MET_WITH",
+		"properties": {}
+	},
+	{
+		"startNode": "Robert Olson",
+		"endNode": "Bobbyo Imports",
+		"type": "OWNED",
+		"properties": {}
+	},
+	{
+		"startNode": "Robert Olson",
+		"endNode": "Barry MacLean",
+		"type": "SOLD_ARTEFACTS_TO",
+		"properties": {}
+	},
+	{
+		"startNode": "Robert Olson",
+		"endNode": "Joel Malter of Malter Galleries",
+		"type": "SOLD_ARTEFACTS_TO",
+		"properties": {}
+	},
+	{
+		"startNode": "Robert Olson",
+		"endNode": "Susan Lerer",
+		"type": "SOLD_ARTEFACTS_TO",
+		"properties": {}
+	},
+	{
+		"startNode": "Robert Olson",
+		"endNode": "Tom Hoyt",
+		"type": "SOLD_ARTEFACTS_TO",
+		"properties": {}
+	},
+	{
+		"startNode": "Robert Olson",
+		"endNode": "Chiang Mai",
+		"type": "VISITED",
+		"properties": {}
+	},
+	{
+		"startNode": "Robert Olson",
+		"endNode": "Singapore",
+		"type": "VISITED",
+		"properties": {}
+	},
+	{
+		"startNode": "Robert Olson",
+		"endNode": "Los Angeles",
+		"type": "VISITED",
+		"properties": {}
+	},
+	{
+		"startNode": "Robert Olson",
+		"endNode": "eBay",
+		"type": "SOLD_ARTEFACTS_TO",
+		"properties": {}
+	},
+	{
+		"startNode": "Jonathan and Cari Markell",
+		"endNode": "Pacific Asia Museum (PAM)",
+		"type": "PROVIDED_ARTEFACTS",
+		"properties": {}
+	},
+	{
+		"startNode": "Jonathan and Cari Markell",
+		"endNode": "Mingei International Museum",
+		"type": "PROVIDED_ARTEFACTS",
+		"properties": {}
+	},
+	{
+		"startNode": "Jonathan and Cari Markell",
+		"endNode": "Robert Olson",
+		"type": "BOUGHT_ARTEFACTS_FROM",
+		"properties": {}
+	},
+	{
+		"startNode": "Jonathan and Cari Markell",
+		"endNode": "Los Angeles County Museum of Art (LACMA)",
+		"type": "DONATED_ARTEFACTS_TO",
+		"properties": {}
+	},
+	{
+		"startNode": "Jonathan and Cari Markell",
+		"endNode": "Bangkok University’s Southeast Asian Ceramics Museum",
+		"type": "MET_WITH",
+		"properties": {}
+	},
+	{
+		"startNode": "Jonathan and Cari Markell",
+		"endNode": "UCLA",
+		"type": "VISITED",
+		"properties": {}
+	},
+	{
+		"startNode": "Barry MacLean",
+		"endNode": "Art Institute of Chicago",
+		"type": "TRUSTEE_AT",
+		"properties": {}
+	},
+	{
+		"startNode": "Barry MacLean",
+		"endNode": "Robert Olson",
+		"type": "BOUGHT_ARTEFACTS_FROM",
+		"properties": {}
+	},
+	{
+		"startNode": "Joel Malter of Malter Galleries",
+		"endNode": "Robert Olson",
+		"type": "PROVIDED_APPRAISALS_FOR",
+		"properties": {}
+	},
+	{
+		"startNode": "Joel Malter of Malter Galleries",
+		"endNode": "Robert Perez",
+		"type": "INTRODUCED_TO",
+		"properties": {}
+	},
+	{
+		"startNode": "Susan Lerer",
+		"endNode": "Robert Olson",
+		"type": "PROVIDED_APPRAISALS_FOR",
+		"properties": {}
+	},
+	{
+		"startNode": "Roxanna Brown",
+		"endNode": "Jonathan and Cari Markell"	}]
 }
