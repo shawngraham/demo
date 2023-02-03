@@ -1,0 +1,150 @@
+{
+  "nodes": [
+    {
+      "Name": "Aidonia Treasure",
+      "type": "Collection"
+    },
+    {
+      "Name": "Mycenaean",
+      "type": "Civilization"
+    },
+    {
+      "Name": "Archaiokapiloi",
+      "type": "Looters"
+    },
+    {
+      "Name": "Michael Ward Gallery",
+      "type": "Gallery"
+    },
+    {
+      "Name": "John Betts",
+      "type": "Archaeologist"
+    },
+    {
+      "Name": "Jack Ogden",
+      "type": "Scientist"
+    },
+    {
+      "Name": "Greek Ministry of Culture",
+      "type": "Organization"
+    },
+    {
+      "Name": "Ricardo Elia",
+      "type": "Archaeologist"
+    },
+    {
+      "Name": "James Wright",
+      "type": "Archaeologist"
+    },
+    {
+      "Name": "Society for the Preservation of the Greek Heritage",
+      "type": "Organization"
+    },
+    {
+      "Name": "US District Court, Southern District of New York",
+      "type": "Court"
+    },
+    {
+      "Name": "Nemea",
+      "type": "Place"
+    },
+    {
+      "Name": "Athenian lawyer",
+      "type": "Lawyer"
+    },
+    {
+      "Name": "New York Times",
+      "type": "Publication"
+    },
+    {
+      "Name": "Nikos Zirganos",
+      "type": "Journalist"
+    }
+  ],
+  "relationships": [
+    {
+      "startNode": "Aidonia Treasure",
+      "endNode": "Mycenaean",
+      "type": "FROM",
+      "date": "1996"
+    },
+    {
+      "startNode": "Mycenaean",
+      "endNode": "Archaiokapiloi",
+      "type": "LOOTED_BY",
+      "date": "Late 1970s"
+    },
+    {
+      "startNode": "Aidonia Treasure",
+      "endNode": "Michael Ward Gallery",
+      "type": "DISPLAYED_BY",
+      "date": "April 1993"
+    },
+    {
+      "startNode": "John Betts",
+      "endNode": "Michael Ward Gallery",
+      "type": "WROTE_INTRODUCTION_FOR",
+      "date": "April 1993"
+    },
+    {
+      "startNode": "Jack Ogden",
+      "endNode": "Michael Ward Gallery",
+      "type": "CONDUCTED_ANALYSIS_FOR",
+      "date": "April 1993"
+    },
+    {
+      "startNode": "Greek Ministry of Culture",
+      "endNode": "Michael Ward Gallery",
+      "type": "CONFIRMED_NO_THEFT_FOR",
+      "date": "April 1993"
+    },
+    {
+      "startNode": "Ricardo Elia",
+      "endNode": "Consul General of Greece in New York",
+      "type": "ALERTED",
+      "date": "April 1993"
+    },
+    {
+      "startNode": "James Wright",
+      "endNode": "Greek Archaeological Service",
+      "type": "INFORMED",
+      "date": "April 1993"
+    },
+    {
+      "startNode": "Greek Ministry of Culture",
+      "endNode": "Michael Ward Gallery",
+      "type": "DEMANDED_RETURN_FROM",
+      "date": "May 1993"
+    },
+    {
+      "startNode": "US District Court, Southern District of New York",
+      "endNode": "Michael Ward Gallery",
+      "type": "PREVENTED_SALE_FOR",
+      "date": "May 1993"
+    },
+    {
+      "startNode": "Society for the Preservation of the Greek Heritage",
+      "endNode": "Greece",
+      "type": "RETURNED_TO",
+      "date": "1996"
+    },
+    {
+      "startNode": "Athenian lawyer",
+      "endNode": "Greek Ministry of Culture",
+      "type": "SENT_LETTER_TO",
+      "date": "1992"
+    },
+    {
+      "startNode": "New York Times",
+      "endNode": "Michael Ward Gallery",
+      "type": "TRAILED",
+      "date": "April 1993"
+    },
+    {
+      "startNode": "Nikos Zirganos",
+      "endNode": "Nemea",
+      "type": "COMPARED_TO",
+      "date": "2002, 2004"
+    }
+  ]
+}
