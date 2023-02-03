@@ -1,0 +1,527 @@
+{
+	"data": [{
+			"nodes": [{
+					"label": "Aidonia Treasure",
+					"properties": {
+						"location": "Nemea, Greece"
+					}
+				},
+				{
+					"label": "Mycenaean",
+					"properties": {
+						"date": "fifteenth-century BC"
+					}
+				},
+				{
+					"label": "Archaiokapiloi",
+					"properties": {}
+				},
+				{
+					"label": "Greek Archaeological Service",
+					"properties": {}
+				},
+				{
+					"label": "Michael Ward Gallery",
+					"properties": {
+						"location": "New York"
+					}
+				},
+				{
+					"label": "Jack Ogden",
+					"properties": {
+						"affiliation": "Cambridge Centre for Precious Metal Research"
+					}
+				},
+				{
+					"label": "Greek Ministry of Culture",
+					"properties": {}
+				},
+				{
+					"label": "New York Times",
+					"properties": {
+						"location": "New York"
+					}
+				},
+				{
+					"label": "Ricardo Elia",
+					"properties": {
+						"occupation": "Archaeologist"
+					}
+				},
+				{
+					"label": "James Wright",
+					"properties": {
+						"occupation": "Archaeologist"
+					}
+				},
+				{
+					"label": "Society for the Preservation of the Greek Heritage",
+					"properties": {
+						"location": "US"
+					}
+				},
+				{
+					"label": "Nemea",
+					"properties": {
+						"location": "Peloponnesian district of Corinthia, Greece"
+					}
+				}
+			],
+			"relationships": [{
+					"startNode": "Mycenaean",
+					"endNode": "Aidonia Treasure",
+					"type": "CONTAINS",
+					"properties": {}
+				},
+				{
+					"startNode": "Archaiokapiloi",
+					"endNode": "Aidonia Treasure",
+					"type": "EXCAVATED",
+					"properties": {}
+				},
+				{
+					"startNode": "Greek Archaeological Service",
+					"endNode": "Aidonia Treasure",
+					"type": "GUARDED",
+					"properties": {
+						"date": "November 1977"
+					}
+				},
+				{
+					"startNode": "Michael Ward Gallery",
+					"endNode": "Aidonia Treasure",
+					"type": "OFFERED_FOR_SALE",
+					"properties": {
+						"price": "$1.5 million"
+					}
+				},
+				{
+					"startNode": "Jack Ogden",
+					"endNode": "Aidonia Treasure",
+					"type": "ANALYZED",
+					"properties": {}
+				},
+				{
+					"startNode": "Greek Ministry of Culture",
+					"endNode": "Aidonia Treasure",
+					"type": "CONFIRMED",
+					"properties": {
+						"date": "1992"
+					}
+				},
+				{
+					"startNode": "Ricardo Elia",
+					"endNode": "Aidonia Treasure",
+					"type": "ALERTED",
+					"properties": {
+						"date": "April 1993"
+					}
+				},
+				{
+					"startNode": "James Wright",
+					"endNode": "Aidonia Treasure",
+					"type": "SUSPECTED",
+					"properties": {
+						"date": "April 1993"
+					}
+				},
+				{
+					"startNode": "Society for the Preservation of the Greek Heritage",
+					"endNode": "Aidonia Treasure",
+					"type": "RETURNED",
+					"properties": {
+						"date": "1996"
+					}
+				},
+				{
+					"startNode": "Nemea",
+					"endNode": "Aidonia Treasure",
+					"type": "NEARBY",
+					"properties": {}
+				}
+			]
+		},
+		{
+			"nodes": [{
+					"label": "Brooklyn Museum",
+					"properties": {
+						"location": "New York"
+					}
+				},
+				{
+					"label": "Metropolitan Museum",
+					"properties": {
+						"location": "New York"
+					}
+				},
+				{
+					"label": "Louvre",
+					"properties": {
+						"location": "Paris"
+					}
+				},
+				{
+					"label": "Coptic Art",
+					"properties": {
+						"date": "3rd - 8th Centuries AD",
+						"style": "Christian and Pagan influences"
+					}
+				},
+				{
+					"label": "Recklinghausen Museum",
+					"properties": {
+						"location": "Germany"
+					}
+				},
+				{
+					"label": "Coptic Museum",
+					"properties": {
+						"location": "Egypt"
+					}
+				},
+				{
+					"label": "John Beckwith",
+					"properties": {
+						"occupation": "Art Historian"
+					}
+				},
+				{
+					"label": "Gary Vikan",
+					"properties": {
+						"occupation": "Art Historian"
+					}
+				},
+				{
+					"label": "Sheikh Ibada",
+					"properties": {
+						"location": "Egypt"
+					}
+				}
+			],
+			"relationships": [{
+					"startNode": "Brooklyn Museum",
+					"endNode": "Coptic Art",
+					"type": "COLLECTS",
+					"properties": {
+						"date": "1950s - 1970s"
+					}
+				},
+				{
+					"startNode": "Metropolitan Museum",
+					"endNode": "Coptic Art",
+					"type": "COLLECTS",
+					"properties": {
+						"date": "1950s - 1970s"
+					}
+				},
+				{
+					"startNode": "Louvre",
+					"endNode": "Coptic Art",
+					"type": "COLLECTS",
+					"properties": {
+						"date": "1950s - 1970s"
+					}
+				},
+				{
+					"startNode": "Recklinghausen Museum",
+					"endNode": "Coptic Art",
+					"type": "COLLECTS",
+					"properties": {
+						"date": "1950s - 1970s"
+					}
+				},
+				{
+					"startNode": "Coptic Museum",
+					"endNode": "Coptic Art",
+					"type": "COLLECTS",
+					"properties": {
+						"date": "1950s - 1970s"
+					}
+				},
+				{
+					"startNode": "John Beckwith",
+					"endNode": "Coptic Art",
+					"type": "RAISED_CONCERN",
+					"properties": {
+						"date": "1963"
+					}
+				},
+				{
+					"startNode": "Gary Vikan",
+					"endNode": "Coptic Art",
+					"type": "RAISED_CONCERN",
+					"properties": {
+						"date": "1977"
+					}
+				},
+				{
+					"startNode": "Sheikh Ibada",
+					"endNode": "Coptic Art",
+					"type": "PRODUCED",
+					"properties": {
+						"date": "1950s - 1970s"
+					}
+				}
+			]
+		},
+		{
+			"nodes": [{
+					"label": "San Andrés de Machaca",
+					"properties": {
+						"location": "Bolivia",
+						"population": 6299,
+						"ethnicity": "Aymara",
+						"language": "Aymara",
+						"poverty": "High"
+					}
+				},
+				{
+					"label": "Fancisco Coillo",
+					"properties": {
+						"occupation": "Architect"
+					}
+				},
+				{
+					"label": "Supreme Decree No 06137",
+					"properties": {
+						"date": "15 June 1962"
+					}
+				},
+				{
+					"label": "Christmas Eve 1997",
+					"properties": {
+						"date": "24 December 1997"
+					}
+				},
+				{
+					"label": "14 August 2008",
+					"properties": {
+						"date": "14 August 2008"
+					}
+				},
+				{
+					"label": "April 2010",
+					"properties": {
+						"date": "April 2010"
+					}
+				},
+				{
+					"label": "Mario Andrade Morales",
+					"properties": {
+						"name": "Edgar Quiroz Soliz"
+					}
+				},
+				{
+					"label": "Felipe Perez Paco",
+					"properties": {
+						"name": "Felipe Perez Paco"
+					}
+				},
+				{
+					"label": "Nicomedes Blanco Paco",
+					"properties": {
+						"name": "Nicomedes Blanco Paco"
+					}
+				},
+				{
+					"label": "Villa Remedios",
+					"properties": {
+						"location": "El Alto, Bolivia"
+					}
+				},
+				{
+					"label": "Fuerza Especial de Lucha Contra el Crimen (FELCC)",
+					"properties": {
+						"name": "FELCC"
+					}
+				},
+				{
+					"label": "Felix Segales",
+					"properties": {
+						"occupation": "City Commander of Police"
+					}
+				},
+				{
+					"label": "Interpol",
+					"properties": {
+						"name": "Interpol"
+					}
+				},
+				{
+					"label": "Washington-based art dealer",
+					"properties": {
+						"name": "Washington-based art dealer"
+					}
+				},
+				{
+					"label": "American collector",
+					"properties": {
+						"name": "American collector"
+					}
+				},
+				{
+					"label": "London",
+					"properties": {
+						"location": "London"
+					}
+				},
+				{
+					"label": "Santa Rosa de Viterbo",
+					"properties": {
+						"name": "Santa Rosa de Viterbo"
+					}
+				},
+				{
+					"label": "San Agustín",
+					"properties": {
+						"name": "San Agustín"
+					}
+				},
+				{
+					"label": "Archangel Arcabucero",
+					"properties": {
+						"measurement": "100 cm by 90 cm",
+						"medium": "Oil on canvas"
+					}
+				},
+				{
+					"label": "Saint Rose of Lima",
+					"properties": {
+						"measurement": "165 cm by 110 cm",
+						"medium": "Oil on canvas"
+					}
+				},
+				{
+					"label": "Saint Francis Protecting the Laics",
+					"properties": {
+						"measurement": "200 cm by 140 cm",
+						"medium": "Oil on canvas"
+					}
+				},
+				{
+					"label": "The holy Family",
+					"properties": {
+						"measurement": "170 cm by 110 cm",
+						"medium": "Oil on canvas"
+					}
+				}
+			],
+			"relationships": [{
+					"startNode": "San Andrés de Machaca",
+					"endNode": "Fancisco Coillo",
+					"type": "DIRECTED_BY",
+					"properties": {}
+				},
+				{
+					"startNode": "San Andrés de Machaca",
+					"endNode": "Supreme Decree No 06137",
+					"type": "DECREED_BY",
+					"properties": {}
+				},
+				{
+					"startNode": "San Andrés de Machaca",
+					"endNode": "Christmas Eve 1997",
+					"type": "ROBBED_ON",
+					"properties": {}
+				},
+				{
+					"startNode": "San Andrés de Machaca",
+					"endNode": "14 August 2008",
+					"type": "ROBBED_ON",
+					"properties": {}
+				},
+				{
+					"startNode": "San Andrés de Machaca",
+					"endNode": "April 2010",
+					"type": "ROBBED_ON",
+					"properties": {}
+				},
+				{
+					"startNode": "Mario Andrade Morales",
+					"endNode": "Villa Remedios",
+					"type": "ARRESTED_IN",
+					"properties": {}
+				},
+				{
+					"startNode": "Felipe Perez Paco",
+					"endNode": "Villa Remedios",
+					"type": "ARRESTED_IN",
+					"properties": {}
+				},
+				{
+					"startNode": "Nicomedes Blanco Paco",
+					"endNode": "Villa Remedios",
+					"type": "ARRESTED_IN",
+					"properties": {}
+				},
+				{
+					"startNode": "San Andrés de Machaca",
+					"endNode": "Fuerza Especial de Lucha Contra el Crimen (FELCC)",
+					"type": "RECOVERED_BY",
+					"properties": {}
+				},
+				{
+					"startNode": "San Andrés de Machaca",
+					"endNode": "Felix Segales",
+					"type": "ARRESTED_BY",
+					"properties": {}
+				},
+				{
+					"startNode": "San Andrés de Machaca",
+					"endNode": "Interpol",
+					"type": "LISTED_BY",
+					"properties": {}
+				},
+				{
+					"startNode": "Washington-based art dealer",
+					"endNode": "American collector",
+					"type": "CONSULTED_BY",
+					"properties": {}
+				},
+				{
+					"startNode": "San Andrés de Machaca",
+					"endNode": "London",
+					"type": "RECOVERED_IN",
+					"properties": {}
+				},
+				{
+					"startNode": "San Andrés de Machaca",
+					"endNode": "Santa Rosa de Viterbo",
+					"type": "MISSING_PAINTING",
+					"properties": {}
+				},
+				{
+					"startNode": "San Andrés de Machaca",
+					"endNode": "San Agustín",
+					"type": "MISSING_PAINTING",
+					"properties": {}
+				},
+				{
+					"startNode": "San Andrés de Machaca",
+					"endNode": "Archangel Arcabucero",
+					"type": "MISSING_PAINTING",
+					"properties": {}
+				},
+				{
+					"startNode": "San Andrés de Machaca",
+					"endNode": "Saint Rose of Lima",
+					"type": "MISSING_PAINTING",
+					"properties": {}
+				},
+				{
+					"startNode": "San Andrés de Machaca",
+					"endNode": "Saint Francis Protecting the Laics",
+					"type": "MISSING_PAINTING",
+					"properties": {}
+				},
+				{
+					"startNode": "San Andrés de Machaca",
+					"endNode": "The holy Family",
+					"type": "MISSING_PAINTING",
+					"properties": {}
+				}
+			]
+		}
+
+	]
+}
