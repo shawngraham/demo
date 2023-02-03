@@ -1,0 +1,248 @@
+{"nodes": [
+    {
+      "label": "American School of Classical Studies in Athens",
+      "properties": {
+        "location": "Athens",
+        "foundation": "1882"
+      }
+    },
+    {
+      "label": "IFAR Reports",
+      "properties": {
+        "date": "June 1990"
+      }
+    },
+    {
+      "label": "Minerva",
+      "properties": {
+        "date": "September 1990"
+      }
+    },
+    {
+      "label": "Karahalios Gang",
+      "properties": {
+        "members": ["Anastasios Karahalios", "Tryfonas Karahalios (Sr)", "Tryfonas Karahalios (Jr)", "Ioannis Loris"]
+      }
+    },
+    {
+      "label": "Wilma Sabala",
+      "properties": {
+        "location": "Miami"
+      }
+    },
+    {
+      "label": "Christie's New York",
+      "properties": {
+        "location": "New York"
+      }
+    },
+    {
+      "label": "Jerome Eisenberg",
+      "properties": {
+        "job": "Editor of Minerva",
+        "business": "Royal Athena Galleries"
+      }
+    },
+    {
+      "label": "FBI",
+      "properties": {
+        "location": "USA"
+      }
+    },
+    {
+      "label": "Greek Archaeological Service",
+      "properties": {
+        "location": "Greece"
+      }
+    },
+    {
+      "label": "Museum of Corinth Excavations",
+      "properties": {
+        "location": "Greece",
+        "date": "1990"
+      }
+    },
+    {
+      "label": "Attic black-figure cups",
+      "properties": {
+        "price": "$17,800"
+      }
+    },
+    {
+      "label": "Julius Caesar",
+      "properties": {
+        "date": "June 1999"
+      }
+    },
+    {
+      "label": "Serapis",
+      "properties": {
+        "date": "December 1999"
+      }
+    },
+    {
+      "label": "Eros",
+      "properties": {
+        "date": "December 1999"
+      }
+    },
+    {
+      "label": "George Karahalios",
+      "properties": {
+        "location": "Miami"
+      }
+    },
+    {
+      "label": "German Collector",
+      "properties": {
+        "location": "Aachen, Germany"
+      }
+    },
+    {
+      "label": "Greek Ministry of Culture",
+      "properties": {
+        "location": "Greece"
+      }
+    },
+    {
+      "label": "Venezuela",
+      "properties": {
+        "location": "South America"
+      }
+    },
+    {
+      "label": "Netherlands",
+      "properties": {
+        "location": "Europe"
+      }
+    },
+    {
+      "label": "Cyprus",
+      "properties": {
+        "location": "Europe"
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "startNode": "American School of Classical Studies in Athens",
+      "endNode": "Museum of Corinth Excavations",
+      "type": "MANAGES",
+      "properties": {
+        "date": "1990"
+      }
+    },
+    {
+      "startNode": "American School of Classical Studies in Athens",
+      "endNode": "IFAR Reports",
+      "type": "PRODUCED",
+      "properties": {
+        "date": "June 1990"
+      }
+    },
+    {
+      "startNode": "American School of Classical Studies in Athens",
+      "endNode": "Minerva",
+      "type": "PUBLISHED",
+      "properties": {
+        "date": "September 1990"
+      }
+    },
+    {
+      "startNode": "Karahalios Gang",
+      "endNode": "Museum of Corinth Excavations",
+      "type": "BURGLARIZED",
+      "properties": {
+        "date": "April 12, 1990"
+      }
+    },
+    {
+      "startNode": "Wilma Sabala",
+      "endNode": "Christie's New York",
+      "type": "SOLD",
+      "properties": {
+        "date": "1997 and 1998"
+      }
+    },
+    {
+      "startNode": "Jerome Eisenberg",
+      "endNode": "Christie's New York",
+      "type": "BOUGHT",
+      "properties": {
+        "date": "1997 and 1998"
+      }
+    },
+    {
+      "startNode": "FBI",
+      "endNode": "Miami Warehouse",
+      "type": "RECOVERED",
+      "properties": {
+        "date": "September 1999"
+      }
+    },
+    {
+      "startNode": "Christie's New York",
+      "endNode": "Greek Ministry of Culture",
+      "type": "RETURNED",
+      "properties": {
+        "date": "January 2001"
+      }
+    },
+    {
+      "startNode": "Wilma Sabala",
+      "endNode": "Christie's New York",
+      "type": "ARRESTED",
+      "properties": {
+        "date": "June 2000"
+      }
+    },
+    {
+      "startNode": "Greek Police",
+      "endNode": "Anastasios Karahalios",
+      "type": "ARRESTED",
+      "properties": {
+        "date": "January 2000"
+      }
+    },
+    {
+      "startNode": "Tryfonas Karahalios (Jr)",
+      "endNode": "Netherlands",
+      "type": "IMPORTED",
+      "properties": {
+        "date": "January 2001"
+      }
+    },
+    {
+      "startNode": "Tryfonas Karahalios (Jr)",
+      "endNode": "Cyprus",
+      "type": "IMPORTED",
+      "properties": {
+        "date": "January 2001"
+      }
+    },
+    {
+      "startNode": "Anastasios Karahalios",
+      "endNode": "German Collector",
+      "type": "SOLD",
+      "properties": {
+        "date": "1990"
+      }
+    },
+    {
+      "startNode": "George Karahalios",
+      "endNode": "Wilma Sabala",
+      "type": "KNOWN",
+      "properties": {
+        "date": "1997"
+      }
+    },
+    {
+      "startNode": "Tryfonas Karahalios (Jr)",
+      "endNode": "Venezuela",
+      "type": "HIDING",
+      "properties": {
+        "date": "2000"
+      }
+    }
+  ]
+}

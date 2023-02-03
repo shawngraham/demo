@@ -1,0 +1,239 @@
+{"nodes": [
+
+    {
+
+      "label": "Grolier Codex",
+
+      "properties": {
+
+        "origin": "Mexico",
+
+        "carbonDate": "AD 1230 ± 130",
+
+        "location": "Museo Nacional de Antropología",
+
+        "pages": "21"
+
+      }
+
+    },
+
+    {
+
+      "label": "Michael Coe",
+
+      "properties": {
+
+        "profession": "Archaeologist"
+
+      }
+
+    },
+
+    {
+
+      "label": "Josué Saenz",
+
+      "properties": {
+
+        "profession": "Mexican Collector"
+
+      }
+
+    },
+
+    {
+
+      "label": "Grolier Club",
+
+      "properties": {
+
+        "location": "New York"
+
+      }
+
+    },
+
+    {
+
+      "label": "Maya Culture",
+
+      "properties": {
+
+        "literate": "yes"
+
+      }
+
+    },
+
+    {
+
+      "label": "Spanish Conquest",
+
+      "properties": {
+
+        "date": "16th century"
+
+      }
+
+    },
+
+    {
+
+      "label": "Karl E. Meyer",
+
+      "properties": {
+
+        "profession": "Journalist"
+
+      }
+
+    },
+
+    {
+
+      "label": "Mexican Government",
+
+      "properties": {
+
+        "location": "Mexico City"
+
+      }
+
+    },
+
+    {
+
+      "label": "Eric Thompson",
+
+      "properties": {
+
+        "profession": "Maya Archaeologist"
+
+      }
+
+    },
+
+    {
+
+      "label": "Claude Baudez",
+
+      "properties": {
+
+        "profession": "Maya Archaeologist"
+
+      }
+
+    }
+
+  ],
+
+  "relationships": [
+
+    {
+
+      "startNode": "Grolier Codex",
+
+      "endNode": "Josué Saenz",
+
+      "type": "BOUGHT_BY",
+
+      "properties": {
+
+        "date": "1966"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Grolier Codex",
+
+      "endNode": "Michael Coe",
+
+      "type": "EXAMINED_BY",
+
+      "properties": {
+
+        "date": "1971"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Grolier Codex",
+
+      "endNode": "Grolier Club",
+
+      "type": "DISPLAYED_AT",
+
+      "properties": {
+
+        "date": "1971"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Grolier Codex",
+
+      "endNode": "Mexican Government",
+
+      "type": "DONATED_TO",
+
+      "properties": {
+
+        "date": "Unclear"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Maya Culture",
+
+      "endNode": "Spanish Conquest",
+
+      "type": "DESTROYED_DURING"
+
+    },
+
+    {
+
+      "startNode": "Grolier Codex",
+
+      "endNode": "Karl E. Meyer",
+
+      "type": "CONTACTED_BY"
+
+    },
+
+    {
+
+      "startNode": "Grolier Codex",
+
+      "endNode": "Eric Thompson",
+
+      "type": "CRITIQUED_BY"
+
+    },
+
+    {
+
+      "startNode": "Grolier Codex",
+
+      "endNode": "Claude Baudez",
+
+      "type": "CRITIQUED_BY"
+
+    }
+
+  ]
+
+}

@@ -1,0 +1,191 @@
+{"nodes": [
+
+    {
+
+      "label": "Mexican Shaft Tomb Tradition",
+
+      "properties": {
+
+        "area": "Nayarit, Jalisco, Colima",
+
+        "timePeriod": "300 BC - 300 AD"
+
+      }
+
+    },
+
+    {
+
+      "label": "Diego Rivera",
+
+      "properties": {
+
+        "profession": "Artist"
+
+      }
+
+    },
+
+    {
+
+      "label": "Frieda Kahlo",
+
+      "properties": {
+
+        "profession": "Artist"
+
+      }
+
+    },
+
+    {
+
+      "label": "Earl Stendhal",
+
+      "properties": {
+
+        "profession": "Dealer"
+
+      }
+
+    },
+
+    {
+
+      "label": "Ralph C. Atlman",
+
+      "properties": {
+
+        "profession": "Dealer"
+
+      }
+
+    },
+
+    {
+
+      "label": "Jules Berman",
+
+      "properties": {
+
+        "profession": "Collector"
+
+      }
+
+    },
+
+    {
+
+      "label": "Vincent Price",
+
+      "properties": {
+
+        "profession": "Actor"
+
+      }
+
+    }
+
+  ],
+
+  "relationships": [
+
+    {
+
+      "startNode": "Diego Rivera",
+
+      "endNode": "Mexican Shaft Tomb Tradition",
+
+      "type": "COLLECTED",
+
+      "properties": {
+
+        "date": "1930s"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Frieda Kahlo",
+
+      "endNode": "Mexican Shaft Tomb Tradition",
+
+      "type": "COLLECTED",
+
+      "properties": {
+
+        "date": "1930s"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Earl Stendhal",
+
+      "endNode": "Mexican Shaft Tomb Tradition",
+
+      "type": "PROMOTED",
+
+      "properties": {
+
+        "date": "1950s"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Ralph C. Atlman",
+
+      "endNode": "Mexican Shaft Tomb Tradition",
+
+      "type": "PROMOTED",
+
+      "properties": {
+
+        "date": "1950s"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Jules Berman",
+
+      "endNode": "Mexican Shaft Tomb Tradition",
+
+      "type": "COLLECTED",
+
+      "properties": {
+
+        "date": "mid-1960s"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Vincent Price",
+
+      "endNode": "Mexican Shaft Tomb Tradition",
+
+      "type": "COLLECTED",
+
+      "properties": {
+
+        "date": "mid-1960s"
+
+      }
+
+    }
+
+  ]
+
+}

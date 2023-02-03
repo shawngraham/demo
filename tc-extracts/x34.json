@@ -1,0 +1,421 @@
+{"nodes": [
+
+    {
+
+      "label": "Sevso Treasure",
+
+      "properties": {
+
+        "owner": "Hungary",
+
+        "discovered": "1980"
+
+      }
+
+    },
+
+    {
+
+      "label": "József Sümegh",
+
+      "properties": {
+
+        "nationality": "Hungarian",
+
+        "died": "1980"
+
+      }
+
+    },
+
+    {
+
+      "label": "Sevso",
+
+      "properties": {
+
+        "location": "Lake Balaton",
+
+        "area": "Szabadbattyán"
+
+      }
+
+    },
+
+    {
+
+      "label": "Ten Pieces of Roman-Period Silver",
+
+      "properties": {
+
+        "discovered": "May 1878",
+
+        "location": "Polgárdi"
+
+      }
+
+    },
+
+    {
+
+      "label": "Roman-Period Silver Folding Stand",
+
+      "properties": {
+
+        "function": "support silver bowls or plates"
+
+      }
+
+    },
+
+    {
+
+      "label": "Geometric Ewers",
+
+      "properties": {
+
+        "manufacture": "Balkan peninsula"
+
+      }
+
+    },
+
+    {
+
+      "label": "Meleagus Plate",
+
+      "properties": {
+
+        "function": "use of a stand"
+
+      }
+
+    },
+
+    {
+
+      "label": "Barbarian Incursion",
+
+      "properties": {
+
+        "date": "374 AD"
+
+      }
+
+    },
+
+    {
+
+      "label": "Wine Cellar",
+
+      "properties": {
+
+        "location": "Polgárdi"
+
+      }
+
+    },
+
+    {
+
+      "label": "Sevso Cauldron",
+
+      "properties": {
+
+        "location": "Wine Cellar"
+
+      }
+
+    },
+
+    {
+
+      "label": "Antiquities Dealer",
+
+      "properties": {
+
+        "location": "Budapest"
+
+      }
+
+    },
+
+    {
+
+      "label": "Marquess of Northampton",
+
+      "properties": {
+
+        "owner": "Sevso Treasure"
+
+      }
+
+    },
+
+    {
+
+      "label": "Hungarian National Museum",
+
+      "properties": {
+
+        "location": "Polgárdi"
+
+      }
+
+    },
+
+    {
+
+      "label": "Peter Wilson",
+
+      "properties": {
+
+        "ex-chairman": "Sotheby's"
+
+      }
+
+    },
+
+    {
+
+      "label": "Peter Wilson's Two Sons",
+
+      "properties": {
+
+        "trust": "Sevso Treasure"
+
+      }
+
+    },
+
+    {
+
+      "label": "Ishtevan Sümegh",
+
+      "properties": {
+
+        "relation": "József Sümegh's younger half-brother"
+
+      }
+
+    },
+
+    {
+
+      "label": "Northampton's Lawyers",
+
+      "properties": {}
+
+    },
+
+    {
+
+      "label": "Croatia",
+
+      "properties": {}
+
+    },
+
+  ],
+
+  "relationships": [
+
+    {
+
+      "startNode": "Sevso Treasure",
+
+      "endNode": "Hungary",
+
+      "type": "BELONGS_TO",
+
+      "properties": {
+
+        "date": "1963"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Sevso",
+
+      "endNode": "Sevso Treasure",
+
+      "type": "RELATED_TO",
+
+      "properties": {}
+
+    },
+
+    {
+
+      "startNode": "Ten Pieces of Roman-Period Silver",
+
+      "endNode": "Hungarian National Museum",
+
+      "type": "DONATED_BY",
+
+      "properties": {}
+
+    },
+
+    {
+
+      "startNode": "Roman-Period Silver Folding Stand",
+
+      "endNode": "Sevso Treasure",
+
+      "type": "COMPLEMENTS",
+
+      "properties": {}
+
+    },
+
+    {
+
+      "startNode": "Geometric Ewers",
+
+      "endNode": "Sevso Treasure",
+
+      "type": "RELATED_TO",
+
+      "properties": {}
+
+    },
+
+    {
+
+      "startNode": "Meleagus Plate",
+
+      "endNode": "Roman-Period Silver Folding Stand",
+
+      "type": "USES",
+
+      "properties": {}
+
+    },
+
+    {
+
+      "startNode": "Barbarian Incursion",
+
+      "endNode": "Sevso Treasure",
+
+      "type": "BURIED_BY",
+
+      "properties": {}
+
+    },
+
+    {
+
+      "startNode": "József Sümegh",
+
+      "endNode": "Wine Cellar",
+
+      "type": "FOUND_IN",
+
+      "properties": {}
+
+    },
+
+    {
+
+      "startNode": "Sevso Cauldron",
+
+      "endNode": "Wine Cellar",
+
+      "type": "HIDDEN_BY",
+
+      "properties": {}
+
+    },
+
+    {
+
+      "startNode": "Antiquities Dealer",
+
+      "endNode": "József Sümegh",
+
+      "type": "SOLD_BY",
+
+      "properties": {}
+
+    },
+
+    {
+
+      "startNode": "Marquess of Northampton",
+
+      "endNode": "Sevso Treasure",
+
+      "type": "OWNED_BY",
+
+      "properties": {}
+
+    },
+
+    {
+
+      "startNode": "Peter Wilson",
+
+      "endNode": "Marquess of Northampton",
+
+      "type": "ENCOURAGED",
+
+      "properties": {}
+
+    },
+
+    {
+
+      "startNode": "Peter Wilson's Two Sons",
+
+      "endNode": "Sevso Treasure",
+
+      "type": "OWNED_BY",
+
+      "properties": {}
+
+    },
+
+    {
+
+      "startNode": "Ishtevan Sümegh",
+
+      "endNode": "Sevso Treasure",
+
+      "type": "REMEMBERED",
+
+      "properties": {}
+
+    },
+
+    {
+
+      "startNode": "Northampton's Lawyers",
+
+      "endNode": "Hungarian Case",
+
+      "type": "DISMISSIVE_OF",
+
+      "properties": {}
+
+    },
+
+    {
+
+      "startNode": "Croatia",
+
+      "endNode": "Meleagros Plate",
+
+      "type": "ANALYZED_BY",
+
+      "properties": {}
+
+    }
+
+  ]
+
+}

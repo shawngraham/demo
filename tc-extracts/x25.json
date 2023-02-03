@@ -1,0 +1,203 @@
+{"nodes": [
+
+    {
+
+      "label": "Derrynaflan Hoard",
+
+      "properties": {
+
+        "location": "Derrynaflan, Lurgoe, County Tipperary",
+
+        "finders": "Michael Webb and his son, also called Michael",
+
+        "items": "chalice, bronze strainer ladle, paten",
+
+        "value": "IR£5.5 million"
+
+      }
+
+    },
+
+    {
+
+      "label": "University College Cork",
+
+      "properties": {}
+
+    },
+
+    {
+
+      "label": "Dr. Elizabeth Shee Twohig",
+
+      "properties": {}
+
+    },
+
+    {
+
+      "label": "National Museum of Ireland",
+
+      "properties": {}
+
+    },
+
+    {
+
+      "label": "High Court",
+
+      "properties": {}
+
+    },
+
+    {
+
+      "label": "Seánad Éireann",
+
+      "properties": {}
+
+    },
+
+    {
+
+      "label": "Dáil Éireann",
+
+      "properties": {}
+
+    },
+
+    {
+
+      "label": "National Monuments (Amendment) Bill",
+
+      "properties": {
+
+        "date": "1987"
+
+      }
+
+    },
+
+    {
+
+      "label": "National Monuments (Amendment) Act 1994",
+
+      "properties": {}
+
+    }
+
+  ],
+
+  "relationships": [
+
+    {
+
+      "startNode": "Derrynaflan Hoard",
+
+      "endNode": "Michael Webb and his son, also called Michael",
+
+      "type": "DISCOVERED_BY",
+
+      "properties": {}
+
+    },
+
+    {
+
+      "startNode": "Derrynaflan Hoard",
+
+      "endNode": "University College Cork",
+
+      "type": "REPORTED_TO",
+
+      "properties": {}
+
+    },
+
+    {
+
+      "startNode": "University College Cork",
+
+      "endNode": "Dr. Elizabeth Shee Twohig",
+
+      "type": "EMPLOYED_BY",
+
+      "properties": {}
+
+    },
+
+    {
+
+      "startNode": "Derrynaflan Hoard",
+
+      "endNode": "National Museum of Ireland",
+
+      "type": "TAKEN_TO",
+
+      "properties": {}
+
+    },
+
+    {
+
+      "startNode": "Derrynaflan Hoard",
+
+      "endNode": "High Court",
+
+      "type": "RULED_BY",
+
+      "properties": {}
+
+    },
+
+    {
+
+      "startNode": "Derrynaflan Hoard",
+
+      "endNode": "Seánad Éireann",
+
+      "type": "DEBATED_IN",
+
+      "properties": {}
+
+    },
+
+    {
+
+      "startNode": "National Monuments (Amendment) Bill",
+
+      "endNode": "Dáil Éireann",
+
+      "type": "PASSED_IN",
+
+      "properties": {}
+
+    },
+
+    {
+
+      "startNode": "Derrynaflan Hoard",
+
+      "endNode": "National Museum of Ireland",
+
+      "type": "ON_DISPLAY_AT",
+
+      "properties": {}
+
+    },
+
+    {
+
+      "startNode": "Derrynaflan Hoard",
+
+      "endNode": "National Monuments (Amendment) Act 1994",
+
+      "type": "INCLUDED_IN",
+
+      "properties": {}
+
+    }
+
+  ]
+
+}

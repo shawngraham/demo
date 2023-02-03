@@ -1,0 +1,87 @@
+{"nodes": [
+    {
+      "label": "José Luis Várez Fisa",
+      "properties": {
+        "nationality": "Spanish"
+      }
+    },
+    {
+      "label": "National Archaeological Museum of Spain",
+      "properties": {
+        "location": "Madrid, Spain"
+      }
+    },
+    {
+      "label": "Giacomo Medici",
+      "properties": {
+        "nationality": "Italian"
+      }
+    },
+    {
+      "label": "Gianfranco Becchina",
+      "properties": {
+        "nationality": "Italian"
+      }
+    },
+    {
+      "label": "Sotheby's New York",
+      "properties": {
+        "location": "New York, USA"
+      }
+    },
+    {
+      "label": "Jerome Eisenberg",
+      "properties": {
+        "nationality": "US"
+      }
+    },
+    {
+      "label": "Auction in London",
+      "properties": {}
+    }
+  ],
+  "relationships": [
+    {
+      "startNode": "José Luis Várez Fisa",
+      "endNode": "National Archaeological Museum of Spain",
+      "type": "DONATED_TO",
+      "properties": {
+        "date": "1999"
+      }
+    },
+    {
+      "startNode": "National Archaeological Museum of Spain",
+      "endNode": "Giacomo Medici",
+      "type": "BOUGHT_FROM",
+      "properties": {
+        "date": "1999"
+      }
+    },
+    {
+      "startNode": "National Archaeological Museum of Spain",
+      "endNode": "Gianfranco Becchina",
+      "type": "BOUGHT_FROM",
+      "properties": {
+        "date": "1999"
+      }
+    },
+    {
+      "startNode": "José Luis Várez Fisa",
+      "endNode": "Sotheby's New York",
+      "type": "BOUGHT_FROM",
+      "properties": {}
+    },
+    {
+      "startNode": "José Luis Várez Fisa",
+      "endNode": "Jerome Eisenberg",
+      "type": "BOUGHT_FROM",
+      "properties": {}
+    },
+    {
+      "startNode": "Jerome Eisenberg",
+      "endNode": "Auction in London",
+      "type": "BOUGHT_FROM",
+      "properties": {}
+    }
+  ]
+}

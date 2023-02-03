@@ -1,0 +1,133 @@
+{"nodes": [
+    {
+      "label": "Cara Sucia",
+      "properties": {
+        "location": "El Salvador",
+        "culture": "Cotzumalhuapa Culture",
+        "discovered": "19th century"
+      }
+    },
+    {
+      "label": "Herbert J. Spinden",
+      "properties": {
+        "profession": "archaeologist"
+      }
+    },
+    {
+      "label": "Dr. Santiago Ignacio Barbarena",
+      "properties": {
+        "profession": "archaeologist"
+      }
+    },
+    {
+      "label": "Dr. Alberto Luna",
+      "properties": {
+        "profession": "collector"
+      }
+    },
+    {
+      "label": "National Commission for Culture and Art (CONCULTURA)",
+      "properties": {
+        "type": "organization"
+      }
+    },
+    {
+      "label": "National Foundation for Archaeology (FUNDAR)",
+      "properties": {
+        "type": "organization"
+      }
+    },
+    {
+      "label": "El Salvador",
+      "properties": {
+        "country": "El Salvador"
+      }
+    },
+    {
+      "label": "Guatemala",
+      "properties": {
+        "country": "Guatemala"
+      }
+    },
+    {
+      "label": "United States",
+      "properties": {
+        "country": "United States"
+      }
+    },
+    {
+      "label": "Japan",
+      "properties": {
+        "country": "Japan"
+      }
+    },
+    {
+      "label": "Saudi Arabia",
+      "properties": {
+        "country": "Saudi Arabia"
+      }
+    },
+    {
+      "label": "Paul Amaroli",
+      "properties": {
+        "profession": "archaeologist"
+      }
+    },
+    {
+      "label": "Stanley Boggs",
+      "properties": {
+        "profession": "archaeologist"
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "startNode": "Cara Sucia",
+      "endNode": "El Salvador",
+      "type": "LOCATED_IN",
+      "properties": {}
+    },
+    {
+      "startNode": "Cara Sucia",
+      "endNode": "Guatemala",
+      "type": "LOCATED_NEAR",
+      "properties": {}
+    },
+    {
+      "startNode": "Cara Sucia",
+      "endNode": "Dr. Santiago Ignacio Barbarena",
+      "type": "DISCOVERED_BY",
+      "properties": {}
+    },
+    {
+      "startNode": "Dr. Alberto Luna",
+      "endNode": "Cara Sucia",
+      "type": "COLLECTED_FROM",
+      "properties": {}
+    },
+    {
+      "startNode": "El Salvador",
+      "endNode": "National Commission for Culture and Art (CONCULTURA)",
+      "type": "HAS_ORGANIZATION",
+      "properties": {}
+    },
+    {
+      "startNode": "El Salvador",
+      "endNode": "National Foundation for Archaeology (FUNDAR)",
+      "type": "HAS_ORGANIZATION",
+      "properties": {}
+    },
+    {
+      "startNode": "United States",
+      "endNode": "Paul Amaroli",
+      "type": "HAS_CITIZEN",
+      "properties": {}
+    },
+    {
+      "startNode": "United States",
+      "endNode": "Stanley Boggs",
+      "type": "HAS_CITIZEN",
+      "properties": {}
+    }
+  ]
+}

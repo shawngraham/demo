@@ -1,0 +1,172 @@
+{"nodes": [
+    {
+      "label": "Vaman Ghiya",
+      "properties": {
+        "location": "Jaipur, India",
+        "profession": "Antiquities Dealer"
+      }
+    },
+    {
+      "label": "Sotheby's",
+      "properties": {
+        "location": "London, UK"
+      }
+    },
+    {
+      "label": "Cape Lion Logging",
+      "properties": {
+        "location": "Geneva, Switzerland"
+      }
+    },
+    {
+      "label": "Megavena",
+      "properties": {
+        "location": "Geneva, Switzerland"
+      }
+    },
+    {
+      "label": "Artistic Imports Corporation",
+      "properties": {
+        "location": "Geneva, Switzerland"
+      }
+    },
+    {
+      "label": "Peter Watson",
+      "properties": {
+        "profession": "Investigator"
+      }
+    },
+    {
+      "label": "A. Yarrow",
+      "properties": {
+        "location": "British Bank"
+      }
+    },
+    {
+      "label": "Hawala Remittance System",
+      "properties": {
+        "type": "Money Transfer System"
+      }
+    },
+    {
+      "label": "Brendan Lynch",
+      "properties": {
+        "profession": "India Expert"
+      }
+    },
+    {
+      "label": "Sotheby's New York",
+      "properties": {
+        "location": "New York , USA"
+      }
+    },
+    {
+      "label": "Christie's Auction House",
+      "properties": {
+        "location": "London, UK"
+      }
+    },
+    {
+      "label": "Vilasgarh Temple",
+      "properties": {
+        "location": "India"
+      }
+    },
+    {
+      "label": "Archaeological Survey of India",
+      "properties": {
+        "location": "India"
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "startNode": "Vaman Ghiya",
+      "endNode": "Sotheby's",
+      "type": "SELLING_THROUGH",
+      "properties": {
+        "date": "1980s"
+      }
+    },
+    {
+      "startNode": "Vaman Ghiya",
+      "endNode": "Cape Lion Logging",
+      "type": "TRANSACTING_THROUGH",
+      "properties": {
+        "date": "1984-1986"
+      }
+    },
+    {
+      "startNode": "Vaman Ghiya",
+      "endNode": "Megavena",
+      "type": "TRANSACTING_THROUGH",
+      "properties": {
+        "date": "1984-1986"
+      }
+    },
+    {
+      "startNode": "Vaman Ghiya",
+      "endNode": "Artistic Imports Corporation",
+      "type": "TRANSACTING_THROUGH",
+      "properties": {
+        "date": "1984-1986"
+      }
+    },
+    {
+      "startNode": "Vaman Ghiya",
+      "endNode": "Peter Watson",
+      "type": "EXPOSED_BY",
+      "properties": {}
+    },
+    {
+      "startNode": "Vaman Ghiya",
+      "endNode": "A. Yarrow",
+      "type": "ACCESSING_BANK_ACCOUNTS",
+      "properties": {}
+    },
+    {
+      "startNode": "Vaman Ghiya",
+      "endNode": "Hawala Remittance System",
+      "type": "USING",
+      "properties": {}
+    },
+    {
+      "startNode": "Vaman Ghiya",
+      "endNode": "Brendan Lynch",
+      "type": "VISITED_BY",
+      "properties": {
+        "date": "1986"
+      }
+    },
+    {
+      "startNode": "Vaman Ghiya",
+      "endNode": "Sotheby's New York",
+      "type": "SELLING_THROUGH",
+      "properties": {
+        "date": "2000"
+      }
+    },
+    {
+      "startNode": "Vaman Ghiya",
+      "endNode": "Christie's Auction House",
+      "type": "SELLING_THROUGH",
+      "properties": {
+        "date": "1997"
+      }
+    },
+    {
+      "startNode": "Vaman Ghiya",
+      "endNode": "Vilasgarh Temple",
+      "type": "STEALING_FROM",
+      "properties": {
+        "date": "1999"
+      }
+    },
+    {
+      "startNode": "Vaman Ghiya",
+      "endNode": "Archaeological Survey of India",
+      "type": "RETURNING_MATERIAL_TO",
+      "properties": {}
+    }
+  ]
+}

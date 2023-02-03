@@ -1,0 +1,147 @@
+{"nodes": [
+    {
+      "label": "Mimbres",
+      "properties": {
+        "region": "Mogollon cultural tradition",
+        "phase": "Classic Mimbres",
+        "timePeriod": "1000-1150 AD"
+      }
+    },
+    {
+      "label": "J. Walter Fewkes",
+      "properties": {
+        "institution": "Smithsonian Institution"
+      }
+    },
+    {
+      "label": "Maxwell Museum",
+      "properties": {
+        "location": "University of New Mexico"
+      }
+    },
+    {
+      "label": "Mimbres Painted Pottery",
+      "properties": {
+        "author": "Gregory Schaaf",
+        "year": "1977"
+      }
+    },
+    {
+      "label": "East Fork Site",
+      "properties": {
+        "location": "Mimbres River, Gila National Forrest"
+      }
+    },
+    {
+      "label": "USDA Forest Service",
+      "properties": {
+        "location": "United States"
+      }
+    },
+    {
+      "label": "James Quarrell",
+      "properties": {
+        "relation": "brother"
+      }
+    },
+    {
+      "label": "Mike Quarrell",
+      "properties": {
+        "relation": "brother"
+      }
+    },
+    {
+      "label": "Aaron Sera",
+      "properties": {
+        "relation": "nephew"
+      }
+    },
+    {
+      "label": "Charles Quarrell",
+      "properties": {
+        "relation": "family",
+        "location": "Las Cruces, New Mexico"
+      }
+    },
+    {
+      "label": "Frank Quarrell",
+      "properties": {
+        "relation": "family"
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "startNode": "J. Walter Fewkes",
+      "endNode": "Mimbres",
+      "type": "SHOWED",
+      "properties": {
+        "date": "1910s"
+      }
+    },
+    {
+      "startNode": "Maxwell Museum",
+      "endNode": "Mimbres",
+      "type": "COLLECTED",
+      "properties": {
+        "date": "1920s-1930s"
+      }
+    },
+    {
+      "startNode": "Gregory Schaaf",
+      "endNode": "Mimbres Painted Pottery",
+      "type": "WROTE",
+      "properties": {
+        "date": "1977"
+      }
+    },
+    {
+      "startNode": "USDA Forest Service",
+      "endNode": "East Fork Site",
+      "type": "MONITORED",
+      "properties": {
+        "date": "February 2000"
+      }
+    },
+    {
+      "startNode": "James Quarrell",
+      "endNode": "East Fork Site",
+      "type": "LOTTED",
+      "properties": {
+        "date": "February 23, 2000"
+      }
+    },
+    {
+      "startNode": "Mike Quarrell",
+      "endNode": "East Fork Site",
+      "type": "LOTTED",
+      "properties": {
+        "date": "February 23, 2000"
+      }
+    },
+    {
+      "startNode": "Aaron Sera",
+      "endNode": "East Fork Site",
+      "type": "LOTTED",
+      "properties": {
+        "date": "February 23, 2000"
+      }
+    },
+    {
+      "startNode": "Charles Quarrell",
+      "endNode": "East Fork Site",
+      "type": "LOTTED",
+      "properties": {
+        "date": "October 1975"
+      }
+    },
+    {
+      "startNode": "Frank Quarrell",
+      "endNode": "East Fork Site",
+      "type": "LOTTED",
+      "properties": {
+        "date": "October 1975"
+      }
+    }
+  ]
+}

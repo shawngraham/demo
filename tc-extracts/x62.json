@@ -1,0 +1,253 @@
+{"nodes": [
+    {
+      "label": "Mask",
+      "properties": {
+        "madeIn": "Río Azul",
+        "date": "Early Classic Period",
+        "material": "Fuschite",
+        "owner": "Kinich Ahaw, the sun god",
+        "price": "$35,000"
+      }
+    }, 
+    {
+      "label": "Peter G. Wray",
+      "properties": {
+        "location": "Scottsdale, Arizona"
+      }
+    }, 
+    {
+      "label": "Andre Emmerich’s New York Gallery",
+      "properties": {
+        "location": "New York"
+      }
+    }, 
+    {
+      "label": "Detroit Institute of Art",
+      "properties": {
+        "location": "Detroit"
+      }
+    }, 
+    {
+      "label": "National Geographic Magazine",
+      "properties": {
+        "location": "United States"
+      }
+    }, 
+    {
+      "label": "Guatemalan Institute of Anthropology and History",
+      "properties": {
+        "location": "Guatemala"
+      }
+    }, 
+    {
+      "label": "Barbier-Mueller Pre-Columbian Art Museum",
+      "properties": {
+        "location": "Barcelona"
+      }
+    }, 
+    {
+      "label": "Guatemalan Government",
+      "properties": {
+        "location": "Guatemala"
+      }
+    }, 
+    {
+      "label": "Barcelona Court",
+      "properties": {
+        "location": "Barcelona"
+      }
+    },
+    {
+      "label": "Río Azul",
+      "properties": {
+        "location": "Guatemala"
+      }
+    }, 
+    {
+      "label": "Tomb 1",
+      "properties": {
+        "location": "Río Azul"
+      }
+    }, 
+    {
+      "label": "Stela 1",
+      "properties": {
+        "location": "Río Azul"
+      }
+    }, 
+    {
+      "label": "Zak Balam",
+      "properties": {
+        "location": "Río Azul"
+      }
+    }, 
+    {
+      "label": "Richard",
+      "properties": {
+        "location": "Río Azul"
+      }
+    },
+    {
+      "label": "Ian Graham",
+      "properties": {
+        "location": "Río Azul"
+      }
+    },
+    {
+      "label": "Hernández Sánchez",
+      "properties": {
+        "location": "Barcelona"
+      }
+    },
+    {
+      "label": "Pakal",
+      "properties": {
+        "location": "Palenque"
+      }
+    },
+    {
+      "label": "Occam's Razor",
+      "properties": {
+        "definition": "The most plausible scenario is the one which demands the fewest assumptions based on the available evidence"
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "startNode": "Mask",
+      "endNode": "Peter G. Wray",
+      "type": "BOUGHT_BY",
+      "properties": {
+        "date": "1984"
+      }
+    },
+    {
+      "startNode": "Mask",
+      "endNode": "Andre Emmerich’s New York Gallery",
+      "type": "OFFERED_BY",
+      "properties": {
+        "date": "1984"
+      }
+    },
+    {
+      "startNode": "Mask",
+      "endNode": "Detroit Institute of Art",
+      "type": "BOUGHT_BY",
+      "properties": {
+        "date": "1984"
+      }
+    },
+    {
+      "startNode": "Mask",
+      "endNode": "National Geographic Magazine",
+      "type": "OFFERED_BY",
+      "properties": {
+        "date": "1990s"
+      }
+    },
+    {
+      "startNode": "Mask",
+      "endNode": "Guatemalan Institute of Anthropology and History",
+      "type": "OFFERED_BY",
+      "properties": {
+        "date": "1990s"
+      }
+    },
+    {
+      "startNode": "Mask",
+      "endNode": "Barbier-Mueller Pre-Columbian Art Museum",
+      "type": "OWNED_BY",
+      "properties": {
+        "date": "1999"
+      }
+    },
+    {
+      "startNode": "Mask",
+      "endNode": "Guatemalan Government",
+      "type": "CLAIMED_BY",
+      "properties": {
+        "date": "2001"
+      }
+    },
+    {
+      "startNode": "Mask",
+      "endNode": "Barcelona Court",
+      "type": "DENIED_BY",
+      "properties": {
+        "date": "2002"
+      }
+    },
+    {
+      "startNode": "Mask",
+      "endNode": "Río Azul",
+      "type": "FROM",
+      "properties": {
+        "date": "Late 1970s"
+      }
+    },
+    {
+      "startNode": "Mask",
+      "endNode": "Tomb 1",
+      "type": "FROM",
+      "properties": {
+        "date": "1981"
+      }
+    },
+    {
+      "startNode": "Mask",
+      "endNode": "Stela 1",
+      "type": "RELATED_TO",
+      "properties": {
+        "date": "393 AD"
+      }
+    },
+    {
+      "startNode": "Mask",
+      "endNode": "Zak Balam",
+      "type": "RELATED_TO",
+      "properties": {
+        "date": "417 AD"
+      }
+    },
+    {
+      "startNode": "Mask",
+      "endNode": "Richard",
+      "type": "SEEN_BY",
+      "properties": {
+        "date": "1962"
+      }
+    },
+    {
+      "startNode": "Mask",
+      "endNode": "Ian Graham",
+      "type": "SEEN_BY",
+      "properties": {
+        "date": "1981"
+      }
+    },
+    {
+      "startNode": "Mask",
+      "endNode": "Hernández Sánchez",
+      "type": "DOCUMENTED_BY",
+      "properties": {
+        "date": "2001"
+      }
+    },
+    {
+      "startNode": "Mask",
+      "endNode": "Pakal",
+      "type": "RELATED_TO",
+      "properties": {
+        "date": "Early Classic Period"
+      }
+    },
+    {
+      "startNode": "Mask",
+      "endNode": "Occam's Razor",
+      "type": "APPLIES_TO",
+      "properties": {
+        "date": "Late 1990s"
+      }
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+{"nodes": [
+    {
+      "label": "El Manatí",
+      "properties": {
+        "location": "Mexican state of Veracruz, near the town of Hidalgotitlán",
+        "usage": "Sacrificial bog utilized by the Olmec culture from around 1600 to 1200 BC",
+        "condition": "Anaerobic",
+        "discovery": "1987"
+      }
+    },
+    {
+      "label": "El Manatí Busts",
+      "properties": {
+        "date": "1200 BC",
+        "style": "Elongated man"
+      }
+    },
+    {
+      "label": "Leonardo Patterson",
+      "properties": {
+        "profession": "Dealer",
+        "location": "Spain and Germany"
+      }
+    },
+    {
+      "label": "INAH",
+      "properties": {
+        "organization": "Instituto Nacional de Antropología e Historia"
+      }
+    },
+    {
+      "label": "Consejo Nacional para la Cultura y Las Artes",
+      "properties": {
+        "organization": "Mexican Government"
+      }
+    },
+    {
+      "label": "Interpol",
+      "properties": {
+        "organization": "International Criminal Police Organization"
+      }
+    },
+    {
+      "label": "Michael Coe",
+      "properties": {
+        "profession": "Archaeologist"
+      }
+    },
+    {
+      "label": "Julio Aguilar",
+      "properties": {
+        "profession": "Journalist"
+      }
+    },
+    {
+      "label": "Munich Civil Court",
+      "properties": {
+        "location": "Munich, Germany"
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "startNode": "El Manatí",
+      "endNode": "Leonardo Patterson",
+      "type": "LINKED_BY",
+      "properties": {
+        "date": "1996"
+      }
+    },
+    {
+      "startNode": "El Manatí",
+      "endNode": "INAH",
+      "type": "REPORTED_TO",
+      "properties": {
+        "date": "1988"
+      }
+    },
+    {
+      "startNode": "El Manatí Busts",
+      "endNode": "Consejo Nacional para la Cultura y Las Artes",
+      "type": "PHOTOGRAPHED_BY",
+      "properties": {}
+    },
+    {
+      "startNode": "El Manatí Busts",
+      "endNode": "Interpol",
+      "type": "SEIZED_BY",
+      "properties": {
+        "date": "1996"
+      }
+    },
+    {
+      "startNode": "El Manatí Busts",
+      "endNode": "Michael Coe",
+      "type": "OBSERVED_BY",
+      "properties": {
+        "date": "1988"
+      }
+    },
+    {
+      "startNode": "El Manatí Busts",
+      "endNode": "Julio Aguilar",
+      "type": "REPORTED_BY",
+      "properties": {}
+    },
+    {
+      "startNode": "El Manatí Busts",
+      "endNode": "Munich Civil Court",
+      "type": "RULED_BY",
+      "properties": {
+        "date": "2015"
+      }
+    }
+  ]
+}

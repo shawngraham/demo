@@ -1,0 +1,111 @@
+{"nodes": [
+    {
+      "label": "Mezcala",
+      "properties": {
+        "culture": "Preclassic/Formative period",
+        "region": "Mesoamerica"
+      }
+    },
+    {
+      "label": "Xochipala",
+      "properties": {
+        "location": "Municipality of Eduardo Neri, Mexican state of Guerrero",
+        "period": "Classic and Postclassic periods"
+      }
+    },
+    {
+      "label": "William Niven",
+      "properties": {
+        "occupation": "Mineralogist and Archaeologist"
+      }
+    },
+    {
+      "label": "Harvard’s Peabody Museum",
+      "properties": {}
+    },
+    {
+      "label": "Princeton University Art Museum",
+      "properties": {}
+    },
+    {
+      "label": "Gillett G. Griffin",
+      "properties": {
+        "occupation": "Curator"
+      }
+    },
+    {
+      "label": "Peter G. Wray",
+      "properties": {}
+    },
+    {
+      "label": "Peter David Joralemon",
+      "properties": {
+        "occupation": "Curator at the Lowe Art Museum, Director of Atlantic Art Partners"
+      }
+    },
+    {
+      "label": "Forrest D. Colburn",
+      "properties": {
+        "occupation": "Professor of Latin American Studies at the City University of New York"
+      }
+    },
+    {
+      "label": "Aztec City of Tenochtitlan",
+      "properties": {
+        "location": "Mexico"
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "startNode": "Mezcala",
+      "endNode": "Xochipala",
+      "type": "ASSOCIATED_WITH",
+      "properties": {}
+    },
+    {
+      "startNode": "William Niven",
+      "endNode": "Harvard’s Peabody Museum",
+      "type": "SOLD_TO",
+      "properties": {}
+    },
+    {
+      "startNode": "Gillett G. Griffin",
+      "endNode": "Princeton University Art Museum",
+      "type": "DONATED_TO",
+      "properties": {
+        "date": "1972, 2003"
+      }
+    },
+    {
+      "startNode": "Peter G. Wray",
+      "endNode": "Princeton University Art Museum",
+      "type": "DONATED_TO",
+      "properties": {
+        "date": "1982"
+      }
+    },
+    {
+      "startNode": "Peter David Joralemon",
+      "endNode": "Princeton University Art Museum",
+      "type": "DONATED_TO",
+      "properties": {
+        "date": "1983"
+      }
+    },
+    {
+      "startNode": "Forrest D. Colburn",
+      "endNode": "Princeton University Art Museum",
+      "type": "DONATED_TO",
+      "properties": {
+        "date": "2003"
+      }
+    },
+    {
+      "startNode": "Aztec City of Tenochtitlan",
+      "endNode": "Mezcala",
+      "type": "EXCAVATED_FROM",
+      "properties": {}
+    }
+  ]
+}

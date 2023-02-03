@@ -1,0 +1,449 @@
+{"nodes": [
+
+    {
+
+      "label": "Pangboche Hand",
+
+      "properties": {
+
+        "origin": "Nepali monastery"
+
+      }
+
+    },
+
+    {
+
+      "label": "James Stewart",
+
+      "properties": {
+
+        "profession": "Actor"
+
+      }
+
+    },
+
+    {
+
+      "label": "Tom Slick",
+
+      "properties": {
+
+        "profession": "Texas oil heir"
+
+      }
+
+    },
+
+    {
+
+      "label": "Peter Byrne",
+
+      "properties": {
+
+        "profession": "Explorer"
+
+      }
+
+    },
+
+    {
+
+      "label": "William Osman Hill",
+
+      "properties": {
+
+        "profession": "Primatologist"
+
+      }
+
+    },
+
+    {
+
+      "label": "Lama Sangwa Dorjee",
+
+      "properties": {
+
+        "date": "17th century"
+
+      }
+
+    },
+
+    {
+
+      "label": "Pangboche Monastery",
+
+      "properties": {
+
+        "location": "Near Mount Everest"
+
+      }
+
+    },
+
+    {
+
+      "label": "Sherpa",
+
+      "properties": {
+
+        "origin": "High Himalaya"
+
+      }
+
+    },
+
+    {
+
+      "label": "Khumjung Monestary",
+
+      "properties": {
+
+        "location": "High Himalaya"
+
+      }
+
+    },
+
+    {
+
+      "label": "Yeti",
+
+      "properties": {
+
+        "origin": "High Himalaya mythology"
+
+      }
+
+    },
+
+    {
+
+      "label": "George Agogino",
+
+      "properties": {
+
+        "profession": "American anthropologist"
+
+      }
+
+    },
+
+    {
+
+      "label": "Unsolved Mysteries",
+
+      "properties": {
+
+        "type": "Television Program"
+
+      }
+
+    },
+
+    {
+
+      "label": "Royal College of Surgeons’ Hunterian Museum",
+
+      "properties": {
+
+        "location": "London"
+
+      }
+
+    },
+
+    {
+
+      "label": "Grand Hotel",
+
+      "properties": {
+
+        "location": "Calcutta"
+
+      }
+
+    },
+
+    {
+
+      "label": "Heathrow Airport",
+
+      "properties": {
+
+        "location": "London"
+
+      }
+
+    },
+
+    {
+
+      "label": "Weta Workshop",
+
+      "properties": {
+
+        "type": "Film production company"
+
+      }
+
+    },
+
+    {
+
+      "label": "Lord of the Rings",
+
+      "properties": {
+
+        "type": "Film"
+
+      }
+
+    },
+
+    {
+
+      "label": "Avatar",
+
+      "properties": {
+
+        "type": "Film"
+
+      }
+
+    },
+
+    {
+
+      "label": "Edinburgh Zoo",
+
+      "properties": {
+
+        "location": "Edinburgh"
+
+      }
+
+    },
+
+    {
+
+      "label": "Zoological Society of Scotland",
+
+      "properties": {
+
+        "type": "Organization"
+
+      }
+
+    },
+
+    {
+
+      "label": "Mike Allsop",
+
+      "properties": {
+
+        "profession": "Climber"
+
+      }
+
+    },
+
+    {
+
+      "label": "Lama Gershe",
+
+      "properties": {
+
+        "date": "2010"
+
+      }
+
+    }
+
+  ],
+
+  "relationships": [
+
+    {
+
+      "startNode": "Peter Byrne",
+
+      "endNode": "Pangboche Monastery",
+
+      "type": "VISITED",
+
+      "properties": {
+
+        "date": "1958"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Peter Byrne",
+
+      "endNode": "William Osman Hill",
+
+      "type": "TOLD_STORY_OF",
+
+      "properties": {
+
+        "date": "London"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Peter Byrne",
+
+      "endNode": "Tom Slick",
+
+      "type": "TOLD_STORY_OF",
+
+      "properties": {
+
+        "date": "London"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "William Osman Hill",
+
+      "endNode": "Peter Byrne",
+
+      "type": "OBTAINED_FINGER_FROM",
+
+      "properties": {
+
+        "date": "London"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "James Stewart",
+
+      "endNode": "Heathrow Airport",
+
+      "type": "SMUGGLED",
+
+      "properties": {
+
+        "date": "UK"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "George Agogino",
+
+      "endNode": "Unsolved Mysteries",
+
+      "type": "TESTED_FOR",
+
+      "properties": {
+
+        "date": "1991"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "William Osman Hill",
+
+      "endNode": "Royal College of Surgeons’ Hunterian Museum",
+
+      "type": "BEQUATHED",
+
+      "properties": {
+
+        "date": "1975"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Rob Ogden",
+
+      "endNode": "Royal College of Surgeons’ Hunterian Museum",
+
+      "type": "TESTED",
+
+      "properties": {
+
+        "date": "2011"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Rob Jones",
+
+      "endNode": "Zoological Society of Scotland",
+
+      "type": "WORKED_FOR",
+
+      "properties": {
+
+        "date": "2011"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Mike Allsop",
+
+      "endNode": "Weta Workshop",
+
+      "type": "APPROACHED",
+
+      "properties": {
+
+        "date": "2010"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Mike Allsop",
+
+      "endNode": "Lama Gershe",
+
+      "type": "KNOWS",
+
+      "properties": {
+
+        "date": "2010"
+
+      }
+
+    }
+
+  ]
+
+}

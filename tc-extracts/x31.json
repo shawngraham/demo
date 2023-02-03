@@ -1,0 +1,294 @@
+{"nodes": [
+    {
+      "label": "Giacomo Medici",
+      "properties": {
+        "country": "Italy",
+        "convicted": "2005",
+        "crime": "Receiving stolen goods, illegal export of goods, and conspiracy to traffic"
+      }
+    },
+    {
+      "label": "Robert Hecht",
+      "properties": {
+        "country": "US"
+      }
+    },
+    {
+      "label": "Euphronios (Sarpedon) Krater",
+      "properties": {
+        "madeIn": "Athens",
+        "date": "515 BC",
+        "potter": "Euxitheos",
+        "painter": "Euphronios",
+        "price": "$1 million"
+      }
+    },
+    {
+      "label": "Metropolitan Museum of Art",
+      "properties": {
+        "country": "US"
+      }
+    },
+    {
+      "label": "Christian Boursaud",
+      "properties": {
+        "country": "Switzerland"
+      }
+    },
+    {
+      "label": "Hydra Gallery",
+      "properties": {
+        "location": "Geneva"
+      }
+    },
+    {
+      "label": "Onesimos Kylix",
+      "properties": {
+        "price": "$100,000"
+      }
+    },
+    {
+      "label": "J. Paul Getty Museum",
+      "properties": {
+        "country": "US"
+      }
+    },
+    {
+      "label": "Apulian Vases",
+      "properties": {
+        "madeIn": "Apulia"
+      }
+    },
+    {
+      "label": "Mat Securitas",
+      "properties": {
+        "location": "Geneva"
+      }
+    },
+    {
+      "label": "Arts Franc",
+      "properties": {
+        "location": "Geneva"
+      }
+    },
+    {
+      "label": "Tecafin Fiduciaire",
+      "properties": {
+        "location": "Geneva"
+      }
+    },
+    {
+      "label": "Robin Symes",
+      "properties": {
+        "country": "UK"
+      }
+    },
+    {
+      "label": "Frieda Tchacos",
+      "properties": {
+        "country": "Switzerland"
+      }
+    },
+    {
+      "label": "Nikolas Koutoulakis",
+      "properties": {
+        "country": "Greece"
+      }
+    },
+    {
+      "label": "Ali and Hischam Aboutaam",
+      "properties": {
+        "country": "Lebanon"
+      }
+    },
+    {
+      "label": "Lawrence and Barbara Fleischman",
+      "properties": {
+        "country": "US"
+      }
+    },
+    {
+      "label": "Maurice Tempelsman",
+      "properties": {
+        "country": "US"
+      }
+    },
+    {
+      "label": "Shelby White",
+      "properties": {
+        "country": "US"
+      }
+    },
+    {
+      "label": "Leon Levy",
+      "properties": {
+        "country": "US"
+      }
+    },
+    {
+      "label": "Hunt brothers",
+      "properties": {
+        "country": "US"
+      }
+    },
+    {
+      "label": "George Ortiz",
+      "properties": {
+        "country": "Switzerland"
+      }
+    },
+    {
+      "label": "José Luis Várez Fisa",
+      "properties": {
+        "country": "Spain"
+      }
+    },
+    {
+      "label": "San Saba Church",
+      "properties": {
+        "location": "Rome"
+      }
+    },
+    {
+      "label": "Editions Services",
+      "properties": {
+        "location": "Geneva"
+      }
+    },
+    {
+      "label": "Santa Marinella",
+      "properties": {
+        "location": "Rome"
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "startNode": "Giacomo Medici",
+      "endNode": "Robert Hecht",
+      "type": "SUPPLIED_TO",
+      "properties": {
+        "date": "1967"
+      }
+    },
+    {
+      "startNode": "Euphronios (Sarpedon) Krater",
+      "endNode": "Metropolitan Museum of Art",
+      "type": "BOUGHT_BY",
+      "properties": {
+        "date": "1972"
+      }
+    },
+    {
+      "startNode": "Giacomo Medici",
+      "endNode": "Christian Boursaud",
+      "type": "PARTNERED_WITH",
+      "properties": {
+        "date": "1978"
+      }
+    },
+    {
+      "startNode": "Onesimos Kylix",
+      "endNode": "J. Paul Getty Museum",
+      "type": "BOUGHT_BY",
+      "properties": {
+        "date": "1985"
+      }
+    },
+    {
+      "startNode": "Apulian Vases",
+      "endNode": "Sotheby's London",
+      "type": "CONSIGNED_BY",
+      "properties": {
+        "date": "1986"
+      }
+    },
+    {
+      "startNode": "Mat Securitas",
+      "endNode": "Sotheby's London",
+      "type": "CONSIGNED_BY",
+      "properties": {
+        "date": "1987 - 1994"
+      }
+    },
+    {
+      "startNode": "Arts Franc",
+      "endNode": "Sotheby's London",
+      "type": "CONSIGNED_BY",
+      "properties": {
+        "date": "1987 - 1994"
+      }
+    },
+    {
+      "startNode": "Tecafin Fiduciaire",
+      "endNode": "Sotheby's London",
+      "type": "CONSIGNED_BY",
+      "properties": {
+        "date": "1987 - 1994"
+      }
+    },
+    {
+      "startNode": "Giacomo Medici",
+      "endNode": "Robin Symes",
+      "type": "RELATED_TO"
+    },
+    {
+      "startNode": "Giacomo Medici",
+      "endNode": "Frieda Tchacos",
+      "type": "RELATED_TO"
+    },
+    {
+      "startNode": "Giacomo Medici",
+      "endNode": "Nikolas Koutoulakis",
+      "type": "RELATED_TO"
+    },
+    {
+      "startNode": "Giacomo Medici",
+      "endNode": "Ali and Hischam Aboutaam",
+      "type": "RELATED_TO"
+    },
+    {
+      "startNode": "Giacomo Medici",
+      "endNode": "Lawrence and Barbara Fleischman",
+      "type": "RELATED_TO"
+    },
+    {
+      "startNode": "Giacomo Medici",
+      "endNode": "Maurice Tempelsman",
+      "type": "RELATED_TO"
+    },
+    {
+      "startNode": "Giacomo Medici",
+      "endNode": "Shelby White",
+      "type": "RELATED_TO"
+    },
+    {
+      "startNode": "Giacomo Medici",
+      "endNode": "Leon Levy",
+      "type": "RELATED_TO"
+    },
+    {
+      "startNode": "Giacomo Medici",
+      "endNode": "Hunt brothers",
+      "type": "RELATED_TO"
+    },
+    {
+      "startNode": "Giacomo Medici",
+      "endNode": "George Ortiz",
+      "type": "RELATED_TO"
+    },
+    {
+      "startNode": "Giacomo Medici",
+      "endNode": "José Luis Várez Fisa",
+      "type": "RELATED_TO"
+    },
+    {
+      "startNode": "Editions Services",
+      "endNode": "San Saba Church",
+      "type": "STOLE_FROM",
+      "properties": {
+        "date": "1985"
+      }
+    },
+    {
+

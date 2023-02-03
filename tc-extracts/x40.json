@@ -1,0 +1,252 @@
+{"nodes": [
+    {
+      "label": "La Mina",
+      "properties": {
+        "location": "Jequetepeque Valley, Peru",
+        "date": "mid-1988"
+      }
+    },
+    {
+      "label": "Lord of Sipán",
+      "properties": {
+        "location": "Lambayeque, Peru"
+      }
+    },
+    {
+      "label": "Christopher Donnan",
+      "properties": {
+        "occupation": "Archaeologist"
+      }
+    },
+    {
+      "label": "Walter Alva",
+      "properties": {
+        "occupation": "Archaeologist"
+      }
+    },
+    {
+      "label": "Antiquities Collector",
+      "properties": {
+        "location": "Trujillo, Peru"
+      }
+    },
+    {
+      "label": "Unemployed Farmer",
+      "properties": {
+        "occupation": "Looter"
+      }
+    },
+    {
+      "label": "Kirkpatrick",
+      "properties": {
+        "occupation": "Writer"
+      }
+    },
+    {
+      "label": "John Bourne Collection",
+      "properties": {
+        "date": "1980s-1990s"
+      }
+    },
+    {
+      "label": "Gold Monkey Head Bead",
+      "properties": {
+        "location": "John Bourne Collection",
+        "date": "2011"
+      }
+    },
+    {
+      "label": "Gold Headdress",
+      "properties": {
+        "location": "La Mina",
+        "date": "1988"
+      }
+    },
+    {
+      "label": "Raul Apesteguía",
+      "properties": {
+        "occupation": "Collector"
+      }
+    },
+    {
+      "label": "Leonardo Patterson",
+      "properties": {
+        "occupation": "Dealer/Collector"
+      }
+    },
+    {
+      "label": "Yves de Parceval",
+      "properties": {
+        "occupation": "French Dealer"
+      }
+    },
+    {
+      "label": "Michel van Rijn",
+      "properties": {
+        "occupation": "Dutch Art Dealer"
+      }
+    },
+    {
+      "label": "Anton Roeckl",
+      "properties": {
+        "occupation": "German Millionaire"
+      }
+    },
+    {
+      "label": "Metropolitan Police",
+      "properties": {
+        "location": "London, UK"
+      }
+    },
+    {
+      "label": "Museo do Pobo Galego",
+      "properties": {
+        "location": "Santiago de Compostela, Spain"
+      }
+    },
+    {
+      "label": "ICE",
+      "properties": {
+        "location": "USA"
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "startNode": "La Mina",
+      "endNode": "Christopher Donnan",
+      "type": "SEARCHED_BY",
+      "properties": {
+        "date": "1989"
+      }
+    },
+    {
+      "startNode": "La Mina",
+      "endNode": "Walter Alva",
+      "type": "CONTACTED_BY",
+      "properties": {
+        "date": "1989"
+      }
+    },
+    {
+      "startNode": "La Mina",
+      "endNode": "Antiquities Collector",
+      "type": "INFORMED_BY",
+      "properties": {
+        "date": "1989"
+      }
+    },
+    {
+      "startNode": "La Mina",
+      "endNode": "Unemployed Farmer",
+      "type": "DISCOVERED_BY",
+      "properties": {
+        "date": "1988"
+      }
+    },
+    {
+      "startNode": "Gold Headdress",
+      "endNode": "Raul Apesteguía",
+      "type": "PURCHASED_BY",
+      "properties": {
+        "date": "1988"
+      }
+    },
+    {
+      "startNode": "Gold Headdress",
+      "endNode": "Leonardo Patterson",
+      "type": "SOLD_TO",
+      "properties": {
+        "date": "1996"
+      }
+    },
+    {
+      "startNode": "Gold Headdress",
+      "endNode": "Museo do Pobo Galego",
+      "type": "EXHIBITED_AT",
+      "properties": {
+        "date": "1997"
+      }
+    },
+    {
+      "startNode": "Gold Headdress",
+      "endNode": "Metropolitan Police",
+      "type": "RECOVERED_BY",
+      "properties": {
+        "date": "2006"
+      }
+    },
+    {
+      "startNode": "Gold Headdress",
+      "endNode": "Michel van Rijn",
+      "type": "STING_ORCHESTRATED_BY",
+      "properties": {
+        "date": "2006"
+      }
+    },
+    {
+      "startNode": "John Bourne Collection",
+      "endNode": "Gold Monkey Head Bead",
+      "type": "CONTAINED",
+      "properties": {
+        "date": "1980s-1990s"
+      }
+    },
+    {
+      "startNode": "Gold Monkey Head Bead",
+      "endNode": "Metropolitan Police",
+      "type": "RECOVERED_BY",
+      "properties": {
+        "date": "2011"
+      }
+    },
+    {
+      "startNode": "Raul Apesteguía",
+      "endNode": "Yves de Parceval",
+      "type": "SHIPPED_BY",
+      "properties": {
+        "date": "1996"
+      }
+    },
+    {
+      "startNode": "John Bourne Collection",
+      "endNode": "Gold Monkey Head Bead",
+      "type": "CONTAINED",
+      "properties": {
+        "date": "1980s-1990s"
+      }
+    },
+    {
+      "startNode": "Gold Monkey Head Bead",
+      "endNode": "Michel van Rijn",
+      "type": "STING_ORCHESTRATED_BY",
+      "properties": {
+        "date": "2006"
+      }
+    },
+    {
+      "startNode": "Leonardo Patterson",
+      "endNode": "Museo do Pobo Galego",
+      "type": "EXHIBITED_AT",
+      "properties": {
+        "date": "1997"
+      }
+    },
+    {
+      "startNode": "Anton Roeckl",
+      "endNode": "ICE",
+      "type": "SEIZED_BY",
+      "properties": {
+        "date": "2009"
+      }
+    },
+    {
+      "startNode": "Anton Roeckl",
+      "endNode": "Peru",
+      "type": "RETURNED_TO",
+      "properties": {
+        "date": "2009"
+      }
+    }
+  ]
+}

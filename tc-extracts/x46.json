@@ -1,0 +1,213 @@
+{"nodes": [
+    {
+      "label": "Arab Dhow Shipwreck",
+      "properties": {
+        "date": "9th century CE",
+        "location": "Belitung, Indonesia",
+        "cargo": "Chinese wares"
+      }
+    },
+    {
+      "label": "Tang Dynasty",
+      "properties": {
+        "timePeriod": "723 AD - 907 AD"
+      }
+    },
+    {
+      "label": "Changsha Ceramics",
+      "properties": {
+        "origin": "Hunan Province, China"
+      }
+    },
+    {
+      "label": "Seabed Explorations",
+      "properties": {
+        "director": "Tilman Walterfang"
+      }
+    },
+    {
+      "label": "French Divers",
+      "properties": {}
+    },
+    {
+      "label": "Sentosa Leisure Group",
+      "properties": {
+        "parentCompany": "Sentosa Development Corporation"
+      }
+    },
+    {
+      "label": "Singapore Tourism Board",
+      "properties": {}
+    },
+    {
+      "label": "Asian Civilizations Museum",
+      "properties": {}
+    },
+    {
+      "label": "The National Geographic",
+      "properties": {}
+    },
+    {
+      "label": "Victor Mair",
+      "properties": {
+        "profession": "Chinese languages and literature professor"
+      }
+    },
+    {
+      "label": "Julian Raby",
+      "properties": {
+        "title": "Director of the Smithsonian Institution’s Freer/Sackler Galleries"
+      }
+    },
+    {
+      "label": "Pamelia Lee",
+      "properties": {
+        "affiliation": "Singapore Tourism Board"
+      }
+    },
+    {
+      "label": "Michael Flecker",
+      "properties": {
+        "profession": "Southeast Asian underwater specialist"
+      }
+    },
+    {
+      "label": "Shipwrecked: Tang Treasures and Monsoon Winds",
+      "properties": {
+        "date": "19 February 2011"
+      }
+    },
+    {
+      "label": "American Association of Museums",
+      "properties": {}
+    },
+    {
+      "label": "UNESCO 2001 Convention on the Protection of Underwater Cultural Heritage",
+      "properties": {}
+    },
+    {
+      "label": "The True History of Tea",
+      "properties": {}
+    },
+    {
+      "label": "Science Magazine",
+      "properties": {}
+    },
+    {
+      "label": "The New York Times",
+      "properties": {}
+    },
+    {
+      "label": "NPR",
+      "properties": {}
+    },
+    {
+      "label": "YouTube",
+      "properties": {}
+    }
+  ],
+  "relationships": [
+    {
+      "startNode": "Arab Dhow Shipwreck",
+      "endNode": "Tang Dynasty",
+      "type": "CARRIED_CARGO_FROM",
+      "properties": {}
+    },
+    {
+      "startNode": "Tang Dynasty",
+      "endNode": "Changsha Ceramics",
+      "type": "PRODUCED",
+      "properties": {}
+    },
+    {
+      "startNode": "Arab Dhow Shipwreck",
+      "endNode": "Seabed Explorations",
+      "type": "SALVAGED_BY",
+      "properties": {}
+    },
+    {
+      "startNode": "Arab Dhow Shipwreck",
+      "endNode": "French Divers",
+      "type": "SALVAGED_BY",
+      "properties": {}
+    },
+    {
+      "startNode": "Sentosa Leisure Group",
+      "endNode": "Singapore Tourism Board",
+      "type": "LOANED_BY",
+      "properties": {}
+    },
+    {
+      "startNode": "Singapore Tourism Board",
+      "endNode": "Asian Civilizations Museum",
+      "type": "EXHIBITED_BY",
+      "properties": {}
+    },
+    {
+      "startNode": "The National Geographic",
+      "endNode": "Arab Dhow Shipwreck",
+      "type": "FEATURED",
+      "properties": {}
+    },
+    {
+      "startNode": "Victor Mair",
+      "endNode": "Arab Dhow Shipwreck",
+      "type": "DISCUSSED",
+      "properties": {}
+    },
+    {
+      "startNode": "Julian Raby",
+      "endNode": "Pamelia Lee",
+      "type": "CONTACTED_BY",
+      "properties": {}
+    },
+    {
+      "startNode": "Michael Flecker",
+      "endNode": "Arab Dhow Shipwreck",
+      "type": "EXCAVATED",
+      "properties": {}
+    },
+    {
+      "startNode": "Shipwrecked: Tang Treasures and Monsoon Winds",
+      "endNode": "Singapore Tourism Board",
+      "type": "PUBLISHED_BY",
+      "properties": {}
+    },
+    {
+      "startNode": "American Association of Museums",
+      "endNode": "Shipwrecked: Tang Treasures and Monsoon Winds",
+      "type": "VIOLATED_BY",
+      "properties": {}
+    },
+    {
+      "startNode": "Victor Mair",
+      "endNode": "The True History of Tea",
+      "type": "AUTHORED",
+      "properties": {}
+    },
+    {
+      "startNode": "Science Magazine",
+      "endNode": "Shipwrecked: Tang Treasures and Monsoon Winds",
+      "type": "COVERED",
+      "properties": {}
+    },
+    {
+      "startNode": "The New York Times",
+      "endNode": "Shipwrecked: Tang Treasures and Monsoon Winds",
+      "type": "COVERED",
+      "properties": {}
+    },
+    {
+      "startNode": "NPR",
+      "endNode": "Shipwrecked: Tang Treasures and Monsoon Winds",
+      "type": "COVERED",
+      "properties": {}
+    },
+    {
+      "startNode": "YouTube",
+      "endNode": "Arab Dhow Shipwreck",
+      "type": "FEATURED",
+      "properties": {}
+    }
+  ]
+}

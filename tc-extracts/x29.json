@@ -1,0 +1,561 @@
+{"nodes": [
+
+    {
+
+      "label": "Haisla First Nation",
+
+      "properties": {
+
+        "location": "North Coast of British Columbia",
+
+        "approximateMembership": "1500 people"
+
+      }
+
+    },
+
+    {
+
+      "label": "Douglas and Devastation Channel Kitamaat",
+
+      "properties": {
+
+        "name": "Haisla"
+
+      }
+
+    },
+
+    {
+
+      "label": "Kitlope",
+
+      "properties": {
+
+        "name": "Henaksiala"
+
+      }
+
+    },
+
+    {
+
+      "label": "Chief G’psgolox",
+
+      "properties": {
+
+        "clan": "Eagle"
+
+      }
+
+    },
+
+    {
+
+      "label": "Humdzeed",
+
+      "properties": {
+
+        "clan": "Raven"
+
+      }
+
+    },
+
+    {
+
+      "label": "Wakas",
+
+      "properties": {
+
+        "clan": "Raven"
+
+      }
+
+    },
+
+    {
+
+      "label": "Misk’usa",
+
+      "properties": {
+
+        "location": "Henaksiala village"
+
+      }
+
+    },
+
+    {
+
+      "label": "Tsooda",
+
+      "properties": {
+
+        "type": "Spirit"
+
+      }
+
+    },
+
+    {
+
+      "label": "Swedish vice consul to British Columbia",
+
+      "properties": {
+
+        "name": "Olof Hansson"
+
+      }
+
+    },
+
+    {
+
+      "label": "Canadian Department of Indian Affairs",
+
+      "properties": {
+
+        "location": "Canada"
+
+      }
+
+    },
+
+    {
+
+      "label": "Sweden's Museum of Ethnography",
+
+      "properties": {
+
+        "location": "Stockholm"
+
+      }
+
+    },
+
+    {
+
+      "label": "Indigenous agent",
+
+      "properties": {
+
+        "location": "British Columbia"
+
+      }
+
+    },
+
+    {
+
+      "label": "Canadian Government",
+
+      "properties": {
+
+        "location": "Canada"
+
+      }
+
+    },
+
+    {
+
+      "label": "Louisa Smith",
+
+      "properties": {
+
+        "relation": "Great-great grand daughter of Chief G’psgolox"
+
+      }
+
+    },
+
+    {
+
+      "label": "Greenpeace",
+
+      "properties": {
+
+        "location": "International"
+
+      }
+
+    },
+
+    {
+
+      "label": "Totem Pole",
+
+      "properties": {
+
+        "location": "Misk’usa",
+
+        "carvedBy": "Humdzeed and Wakas"
+
+      }
+
+    },
+
+    {
+
+      "label": "Potlach",
+
+      "properties": {
+
+        "type": "Traditional celebration"
+
+      }
+
+    },
+
+    {
+
+      "label": "European Contact",
+
+      "properties": {
+
+        "type": "Colonization"
+
+      }
+
+    },
+
+    {
+
+      "label": "1884 Canadian Government",
+
+      "properties": {
+
+        "action": "Outlawed the potlach"
+
+      }
+
+    },
+
+    {
+
+      "label": "1894 Canadian Government",
+
+      "properties": {
+
+        "action": "Mandatory removal of Indigenous children to residential schools"
+
+      }
+
+    },
+
+    {
+
+      "label": "1991 Haisla",
+
+      "properties": {
+
+        "action": "Discovered the pole in the collection of the Museum of Ethnography in Stockholm"
+
+      }
+
+    },
+
+    {
+
+      "label": "1994 Canadian Government",
+
+      "properties": {
+
+        "action": "Granted permission to Sweden to “gift” the pole to the Haisla"
+
+      }
+
+    },
+
+    {
+
+      "label": "Henry Robertson",
+
+      "properties": {
+
+        "relation": "Grandson of one of the original pole carvers"
+
+      }
+
+    },
+
+    {
+
+      "label": "2006 Haisla",
+
+      "properties": {
+
+        "action": "Conducted a traditional pole raising ceremony for the replica pole at the Museum of Ethnography"
+
+      }
+
+    },
+
+    {
+
+      "label": "23 March 2020",
+
+      "properties": {
+
+        "action": "Original pole was packed and shipped back to Canada"
+
+      }
+
+    },
+
+    {
+
+      "label": "1 July 2020",
+
+      "properties": {
+
+        "action": "Original pole returned to Kitimaat Village"
+
+      }
+
+    }
+
+
+
+  ],
+
+  "relationships": [
+
+    {
+
+      "startNode": "Haisla First Nation",
+
+      "endNode": "Douglas and Devastation Channel Kitamaat",
+
+      "type": "AMALGAMATION_OF",
+
+      "properties": {
+
+        "date": "1947"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Haisla First Nation",
+
+      "endNode": "Kitlope",
+
+      "type": "AMALGAMATION_OF",
+
+      "properties": {
+
+        "date": "1947"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Chief G’psgolox",
+
+      "endNode": "Tsooda",
+
+      "type": "HAD_EXPERIENCE_WITH",
+
+      "properties": {
+
+        "date": "1872"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Humdzeed",
+
+      "endNode": "Totem Pole",
+
+      "type": "CARVED",
+
+      "properties": {
+
+        "date": "1872"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Wakas",
+
+      "endNode": "Totem Pole",
+
+      "type": "CARVED",
+
+      "properties": {
+
+        "date": "1872"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Totem Pole",
+
+      "endNode": "Misk’usa",
+
+      "type": "ERECTED_IN",
+
+      "properties": {
+
+        "date": "1872"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Swedish vice consul to British Columbia",
+
+      "endNode": "Canadian Department of Indian Affairs",
+
+      "type": "ASKED_FOR",
+
+      "properties": {
+
+        "date": "December 1927"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Swedish vice consul to British Columbia",
+
+      "endNode": "Indigenous agent",
+
+      "type": "NOTIFIED_BY",
+
+      "properties": {
+
+        "date": "December 1927"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Swedish vice consul to British Columbia",
+
+      "endNode": "Sweden's Museum of Ethnography",
+
+      "type": "BAGGED_FOR",
+
+      "properties": {
+
+        "date": "December 1927"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Canadian Government",
+
+      "endNode": "Sweden's Museum of Ethnography",
+
+      "type": "GRANTED_REQUEST",
+
+      "properties": {
+
+        "date": "January 1928"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Louisa Smith",
+
+      "endNode": "Chief G’psgolox",
+
+      "type": "RELATION_TO"
+
+    },
+
+    {
+
+      "startNode": "Haisla",
+
+      "endNode": "Greenpeace",
+
+      "type": "RECEIVED_LOGISTICAL_HELP_FROM",
+
+      "properties": {
+
+        "date": "1991"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Totem Pole",
+
+      "endNode": "Potlach",
+
+      "type": "TIED_TO"
+
+    },
+
+    {
+
+      "startNode": "European Contact",
+
+      "endNode": "Potlach",
+
+      "type": "CAUSED_FLOWERING_OF",
+
+      "properties": {
+
+        "date": "Early 19th century"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "1884 Canadian Government",
+
+      "endNode": "Potlach",
+
+      "type": "OULAWED"
+
+    },
+
+    {
+
+      "startNode": "1894 Canadian Government",
+
+      "endNode": "Traditional Arts",
+
+      "type": "PREVENTED_TEACHING_OF"
+
+    },
+
+    {
+
+      "startNode": "1991 Haisla",
+
+      "endNode": "Sweden's Museum of Ethnography"}

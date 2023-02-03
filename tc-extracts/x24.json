@@ -1,0 +1,477 @@
+{"nodes": [
+
+    {
+
+      "label": "Sarmizegetusa Regia",
+
+      "properties": {
+
+        "location": "Romania",
+
+        "date": "82 BC - 106 AD"
+
+      }
+
+    },
+
+    {
+
+      "label": "Dacian Fortresses of the Orastie Mountains",
+
+      "properties": {
+
+        "type": "UNESCO World Heritage site"
+
+      }
+
+    },
+
+    {
+
+      "label": "Hoard 1",
+
+      "properties": {
+
+        "location": "Muchea Cetăţii",
+
+        "finds": "Six gold bracelets"
+
+      }
+
+    },
+
+    {
+
+      "label": "Hoard 2",
+
+      "properties": {
+
+        "location": "Unknown",
+
+        "finds": "One gold bracelet, 800 staters of Lysimachus type, and silver adornments"
+
+      }
+
+    },
+
+    {
+
+      "label": "Hoard 3",
+
+      "properties": {
+
+        "location": "Unknown",
+
+        "finds": "Two gold bracelets, 200 staters, 500 tetradrachms"
+
+      }
+
+    },
+
+    {
+
+      "label": "Hoard 4",
+
+      "properties": {
+
+        "location": "Căprăreaţa Hill",
+
+        "finds": "Ten gold bracelets in a cist behind a rock"
+
+      }
+
+    },
+
+    {
+
+      "label": "Hoard 5",
+
+      "properties": {
+
+        "location": "Lower slopes of Căprăreaţa Hill",
+
+        "finds": "Five gold bracelets"
+
+      }
+
+    },
+
+    {
+
+      "label": "Christie's New York",
+
+      "properties": {
+
+        "type": "Auction House"
+
+      }
+
+    },
+
+    {
+
+      "label": "Grand Palais Biennale Exhibition",
+
+      "properties": {
+
+        "location": "Paris"
+
+      }
+
+    },
+
+    {
+
+      "label": "American Collector",
+
+      "properties": {
+
+        "location": "USA"
+
+      }
+
+    },
+
+    {
+
+      "label": "French Government",
+
+      "properties": {
+
+        "location": "France"
+
+      }
+
+    },
+
+    {
+
+      "label": "Adrian Iorgulescu",
+
+      "properties": {
+
+        "title": "Minister of Culture and Religious Affairs"
+
+      }
+
+    },
+
+    {
+
+      "label": "Augustin Lazar",
+
+      "properties": {
+
+        "title": "Deputy Prosecutor General"
+
+      }
+
+    },
+
+    {
+
+      "label": "Romanian Border Police",
+
+      "properties": {
+
+        "location": "Romania"
+
+      }
+
+    },
+
+    {
+
+      "label": "Swiss Collectors",
+
+      "properties": {
+
+        "location": "Switzerland"
+
+      }
+
+    },
+
+    {
+
+      "label": "German Antiquities Collector",
+
+      "properties": {
+
+        "location": "Germany"
+
+      }
+
+    },
+
+    {
+
+      "label": "Romanian General Police Inspectorate",
+
+      "properties": {
+
+        "location": "Romania"
+
+      }
+
+    },
+
+    {
+
+      "label": "Gold Bracelets",
+
+      "properties": {
+
+        "type": "Dacian craftsmanship",
+
+        "shape": "Spiral",
+
+        "size": "91 to 123 mm in diameter",
+
+        "weight": "682.30 to 1196.03 grams",
+
+        "material": "Gold"
+
+      }
+
+    }
+
+  ],
+
+  "relationships": [
+
+    {
+
+      "startNode": "Sarmizegetusa Regia",
+
+      "endNode": "Dacian Fortresses of the Orastie Mountains",
+
+      "type": "PART_OF",
+
+      "properties": {}
+
+    },
+
+    {
+
+      "startNode": "Hoard 1",
+
+      "endNode": "Sarmizegetusa Regia",
+
+      "type": "FOUND_AT",
+
+      "properties": {}
+
+    },
+
+    {
+
+      "startNode": "Hoard 2",
+
+      "endNode": "Sarmizegetusa Regia",
+
+      "type": "FOUND_AT",
+
+      "properties": {}
+
+    },
+
+    {
+
+      "startNode": "Hoard 3",
+
+      "endNode": "Sarmizegetusa Regia",
+
+      "type": "FOUND_AT",
+
+      "properties": {}
+
+    },
+
+    {
+
+      "startNode": "Hoard 4",
+
+      "endNode": "Sarmizegetusa Regia",
+
+      "type": "FOUND_AT",
+
+      "properties": {}
+
+    },
+
+    {
+
+      "startNode": "Hoard 5",
+
+      "endNode": "Sarmizegetusa Regia",
+
+      "type": "FOUND_AT",
+
+      "properties": {}
+
+    },
+
+    {
+
+      "startNode": "Hoard 2",
+
+      "endNode": "Christie's New York",
+
+      "type": "SOLD_BY",
+
+      "properties": {
+
+        "date": "8 December 1999"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Hoard 2",
+
+      "endNode": "Grand Palais Biennale Exhibition",
+
+      "type": "SEIZED_BY",
+
+      "properties": {
+
+        "date": "Unknown"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Hoard 2",
+
+      "endNode": "American Collector",
+
+      "type": "BOUGHT_BY",
+
+      "properties": {
+
+        "date": "Unknown"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Hoard 2",
+
+      "endNode": "Romanian State",
+
+      "type": "REDEEMED_BY",
+
+      "properties": {
+
+        "date": "Unknown"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Hoard 6",
+
+      "endNode": "Romanian Border Police",
+
+      "type": "FOUND_BY",
+
+      "properties": {
+
+        "date": "June 2007"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Hoard 7",
+
+      "endNode": "Swiss Collectors",
+
+      "type": "BOUGHT_BY",
+
+      "properties": {
+
+        "date": "August 2007"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Hoard 8",
+
+      "endNode": "American Collector",
+
+      "type": "BOUGHT_BY",
+
+      "properties": {
+
+        "date": "December 2008"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Hoard 9",
+
+      "endNode": "German Antiquities Collector",
+
+      "type": "BOUGHT_BY",
+
+      "properties": {
+
+        "date": "Unknown"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Hoard 9",
+
+      "endNode": "Romanian State",
+
+      "type": "REDEEMED_BY",
+
+      "properties": {
+
+        "date": "May 2011"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Gold Bracelets",
+
+      "endNode": "Sarmizegetusa Regia",
+
+      "type": "LOOTED_FROM",
+
+      "properties": {
+
+        "date": "1999-2001"
+
+      }
+
+    }
+
+  ]
+
+}

@@ -1,0 +1,136 @@
+{"nodes": [
+
+    {
+
+      "label": "Yeavering Bell",
+
+      "properties": {
+
+        "location": "Northumberland",
+
+        "date": "first millennium BC",
+
+        "holes": "34"
+
+      }
+
+    },
+    {
+
+      "label": "Ad Gefrin",
+
+      "properties": {
+
+        "location": "Northumberland",
+
+        "proximity": "close"
+
+      }
+
+    },
+
+    {
+
+      "label": "Northumberland National Park",
+
+      "properties": {
+
+        "stewardship": "Yes"
+
+      }
+
+    },
+
+    {
+
+      "label": "Lord Anthony Hill",
+
+      "properties": {
+
+        "landowner": "Yes"
+
+      }
+
+    },
+
+    {
+
+      "label": "Dealing in Cultural Objects (Offences) Bill",
+
+      "properties": {
+
+        "date": "2003",
+
+        "status": "Enacted"
+
+      }
+
+    },
+
+    {
+
+      "label": "Iraq National Museum",
+
+      "properties": {
+
+        "location": "Iraq"
+
+      }
+
+    }
+
+  ],
+
+  "relationships": [
+
+    {
+
+      "startNode": "Yeavering Bell",
+
+      "endNode": "Northumberland National Park",
+
+      "type": "STEWARDSHIP_OF",
+
+      "properties": {}
+
+    },
+
+    {
+
+      "startNode": "Yeavering Bell",
+
+      "endNode": "Lord Anthony Hill",
+
+      "type": "BELONGS_TO",
+
+      "properties": {}
+
+    },
+
+    {
+
+      "startNode": "Yeavering Bell",
+
+      "endNode": "Ad Gefrin",
+
+      "type": "CLOSE_PROXIMITY",
+
+      "properties": {}
+
+    },
+
+    {
+
+      "startNode": "Dealing in Cultural Objects (Offences) Bill",
+
+      "endNode": "Iraq National Museum",
+
+      "type": "PROPOSED_BY",
+
+      "properties": {}
+
+    }
+
+  ]
+
+}

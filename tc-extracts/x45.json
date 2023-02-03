@@ -1,0 +1,229 @@
+{"nodes": [
+
+    {
+
+      "label": "Malagana Culture",
+
+      "properties": {
+
+        "Location": "Cauca Valley, Colombia",
+
+        "Date": "300 BC - 300 AD"
+
+      }
+
+    },
+
+    {
+
+      "label": "Hacienda Malagana",
+
+      "properties": {
+
+        "Location": "Palmira, Colombia"
+
+      }
+
+    },
+
+    {
+
+      "label": "Ingenio Providencia",
+
+      "properties": {
+
+        "Type": "Sugarcane company"
+
+      }
+
+    },
+
+    {
+
+      "label": "Universidad Nacional de Colombia",
+
+      "properties": {
+
+        "Location": "Bogotá, Colombia"
+
+      }
+
+    },
+
+    {
+
+      "label": "Banco de la República",
+
+      "properties": {
+
+        "Type": "Bank"
+
+      }
+
+    },
+
+    {
+
+      "label": "Museo del Oro",
+
+      "properties": {
+
+        "Location": "Bogotá, Colombia"
+
+      }
+
+    },
+
+    {
+
+      "label": "George Ortiz",
+
+      "properties": {
+
+        "Location": "Unknown"
+
+      }
+
+    },
+
+    {
+
+      "label": "Godzilla's Realm",
+
+      "properties": {
+
+        "Findspot": "El Bolo, Cauca Valley (Colombia)",
+
+        "Culture": "Malagana"
+
+      }
+
+    },
+
+    {
+
+      "label": "Fundación Cultura Malagana",
+
+      "properties": {
+
+        "Location": "Palmira, Colombia"
+
+      }
+
+    },
+
+    {
+
+      "label": "El Tiempo",
+
+      "properties": {
+
+        "Type": "Newspaper"
+
+      }
+
+    }
+
+  ],
+
+  "relationships": [
+
+    {
+
+      "startNode": "Ingenio Providencia",
+
+      "endNode": "Hacienda Malagana",
+
+      "type": "LEASE",
+
+      "properties": {
+
+        "date": "late 1992"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Universidad Nacional de Colombia",
+
+      "endNode": "Malagana Culture",
+
+      "type": "RESEARCH",
+
+      "properties": {
+
+        "date": "2012"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Banco de la República",
+
+      "endNode": "Museo del Oro",
+
+      "type": "AFFILIATE"
+
+    },
+
+    {
+
+      "startNode": "Museo del Oro",
+
+      "endNode": "Malagana Culture",
+
+      "type": "ACQUIRE",
+
+      "properties": {
+
+        "date": "late 1992",
+
+        "cost": "500 million pesos"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "George Ortiz",
+
+      "endNode": "Godzilla's Realm",
+
+      "type": "COLLECT"
+
+    },
+
+    {
+
+      "startNode": "Fundación Cultura Malagana",
+
+      "endNode": "Hacienda Malagana",
+
+      "type": "MANAGE"
+
+    },
+
+    {
+
+      "startNode": "El Tiempo",
+
+      "endNode": "Hacienda Malagana",
+
+      "type": "REPORT",
+
+      "properties": {
+
+        "date": "1999"
+
+      }
+
+    }
+
+  ]
+
+}

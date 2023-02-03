@@ -1,0 +1,121 @@
+{"nodes": [
+    {
+      "label": "Xultun",
+      "properties": {
+        "location": "Guatemala's Petén province",
+        "emblemGlyph": "B’aax Witz or Quartz Hill/Mountain"
+      }
+    },
+    {
+      "label": "Carnegie Institute",
+      "properties": {
+        "visits to Xultun": "3"
+      }
+    },
+    {
+      "label": "Stela 3",
+      "properties": {
+        "looted": "true",
+        "location": "unknown"
+      }
+    },
+    {
+      "label": "Stela 4",
+      "properties": {
+        "looted": "false",
+        "buried": "true"
+      }
+    },
+    {
+      "label": "Stela 10",
+      "properties": {
+        "looted": "true",
+        "location": "unknown"
+      }
+    },
+    {
+      "label": "Stela 12",
+      "properties": {
+        "looted": "true",
+        "location": "unknown"
+      }
+    },
+    {
+      "label": "November Collection of Maya Pottery",
+      "properties": {
+        "location": "Museum of Fine Arts, Boston"
+      }
+    },
+    {
+      "label": "K8007",
+      "properties": {
+        "location": "Justin Kerr's Maya Vase Database"
+      }
+    },
+    {
+      "label": "Mural Painting",
+      "properties": {
+        "eroded": "true",
+        "inscriptions": "astronomical cycles and figural depictions"
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "startNode": "Xultun",
+      "endNode": "Carnegie Institute",
+      "type": "EXPLORED_BY",
+      "properties": {
+        "date": "1920"
+      }
+    },
+    {
+      "startNode": "Stela 3",
+      "endNode": "Carnegie Institute",
+      "type": "RECORDED_BY",
+      "properties": {
+        "date": "1920"
+      }
+    },
+    {
+      "startNode": "Stela 10",
+      "endNode": "Carnegie Institute",
+      "type": "RECORDED_BY",
+      "properties": {
+        "date": "1920"
+      }
+    },
+    {
+      "startNode": "Stela 12",
+      "endNode": "Carnegie Institute",
+      "type": "RECORDED_BY",
+      "properties": {
+        "date": "1920"
+      }
+    },
+    {
+      "startNode": "November Collection of Maya Pottery",
+      "endNode": "Museum of Fine Arts, Boston",
+      "type": "HOUSED_BY",
+      "properties": {
+        "date": "1974-1981"
+      }
+    },
+    {
+      "startNode": "K8007",
+      "endNode": "Justin Kerr's Maya Vase Database",
+      "type": "HOUSED_BY",
+      "properties": {
+        "date": "1974"
+      }
+    },
+    {
+      "startNode": "Mural Painting",
+      "endNode": "William Saturno",
+      "type": "DISCOVERED_BY",
+      "properties": {
+        "date": "2010"
+      }
+    }
+  ]
+}

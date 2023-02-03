@@ -1,0 +1,329 @@
+{"nodes": [
+
+    {
+
+      "label": "Royal Navy Officer Robert Falcon Scott",
+
+      "properties": {
+
+        "arrival": "South Pole",
+
+        "date": "17 January 1912",
+
+        "otherExplorer": "Roald Amundsen"
+
+      }
+
+    },
+
+    {
+
+      "label": "Roald Amundsen",
+
+      "properties": {
+
+        "arrival": "South Pole",
+
+        "date": "17 January 1912",
+
+        "otherExplorer": "Robert Falcon Scott"
+
+      }
+
+    },
+
+    {
+
+      "label": "Cape Evans Campsite",
+
+      "properties": {
+
+        "designation": "Antarctic Specially Protected Area (ASPA)",
+
+        "managers": "Antarctic Heritage Trust",
+
+        "artifacts": "8500+"
+
+      }
+
+    },
+
+    {
+
+      "label": "Antarctic Heritage Trust",
+
+      "properties": {
+
+        "mission": "conserving sites of historic exploration to Antarctica’s Ross Sea Region"
+
+      }
+
+    },
+
+    {
+
+      "label": "Discovery Hut",
+
+      "properties": {
+
+        "designation": "Antarctic Specially Protected Area (ASPA)",
+
+        "location": "Hut Point, Ross Island",
+
+        "artifacts": "sledges, skis, penguin skins, and homemade chessmen"
+
+      }
+
+    },
+
+    {
+
+      "label": "Thomas Keneally",
+
+      "properties": {
+
+        "theft": "large biscuit from a tin on the hut’s floor"
+
+      }
+
+    },
+
+    {
+
+      "label": "John Claydon",
+
+      "properties": {
+
+        "theft": "items from several historic expedition huts"
+
+      }
+
+    },
+
+    {
+
+      "label": "Christie’s Auction House",
+
+      "properties": {
+
+        "sale": "polar artefacts"
+
+      }
+
+    },
+
+    {
+
+      "label": "Sir Edmund Hillary",
+
+      "properties": {
+
+        "role": "first two men to reach the summit of Mount Everest"
+
+      }
+
+    },
+
+    {
+
+      "label": "British Foreign Office",
+
+      "properties": {
+
+        "role": "requested ownership and provenance data for the artefacts"
+
+      }
+
+    },
+
+    {
+
+      "label": "New Zealand Government",
+
+      "properties": {
+
+        "role": "requested ownership and provenance data for the artefacts"
+
+      }
+
+    },
+
+    {
+
+      "label": "Scott Polar Research Institute",
+
+      "properties": {
+
+        "location": "University of Cambridge"
+
+      }
+
+    }
+
+  ],
+
+  "relationships": [
+
+    {
+
+      "startNode": "Royal Navy Officer Robert Falcon Scott",
+
+      "endNode": "Roald Amundsen",
+
+      "type": "RACE_TO_REACH_POLE",
+
+      "properties": {
+
+        "date": "17 January 1912"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Cape Evans Campsite",
+
+      "endNode": "Antarctic Heritage Trust",
+
+      "type": "MANAGED_BY",
+
+      "properties": {
+
+        "date": "1961"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Discovery Hut",
+
+      "endNode": "McMurdo Base",
+
+      "type": "LOCATED_NEAR",
+
+      "properties": {
+
+        "distance": "300 metres"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Thomas Keneally",
+
+      "endNode": "Discovery Hut",
+
+      "type": "STOLE_FROM",
+
+      "properties": {
+
+        "date": "1968"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "John Claydon",
+
+      "endNode": "Discovery Hut",
+
+      "type": "STOLE_FROM",
+
+      "properties": {
+
+        "date": "1957"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "John Claydon",
+
+      "endNode": "Christie’s Auction House",
+
+      "type": "CONSIGNED_TO",
+
+      "properties": {
+
+        "date": "1998"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Sir Edmund Hillary",
+
+      "endNode": "Christie’s Auction House",
+
+      "type": "SPOKE_OUT_AGAINST",
+
+      "properties": {
+
+        "date": "1998"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "British Foreign Office",
+
+      "endNode": "Christie’s Auction House",
+
+      "type": "CONTACTED",
+
+      "properties": {
+
+        "date": "1998"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "New Zealand Government",
+
+      "endNode": "Christie’s Auction House",
+
+      "type": "CONTACTED",
+
+      "properties": {
+
+        "date": "1998"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Christie’s Auction House",
+
+      "endNode": "Scott Polar Research Institute",
+
+      "type": "DONATED_TO",
+
+      "properties": {
+
+        "date": "1999"
+
+      }
+
+    }
+
+  ]
+
+}

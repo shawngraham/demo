@@ -1,0 +1,177 @@
+{"nodes": [
+    {
+      "label": "Aubin Tonalamatl",
+      "properties": {
+        "origin": "Tlaxcala, Mexico",
+        "pages": "18",
+        "content": "Divination, tonalpohualli symbols",
+        "firstAppearance": "Lorenzo Boturini Benaduci's inventory"
+      }
+    },
+    {
+      "label": "Lorenzo Boturini Benaduci",
+      "properties": {
+        "nationality": "Italian"
+      }
+    },
+    {
+      "label": "Carl Nebel",
+      "properties": {
+        "nationality": "German"
+      }
+    },
+    {
+      "label": "Jean-Frédéric Waldek",
+      "properties": {
+        "nationality": "French"
+      }
+    },
+    {
+      "label": "Joseph Marius Alexis Aubin",
+      "properties": {
+        "nationality": "French"
+      }
+    },
+    {
+      "label": "Charles Eugène Espidon Goupil",
+      "properties": {
+        "nationality": "French"
+      }
+    },
+    {
+      "label": "Bibliothèque Nationale de Paris",
+      "properties": {}
+    },
+    {
+      "label": "José Luis Castañeda del Valle",
+      "properties": {
+        "nationality": "Mexican",
+        "occupation": "Attorney and journalist"
+      }
+    },
+    {
+      "label": "Biblioteca del Instituto Nacional de Antropología e Historia",
+      "properties": {}
+    },
+    {
+      "label": "El País",
+      "properties": {
+        "nationality": "Spanish"
+      }
+    },
+    {
+      "label": "Secretaría de Relaciones Exteriores de Mexico",
+      "properties": {}
+    },
+    {
+      "label": "INAH",
+      "properties": {
+        "fullName": "Instituto Nacional de Antropología e Historia"
+      }
+    },
+    {
+      "label": "Antonio de León y Gama",
+      "properties": {
+        "occupation": "Astronomer"
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "startNode": "Aubin Tonalamatl",
+      "endNode": "Lorenzo Boturini Benaduci",
+      "type": "OWNED_BY",
+      "properties": {
+        "date": "1743"
+      }
+    },
+    {
+      "startNode": "Aubin Tonalamatl",
+      "endNode": "Carl Nebel",
+      "type": "SOLD_BY",
+      "properties": {
+        "date": "1802"
+      }
+    },
+    {
+      "startNode": "Aubin Tonalamatl",
+      "endNode": "Jean-Frédéric Waldek",
+      "type": "SOLD_BY",
+      "properties": {
+        "date": "1841"
+      }
+    },
+    {
+      "startNode": "Aubin Tonalamatl",
+      "endNode": "Joseph Marius Alexis Aubin",
+      "type": "SOLD_BY",
+      "properties": {
+        "date": "1841"
+      }
+    },
+    {
+      "startNode": "Aubin Tonalamatl",
+      "endNode": "Charles Eugène Espidon Goupil",
+      "type": "BOUGHT_BY",
+      "properties": {
+        "date": "1889"
+      }
+    },
+    {
+      "startNode": "Aubin Tonalamatl",
+      "endNode": "Bibliothèque Nationale de Paris",
+      "type": "DONATED_BY",
+      "properties": {
+        "date": "1898"
+      }
+    },
+    {
+      "startNode": "Aubin Tonalamatl",
+      "endNode": "José Luis Castañeda del Valle",
+      "type": "STOLEN_BY",
+      "properties": {
+        "date": "1982"
+      }
+    },
+    {
+      "startNode": "Aubin Tonalamatl",
+      "endNode": "Biblioteca del Instituto Nacional de Antropología e Historia",
+      "type": "DONATED_BY",
+      "properties": {
+        "date": "1982"
+      }
+    },
+    {
+      "startNode": "Aubin Tonalamatl",
+      "endNode": "El País",
+      "type": "REPORTED_BY",
+      "properties": {
+        "date": "1982"
+      }
+    },
+    {
+      "startNode": "Aubin Tonalamatl",
+      "endNode": "Secretaría de Relaciones Exteriores de Mexico",
+      "type": "CLAIMED_BY",
+      "properties": {
+        "date": "1982"
+      }
+    },
+    {
+      "startNode": "Aubin Tonalamatl",
+      "endNode": "INAH",
+      "type": "KEEP_ON_LOAN",
+      "properties": {
+        "date": "2009"
+      }
+    },
+    {
+      "startNode": "Aubin Tonalamatl",
+      "endNode": "Antonio de León y Gama",
+      "type": "SOLD_BY",
+      "properties": {
+        "date": "1802"
+      }
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{"nodes": [
+    {
+      "label": "Paracas Culture",
+      "properties": {
+        "region": "Paracas Peninsula",
+        "timePeriod": "800 BC - 100 BC"
+      }
+    },
+    {
+      "label": "Julio Tello",
+      "properties": {
+        "profession": "Archaeologist"
+      }
+    },
+    {
+      "label": "Toribio Mejía Xesspe",
+      "properties": {
+        "profession": "Archaeologist"
+      }
+    },
+    {
+      "label": "Paracas Necropolis",
+      "properties": {
+        "location": "Cerro Colorado"
+      }
+    },
+    {
+      "label": "Sven Karell",
+      "properties": {
+        "title": "Swedish Consul in Peru"
+      }
+    },
+    {
+      "label": "Museum of World Culture",
+      "properties": {
+        "location": "Göteborg, Sweden"
+      }
+    },
+    {
+      "label": "Alan Garcia",
+      "properties": {
+        "title": "President of Peru"
+      }
+    },
+    {
+      "label": "Yale",
+      "properties": {
+        "location": "New Haven, Connecticut"
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "startNode": "Paracas Culture",
+      "endNode": "Julio Tello",
+      "type": "IDENTIFIED_BY",
+      "properties": {}
+    },
+    {
+      "startNode": "Paracas Culture",
+      "endNode": "Toribio Mejía Xesspe",
+      "type": "IDENTIFIED_BY",
+      "properties": {}
+    },
+    {
+      "startNode": "Paracas Necropolis",
+      "endNode": "Julio Tello",
+      "type": "EXCAVATED_BY",
+      "properties": {}
+    },
+    {
+      "startNode": "Paracas Necropolis",
+      "endNode": "Toribio Mejía Xesspe",
+      "type": "EXCAVATED_BY",
+      "properties": {}
+    },
+    {
+      "startNode": "Sven Karell",
+      "endNode": "Museum of World Culture",
+      "type": "EXPORTED_TO",
+      "properties": {
+        "date": "1931-1933"
+      }
+    },
+    {
+      "startNode": "Museum of World Culture",
+      "endNode": "Alan Garcia",
+      "type": "REQUESTED_BY",
+      "properties": {
+        "date": "December 2009"
+      }
+    },
+    {
+      "startNode": "Yale",
+      "endNode": "Alan Garcia",
+      "type": "REQUESTED_BY",
+      "properties": {}
+    }
+  ]
+}

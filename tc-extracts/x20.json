@@ -1,0 +1,259 @@
+{"nodes": [
+
+    {
+
+      "label": "Zeugma",
+
+      "properties": {
+
+        "location": "Turkey",
+
+        "date": "300 BC",
+
+        "population": "70,000"
+
+      }
+
+    },
+
+    {
+
+      "label": "Belkis and Tilmuse",
+
+      "properties": {
+
+        "location": "Turkey",
+
+        "date": "1970s"
+
+      }
+
+    },
+
+    {
+
+      "label": "Provinces Mosaic",
+
+      "properties": {
+
+        "collections": "11 public and private collections in 7 countries"
+
+      }
+
+    },
+
+    {
+
+      "label": "Metropolitan Museum of Art",
+
+      "properties": {
+
+        "location": "New York City"
+
+      }
+
+    },
+
+    {
+
+      "label": "South East Anatolia Project",
+
+      "properties": {
+
+        "date": "1990s-2000s"
+
+      }
+
+    },
+
+    {
+
+      "label": "GAP",
+
+      "properties": {
+
+        "location": "Turkey"
+
+      }
+
+    },
+
+    {
+
+      "label": "Birecik Dam",
+
+      "properties": {
+
+        "location": "Turkey",
+
+        "date": "2000"
+
+      }
+
+    },
+
+    {
+
+      "label": "Packard Humanities Institute",
+
+      "properties": {
+
+        "location": "USA"
+
+      }
+
+    },
+
+    {
+
+      "label": "Journal of Roman Archaeology",
+
+      "properties": {
+
+        "location": "USA"
+
+      }
+
+    },
+
+    {
+
+      "label": "Menil Collection",
+
+      "properties": {
+
+        "location": "Houston, Texas"
+
+      }
+
+    },
+
+    {
+
+      "label": "Rice University",
+
+      "properties": {
+
+        "location": "Texas"
+
+      }
+
+    },
+
+    {
+
+      "label": "Bowling Green State University",
+
+      "properties": {
+
+        "location": "Ohio"
+
+      }
+
+    },
+
+    {
+
+      "label": "Gaziantep Museum",
+
+      "properties": {
+
+        "location": "Turkey"
+
+      }
+
+    }
+
+
+
+  ],
+
+  "relationships": [
+
+    {
+
+      "startNode": "Zeugma",
+
+      "endNode": "Belkis and Tilmuse",
+
+      "type": "LOCATED_AT",
+
+      "properties": {}
+
+    },
+
+    {
+
+      "startNode": "Provinces Mosaic",
+
+      "endNode": "Metropolitan Museum of Art",
+
+      "type": "BOUGHT_BY",
+
+      "properties": {}
+
+    },
+
+    {
+
+      "startNode": "South East Anatolia Project",
+
+      "endNode": "GAP",
+
+      "type": "INCLUDES",
+
+      "properties": {}
+
+    },
+
+    {
+
+      "startNode": "GAP",
+
+      "endNode": "Birecik Dam",
+
+      "type": "INCLUDES",
+
+      "properties": {}
+
+    },
+
+    {
+
+      "startNode": "Packard Humanities Institute",
+
+      "endNode": "Journal of Roman Archaeology",
+
+      "type": "FUNDED",
+
+      "properties": {}
+
+    },
+
+    {
+
+      "startNode": "Menil Collection",
+
+      "endNode": "Rice University",
+
+      "type": "LOANED_TO",
+
+      "properties": {}
+
+    },
+
+    {
+
+      "startNode": "Bowling Green State University",
+
+      "endNode": "Gaziantep Museum",
+
+      "type": "REPATRIATED_TO",
+
+      "properties": {}
+
+    }
+
+  ]
+
+}

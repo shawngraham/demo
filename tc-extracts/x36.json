@@ -1,0 +1,227 @@
+{"nodes": [
+    {
+      "label": "Batán Grande",
+      "properties": {
+        "location": "Pitipo District, Lambayeque Province, Peru",
+        "culture": "Lambayeque/Sicán",
+        "period": "Middle Sicán"
+      }
+    },
+    {
+      "label": "Huaca Loro",
+      "properties": {
+        "location": "Batán Grande"
+      }
+    },
+    {
+      "label": "Huaca Tres Ventanas",
+      "properties": {
+        "location": "Batán Grande"
+      }
+    },
+    {
+      "label": "Huaca la Merced",
+      "properties": {
+        "location": "Batán Grande"
+      }
+    },
+    {
+      "label": "Izumi Shimada",
+      "properties": {
+        "occupation": "Archaeologist"
+      }
+    },
+    {
+      "label": "Walter Alva",
+      "properties": {
+        "occupation": "Archaeologist"
+      }
+    },
+    {
+      "label": "Miguel Mujica Gallo",
+      "properties": {
+        "occupation": "Businessman"
+      }
+    },
+    {
+      "label": "Museo Oro del Peru",
+      "properties": {
+        "location": "Lima, Peru"
+      }
+    },
+    {
+      "label": "Aurich Family",
+      "properties": {
+        "location": "Batán Grande"
+      }
+    },
+    {
+      "label": "Juan José Aurich Pastor",
+      "properties": {
+        "occupation": "Hacienda Owner"
+      }
+    },
+    {
+      "label": "Edmundo Aurich Bonilla",
+      "properties": {
+        "occupation": "Hacienda Owner"
+      }
+    },
+    {
+      "label": "Oswaldo Aurich Bonilla",
+      "properties": {
+        "occupation": "Hacienda Owner"
+      }
+    },
+    {
+      "label": "Julio Tello",
+      "properties": {
+        "occupation": "Father of Peruvian Archaeology"
+      }
+    },
+    {
+      "label": "Museo de Arqueología Peruana",
+      "properties": {
+        "location": "Lima, Peru"
+      }
+    },
+    {
+      "label": "El Comercio",
+      "properties": {
+        "location": "Lima, Peru"
+      }
+    },
+    {
+      "label": "Denis Garcia",
+      "properties": {
+        "location": "Miami, USA"
+      }
+    },
+    {
+      "label": "Manual Bacigalupo Remy",
+      "properties": {
+        "location": "Peru"
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "startNode": "Batán Grande",
+      "endNode": "Lambayeque/Sicán Culture",
+      "type": "PART_OF",
+      "properties": {}
+    },
+    {
+      "startNode": "Huaca Loro",
+      "endNode": "Batán Grande",
+      "type": "PART_OF",
+      "properties": {}
+    },
+    {
+      "startNode": "Huaca Tres Ventanas",
+      "endNode": "Batán Grande",
+      "type": "PART_OF",
+      "properties": {}
+    },
+    {
+      "startNode": "Huaca la Merced",
+      "endNode": "Batán Grande",
+      "type": "PART_OF",
+      "properties": {}
+    },
+    {
+      "startNode": "Izumi Shimada",
+      "endNode": "Batán Grande",
+      "type": "EXCAVATED",
+      "properties": {
+        "date": "1978"
+      }
+    },
+    {
+      "startNode": "Walter Alva",
+      "endNode": "Batán Grande",
+      "type": "RESEARCHED",
+      "properties": {}
+    },
+    {
+      "startNode": "Miguel Mujica Gallo",
+      "endNode": "Museo Oro del Peru",
+      "type": "OWNED",
+      "properties": {}
+    },
+    {
+      "startNode": "Museo Oro del Peru",
+      "endNode": "Batán Grande",
+      "type": "CONTAINED_ARTIFACTS_FROM",
+      "properties": {
+        "date": "Early 20th Century - Present"
+      }
+    },
+    {
+      "startNode": "Aurich Family",
+      "endNode": "Batán Grande",
+      "type": "OWNED",
+      "properties": {
+        "date": "Before 1930s - 1970"
+      }
+    },
+    {
+      "startNode": "Juan José Aurich Pastor",
+      "endNode": "Batán Grande",
+      "type": "OWNED",
+      "properties": {
+        "date": "Early 1900s"
+      }
+    },
+    {
+      "startNode": "Edmundo Aurich Bonilla",
+      "endNode": "Batán Grande",
+      "type": "OWNED",
+      "properties": {
+        "date": "1970 - 1973"
+      }
+    },
+    {
+      "startNode": "Oswaldo Aurich Bonilla",
+      "endNode": "Batán Grande",
+      "type": "OWNED",
+      "properties": {
+        "date": "1970 - 1973"
+      }
+    },
+    {
+      "startNode": "Julio Tello",
+      "endNode": "Museo de Arqueología Peruana",
+      "type": "REPRESENTED",
+      "properties": {
+        "date": "1937"
+      }
+    },
+    {
+      "startNode": "Julio Tello",
+      "endNode": "El Comercio",
+      "type": "WROTE_FOR",
+      "properties": {}
+    },
+    {
+      "startNode": "Denis Garcia",
+      "endNode": "Batán Grande",
+      "type": "LINKED_TO",
+      "properties": {
+        "date": "1960s"
+      }
+    },
+    {
+      "startNode": "Manual Bacigalupo Remy",
+      "endNode": "Batán Grande",
+      "type": "LINKED_TO",
+      "properties": {}
+    },
+    {
+      "startNode": "Edmundo Aurich Bonilla",
+      "endNode": "Manual Bacigalupo Remy",
+      "type": "ADVISED",
+      "properties": {}
+    }
+  ]
+}

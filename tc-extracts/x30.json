@@ -1,0 +1,447 @@
+{"nodes": [
+
+    {
+
+      "label": "GE Mound",
+
+      "properties": {
+
+        "location": "Black Township, Posey County, Indiana",
+
+        "size": "400 feet long, 175 feet wide and 20 feet high",
+
+        "date": "First century AD",
+
+        "function": "Funerary and Ceremonial"
+
+      }
+
+    },
+
+    {
+
+      "label": "Boyd Brothers construction company",
+
+      "properties": {
+
+        "type": "Construction Company"
+
+      }
+
+    },
+
+    {
+
+      "label": "Kirby Wilson",
+
+      "properties": {
+
+        "location": "Indiana"
+
+      }
+
+    },
+
+    {
+
+      "label": "John William Way",
+
+      "properties": {
+
+        "location": "Illinois"
+
+      }
+
+    },
+
+    {
+
+      "label": "John D. Towery",
+
+      "properties": {
+
+        "location": "Kentucky"
+
+      }
+
+    },
+
+    {
+
+      "label": "Danny G. Glover",
+
+      "properties": {
+
+        "location": "Kentucky"
+
+      }
+
+    },
+
+    {
+
+      "label": "Arthur J. Gerber",
+
+      "properties": {
+
+        "location": "Indiana"
+
+      }
+
+    },
+
+    {
+
+      "label": "Randall R. Hanson",
+
+      "properties": {
+
+        "location": "Kentucky"
+
+      }
+
+    },
+
+    {
+
+      "label": "Mark Seeman",
+
+      "properties": {
+
+        "profession": "Archaeologist"
+
+      }
+
+    },
+
+    {
+
+      "label": "Indiana Department of Natural Resources",
+
+      "properties": {
+
+        "type": "Government Agency"
+
+      }
+
+    },
+
+    {
+
+      "label": "General Electric",
+
+      "properties": {
+
+        "type": "Company"
+
+      }
+
+    },
+
+    {
+
+      "label": "Crib Mound",
+
+      "properties": {
+
+        "location": "Indiana",
+
+        "type": "Archaic Shell Mound"
+
+      }
+
+    },
+
+    {
+
+      "label": "US Attorney’s Office",
+
+      "properties": {
+
+        "type": "Government Agency"
+
+      }
+
+    },
+
+    {
+
+      "label": "US Court of Appeals",
+
+      "properties": {
+
+        "type": "Government Agency"
+
+      }
+
+    },
+
+    {
+
+      "label": "US Supreme Court",
+
+      "properties": {
+
+        "type": "Government Agency"
+
+      }
+
+    },
+
+    {
+
+      "label": "Interstate Commerce Provision",
+
+      "properties": {
+
+        "type": "Law"
+
+      }
+
+    },
+
+    {
+
+      "label": "Archaeological Resources Protection Act (ARPA)",
+
+      "properties": {
+
+        "type": "Law",
+
+        "date": "1979"
+
+      }
+
+    }
+
+  ],
+
+  "relationships": [
+
+    {
+
+      "startNode": "Boyd Brothers construction company",
+
+      "endNode": "GE Mound",
+
+      "type": "CONSTRUCTION_PROJECT",
+
+      "properties": {
+
+        "date": "1988"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Kirby Wilson",
+
+      "endNode": "GE Mound",
+
+      "type": "LOOTING",
+
+      "properties": {
+
+        "date": "1988 - 1989"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "John William Way",
+
+      "endNode": "GE Mound",
+
+      "type": "LOOTING",
+
+      "properties": {
+
+        "date": "1988"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "John D. Towery",
+
+      "endNode": "GE Mound",
+
+      "type": "LOOTING",
+
+      "properties": {
+
+        "date": "1988"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Danny G. Glover",
+
+      "endNode": "GE Mound",
+
+      "type": "LOOTING",
+
+      "properties": {
+
+        "date": "1988"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Arthur J. Gerber",
+
+      "endNode": "Crib Mound",
+
+      "type": "LOOTING",
+
+      "properties": {
+
+        "date": "Unknown"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Randall R. Hanson",
+
+      "endNode": "GE Mound",
+
+      "type": "LOOTING",
+
+      "properties": {
+
+        "date": "Unknown"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Mark Seeman",
+
+      "endNode": "GE Mound",
+
+      "type": "INVESTIGATION",
+
+      "properties": {
+
+        "date": "1988 - 1989"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Indiana Department of Natural Resources",
+
+      "endNode": "GE Mound",
+
+      "type": "LEGISLATION",
+
+      "properties": {
+
+        "date": "Unknown"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "General Electric",
+
+      "endNode": "GE Mound",
+
+      "type": "PROTECTION",
+
+      "properties": {
+
+        "date": "1988 - 1989"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "US Attorney’s Office",
+
+      "endNode": "GE Mound",
+
+      "type": "INVESTIGATION",
+
+      "properties": {
+
+        "date": "1989 - 1991"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "US Court of Appeals",
+
+      "endNode": "Arthur J. Gerber",
+
+      "type": "CONVICTION",
+
+      "properties": {
+
+        "date": "1993"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "US Supreme Court",
+
+      "endNode": "Arthur J. Gerber",
+
+      "type": "DENIAL",
+
+      "properties": {
+
+        "date": "1994"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Interstate Commerce Provision",
+
+      "endNode": "GE Mound",
+
+      "type": "VIOLATION",
+
+      "properties": {
+
+        "date": "1988 - 1989"
+
+      }
+
+    }
+
+  ]
+
+}

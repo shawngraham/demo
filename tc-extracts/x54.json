@@ -1,0 +1,184 @@
+{"nodes": [
+    {
+      "label": "Hacienda Ocucaje",
+      "properties": {
+        "location": "Ica Province, Peru",
+        "looting": "early 20th century"
+      }
+    },
+    {
+      "label": "Cerro Max Uhle",
+      "properties": {
+        "location": "Ocucaje region, Peru",
+        "excavated": "1901"
+      }
+    },
+    {
+      "label": "Cerro de la Cruz",
+      "properties": {
+        "location": "Ocucaje region, Peru",
+        "excavated": "1901"
+      }
+    },
+    {
+      "label": "Dr. Ernesto Mazzei",
+      "properties": {
+        "role": "Hacienda Ocucaje manager"
+      }
+    },
+    {
+      "label": "Max Uhle",
+      "properties": {
+        "role": "Archaeologist"
+      }
+    },
+    {
+      "label": "Pablo Soldi",
+      "properties": {
+        "role": "Ica-based dealer in antiquities"
+      }
+    },
+    {
+      "label": "Paul Truel",
+      "properties": {
+        "role": "Co-owner of Hacienda Ocucaje"
+      }
+    },
+    {
+      "label": "National Textile Museum",
+      "properties": {
+        "location": "Peru"
+      }
+    },
+    {
+      "label": "American Museum of Natural History",
+      "properties": {
+        "location": "New York, USA"
+      }
+    },
+    {
+      "label": "Zero Mostel",
+      "properties": {
+        "role": "Actor"
+      }
+    },
+    {
+      "label": "Erich von Daniken",
+      "properties": {
+        "role": "Pseudoscientist"
+      }
+    },
+    {
+      "label": "Loma Negra",
+      "properties": {
+        "location": "Peru",
+        "looting": "heavily looted"
+      }
+    },
+    {
+      "label": "Basilio Uschuya",
+      "properties": {
+        "role": "Farmer"
+      }
+    },
+    {
+      "label": "Irma Gutiérrez de Aparcana",
+      "properties": {
+        "role": "Farmer"
+      }
+    },
+    {
+      "label": "Javier Cabrera Darquea",
+      "properties": {
+        "role": "Physician"
+      }
+    },
+    {
+      "label": "Ica Stones",
+      "properties": {
+        "madeIn": "Ocucaje region, Peru",
+        "origin": "Hoax"
+      }
+    },
+    {
+      "label": "Fossils",
+      "properties": {
+        "location": "Ocucaje desert, Peru"
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "startNode": "Hacienda Ocucaje",
+      "endNode": "Dr. Ernesto Mazzei",
+      "type": "MANAGED_BY",
+      "properties": {
+        "date": "Early 20th century"
+      }
+    },
+    {
+      "startNode": "Cerro Max Uhle",
+      "endNode": "Max Uhle",
+      "type": "EXCAVATED_BY",
+      "properties": {
+        "date": "1901"
+      }
+    },
+    {
+      "startNode": "Cerro de la Cruz",
+      "endNode": "Max Uhle",
+      "type": "EXCAVATED_BY",
+      "properties": {
+        "date": "1901"
+      }
+    },
+    {
+      "startNode": "Hacienda Ocucaje",
+      "endNode": "Paul Truel",
+      "type": "CO-OWNED_BY",
+      "properties": {
+        "date": "Early 20th century"
+      }
+    },
+    {
+      "startNode": "Pablo Soldi",
+      "endNode": "Javier Cabrera Darquea",
+      "type": "SOLD"
+    },
+    {
+      "startNode": "Pablo Soldi",
+      "endNode": "National Textile Museum",
+      "type": "SOLD"
+    },
+    {
+      "startNode": "Pablo Soldi",
+      "endNode": "American Museum of Natural History",
+      "type": "SOLD"
+    },
+    {
+      "startNode": "Zero Mostel",
+      "endNode": "Cerro Max Uhle",
+      "type": "BOUGHT_FROM"
+    },
+    {
+      "startNode": "Erich von Daniken",
+      "endNode": "Basilio Uschuya",
+      "type": "INFORMED_BY"
+    },
+    {
+      "startNode": "Basilio Uschuya",
+      "endNode": "Ica Stones",
+      "type": "FORGED"
+    },
+    {
+      "startNode": "Javier Cabrera Darquea",
+      "endNode": "Ica Stones",
+      "type": "COLLECTED"
+    },
+    {
+      "startNode": "Ocucaje region",
+      "endNode": "Fossils",
+      "type": "EXCAVATED_FROM"
+    }
+  ]
+}

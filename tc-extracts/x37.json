@@ -1,0 +1,197 @@
+{"nodes": [
+    {
+      "label": "Jiri Frel",
+      "properties": {
+        "associatedWith": "irregularities regarding museum acquisitions",
+        "from": "Czechoslovakia",
+        "profession": "Professor of Classics"
+      }
+    },
+    {
+      "label": "Charles University",
+      "properties": {
+        "location": "Prague"
+      }
+    },
+    {
+      "label": "Princeton University's Institute for Advanced Studies",
+      "properties": {
+        "location": "Princeton"
+      }
+    },
+    {
+      "label": "Metropolitan Museum of Art",
+      "properties": {
+        "location": "New York"
+      }
+    },
+    {
+      "label": "Getty Museum",
+      "properties": {
+        "location": "Los Angeles"
+      }
+    },
+    {
+      "label": "Bruce McNall",
+      "properties": {
+        "profession": "Antiquities dealer",
+        "partner": "Robert Hecht at Summa Antiquities"
+      }
+    },
+    {
+      "label": "Sy Weintraub",
+      "properties": {
+        "profession": "Movie producer and coin collector"
+      }
+    },
+    {
+      "label": "Summa Antiquities",
+      "properties": {
+        "location": "Unknown"
+      }
+    },
+    {
+      "label": "Jerome Eisenberg",
+      "properties": {
+        "profession": "New York antiquities dealer"
+      }
+    },
+    {
+      "label": "Roman Head",
+      "properties": {
+        "price": "$900",
+        "appraisedValue": "$45,000"
+      }
+    },
+    {
+      "label": "Sarcophagus Fragments",
+      "properties": {
+        "price": "$4,000",
+        "appraisedValue": "$40,000"
+      }
+    },
+    {
+      "label": "Sixth-Century BC Marble Funerary Relief",
+      "properties": {
+        "price": "$Unknown",
+        "appraisedValue": "$Unknown"
+      }
+    },
+    {
+      "label": "Marble Head by Scopas",
+      "properties": {
+        "price": "$Unknown",
+        "appraisedValue": "$Unknown"
+      }
+    },
+    {
+      "label": "Getty Kouros",
+      "properties": {
+        "price": "$Unknown",
+        "appraisedValue": "$Unknown"
+      }
+    },
+    {
+      "label": "Thomas Hoving",
+      "properties": {
+        "profession": "Director of the Metropolitan Museum of Art"
+      }
+    },
+    {
+      "label": "Gianfranco Becchina",
+      "properties": {
+        "profession": "Italian antiquities dealer"
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "startNode": "Jiri Frel",
+      "endNode": "Charles University",
+      "type": "WORKED_AT",
+      "properties": {
+        "date": "1969-1989"
+      }
+    },
+    {
+      "startNode": "Jiri Frel",
+      "endNode": "Princeton University's Institute for Advanced Studies",
+      "type": "WORKED_AT",
+      "properties": {
+        "date": "1969"
+      }
+    },
+    {
+      "startNode": "Jiri Frel",
+      "endNode": "Metropolitan Museum of Art",
+      "type": "WORKED_AT",
+      "properties": {
+        "date": "1969"
+      }
+    },
+    {
+      "startNode": "Jiri Frel",
+      "endNode": "Getty Museum",
+      "type": "WORKED_AT",
+      "properties": {
+        "date": "1973-1986"
+      }
+    },
+    {
+      "startNode": "Bruce McNall",
+      "endNode": "Summa Antiquities",
+      "type": "PARTNER",
+      "properties": {
+        "date": "Unknown"
+      }
+    },
+    {
+      "startNode": "Sy Weintraub",
+      "endNode": "Summa Antiquities",
+      "type": "BOUGHT_FROM",
+      "properties": {
+        "date": "Unknown"
+      }
+    },
+    {
+      "startNode": "Sy Weintraub",
+      "endNode": "Getty Museum",
+      "type": "DONATED_TO",
+      "properties": {
+        "date": "Unknown"
+      }
+    },
+    {
+      "startNode": "Jerome Eisenberg",
+      "endNode": "Jiri Frel",
+      "type": "SUPPLIED_APPRAISALS",
+      "properties": {
+        "date": "Unknown"
+      }
+    },
+    {
+      "startNode": "Jiri Frel",
+      "endNode": "Getty Museum",
+      "type": "PREPARED_APPRAISALS",
+      "properties": {
+        "date": "Unknown"
+      }
+    },
+    {
+      "startNode": "Jiri Frel",
+      "endNode": "Gianfranco Becchina",
+      "type": "STAYED_AT",
+      "properties": {
+        "date": "Unknown"
+      }
+    },
+    {
+      "startNode": "Thomas Hoving",
+      "endNode": "Metropolitan Museum of Art",
+      "type": "DIRECTED",
+      "properties": {
+        "date": "1973-1983"
+      }
+    }
+  ]
+}

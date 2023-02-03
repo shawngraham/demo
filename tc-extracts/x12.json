@@ -1,0 +1,88 @@
+{"nodes": [
+    {
+      "label": "Vibia Sabina Statue",
+      "properties": {
+        "date": "2nd century Roman",
+        "lootedFrom": "Italy"
+      }
+    },
+    {
+      "label": "Nikolas Koutoulakis",
+      "properties": {
+        "profession": "Greek Dealer"
+      }
+    },
+    {
+      "label": "Giacomo Medici",
+      "properties": {
+        "profession": "Italian Antiquities Dealer"
+      }
+    },
+    {
+      "label": "Robert Hecht",
+      "properties": {
+        "profession": "Antiquities Dealer"
+      }
+    },
+    {
+      "label": "Fritz Bürki",
+      "properties": {
+        "profession": "Conservator"
+      }
+    },
+    {
+      "label": "Boston Museum of Fine Arts",
+      "properties": {
+        "location": "Boston, MA"
+      }
+    },
+    {
+      "label": "Metropolitan Museum of Art",
+      "properties": {
+        "location": "New York, NY"
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "startNode": "Nikolas Koutoulakis",
+      "endNode": "Vibia Sabina Statue",
+      "type": "ABOUT",
+      "properties": {
+        "date": "1974"
+      }
+    },
+    {
+      "startNode": "Giacomo Medici",
+      "endNode": "Vibia Sabina Statue",
+      "type": "CHECKED"
+    },
+    {
+      "startNode": "Robert Hecht",
+      "endNode": "Vibia Sabina Statue",
+      "type": "BOUGHT"
+    },
+    {
+      "startNode": "Fritz Bürki",
+      "endNode": "Vibia Sabina Statue",
+      "type": "FRONT_FOR"
+    },
+    {
+      "startNode": "Vibia Sabina Statue",
+      "endNode": "Boston Museum of Fine Arts",
+      "type": "BOUGHT_BY",
+      "properties": {
+        "date": "1979"
+      }
+    },
+    {
+      "startNode": "Vibia Sabina Statue",
+      "endNode": "Metropolitan Museum of Art",
+      "type": "BOUGHT_BY",
+      "properties": {
+        "date": "1972"
+      }
+    }
+  ]
+}
+

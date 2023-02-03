@@ -1,0 +1,79 @@
+},{"nodes": [
+    {
+      "label": "Ubina Site",
+      "properties": {
+        "location": "Salu village, Ubina, Harjumaa county, northern Estonia",
+        "date": "12th century AD"
+      }
+    },
+    {
+      "label": "Silver Hoard of Ubina",
+      "properties": {
+        "material": "pottery fragments, penannular brooches and other jewellery, and silver coins",
+        "origin": "Byzantine culture, Germany, England, Arabia, Denmark, Sweden, Hungary, and Byzantine"
+      }
+    },
+    {
+      "label": "Walter Augsburger",
+      "properties": {
+        "location": "German city of Dortmund"
+      }
+    },
+    {
+      "label": "Maido Kättmann",
+      "properties": {
+        "location": "Pärnu, Estonia"
+      }
+    },
+    {
+      "label": "Estonian Defence League",
+      "properties": {
+        "type": "voluntary division of the Defence Forces"
+      }
+    },
+    {
+      "label": "Institute of History",
+      "properties": {
+        "location": "Tallinn"
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "startNode": "Ubina Site",
+      "endNode": "Silver Hoard of Ubina",
+      "type": "CONTAINS",
+      "properties": {}
+    },
+    {
+      "startNode": "Silver Hoard of Ubina",
+      "endNode": "Walter Augsburger",
+      "type": "SOLD_BY",
+      "properties": {}
+    },
+    {
+      "startNode": "Walter Augsburger",
+      "endNode": "Maido Kättmann",
+      "type": "SOLD_TO",
+      "properties": {}
+    },
+    {
+      "startNode": "Maido Kättmann",
+      "endNode": "Ubina Site",
+      "type": "LOOTED_FROM",
+      "properties": {}
+    },
+    {
+      "startNode": "Estonian Defence League",
+      "endNode": "Ubina Site",
+      "type": "PROTECTED",
+      "properties": {}
+    },
+    {
+      "startNode": "Silver Hoard of Ubina",
+      "endNode": "Institute of History",
+      "type": "STORED_AT",
+      "properties": {}
+    }
+  ]
+}

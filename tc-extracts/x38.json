@@ -1,0 +1,126 @@
+{"nodes": [
+    {
+      "label": "Jiroft",
+      "properties": {
+        "location": "Iran",
+        "date": "2001"
+      }
+    },
+    {
+      "label": "Kerman",
+      "properties": {
+        "location": "Iran"
+      }
+    },
+    {
+      "label": "Chlorite",
+      "properties": {
+        "mineral": "soapstone-like"
+      }
+    },
+    {
+      "label": "Yazd",
+      "properties": {
+        "location": "Iran"
+      }
+    },
+    {
+      "label": "United Arab Emirates",
+      "properties": {
+        "location": "Middle East"
+      }
+    },
+    {
+      "label": "United Kingdom",
+      "properties": {
+        "location": "Europe"
+      }
+    },
+    {
+      "label": "Interpol",
+      "properties": {
+        "organization": "international law enforcement agency"
+      }
+    },
+    {
+      "label": "Sotheby’s",
+      "properties": {
+        "organization": "auction house"
+      }
+    },
+    {
+      "label": "Drouot",
+      "properties": {
+        "organization": "auction house"
+      }
+    },
+    {
+      "label": "National Museum",
+      "properties": {
+        "location": "Tehran"
+      }
+    },
+    {
+      "label": "Mesopotamia",
+      "properties": {
+        "location": "Middle East"
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "startNode": "Jiroft",
+      "endNode": "Kerman",
+      "type": "LOCATED_IN",
+      "properties": {}
+    },
+    {
+      "startNode": "Jiroft",
+      "endNode": "Yazd",
+      "type": "EXPORTED_TO",
+      "properties": {}
+    },
+    {
+      "startNode": "Jiroft",
+      "endNode": "United Arab Emirates",
+      "type": "EXPORTED_TO",
+      "properties": {}
+    },
+    {
+      "startNode": "Jiroft",
+      "endNode": "United Kingdom",
+      "type": "EXPORTED_TO",
+      "properties": {}
+    },
+    {
+      "startNode": "Jiroft",
+      "endNode": "Interpol",
+      "type": "RECOVERED_BY",
+      "properties": {}
+    },
+    {
+      "startNode": "Jiroft",
+      "endNode": "Sotheby’s",
+      "type": "FOUND_IN",
+      "properties": {}
+    },
+    {
+      "startNode": "Jiroft",
+      "endNode": "Drouot",
+      "type": "FOUND_IN",
+      "properties": {}
+    },
+    {
+      "startNode": "Jiroft",
+      "endNode": "National Museum",
+      "type": "RETURNED_TO",
+      "properties": {}
+    },
+    {
+      "startNode": "Jiroft",
+      "endNode": "Mesopotamia",
+      "type": "COMPARED_TO",
+      "properties": {}
+    }
+  ]
+}

@@ -1,0 +1,178 @@
+{"nodes": [
+    {
+      "label": "Marion True",
+      "properties": {
+        "position": "Curator of Antiquities",
+        "location": "J. Paul Getty Museum"
+      }
+    },
+    {
+      "label": "Jiri Frel",
+      "properties": {
+        "position": "Curator of Antiquities",
+        "location": "J. Paul Getty Museum"
+      }
+    },
+    {
+      "label": "Getty Aphrodite",
+      "properties": {
+        "date": "1988"
+      }
+    },
+    {
+      "label": "Kanakaria Mosaics",
+      "properties": {
+        "date": "1988"
+      }
+    },
+    {
+      "label": "Sevso Treasure",
+      "properties": {
+        "date": "1996"
+      }
+    },
+    {
+      "label": "Ceramic Fragments",
+      "properties": {
+        "date": "1979-1981"
+      }
+    },
+    {
+      "label": "Francavilla Maritima",
+      "properties": {
+        "location": "Italy"
+      }
+    },
+    {
+      "label": "Metropolitan Museum of Art",
+      "properties": {
+        "location": "New York"
+      }
+    },
+    {
+      "label": "Getty Villa",
+      "properties": {
+        "location": "Malibu",
+        "date": "2006"
+      }
+    },
+    {
+      "label": "Paros",
+      "properties": {
+        "location": "Greece"
+      }
+    },
+    {
+      "label": "Christos Michaelides",
+      "properties": {
+        "position": "antiquities dealer"
+      }
+    },
+    {
+      "label": "Robin Symes",
+      "properties": {
+        "position": "antiquities dealer"
+      }
+    },
+    {
+      "label": "Barbara and Lawrence Fleischman Collection",
+      "properties": {
+        "date": "1994"
+      }
+    },
+    {
+      "label": "Guglielmo Collection",
+      "properties": {
+        "location": "Italy"
+      }
+    },
+    {
+      "label": "Robert Hecht",
+      "properties": {
+        "position": "antiquities dealer"
+      }
+    },
+    {
+      "label": "Giacomo Medici",
+      "properties": {
+        "position": "antiquities dealer"
+      }
+    },
+    {
+      "label": "Dietrich von Bothmer",
+      "properties": {
+        "position": "Curator of Greek and Roman Art"
+      }
+    },
+    {
+      "label": "Getty CEO",
+      "properties": {
+        "position": "Chief Executive Officer"
+      }
+    },
+    {
+      "label": "Getty Director",
+      "properties": {
+        "position": "Director"
+      }
+    },
+    {
+      "label": "Getty Board of Trustees",
+      "properties": {
+        "position": "Board of Trustees"
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "startNode": "Marion True",
+      "endNode": "Jiri Frel",
+      "type": "SUPERVISED_BY",
+      "properties": {
+        "date": "1986"
+      }
+    },
+    {
+      "startNode": "Marion True",
+      "endNode": "Metropolitan Museum of Art",
+      "type": "OFFERED_POSITION",
+      "properties": {
+        "date": "1991"
+      }
+    },
+    {
+      "startNode": "Marion True",
+      "endNode": "Getty Villa",
+      "type": "OVERSEES_PROJECT",
+      "properties": {
+        "date": "1995"
+      }
+    },
+    {
+      "startNode": "Marion True",
+      "endNode": "Christos Michaelides",
+      "type": "RECIEVED_LOAN",
+      "properties": {
+        "date": "1995"
+      }
+    },
+    {
+      "startNode": "Marion True",
+      "endNode": "Barbara and Lawrence Fleischman Collection",
+      "type": "ACQUIRED",
+      "properties": {
+        "date": "1996"
+      }
+    },
+    {
+      "startNode": "Marion True",
+      "endNode": "Guglielmo Collection",
+      "type": "ACQUIRED",
+      "properties": {
+        "date": "1990"
+      }
+    },
+    {
+      "startNode": "Marion True",
+      "endNode": "Robert Hecht"
+     }

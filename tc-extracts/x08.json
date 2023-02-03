@@ -1,0 +1,113 @@
+{"nodes": [
+    {
+      "label": "Valdivia Culture",
+      "properties": {
+        "date": "4400 BC - 1450 BC",
+        "sites": "Valdivia, San Pablo, Real Alto, Salango, Loma Alta, Colimes, San Lorenzo del Mate"
+      }
+    },
+    {
+      "label": "Betty Meggers",
+      "properties": {
+        "theory": "Direct contact with Jomon Period Japan"
+      }
+    },
+    {
+      "label": "Constantin Brâncuşi",
+      "properties": {}
+    },
+    {
+      "label": "Henry Moore",
+      "properties": {}
+    },
+    {
+      "label": "Emilio Estrada",
+      "properties": {}
+    },
+    {
+      "label": "Rex González",
+      "properties": {}
+    },
+    {
+      "label": "Museo Banco Central",
+      "properties": {
+        "location": "Quito"
+      }
+    },
+    {
+      "label": "San Isidro",
+      "properties": {}
+    },
+    {
+      "label": "Valdivia Figurines",
+      "properties": {
+        "iconography": "Zoomorphic/Anthropomorphic",
+        "date": "2300 BC - 2000 BC"
+      }
+    },
+    {
+      "label": "Huaqueros",
+      "properties": {
+        "sites": "U-shaped early Valdivia sites",
+        "knowledge": "Intimate knowledge of the archaeology of the region"
+      }
+    },
+    {
+      "label": "Fake Valdivia Figurines",
+      "properties": {
+        "originating_potter": "Practical joker who sought to ‘salt’ archaeological digs with fakes"
+      }
+    }
+
+  ],
+  "relationships": [
+    {
+      "startNode": "Valdivia Culture",
+      "endNode": "Betty Meggers",
+      "type": "INSPIRED_BY",
+      "properties": {}
+    },
+    {
+      "startNode": "Valdivia Figurines",
+      "endNode": "Constantin Brâncuşi",
+      "type": "COMPARED_TO",
+      "properties": {}
+    },
+    {
+      "startNode": "Valdivia Figurines",
+      "endNode": "Henry Moore",
+      "type": "COMPARED_TO",
+      "properties": {}
+    },
+    {
+      "startNode": "Emilio Estrada",
+      "endNode": "Valdivia",
+      "type": "DISCOVERED",
+      "properties": {}
+    },
+    {
+      "startNode": "Museo Banco Central",
+      "endNode": "San Isidro",
+      "type": "LOCATED",
+      "properties": {}
+    },
+    {
+      "startNode": "Rex González",
+      "endNode": "Museo Banco Central",
+      "type": "QUESTIONED",
+      "properties": {}
+    },
+    {
+      "startNode": "Huaqueros",
+      "endNode": "San Isidro",
+      "type": "LOCATED",
+      "properties": {}
+    },
+    {
+      "startNode": "Fake Valdivia Figurines",
+      "endNode": "Museo Banco Central",
+      "type": "SOLD_TO",
+      "properties": {}
+    }
+  ]
+}

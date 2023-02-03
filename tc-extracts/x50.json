@@ -1,0 +1,609 @@
+{"nodes": [
+
+    {
+
+      "label": "Morgantina Silver",
+
+      "properties": {
+
+        "location": "Sicily",
+
+        "pieces": "16",
+
+        "price": "$2.7 million"
+
+      }
+
+    },
+
+    {
+
+      "label": "Metropolitan Museum of Art",
+
+      "properties": {
+
+        "location": "New York"
+
+      }
+
+    },
+
+    {
+
+      "label": "Princeton University",
+
+      "properties": {
+
+        "location": "New Jersey"
+
+      }
+
+    },
+
+    {
+
+      "label": "University of Virginia",
+
+      "properties": {
+
+        "location": "Virginia"
+
+      }
+
+    },
+
+    {
+
+      "label": "Wesleyan University",
+
+      "properties": {
+
+        "location": "Connecticut"
+
+      }
+
+    },
+
+    {
+
+      "label": "Robert Hecht",
+
+      "properties": {
+
+        "location": "Switzerland"
+
+      }
+
+    },
+
+    {
+
+      "label": "Peter Watson",
+
+      "properties": {
+
+        "location": "Unknown"
+
+      }
+
+    },
+
+    {
+
+      "label": "Cecilia Todeschini",
+
+      "properties": {
+
+        "location": "Unknown"
+
+      }
+
+    },
+
+    {
+
+      "label": "Malcolm Bell",
+
+      "properties": {
+
+        "location": "Unknown"
+
+      }
+
+    },
+
+    {
+
+      "label": "Giuseppe Mascara",
+
+      "properties": {
+
+        "location": "Sicily"
+
+      }
+
+    },
+
+    {
+
+      "label": "Vincenzo Bossi",
+
+      "properties": {
+
+        "location": "Enna"
+
+      }
+
+    },
+
+    {
+
+      "label": "Filippo Baviera",
+
+      "properties": {
+
+        "location": "Enna"
+
+      }
+
+    },
+
+    {
+
+      "label": "Orazio Di Simone",
+
+      "properties": {
+
+        "location": "Lugano"
+
+      }
+
+    },
+
+    {
+
+      "label": "Dietrich von Bothmer",
+
+      "properties": {
+
+        "location": "Unknown"
+
+      }
+
+    },
+
+    {
+
+      "label": "Ashton Hawkins",
+
+      "properties": {
+
+        "location": "Unknown"
+
+      }
+
+    },
+
+    {
+
+      "label": "Giuliano Urbani",
+
+      "properties": {
+
+        "location": "Italy"
+
+      }
+
+    },
+
+    {
+
+      "label": "Eupolemos",
+
+      "properties": {
+
+        "location": "Morgantina"
+
+      }
+
+    },
+
+    {
+
+      "label": "Philippe de Montebello",
+
+      "properties": {
+
+        "location": "Unknown"
+
+      }
+
+    },
+
+    {
+
+      "label": "Maurice Tempelsman",
+
+      "properties": {
+
+        "location": "Unknown"
+
+      }
+
+    },
+
+    {
+
+      "label": "Getty Aphrodite",
+
+      "properties": {
+
+        "location": "Unknown"
+
+      }
+
+    },
+
+    {
+
+      "label": "Rome",
+
+      "properties": {
+
+        "location": "Italy"
+
+      }
+
+    },
+
+    {
+
+      "label": "Palermo",
+
+      "properties": {
+
+        "location": "Italy"
+
+      }
+
+    },
+
+    {
+
+      "label": "Aidone",
+
+      "properties": {
+
+        "location": "Sicily"
+
+      }
+
+    }
+
+  ],
+
+  "relationships": [
+
+    {
+
+      "startNode": "Metropolitan Museum of Art",
+
+      "endNode": "Morgantina Silver",
+
+      "type": "BOUGHT_BY",
+
+      "properties": {
+
+        "date": "1981-1982"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Princeton University",
+
+      "endNode": "Morgantina Silver",
+
+      "type": "EXCAVATED",
+
+      "properties": {
+
+        "date": "1955"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "University of Virginia",
+
+      "endNode": "Morgantina Silver",
+
+      "type": "EXCAVATED",
+
+      "properties": {
+
+        "date": "Unknown"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Wesleyan University",
+
+      "endNode": "Morgantina Silver",
+
+      "type": "EXCAVATED",
+
+      "properties": {
+
+        "date": "Unknown"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Robert Hecht",
+
+      "endNode": "Morgantina Silver",
+
+      "type": "BOUGHT_FROM",
+
+      "properties": {
+
+        "date": "1981-1982"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Peter Watson",
+
+      "endNode": "Morgantina Silver",
+
+      "type": "SUMMARIZED",
+
+      "properties": {
+
+        "date": "Unknown"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Cecilia Todeschini",
+
+      "endNode": "Morgantina Silver",
+
+      "type": "SUMMARIZED",
+
+      "properties": {
+
+        "date": "Unknown"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Malcolm Bell",
+
+      "endNode": "Morgantina Silver",
+
+      "type": "INVESTIGATED",
+
+      "properties": {
+
+        "date": "1993"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Giuseppe Mascara",
+
+      "endNode": "Morgantina Silver",
+
+      "type": "DISCLOSED",
+
+      "properties": {
+
+        "date": "1996"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Vincenzo Bossi",
+
+      "endNode": "Morgantina Silver",
+
+      "type": "SOLD_TO",
+
+      "properties": {
+
+        "date": "Unknown"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Filippo Baviera",
+
+      "endNode": "Morgantina Silver",
+
+      "type": "SOLD_TO",
+
+      "properties": {
+
+        "date": "Unknown"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Orazio Di Simone",
+
+      "endNode": "Morgantina Silver",
+
+      "type": "SOLD_TO",
+
+      "properties": {
+
+        "date": "Unknown"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Dietrich von Bothmer",
+
+      "endNode": "Morgantina Silver",
+
+      "type": "PUBLISHED",
+
+      "properties": {
+
+        "date": "1984"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Ashton Hawkins",
+
+      "endNode": "Morgantina Silver",
+
+      "type": "REFUSED_REQUEST",
+
+      "properties": {
+
+        "date": "1993"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Giuliano Urbani",
+
+      "endNode": "Morgantina Silver",
+
+      "type": "REQUESTED",
+
+      "properties": {
+
+        "date": "1996"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Malcolm Bell",
+
+      "endNode": "Eupolemos",
+
+      "type": "TRANSLATED",
+
+      "properties": {
+
+        "date": "1999"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Philippe de Montebello",
+
+      "endNode": "Morgantina Silver",
+
+      "type": "AGREED",
+
+      "properties": {
+
+        "date": "2006"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Rome",
+
+      "endNode": "Morgantina Silver",
+
+      "type": "DISPLAYED",
+
+      "properties": {
+
+        "date": "Unknown"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Palermo",
+
+      "endNode": "Morgantina Silver",
+
+      "type": "DISPLAYED",
+
+      "properties": {
+
+        "date": "Unknown"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Aidone",
+
+      "endNode": "Morgantina Silver",
+
+      "type": "DISPLAYED",
+
+      "properties": {
+
+        "date": "Unknown"
+
+      }
+
+    }
+
+  ]
+
+}

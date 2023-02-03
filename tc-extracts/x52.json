@@ -1,0 +1,161 @@
+{"nodes": [
+    {
+      "label": "Benghazi Treasure",
+      "properties": {
+        "objects": "364 gold coins, 2,433 silver coins, 4,484 bronze coins, 306 pieces of jewelry and 43 other antiquities"
+      }
+    },
+    {
+      "label": "Temple of Artemis",
+      "properties": {
+        "location": "Cyrene",
+        "date": "fifth and sixth centuries BC"
+      }
+    },
+    {
+      "label": "Palace of Columns",
+      "properties": {
+        "location": "Ptolemais",
+        "date": "Hellenistic period"
+      }
+    },
+    {
+      "label": "Meliu collection",
+      "properties": {
+        "objects": "2,000 coins"
+      }
+    },
+    {
+      "label": "Museo Coloniale",
+      "properties": {
+        "location": "Rome"
+      }
+    },
+    {
+      "label": "National Commercial Bank",
+      "properties": {
+        "location": "Omar al-Mukhtar Street, Benghazi"
+      }
+    },
+    {
+      "label": "Department of Antiquities",
+      "properties": {
+        "location": "Benghazi"
+      }
+    },
+    {
+      "label": "Muammar Gaddafi",
+      "properties": {
+        "date": "overthrow in 2011"
+      }
+    },
+    {
+      "label": "UNESCO",
+      "properties": {
+        "head": "Francesco Bandarin"
+      }
+    },
+    {
+      "label": "Ahmed Buzaian",
+      "properties": {
+        "profession": "Professor of Archaeology at Benghazi University"
+      }
+    },
+    {
+      "label": "Hafed Walda",
+      "properties": {
+        "profession": "Libyan Archaeologist"
+      }
+    },
+    {
+      "label": "Nick Meo",
+      "properties": {
+        "profession": "Reporter for The Telegraph"
+      }
+    },
+    {
+      "label": "Egypt",
+      "properties": {}
+    }
+  ],
+  "relationships": [
+    {
+      "startNode": "Benghazi Treasure",
+      "endNode": "Temple of Artemis",
+      "type": "EXCAVATED_FROM",
+      "properties": {}
+    },
+    {
+      "startNode": "Benghazi Treasure",
+      "endNode": "Palace of Columns",
+      "type": "EXCAVATED_FROM",
+      "properties": {}
+    },
+    {
+      "startNode": "Benghazi Treasure",
+      "endNode": "Meliu collection",
+      "type": "COMPRISES",
+      "properties": {}
+    },
+    {
+      "startNode": "Benghazi Treasure",
+      "endNode": "Museo Coloniale",
+      "type": "MOVED_TO",
+      "properties": {
+        "date": "1942"
+      }
+    },
+    {
+      "startNode": "Benghazi Treasure",
+      "endNode": "National Commercial Bank",
+      "type": "MOVED_TO",
+      "properties": {
+        "date": "1961"
+      }
+    },
+    {
+      "startNode": "Benghazi Treasure",
+      "endNode": "Department of Antiquities",
+      "type": "INVESTIGATED_BY",
+      "properties": {}
+    },
+    {
+      "startNode": "Benghazi Treasure",
+      "endNode": "Muammar Gaddafi",
+      "type": "OVERTHROWN_BY",
+      "properties": {}
+    },
+    {
+      "startNode": "Benghazi Treasure",
+      "endNode": "UNESCO",
+      "type": "COMMENTED_ON_BY",
+      "properties": {}
+    },
+    {
+      "startNode": "Benghazi Treasure",
+      "endNode": "Ahmed Buzaian",
+      "type": "COMMENTED_ON_BY",
+      "properties": {}
+    },
+    {
+      "startNode": "Benghazi Treasure",
+      "endNode": "Hafed Walda",
+      "type": "COMMENTED_ON_BY",
+      "properties": {}
+    },
+    {
+      "startNode": "Benghazi Treasure",
+      "endNode": "Nick Meo",
+      "type": "REPORTED_ON_BY",
+      "properties": {}
+    },
+    {
+      "startNode": "Benghazi Treasure",
+      "endNode": "Egypt",
+      "type": "POTENTIALLY_SOLD_TO",
+      "properties": {
+        "date": "2011"
+      }
+    }
+  ]
+}

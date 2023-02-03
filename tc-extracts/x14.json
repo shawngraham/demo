@@ -1,0 +1,74 @@
+{"nodes": [
+    {
+      "label": "Five Dynasties Tomb of Wang Chuzhi",
+      "properties": {
+        "location": "Xiyanchuan, Hebei Province"
+      }
+    },
+    {
+      "label": "Marble Relief Panel",
+      "properties": {
+        "date": "10th century",
+        "priceEstimate": "$400,000-500,000"
+      }
+    },
+    {
+      "label": "M&C Gallery",
+      "properties": {
+        "location": "Hong Kong"
+      }
+    },
+    {
+      "label": "Christie's New York",
+      "properties": {
+        "location": "New York"
+      }
+    },
+    {
+      "label": "US Customs",
+      "properties": {
+        "location": "United States"
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "startNode": "Marble Relief Panel",
+      "endNode": "Five Dynasties Tomb of Wang Chuzhi",
+      "type": "FROM",
+      "properties": {
+        "date": "1994"
+      }
+    },
+    {
+      "startNode": "Marble Relief Panel",
+      "endNode": "M&C Gallery",
+      "type": "CONSIGNED_BY",
+      "properties": {}
+    },
+    {
+      "startNode": "Marble Relief Panel",
+      "endNode": "Christie's New York",
+      "type": "ADVERTISED_BY",
+      "properties": {
+        "date": "2000"
+      }
+    },
+    {
+      "startNode": "US Customs",
+      "endNode": "Marble Relief Panel",
+      "type": "SEIZED_BY",
+      "properties": {
+        "date": "2000"
+      }
+    },
+    {
+      "startNode": "Marble Relief Panel",
+      "endNode": "China",
+      "type": "RETURNED_TO",
+      "properties": {
+        "date": "2001"
+      }
+    }
+  ]
+}

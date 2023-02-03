@@ -1,0 +1,106 @@
+{"nodes": [
+    {
+      "label": "Vase",
+      "properties": {
+        "madeIn": "Maya",
+        "location": "Tomb 12 at Río Azul",
+        "style": "Cylindrical blackware",
+        "decoration": "Swirled pattern, partially carved with geometric designs, partially stuccoed and painted in white, red, and Maya blue"
+      }
+    },
+    {
+      "label": "Six Sky",
+      "properties": {}
+    },
+    {
+      "label": "Río Azul",
+      "properties": {
+        "location": "Guatemala"
+      }
+    },
+    {
+      "label": "Andre Emmerich Gallery",
+      "properties": {
+        "location": "New York"
+      }
+    },
+    {
+      "label": "Peter G. Wray",
+      "properties": {
+        "location": "Scottsdale, Arizona"
+      }
+    },
+    {
+      "label": "Detroit Institute of Arts",
+      "properties": {
+        "location": "Detroit"
+      }
+    },
+    {
+      "label": "Arthur H. Nixon Fund",
+      "properties": {}
+    },
+    {
+      "label": "UNESCO",
+      "properties": {}
+    },
+    {
+      "label": "Michael Kan",
+      "properties": {
+        "role": "Curator of African, Oceanic and New World Art"
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "startNode": "Vase",
+      "endNode": "Río Azul",
+      "type": "FROM",
+      "properties": {}
+    },
+    {
+      "startNode": "Vase",
+      "endNode": "Six Sky",
+      "type": "MENTIONS",
+      "properties": {}
+    },
+    {
+      "startNode": "Vase",
+      "endNode": "Andre Emmerich Gallery",
+      "type": "OFFERED_BY",
+      "properties": {}
+    },
+    {
+      "startNode": "Andre Emmerich Gallery",
+      "endNode": "Peter G. Wray",
+      "type": "IN_POSSESSION_OF",
+      "properties": {}
+    },
+    {
+      "startNode": "Vase",
+      "endNode": "Detroit Institute of Arts",
+      "type": "BOUGHT_BY",
+      "properties": {
+        "date": "April 1984"
+      }
+    },
+    {
+      "startNode": "Detroit Institute of Arts",
+      "endNode": "Arthur H. Nixon Fund",
+      "type": "PURCHASED_BY",
+      "properties": {}
+    },
+    {
+      "startNode": "Detroit Institute of Arts",
+      "endNode": "UNESCO",
+      "type": "HAS_POLICY_OF",
+      "properties": {}
+    },
+    {
+      "startNode": "Detroit Institute of Arts",
+      "endNode": "Michael Kan",
+      "type": "CURATOR",
+      "properties": {}
+    }
+  ]
+}

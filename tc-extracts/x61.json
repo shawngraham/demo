@@ -1,0 +1,131 @@
+{"nodes": [
+    {
+      "label": "Río Azul",
+      "properties": {
+        "location": "Northeastern Guatemala",
+        "discovered": "1962",
+        "looted": "1976-1978"
+      }
+    },
+    {
+      "label": "Sun Oil Company",
+      "properties": {
+        "location": "Northeastern Guatemala"
+      }
+    },
+    {
+      "label": "Trinidad Pech",
+      "properties": {
+        "role": "Employee of Sun Oil Company"
+      }
+    },
+    {
+      "label": "Richard",
+      "properties": {
+        "role": "Archaeologist"
+      }
+    },
+    {
+      "label": "Guatemalan Collector",
+      "properties": {
+        "role": "Wealthy Collector"
+      }
+    },
+    {
+      "label": "Local Guatemalan Man",
+      "properties": {
+        "role": "Leader of Looting Gangs"
+      }
+    },
+    {
+      "label": "Unnamed Archaeologist",
+      "properties": {
+        "location": "Tikal"
+      }
+    },
+    {
+      "label": "Ian Graham",
+      "properties": {
+        "role": "Archaeologist"
+      }
+    },
+    {
+      "label": "Rafael Morales",
+      "properties": {
+        "role": "Director of Prehispanic Monuments"
+      }
+    },
+    {
+      "label": "Eastern University",
+      "properties": {
+        "location": "Unknown"
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "startNode": "Río Azul",
+      "endNode": "Sun Oil Company",
+      "type": "DISCOVERED_BY",
+      "properties": {
+        "date": "1962"
+      }
+    },
+    {
+      "startNode": "Sun Oil Company",
+      "endNode": "Trinidad Pech",
+      "type": "EMPLOYED_BY",
+      "properties": {
+        "role": "Employee"
+      }
+    },
+    {
+      "startNode": "Río Azul",
+      "endNode": "Guatemalan Collector",
+      "type": "LOOTED_BY",
+      "properties": {
+        "date": "1976-1978"
+      }
+    },
+    {
+      "startNode": "Río Azul",
+      "endNode": "Local Guatemalan Man",
+      "type": "ORGANISED_BY",
+      "properties": {
+        "role": "Leader of Looting Gangs"
+      }
+    },
+    {
+      "startNode": "Local Guatemalan Man",
+      "endNode": "Unnamed Archaeologist",
+      "type": "CONNECTED_TO",
+      "properties": {
+        "location": "Tikal"
+      }
+    },
+    {
+      "startNode": "Río Azul",
+      "endNode": "Ian Graham",
+      "type": "VISITED_BY",
+      "properties": {
+        "date": "1981"
+      }
+    },
+    {
+      "startNode": "Río Azul",
+      "endNode": "Rafael Morales",
+      "type": "VISITED_BY",
+      "properties": {
+        "date": "1981"
+      }
+    },
+    {
+      "startNode": "Río Azul",
+      "endNode": "Eastern University",
+      "type": "CONNECTED_TO",
+      "properties": {
+        "role": "Corrupt Archaeologist"
+      }
+    }
+  ]
+}

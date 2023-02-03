@@ -1,0 +1,150 @@
+{"nodes": [
+    {
+      "label": "Placeres",
+      "properties": {
+        "location": "Campeche, Mexico"
+      }
+    },
+    {
+      "label": "Museo Nacional de Antropolgía",
+      "properties": {
+        "location": "Mexico City"
+      }
+    },
+    {
+      "label": "Everett Rassiga",
+      "properties": {
+        "occupation": "antiquities dealer"
+      }
+    },
+    {
+      "label": "Josué Sáenz",
+      "properties": {
+        "occupation": "collector"
+      }
+    },
+    {
+      "label": "Grolier Codex",
+      "properties": {
+        "date": "15th century"
+      }
+    },
+    {
+      "label": "Metropolitan Museum of Art",
+      "properties": {
+        "location": "New York City"
+      }
+    },
+    {
+      "label": "Thomas Hoving",
+      "properties": {
+        "occupation": "director of the Metropolitan Museum of Art"
+      }
+    },
+    {
+      "label": "Dr Ignacio Bernal",
+      "properties": {
+        "occupation": "Mexico’s National Museum of Anthropology"
+      }
+    },
+    {
+      "label": "Joseph Veach Noble",
+      "properties": {
+        "occupation": "vice director of operations, Metropolitan Museum of Art"
+      }
+    },
+    {
+      "label": "Henry Beta",
+      "properties": {
+        "alias": "Everett Rassiga"
+      }
+    },
+    {
+      "label": "Sylvanus G. Morely",
+      "properties": {
+        "occupation": "archaeologist"
+      }
+    },
+    {
+      "label": "Karl H. Meyer",
+      "properties": {
+        "occupation": "author"
+      }
+    },
+    {
+      "label": "David Freidel",
+      "properties": {
+        "occupation": "archaeologist"
+      }
+    },
+    {
+      "label": "Maize God",
+      "properties": {
+        "deity": "Maya Lord"
+      }
+    },
+    {
+      "label": "Maya Temple Decoration",
+      "properties": {
+        "date": "1968"
+      }
+    },
+    {
+      "label": "Stucco Temple Facade",
+      "properties": {
+        "date": "Late Classic Maya"
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "startNode": "Placeres",
+      "endNode": "Sylvanus G. Morely",
+      "type": "RECORDED_BY",
+      "properties": {
+        "date": "1930s"
+      }
+    },
+    {
+      "startNode": "Everett Rassiga",
+      "endNode": "Josué Sáenz",
+      "type": "OFFERED",
+      "properties": {
+        "item": "stucco temple facade"
+      }
+    },
+    {
+      "startNode": "Grolier Codex",
+      "endNode": "Josué Sáenz",
+      "type": "TRAFFICKED_BY"
+    },
+    {
+      "startNode": "Everett Rassiga",
+      "endNode": "Thomas Hoving",
+      "type": "OFFERED_FOR_SALE",
+      "properties": {
+        "price": "$400,000"
+      }
+    },
+    {
+      "startNode": "Thomas Hoving",
+      "endNode": "Dr Ignacio Bernal",
+      "type": "NOTIFIED"
+    },
+    {
+      "startNode": "Everett Rassiga",
+      "endNode": "Mexican authorities",
+      "type": "CONTACTED"
+    },
+    {
+      "startNode": "David Freidel",
+      "endNode": "photographer",
+      "type": "OBTAINED_PHOTOGRAPHS_FROM"
+    },
+    {
+      "startNode": "Everett Rassiga",
+      "endNode": "Mexican authorities",
+      "type": "RETURNED_STUCCO_FACADE_TO"
+    }
+  ]
+}

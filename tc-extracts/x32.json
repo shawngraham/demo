@@ -1,0 +1,82 @@
+{"nodes": [
+    {
+      "label": "Golden Horns",
+      "properties": {
+        "date": "5th Century AD",
+        "location": "Gallehus"
+      }
+    },
+    {
+      "label": "Niels Heidenreich",
+      "properties": {
+        "occupation": "Goldsmith"
+      }
+    },
+    {
+      "label": "Kunstkammer",
+      "properties": {
+        "location": "Christiansborg palace in Copenhagen"
+      }
+    },
+    {
+      "label": "Adam Gottlob Oehlenschläger",
+      "properties": {
+        "occupation": "Poet"
+      }
+    },
+    {
+      "label": "National Museum of Denmark",
+      "properties": {
+        "location": "Copenhagen"
+      }
+    },
+    {
+      "label": "Royal Jelling Museum",
+      "properties": {
+        "location": "Jelling"
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "startNode": "Golden Horns",
+      "endNode": "Kunstkammer",
+      "type": "KEPT_BY",
+      "properties": {
+        "date": "Before Nineteenth Century"
+      }
+    },
+    {
+      "startNode": "Niels Heidenreich",
+      "endNode": "Golden Horns",
+      "type": "STOLE",
+      "properties": {
+        "date": "May 1802"
+      }
+    },
+    {
+      "startNode": "Adam Gottlob Oehlenschläger",
+      "endNode": "Golden Horns",
+      "type": "COMPOSED_POEM_ABOUT",
+      "properties": {
+        "date": "1802"
+      }
+    },
+    {
+      "startNode": "National Museum of Denmark",
+      "endNode": "Golden Horns",
+      "type": "DISPLAYED_EARRINGS_MADE_FROM",
+      "properties": {
+        "date": "2004"
+      }
+    },
+    {
+      "startNode": "Royal Jelling Museum",
+      "endNode": "Golden Horns",
+      "type": "STOLE_REPLICAS_OF",
+      "properties": {
+        "date": "2007"
+      }
+    }
+  ]
+}

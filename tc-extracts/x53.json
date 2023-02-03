@@ -1,0 +1,361 @@
+{"nodes": [
+
+    {
+
+      "label": "November Collection",
+
+      "properties": {
+
+        "origin": "Guatemala",
+
+        "date": "1974-1981",
+
+        "pieces": "138"
+
+      }
+
+    },
+
+    {
+
+      "label": "John B. Fulling",
+
+      "properties": {
+
+        "origin": "Florida",
+
+        "role": "Collector"
+
+      }
+
+    },
+
+    {
+
+      "label": "Art Collectors of November, Inc.",
+
+      "properties": {
+
+        "registered": "April 7, 1981",
+
+        "president": "John B. Fulling",
+
+        "vice-president": "Robin S. Fulling",
+
+        "agent": "Martin F. Avery Jr."
+
+      }
+
+    },
+
+    {
+
+      "label": "Landon T. Clay",
+
+      "properties": {
+
+        "origin": "Boston, Massachusetts",
+
+        "role": "Buyer"
+
+      }
+
+    },
+
+    {
+
+      "label": "Museum of Fine Arts, Boston",
+
+      "properties": {
+
+        "origin": "Boston, Massachusetts",
+
+        "role": "Recipient"
+
+      }
+
+    },
+
+    {
+
+      "label": "Francis Robicsek",
+
+      "properties": {
+
+        "origin": "unknown",
+
+        "role": "Publisher"
+
+      }
+
+    },
+
+    {
+
+      "label": "Michael Coe",
+
+      "properties": {
+
+        "origin": "unknown",
+
+        "role": "Publisher"
+
+      }
+
+    },
+
+    {
+
+      "label": "Clemency C. Coggins",
+
+      "properties": {
+
+        "origin": "Boston University",
+
+        "role": "Archaeologist"
+
+      }
+
+    },
+
+    {
+
+      "label": "Alan Shestack",
+
+      "properties": {
+
+        "origin": "Museum of Fine Arts, Boston",
+
+        "role": "Director"
+
+      }
+
+    },
+
+    {
+
+      "label": "Malcolm Rogers",
+
+      "properties": {
+
+        "origin": "Museum of Fine Arts, Boston",
+
+        "role": "Director"
+
+      }
+
+    },
+
+    {
+
+      "label": "Weld S. Henshaw",
+
+      "properties": {
+
+        "origin": "Boston Globe",
+
+        "role": "Attorney"
+
+      }
+
+    },
+
+    {
+
+      "label": "Martina Regina de Fahsen",
+
+      "properties": {
+
+        "origin": "Guatemalan Cultural Affairs Officer",
+
+        "role": "Officer"
+
+      }
+
+    }
+
+
+
+  ],
+
+  "relationships": [
+
+    {
+
+      "startNode": "November Collection",
+
+      "endNode": "John B. Fulling",
+
+      "type": "COLLECTED_BY",
+
+      "properties": {
+
+        "date": "1974-1981"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "November Collection",
+
+      "endNode": "Art Collectors of November, Inc.",
+
+      "type": "REGISTERED_BY",
+
+      "properties": {
+
+        "date": "April 7, 1981"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "November Collection",
+
+      "endNode": "Landon T. Clay",
+
+      "type": "BOUGHT_BY",
+
+      "properties": {
+
+        "date": "1987"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "November Collection",
+
+      "endNode": "Museum of Fine Arts, Boston",
+
+      "type": "DONATED_BY",
+
+      "properties": {
+
+        "date": "1988"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "November Collection",
+
+      "endNode": "Francis Robicsek",
+
+      "type": "PUBLISHED_BY",
+
+      "properties": {
+
+        "date": "1975"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "November Collection",
+
+      "endNode": "Michael Coe",
+
+      "type": "PUBLISHED_BY",
+
+      "properties": {
+
+        "date": "1978"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "November Collection",
+
+      "endNode": "Clemency C. Coggins",
+
+      "type": "CONTACTED_BY",
+
+      "properties": {
+
+        "date": "late 1980s"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "November Collection",
+
+      "endNode": "Alan Shestack",
+
+      "type": "CONTACTED_BY",
+
+      "properties": {
+
+        "date": "late 1980s"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "November Collection",
+
+      "endNode": "Malcolm Rogers",
+
+      "type": "CONTACTED_BY",
+
+      "properties": {
+
+        "date": "1998"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "November Collection",
+
+      "endNode": "Weld S. Henshaw",
+
+      "type": "CONTACTED_BY",
+
+      "properties": {
+
+        "date": "1987"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "November Collection",
+
+      "endNode": "Martina Regina de Fahsen",
+
+      "type": "CONTACTED_BY",
+
+      "properties": {
+
+        "date": "1989"
+
+      }
+
+    }
+
+  ]
+
+}

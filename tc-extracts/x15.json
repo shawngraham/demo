@@ -1,0 +1,129 @@
+{"nodes": [
+    {
+      "label": "Weary Herakles",
+      "properties": {
+        "sculptor": "Lyssipos of Sicyon",
+        "period": "Late Antonine period",
+        "type": "Roman sculpture"
+      }
+    },
+    {
+      "label": "Metropolitan Museum of Art",
+      "properties": {
+        "location": "New York, USA"
+      }
+    },
+    {
+      "label": "Museum of Fine Arts",
+      "properties": {
+        "location": "Boston, USA"
+      }
+    },
+    {
+      "label": "Perge",
+      "properties": {
+        "location": "Turkey"
+      }
+    },
+    {
+      "label": "Antalya Museum",
+      "properties": {
+        "location": "Antalya, Turkey"
+      }
+    },
+    {
+      "label": "Shelby White",
+      "properties": {}
+    },
+    {
+      "label": "Leon Levy",
+      "properties": {}
+    },
+    {
+      "label": "Cornelius C. Vermeule III",
+      "properties": {}
+    },
+    {
+      "label": "Thomas Hoving",
+      "properties": {}
+    },
+    {
+      "label": "Robert P Mitchell",
+      "properties": {}
+    }
+  ],
+  "relationships": [
+    {
+      "startNode": "Weary Herakles",
+      "endNode": "Metropolitan Museum of Art",
+      "type": "EXHIBITED_IN",
+      "properties": {
+        "date": "1982"
+      }
+    },
+    {
+      "startNode": "Metropolitan Museum of Art",
+      "endNode": "Museum of Fine Arts",
+      "type": "PARTNERED_WITH",
+      "properties": {
+        "date": "1981"
+      }
+    },
+    {
+      "startNode": "Museum of Fine Arts",
+      "endNode": "Leon Levy",
+      "type": "OWNED_BY",
+      "properties": {
+        "date": "2004"
+      }
+    },
+    {
+      "startNode": "Weary Herakles",
+      "endNode": "Perge",
+      "type": "EXCAVATED_FROM",
+      "properties": {
+        "date": "1980"
+      }
+    },
+    {
+      "startNode": "Weary Herakles",
+      "endNode": "Antalya Museum",
+      "type": "DISPLAYED_IN",
+      "properties": {
+        "date": "1992"
+      }
+    },
+    {
+      "startNode": "Museum of Fine Arts",
+      "endNode": "Turkey",
+      "type": "RETURNED_TO",
+      "properties": {
+        "date": "2011"
+      }
+    },
+    {
+      "startNode": "Shelby White",
+      "endNode": "Leon Levy",
+      "type": "PARTNERED_WITH",
+      "properties": {}
+    },
+    {
+      "startNode": "Cornelius C. Vermeule III",
+      "endNode": "Museum of Fine Arts",
+      "type": "WORKED_AT",
+      "properties": {}
+    },
+    {
+      "startNode": "Thomas Hoving",
+      "endNode": "Metropolitan Museum of Art",
+      "type": "WORKED_AT",
+      "properties": {}
+    },
+    {
+      "startNode": "Robert P Mitchell",
+      "endNode": "Museum of Fine Arts",
+      "type": "WORKED_AT",
+      "properties": {}
+    }
+  ]
+}

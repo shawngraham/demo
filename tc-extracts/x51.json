@@ -1,0 +1,333 @@
+{"nodes": [
+
+    {
+
+      "label": "Mosaic stone mask",
+
+      "properties": {
+
+        "lootedFrom": "Mexican cave",
+
+        "collection": "Dumbarton Oaks"
+
+      }
+
+    },
+
+    {
+
+      "label": "Mildred Barns Bliss",
+
+      "properties": {
+
+        "widowOf": "Robert Woods Bliss",
+
+        "cofounder": "Dumbarton Oaks Research Library and Collection"
+
+      }
+
+    },
+
+    {
+
+      "label": "Dr. Josué Sáenz",
+
+      "properties": {
+
+        "antiquitiesCollector": "Mexican antiquities collector"
+
+      }
+
+    },
+
+    {
+
+      "label": "Gonzáles",
+
+      "properties": {
+
+        "unknownCaller": "true"
+
+      }
+
+    },
+
+    {
+
+      "label": "Villahermosa, Tabasco",
+
+      "properties": {
+
+        "location": "Villahermosa, Tabasco"
+
+      }
+
+    },
+
+    {
+
+      "label": "small plane",
+
+      "properties": {
+
+        "compassCovered": "true"
+
+      }
+
+    },
+
+    {
+
+      "label": "Sierra de Chiapas",
+
+      "properties": {
+
+        "location": "Sierra de Chiapas"
+
+      }
+
+    },
+
+    {
+
+      "label": "Grolier Codex",
+
+      "properties": {
+
+        "authenticator": "José Luis Franco"
+
+      }
+
+    },
+
+    {
+
+      "label": "Parke-Bernet auction catalogue",
+
+      "properties": {
+
+        "saleValue": "US sale value of Mexican antiquities"
+
+      }
+
+    },
+
+    {
+
+      "label": "Alphonse Jax",
+
+      "properties": {
+
+        "dealer": "New York-based dealer"
+
+      }
+
+    },
+
+    {
+
+      "label": "Dr. Gordon Ekholm",
+
+      "properties": {
+
+        "curator": "Mexican archaeology at the American Museum of Natural History"
+
+      }
+
+    },
+
+    {
+
+      "label": "George Alpha",
+
+      "properties": {
+
+        "dealer": "New York-based dealer"
+
+      }
+
+    }
+
+  ],
+
+  "relationships": [
+
+    {
+
+      "startNode": "Mosaic stone mask",
+
+      "endNode": "Mildred Barns Bliss",
+
+      "type": "BOUGHT_BY",
+
+      "properties": {
+
+        "date": "1966"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Dr. Josué Sáenz",
+
+      "endNode": "Gonzáles",
+
+      "type": "CALLED_BY",
+
+      "properties": {
+
+        "date": "1966"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Gonzáles",
+
+      "endNode": "Villahermosa, Tabasco",
+
+      "type": "SENT_TO",
+
+      "properties": {
+
+        "date": "1966"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Dr. Josué Sáenz",
+
+      "endNode": "small plane",
+
+      "type": "GOT_INTO",
+
+      "properties": {
+
+        "date": "1966"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "small plane",
+
+      "endNode": "Sierra de Chiapas",
+
+      "type": "LANDED_ON",
+
+      "properties": {
+
+        "date": "1966"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Dr. Josué Sáenz",
+
+      "endNode": "Grolier Codex",
+
+      "type": "FOUND_BY",
+
+      "properties": {
+
+        "date": "1966"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Dr. Josué Sáenz",
+
+      "endNode": "Parke-Bernet auction catalogue",
+
+      "type": "SHOWN_BY",
+
+      "properties": {
+
+        "date": "1966"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Dr. Josué Sáenz",
+
+      "endNode": "Alphonse Jax",
+
+      "type": "SOLD_TO",
+
+      "properties": {
+
+        "date": "1966"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Alphonse Jax",
+
+      "endNode": "Dr. Gordon Ekholm",
+
+      "type": "SHOWED_TO",
+
+      "properties": {
+
+        "date": "1966"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Alphonse Jax",
+
+      "endNode": "Mildred Barns Bliss",
+
+      "type": "SOLD_TO",
+
+      "properties": {
+
+        "date": "1966"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "George Alpha",
+
+      "endNode": "Meyer",
+
+      "type": "TOLD_BY",
+
+      "properties": {
+
+        "date": "1971"
+
+      }
+
+    }
+
+  ]
+
+}

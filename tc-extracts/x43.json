@@ -1,0 +1,327 @@
+{"nodes": [
+
+    {
+
+      "label": "Ma’adi",
+
+      "properties": {
+
+        "location": "Cairo",
+
+        "period": "Predynastic (fourth millenium BC)"
+
+      }
+
+    },
+
+    {
+
+      "label": "Bonhams",
+
+      "properties": {
+
+        "location": "London"
+
+      }
+
+    },
+
+    {
+
+      "label": "Joseph Garnish",
+
+      "properties": {
+
+        "profession": "Mining Company"
+
+      }
+
+    },
+
+    {
+
+      "label": "Christie’s",
+
+      "properties": {
+
+        "location": "New York"
+
+      }
+
+    },
+
+    {
+
+      "label": "Metropolitan Museum of Art",
+
+      "properties": {
+
+        "location": "New York"
+
+      }
+
+    },
+
+    {
+
+      "label": "Luc Watrin",
+
+      "properties": {
+
+        "profession": "Egyptologist"
+
+      }
+
+    },
+
+    {
+
+      "label": "Orpheus Art",
+
+      "properties": {
+
+        "location": "Michigan"
+
+      }
+
+    },
+
+    {
+
+      "label": "Wallis Gallery of Antiquities",
+
+      "properties": {
+
+        "location": "Washington DC"
+
+      }
+
+    },
+
+    {
+
+      "label": "Sands of Time Antiquities",
+
+      "properties": {
+
+        "location": "Washington DC"
+
+      }
+
+    },
+
+    {
+
+      "label": "Edward George Johnson",
+
+      "properties": {
+
+        "profession": "US Army helicopter pilot"
+
+      }
+
+    },
+
+    {
+
+      "label": "US Immigration and Customs Enforcement (ICE)",
+
+      "properties": {
+
+        "location": "USA"
+
+      }
+
+    },
+
+    {
+
+      "label": "Sue McGovern",
+
+      "properties": {
+
+        "profession": "Proprietor of Sands of Time"
+
+      }
+
+    },
+
+    {
+
+      "label": "Art Loss Register (ALR)",
+
+      "properties": {
+
+        "location": "USA"
+
+      }
+
+    }
+
+  ],
+
+  "relationships": [
+
+    {
+
+      "startNode": "Ma’adi",
+
+      "endNode": "Bonhams",
+
+      "type": "STOLEN_FROM",
+
+      "properties": {
+
+        "date": "2004"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Bonhams",
+
+      "endNode": "Luc Watrin",
+
+      "type": "ALERTED_BY",
+
+      "properties": {
+
+        "date": "2004"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Bonhams",
+
+      "endNode": "Metropolitan Museum of Art",
+
+      "type": "RETURNED_TO",
+
+      "properties": {
+
+        "date": "2005"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Christie’s",
+
+      "endNode": "Metropolitan Museum of Art",
+
+      "type": "RETURNED_TO",
+
+      "properties": {
+
+        "date": "2004"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Joseph Garnish",
+
+      "endNode": "Orpheus Art",
+
+      "type": "PROVENANCE_OF",
+
+      "properties": {
+
+        "date": "1930s"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Wallis Gallery of Antiquities",
+
+      "endNode": "Sands of Time Antiquities",
+
+      "type": "RETURNED_TO",
+
+      "properties": {
+
+        "date": "2004"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Edward George Johnson",
+
+      "endNode": "Sue McGovern",
+
+      "type": "SOLD_TO",
+
+      "properties": {
+
+        "date": "2003"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "US Immigration and Customs Enforcement (ICE)",
+
+      "endNode": "Edward George Johnson",
+
+      "type": "ARRESTED",
+
+      "properties": {
+
+        "date": "2008"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Sands of Time Antiquities",
+
+      "endNode": "Art Loss Register (ALR)",
+
+      "type": "WORKED_WITH",
+
+      "properties": {
+
+        "date": "2004"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "US Immigration and Customs Enforcement (ICE)",
+
+      "endNode": "Egypt",
+
+      "type": "RETURNED_TO",
+
+      "properties": {
+
+        "date": "2008"
+
+      }
+
+    }
+
+  ]
+
+}

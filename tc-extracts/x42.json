@@ -1,0 +1,130 @@
+{"nodes": [
+    {
+      "label": "Las Bocas",
+      "properties": {
+        "location": "Izúcar de Matamoros, Puebla, Mexico",
+        "culture": "Olmec"
+      }
+    },
+    {
+      "label": "Metropolitan Museum of Art",
+      "properties": {
+        "location": "New York City, US"
+      }
+    },
+    {
+      "label": "Nelson Rockefeller",
+      "properties": {
+        "occupation": "Businessman"
+      }
+    },
+    {
+      "label": "Everett Rassiga",
+      "properties": {
+        "occupation": "Antiquities Dealer"
+      }
+    },
+    {
+      "label": "Michael Coe",
+      "properties": {
+        "occupation": "Archaeologist"
+      }
+    },
+    {
+      "label": "María de la Cruz Paillés Hernándezes",
+      "properties": {
+        "occupation": "Mexican Archaeologist"
+      }
+    },
+    {
+      "label": "Román Piña Chan",
+      "properties": {
+        "occupation": "Mexican Archaeologist"
+      }
+    },
+    {
+      "label": "Las Bocas Figurines",
+      "properties": {
+        "type": "Olmec Figurines"
+      }
+    },
+    {
+      "label": "Placeres",
+      "properties": {
+        "location": "Mexico"
+      }
+    },
+    {
+      "label": "The Jaguar Children",
+      "properties": {
+        "type": "Book"
+      }
+    },
+    {
+      "label": "Caballo Pintado",
+      "properties": {
+        "location": "Las Bocas, Mexico"
+      }
+    },
+    {
+      "label": "Las Bocas-Caballo Pintado",
+      "properties": {
+        "location": "Las Bocas, Mexico"
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "startNode": "Las Bocas",
+      "endNode": "Las Bocas Figurines",
+      "type": "ASSOCIATED_WITH",
+      "properties": {}
+    },
+    {
+      "startNode": "Metropolitan Museum of Art",
+      "endNode": "Nelson Rockefeller",
+      "type": "BOUGHT_FROM",
+      "properties": {
+        "date": "1965"
+      }
+    },
+    {
+      "startNode": "Nelson Rockefeller",
+      "endNode": "Everett Rassiga",
+      "type": "BOUGHT_FROM",
+      "properties": {
+        "date": "1965"
+      }
+    },
+    {
+      "startNode": "Michael Coe",
+      "endNode": "Las Bocas",
+      "type": "MENTIONED_IN",
+      "properties": {
+        "book": "The Jaguar Children"
+      }
+    },
+    {
+      "startNode": "María de la Cruz Paillés Hernándezes",
+      "endNode": "Las Bocas",
+      "type": "EXCAVATED_AT",
+      "properties": {
+        "date": "1995 - 2000"
+      }
+    },
+    {
+      "startNode": "Román Piña Chan",
+      "endNode": "Caballo Pintado",
+      "type": "EXCAVATED_AT",
+      "properties": {
+        "date": "1967"
+      }
+    },
+    {
+      "startNode": "Las Bocas-Caballo Pintado",
+      "endNode": "María de la Cruz Paillés Hernándezes",
+      "type": "EXCAVATED_BY",
+      "properties": {}
+    }
+  ]
+}

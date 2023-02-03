@@ -1,0 +1,331 @@
+{"nodes": [
+    {
+      "label": "Persian Mummy",
+      "properties": {
+        "manufactured": "2000",
+        "daughterOf": "King Xerxes",
+        "cuneiformExpert": "Major American University",
+        "sarcophagusCarver": "Unknown",
+        "goldsmith": "Unknown",
+        "cuneiformKnowledge": "Rudimentary",
+        "facility": "Unknown",
+        "dryingChemicals": "Half a ton",
+        "dateOfDeath": "1996",
+        "locationOfDeath": "Unknown"
+      }
+    },
+    {
+      "label": "Amanollah Riggi",
+      "properties": {
+        "location": "New Jersey"
+      }
+    },
+    {
+      "label": "Oscar Muscarella",
+      "properties": {
+        "location": "New York"
+      }
+    },
+    {
+      "label": "Ali Akbar",
+      "properties": {
+        "location": "Karachi, Pakistan"
+      }
+    },
+    {
+      "label": "Wali Mohammad Reeki",
+      "properties": {
+        "location": "Quetta, Pakistan"
+      }
+    },
+    {
+      "label": "Sharif Shah Bakhi",
+      "properties": {
+        "location": "Iran"
+      }
+    },
+    {
+      "label": "National Museum",
+      "properties": {
+        "location": "Karachi, Pakistan"
+      }
+    },
+    {
+      "label": "Asma Ibrahim",
+      "properties": {
+        "location": "National Museum of Pakistan"
+      }
+    },
+    {
+      "label": "Metropolitan Museum of Art",
+      "properties": {
+        "location": "New York"
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "startNode": "Persian Mummy",
+      "endNode": "Amanollah Riggi",
+      "type": "SENT_BY",
+      "properties": {
+        "date": "March 2000"
+      }
+    },
+    {
+      "startNode": "Amanollah Riggi",
+      "endNode": "Oscar Muscarella",
+      "type": "SENT_BY",
+      "properties": {
+        "date": "March 2000"
+      }
+    },
+    {
+      "startNode": "Ali Akbar",
+      "endNode": "Persian Mummy",
+      "type": "SELLING",
+      "properties": {
+        "date": "October 2000"
+      }
+    },
+    {
+      "startNode": "Wali Mohammad Reeki",
+      "endNode": "Persian Mummy",
+      "type": "RECEIVED_FROM",
+      "properties": {
+        "date": "October 2000"
+      }
+    },
+    {
+      "startNode": "Wali Mohammad Reeki",
+      "endNode": "Sharif Shah Bakhi",
+      "type": "RECEIVED_FROM",
+      "properties": {
+        "date": "Unknown"
+      }
+    },
+    {
+      "startNode": "Persian Mummy",
+      "endNode": "National Museum",
+      "type": "TAKEN_TO",
+      "properties": {
+        "date": "October 2000"
+      }
+    },
+    {
+      "startNode": "Asma Ibrahim",
+      "endNode": "Persian Mummy",
+      "type": "EXAMINED",
+      "properties": {
+        "date": "October 2000"
+      }
+    },
+    {
+      "startNode": "Metropolitan Museum of Art",
+      "endNode": "Oscar Muscarella",
+      "type": "EMPLOYED_BY",
+      "properties": {
+        "date": "Unknown"
+      }
+    }
+  ]
+}
+{
+
+"nodes": [
+
+    {
+
+      "label": "David Bernstein",
+
+      "properties": {
+
+        "location": "New York City"
+
+      }
+
+    },
+
+    {
+
+      "label": "Dulles International Airport",
+
+      "properties": {}
+
+    },
+
+    {
+
+      "label": "Metropolitan Museum of Art",
+
+      "properties": {}
+
+    },
+
+    {
+
+      "label": "Art Institute of Chicago",
+
+      "properties": {}
+
+    },
+
+    {
+
+      "label": "Richard Conger",
+
+      "properties": {
+
+        "location": "Washington DC"
+
+      }
+
+    },
+
+    {
+
+      "label": "Clifford Evans",
+
+      "properties": {}
+
+    },
+
+    {
+
+      "label": "Peruvian Embassy",
+
+      "properties": {}
+
+    },
+
+    {
+
+      "label": "National Geographic Society",
+
+      "properties": {}
+
+    },
+
+    {
+
+      "label": "Explorer's Hall",
+
+      "properties": {}
+
+    },
+
+    {
+
+      "label": "Stolen Treasures, Missing Links Exhibition",
+
+      "properties": {}
+
+    },
+
+    {
+
+      "label": "Sipán Jewellery",
+
+      "properties": {}
+
+    }
+
+  ],
+
+  "relationships": [
+
+    {
+
+      "startNode": "David Bernstein",
+
+      "endNode": "Dulles International Airport",
+
+      "type": "TRAVELLED_TO",
+
+      "properties": {
+
+        "date": "January 1981"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "David Bernstein",
+
+      "endNode": "Metropolitan Museum of Art",
+
+      "type": "SOLD_TO",
+
+      "properties": {}
+
+    },
+
+    {
+
+      "startNode": "David Bernstein",
+
+      "endNode": "Art Institute of Chicago",
+
+      "type": "SOLD_TO",
+
+      "properties": {}
+
+    },
+
+    {
+
+      "startNode": "Richard Conger",
+
+      "endNode": "Dulles International Airport",
+
+      "type": "WORKED_AT",
+
+      "properties": {}
+
+    },
+
+    {
+
+      "startNode": "Clifford Evans",
+
+      "endNode": "Peruvian Embassy",
+
+      "type": "WORKED_AT",
+
+      "properties": {}
+
+    },
+
+    {
+
+      "startNode": "National Geographic Society",
+
+      "endNode": "Explorer's Hall",
+
+      "type": "HOSTED",
+
+      "properties": {
+
+        "title": "Stolen Treasures, Missing Links Exhibition"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Sipán Jewellery",
+
+      "endNode": "Sotheby's Auction House",
+
+      "type": "OFFERED_FOR_SALE",
+
+      "properties": {}
+
+    }
+
+]
+
+}

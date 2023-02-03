@@ -1,0 +1,108 @@
+{"nodes": [
+    {
+      "label": "Ixkun",
+      "properties": {
+        "location": "Mopan river valley in Guatemala’s Péten Department",
+        "date": "Preclassic to Postclassic periods",
+        "visitedBy": ["Colonel Modesto Mendez", "Eusebio Lara", "Alfred Maudslay", "Sylvanus Morley", "Herbert Spindon", "Ian Graham", "Atlas Arqueológico de Guatemala"]
+      }
+    },
+    {
+      "label": "Stela 1",
+      "properties": {
+        "height": "tallest monument in the Péten"
+      }
+    },
+    {
+      "label": "Stela 5",
+      "properties": {
+        "height": "2.65 m",
+        "commissionedBy": "Rabbit God K",
+        "material": "white limestone",
+        "figure": "male figure wearing an elaborate headdress and carrying a staff in one hand while scattering drops of liquid with the other",
+        "hieroglyphicPanel": "beneath the figure",
+        "prisoner": "bound and seated war captive"
+      }
+    },
+    {
+      "label": "Museo Nacional de Arqueología y Etnología",
+      "properties": {}
+    },
+    {
+      "label": "Atlas Arqueológico de Guatemala",
+      "properties": {}
+    },
+    {
+      "label": "Society of Antiquaries of London",
+      "properties": {}
+    }
+  ],
+  "relationships": [
+    {
+      "startNode": "Ixkun",
+      "endNode": "Colonel Modesto Mendez",
+      "type": "VISITED_BY",
+      "properties": {}
+    },
+    {
+      "startNode": "Ixkun",
+      "endNode": "Eusebio Lara",
+      "type": "VISITED_BY",
+      "properties": {}
+    },
+    {
+      "startNode": "Ixkun",
+      "endNode": "Alfred Maudslay",
+      "type": "VISITED_BY",
+      "properties": {}
+    },
+    {
+      "startNode": "Ixkun",
+      "endNode": "Sylvanus Morley",
+      "type": "VISITED_BY",
+      "properties": {}
+    },
+    {
+      "startNode": "Ixkun",
+      "endNode": "Herbert Spindon",
+      "type": "VISITED_BY",
+      "properties": {}
+    },
+    {
+      "startNode": "Ixkun",
+      "endNode": "Ian Graham",
+      "type": "VISITED_BY",
+      "properties": {}
+    },
+    {
+      "startNode": "Ixkun",
+      "endNode": "Atlas Arqueológico de Guatemala",
+      "type": "EXCAVATED_BY",
+      "properties": {}
+    },
+    {
+      "startNode": "Stela 5",
+      "endNode": "Rabbit God K",
+      "type": "COMMISSIONED_BY",
+      "properties": {}
+    },
+    {
+      "startNode": "Stela 5",
+      "endNode": "Society of Antiquaries of London",
+      "type": "DRAWN_BY",
+      "properties": {}
+    },
+    {
+      "startNode": "Stela 5",
+      "endNode": "Museo Nacional de Arqueología y Etnología",
+      "type": "HOUSED_BY",
+      "properties": {}
+    },
+    {
+      "startNode": "Stela 5",
+      "endNode": "Atlas Arqueológico de Guatemala",
+      "type": "KEPT_BY",
+      "properties": {}
+    }
+  ]
+}

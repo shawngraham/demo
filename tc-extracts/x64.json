@@ -1,0 +1,175 @@
+{"nodes": [
+    {
+      "label": "Lord Alistair McAlpine",
+      "properties": {
+        "occupation": "Antiquities Dealer"
+      }
+    },
+    {
+      "label": "Dr Ian Stead",
+      "properties": {
+        "occupation": "British Museum Staff"
+      }
+    },
+    {
+      "label": "John of Salisbury",
+      "properties": {
+        "occupation": "Metal Detecting Enthusiast"
+      }
+    },
+    {
+      "label": "James Garriock",
+      "properties": {
+        "occupation": "Metal Detecting Enthusiast"
+      }
+    },
+    {
+      "label": "Detective Chief Inspector Jack Woods",
+      "properties": {
+        "occupation": "Holborn Police Officer"
+      }
+    },
+    {
+      "label": "Stuart Needham",
+      "properties": {
+        "occupation": "British Museum Staff"
+      }
+    },
+    {
+      "label": "Terry Rossiter",
+      "properties": {
+        "occupation": "Metal Detecting Enthusiast"
+      }
+    },
+    {
+      "label": "John Cummings",
+      "properties": {
+        "occupation": "Antiquities Dealer"
+      }
+    },
+    {
+      "label": "Salisbury Hoard",
+      "properties": {
+        "numberOfArtefacts": "600",
+        "dateOfDiscovery": "23 February 1985"
+      }
+    },
+    {
+      "label": "British Museum",
+      "properties": {
+        "location": "London"
+      }
+    },
+    {
+      "label": "Christie's",
+      "properties": {
+        "location": "South Kensington"
+      }
+    },
+    {
+      "label": "Salt Lake City",
+      "properties": {
+        "location": "USA"
+      }
+    },
+    {
+      "label": "Devizes Museum",
+      "properties": {
+        "location": "Wiltshire"
+      }
+    },
+    {
+      "label": "Red Lion Hotel",
+      "properties": {
+        "location": "Salisbury, Wiltshire"
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "startNode": "Lord Alistair McAlpine", 
+      "endNode": "British Museum",
+      "type": "SOLD",
+      "properties": {
+        "date": "1988",
+        "price": "£55,000"
+      }
+    },
+    {
+      "startNode": "John of Salisbury",
+      "endNode": "British Museum",
+      "type": "OFFERED_FOR_SALE",
+      "properties": {
+        "date": "December 1992",
+        "price": "£20,000"
+      }
+    },
+    {
+      "startNode": "John Cummings",
+      "endNode": "Salisbury Hoard",
+      "type": "BOUGHT",
+      "properties": {
+        "date": "1985",
+        "price": "£10,500"
+      }
+    },
+    {
+      "startNode": "Lord Alistair McAlpine",
+      "endNode": "Salisbury Hoard",
+      "type": "POSSESSED",
+      "properties": {
+        "date": "1990"
+      }
+    },
+    {
+      "startNode": "Devizes Museum",
+      "endNode": "Salisbury Hoard",
+      "type": "PURCHASED_FROM",
+      "properties": {
+        "date": "1990",
+        "dealer": "London Antiquities Dealer"
+      }
+    },
+    {
+      "startNode": "Christie's",
+      "endNode": "Salisbury Hoard",
+      "type": "LISTED_FOR_SALE",
+      "properties": {
+        "date": "27 October 1993",
+        "price": "£150-250, £200-300"
+      }
+    },
+    {
+      "startNode": "British Museum",
+      "endNode": "Salisbury Hoard",
+      "type": "PURCHASED_TWICE",
+      "properties": {
+        "date": "1993-1994"
+      }
+    },
+    {
+      "startNode": "British Museum",
+      "endNode": "Landowner's Daughter",
+      "type": "RETURNED_TO",
+      "properties": {
+        "date": "1994"
+      }
+    },
+    {
+      "startNode": "British Museum",
+      "endNode": "Lord Alistair McAlpine",
+      "type": "ATTEMPTED_FINANCIAL_RECOMPENSE_FROM",
+      "properties": {
+        "date": "1995"
+      }
+    },
+    {
+      "startNode": "Dr Ian Stead",
+      "endNode": "Salisbury Hoard",
+      "type": "EXCAVATED_AND_ANALYSED",
+      "properties": {
+        "date": "1995"
+      }
+    }
+  ]
+}

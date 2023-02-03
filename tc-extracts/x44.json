@@ -1,0 +1,156 @@
+{"nodes": [
+    {
+      "label": "Machaquilá",
+      "properties": {
+        "location": "Petén, Guatemala",
+        "florescence": "9th century AD",
+        "stela": "17 stelas and six altars"
+      }
+    },
+    {
+      "label": "Machaquilá Stela 2",
+      "properties": {
+        "date": "May 1961",
+        "looted": "1971",
+        "price": "$3,000 USD"
+      }
+    },
+    {
+      "label": "Jorge Alamilla",
+      "properties": {
+        "location": "Belize",
+        "occupation": "Antiquities Trader"
+      }
+    },
+    {
+      "label": "Ed Dwyer",
+      "properties": {
+        "location": "Petén, Guatemala",
+        "occupation": "Lumber Company Owner"
+      }
+    },
+    {
+      "label": "Johnnie Brown Fell",
+      "properties": {
+        "location": "Belize City",
+        "occupation": "Shrimp Exporter"
+      }
+    },
+    {
+      "label": "Harry Brown",
+      "properties": {
+        "location": "Belize City",
+        "occupation": "Shrimp Exporter"
+      }
+    },
+    {
+      "label": "Clive Hollinshead",
+      "properties": {
+        "location": "Santa Fe Springs, California",
+        "occupation": "Restorer"
+      }
+    },
+    {
+      "label": "Dr. William Bullard",
+      "properties": {
+        "location": "University of Florida",
+        "occupation": "Archaeologist"
+      }
+    },
+    {
+      "label": "Marjorie Neikrug",
+      "properties": {
+        "location": "New York City",
+        "occupation": "Gallery Owner"
+      }
+    },
+    {
+      "label": "Glenn Rittenour",
+      "properties": {
+        "location": "Milwaukee, Wisconsin",
+        "occupation": "Methodist Minister"
+      }
+    },
+    {
+      "label": "Ted Wiener",
+      "properties": {
+        "location": "Dallas",
+        "occupation": "Oil Business Owner"
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "startNode": "Machaquilá Stela 2",
+      "endNode": "Jorge Alamilla",
+      "type": "BOUGHT_BY",
+      "properties": {
+        "date": "1971"
+      }
+    },
+    {
+      "startNode": "Machaquilá Stela 2",
+      "endNode": "Ed Dwyer",
+      "type": "BOUGHT_BY",
+      "properties": {
+        "date": "1971"
+      }
+    },
+    {
+      "startNode": "Machaquilá Stela 2",
+      "endNode": "Johnnie Brown Fell",
+      "type": "BOUGHT_BY",
+      "properties": {
+        "date": "1971"
+      }
+    },
+    {
+      "startNode": "Machaquilá Stela 2",
+      "endNode": "Harry Brown",
+      "type": "BOUGHT_BY",
+      "properties": {
+        "date": "1971"
+      }
+    },
+    {
+      "startNode": "Machaquilá Stela 2",
+      "endNode": "Clive Hollinshead",
+      "type": "BOUGHT_BY",
+      "properties": {
+        "date": "1972"
+      }
+    },
+    {
+      "startNode": "Machaquilá Stela 2",
+      "endNode": "Dr. William Bullard",
+      "type": "NOTIFIED_BY",
+      "properties": {
+        "date": "1971"
+      }
+    },
+    {
+      "startNode": "Machaquilá Stela 2",
+      "endNode": "Marjorie Neikrug",
+      "type": "OFFERED_TO",
+      "properties": {
+        "date": "1971"
+      }
+    },
+    {
+      "startNode": "Machaquilá Stela 2",
+      "endNode": "Glenn Rittenour",
+      "type": "OFFERED_TO",
+      "properties": {
+        "date": "1971"
+      }
+    },
+    {
+      "startNode": "Machaquilá Stela 2",
+      "endNode": "Ted Wiener",
+      "type": "FINANCED_BY",
+      "properties": {
+        "date": "1972"
+      }
+    }
+  ]
+}

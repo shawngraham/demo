@@ -1,0 +1,101 @@
+{"nodes": [
+    {
+      "label": "Silver Hoard of Everbeek",
+      "properties": {
+        "value": "high-profile archaeological find"
+      }
+    },
+    {
+      "label": "Zilverschat van Everbeek",
+      "properties": {
+        "value": "high-profile archaeological find"
+      }
+    },
+    {
+      "label": "Roman Silver Hoard",
+      "properties": {
+        "date": "third-century AD"
+      }
+    },
+    {
+      "label": "Provincial Archaeological Museum",
+      "properties": {
+        "location": "Velzeke"
+      }
+    },
+    {
+      "label": "Everbeek",
+      "properties": {
+        "location": "Belgium"
+      }
+    },
+    {
+      "label": "Flanders Heritage Agency",
+      "properties": {
+        "location": "Belgium"
+      }
+    },
+    {
+      "label": "Provincial Gallo-Roman Museum",
+      "properties": {
+        "location": "Tongeren"
+      }
+    },
+    {
+      "label": "Parliamentary Commission on heritage",
+      "properties": {
+        "location": "Belgium"
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "startNode": "Silver Hoard of Everbeek",
+      "endNode": "Provincial Archaeological Museum",
+      "type": "ACQUIRED_BY",
+      "properties": {
+        "date": "2010"
+      }
+    },
+    {
+      "startNode": "Zilverschat van Everbeek",
+      "endNode": "Provincial Archaeological Museum",
+      "type": "ACQUIRED_BY",
+      "properties": {
+        "date": "2010"
+      }
+    },
+    {
+      "startNode": "Roman Silver Hoard",
+      "endNode": "Everbeek",
+      "type": "FOUND_IN",
+      "properties": {
+        "date": "2008"
+      }
+    },
+    {
+      "startNode": "Roman Silver Hoard",
+      "endNode": "Flanders Heritage Agency",
+      "type": "REPORTED_TO",
+      "properties": {
+        "date": "2010"
+      }
+    },
+    {
+      "startNode": "Roman Silver Hoard",
+      "endNode": "Provincial Gallo-Roman Museum",
+      "type": "OFFERED_TO",
+      "properties": {
+        "date": "2008"
+      }
+    },
+    {
+      "startNode": "Roman Silver Hoard",
+      "endNode": "Parliamentary Commission on heritage",
+      "type": "QUESTIONED_BY",
+      "properties": {
+        "date": "2010"
+      }
+    }
+  ]
+}

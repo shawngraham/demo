@@ -1,0 +1,401 @@
+{"nodes": [
+
+    {
+
+      "label": "Bourne Collection",
+
+      "properties": {
+
+        "value": "$2 million"
+
+      }
+
+    },
+
+    {
+
+      "label": "John Bourne",
+
+      "properties": {
+
+        "profession": "collector"
+
+      }
+
+    },
+
+    {
+
+      "label": "Ben Johnson",
+
+      "properties": {
+
+        "profession": "art historian and conservator"
+
+      }
+
+    },
+
+    {
+
+      "label": "David Swetnam",
+
+      "properties": {
+
+        "profession": "antiquities smuggler"
+
+      }
+
+    },
+
+    {
+
+      "label": "Michael Kelly",
+
+      "properties": {
+
+        "profession": "involved in an antiquities smuggling ring"
+
+      }
+
+    },
+
+    {
+
+      "label": "Thomas E Chávez",
+
+      "properties": {
+
+        "profession": "former director of the museum"
+
+      }
+
+    },
+
+    {
+
+      "label": "Walter Alva",
+
+      "properties": {
+
+        "profession": "Peruvian archaeologist"
+
+      }
+
+    },
+
+    {
+
+      "label": "Francis Levine",
+
+      "properties": {
+
+        "profession": "director of the museum"
+
+      }
+
+    },
+
+    {
+
+      "label": "Karen Durkovitch",
+
+      "properties": {
+
+        "profession": "president of the boar"
+
+      }
+
+    },
+
+    {
+
+      "label": "Metropolitan Museum of Art",
+
+      "properties": {
+
+        "location": "New York"
+
+      }
+
+    },
+
+    {
+
+      "label": "New Mexico History Museum",
+
+      "properties": {
+
+        "location": "Santa Fe"
+
+      }
+
+    },
+
+    {
+
+      "label": "The Walters Art Museum",
+
+      "properties": {
+
+        "location": "Baltimore"
+
+      }
+
+    },
+
+    {
+
+      "label": "Sipán",
+
+      "properties": {
+
+        "location": "Lambayeque Valley, Peru"
+
+      }
+
+    },
+
+    {
+
+      "label": "La Mina",
+
+      "properties": {
+
+        "location": "Peru"
+
+      }
+
+    }
+
+  ],
+
+  "relationships": [
+
+    {
+
+      "startNode": "John Bourne",
+
+      "endNode": "New Mexico History Museum",
+
+      "type": "DONATED",
+
+      "properties": {
+
+        "date": "1995"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "John Bourne",
+
+      "endNode": "New Mexico History Museum",
+
+      "type": "LOANED",
+
+      "properties": {
+
+        "date": "1996"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "John Bourne",
+
+      "endNode": "New Mexico History Museum",
+
+      "type": "PLEDGE_TO_DONATE",
+
+      "properties": {
+
+        "date": "1997"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Ben Johnson",
+
+      "endNode": "John Bourne",
+
+      "type": "SOLD_TO",
+
+      "properties": {
+
+        "date": "1987"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "David Swetnam",
+
+      "endNode": "Ben Johnson",
+
+      "type": "ROUTED_THROUGH",
+
+      "properties": {
+
+        "date": "1987"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Michael Kelly",
+
+      "endNode": "David Swetnam",
+
+      "type": "ASSERTED_FALSE_PROVENANCE_FOR",
+
+      "properties": {
+
+        "date": "1987"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Walter Alva",
+
+      "endNode": "New Mexico History Museum",
+
+      "type": "VISITED",
+
+      "properties": {
+
+        "date": "1998"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Bob Wittman",
+
+      "endNode": "New Mexico History Museum",
+
+      "type": "VISITED",
+
+      "properties": {
+
+        "date": "1998"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Brian Midkiff",
+
+      "endNode": "New Mexico History Museum",
+
+      "type": "VISITED",
+
+      "properties": {
+
+        "date": "1998"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Peru",
+
+      "endNode": "New Mexico History Museum",
+
+      "type": "REQUESTED_RETURN",
+
+      "properties": {
+
+        "date": "1998"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Peru",
+
+      "endNode": "New Mexico History Museum",
+
+      "type": "REQUESTED_RETURN",
+
+      "properties": {
+
+        "date": "2011"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Spain",
+
+      "endNode": "Peru",
+
+      "type": "RETURNED_SIMILAR_MONKEY_HEAD_BEAD",
+
+      "properties": {
+
+        "date": "2007"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "John Bourne",
+
+      "endNode": "The Walters Art Museum",
+
+      "type": "DONATED",
+
+      "properties": {
+
+        "date": "2009"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "John Bourne",
+
+      "endNode": "The Walters Art Museum",
+
+      "type": "BEQUEATHED",
+
+      "properties": {
+
+        "date": "2009"
+
+      }
+
+    }
+
+  ]
+
+}

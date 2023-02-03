@@ -1,0 +1,124 @@
+{"nodes": [
+    {
+      "label": "Brooklyn Museum",
+      "properties": {
+        "location": "New York"
+      }
+    },
+    {
+      "label": "Metropolitan Museum",
+      "properties": {
+        "location": "New York"
+      }
+    },
+    {
+      "label": "Louvre",
+      "properties": {
+        "location": "Paris"
+      }
+    },
+    {
+      "label": "Coptic Art",
+      "properties": {
+        "date": "3rd - 8th Centuries AD",
+        "style": "Christian and Pagan influences"
+      }
+    },
+    {
+      "label": "Recklinghausen Museum",
+      "properties": {
+        "location": "Germany"
+      }
+    },
+    {
+      "label": "Coptic Museum",
+      "properties": {
+        "location": "Egypt"
+      }
+    },
+    {
+      "label": "John Beckwith",
+      "properties": {
+        "occupation": "Art Historian"
+      }
+    },
+    {
+      "label": "Gary Vikan",
+      "properties": {
+        "occupation": "Art Historian"
+      }
+    },
+    {
+      "label": "Sheikh Ibada",
+      "properties": {
+        "location": "Egypt"
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "startNode": "Brooklyn Museum",
+      "endNode": "Coptic Art",
+      "type": "COLLECTS",
+      "properties": {
+        "date": "1950s - 1970s"
+      }
+    },
+    {
+      "startNode": "Metropolitan Museum",
+      "endNode": "Coptic Art",
+      "type": "COLLECTS",
+      "properties": {
+        "date": "1950s - 1970s"
+      }
+    },
+    {
+      "startNode": "Louvre",
+      "endNode": "Coptic Art",
+      "type": "COLLECTS",
+      "properties": {
+        "date": "1950s - 1970s"
+      }
+    },
+    {
+      "startNode": "Recklinghausen Museum",
+      "endNode": "Coptic Art",
+      "type": "COLLECTS",
+      "properties": {
+        "date": "1950s - 1970s"
+      }
+    },
+    {
+      "startNode": "Coptic Museum",
+      "endNode": "Coptic Art",
+      "type": "COLLECTS",
+      "properties": {
+        "date": "1950s - 1970s"
+      }
+    },
+    {
+      "startNode": "John Beckwith",
+      "endNode": "Coptic Art",
+      "type": "RAISED_CONCERN",
+      "properties": {
+        "date": "1963"
+      }
+    },
+    {
+      "startNode": "Gary Vikan",
+      "endNode": "Coptic Art",
+      "type": "RAISED_CONCERN",
+      "properties": {
+        "date": "1977"
+      }
+    },
+    {
+      "startNode": "Sheikh Ibada",
+      "endNode": "Coptic Art",
+      "type": "PRODUCED",
+      "properties": {
+        "date": "1950s - 1970s"
+      }
+    }
+  ]
+}

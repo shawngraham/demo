@@ -1,0 +1,325 @@
+{"nodes": [
+
+    {
+
+      "label": "Cancuen Ballcourt Marker",
+
+      "properties": {
+
+        "location": "Cancuen, Guatemala",
+
+        "date": "796 CE",
+
+        "depicts": "Tajal Chan Ahk",
+
+        "weight": "600 pounds"
+
+      }
+
+    },
+
+    {
+
+      "label": "Morley's Ballcourt Marker",
+
+      "properties": {
+
+        "location": "Cancuen, Guatemala",
+
+        "date": "795 CE",
+
+        "depicts": "Tajal Chan Ahk"
+
+      }
+
+    },
+
+    {
+
+      "label": "Demarest's Ballcourt Marker",
+
+      "properties": {
+
+        "location": "Cancuen, Guatemala",
+
+        "date": "795 CE",
+
+        "depicts": "Tajal Chan Ahk"
+
+      }
+
+    },
+
+    {
+
+      "label": "National Museum of Archaeology",
+
+      "properties": {
+
+        "location": "Guatemala City"
+
+      }
+
+    },
+
+    {
+
+      "label": "Sylvanus G. Morley",
+
+      "properties": {
+
+        "occupation": "Archaeologist"
+
+      }
+
+    },
+
+    {
+
+      "label": "Arthur Demarest",
+
+      "properties": {
+
+        "occupation": "Archaeologist"
+
+      }
+
+    },
+
+    {
+
+      "label": "Vanderbilt University",
+
+      "properties": {
+
+        "location": "Nashville, TN"
+
+      }
+
+    },
+
+    {
+
+      "label": "Universidád del Valle",
+
+      "properties": {
+
+        "location": "Guatemala"
+
+      }
+
+    },
+
+    {
+
+      "label": "Guatemalan Ministry of Culture",
+
+      "properties": {
+
+        "location": "Guatemala"
+
+      }
+
+    },
+
+    {
+
+      "label": "Servícios de Investigación Criminal",
+
+      "properties": {
+
+        "location": "Guatemala"
+
+      }
+
+    },
+
+    {
+
+      "label": "Marc Wolf",
+
+      "properties": {
+
+        "occupation": "Archaeologist"
+
+      }
+
+    },
+
+    {
+
+      "label": "District Governor",
+
+      "properties": {
+
+        "location": "Guatemala"
+
+      }
+
+    },
+
+    {
+
+      "label": "Drug Trafficking",
+
+      "properties": {
+
+        "location": "Guatemala"
+
+      }
+
+    },
+
+    {
+
+      "label": "Cancuen Panel",
+
+      "properties": {
+
+        "location": "Cancuen, Guatemala",
+
+        "price": "$75,000 USD"
+
+      }
+
+    }
+
+  ],
+
+  "relationships": [
+
+    {
+
+      "startNode": "Cancuen Ballcourt Marker",
+
+      "endNode": "National Museum of Archaeology",
+
+      "type": "HELD_BY",
+
+      "properties": {
+
+        "date": "2004"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Morley's Ballcourt Marker",
+
+      "endNode": "Sylvanus G. Morley",
+
+      "type": "DISCOVERED_BY",
+
+      "properties": {
+
+        "date": "1915"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Demarest's Ballcourt Marker",
+
+      "endNode": "Arthur Demarest",
+
+      "type": "DISCOVERED_BY",
+
+      "properties": {
+
+        "date": "2004"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Demarest's Ballcourt Marker",
+
+      "endNode": "Vanderbilt University",
+
+      "type": "RESEARCHED_BY",
+
+      "properties": {}
+
+    },
+
+    {
+
+      "startNode": "Demarest's Ballcourt Marker",
+
+      "endNode": "Universidád del Valle",
+
+      "type": "RESEARCHED_BY",
+
+      "properties": {}
+
+    },
+
+    {
+
+      "startNode": "Demarest's Ballcourt Marker",
+
+      "endNode": "Guatemalan Ministry of Culture",
+
+      "type": "RESEARCHED_BY",
+
+      "properties": {}
+
+    },
+
+    {
+
+      "startNode": "Cancuen Ballcourt Marker",
+
+      "endNode": "Servícios de Investigación Criminal",
+
+      "type": "REPORTED_TO",
+
+      "properties": {
+
+        "date": "March 2003"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Cancuen Ballcourt Marker",
+
+      "endNode": "Arthur Demarest",
+
+      "type": "RECOVERED_BY",
+
+      "properties": {
+
+        "date": "September 2003"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Cancuen Panel",
+
+      "endNode": "New York Times",
+
+      "type": "REPORTED_BY",
+
+      "properties": {
+
+        "date": "1995"
+
+      }
+
+    }
+
+  ]
+
+}

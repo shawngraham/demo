@@ -1,0 +1,282 @@
+{"nodes": [
+    {
+      "label": "Port Royal",
+      "properties": {
+        "location": "Jamaica"
+      }
+    },
+    {
+      "label": "Tainos",
+      "properties": {
+        "firstInhabitants": "Jamaica"
+      }
+    },
+    {
+      "label": "Admiral Penn",
+      "properties": {
+        "commander": "British invasion of Jamaica"
+      }
+    },
+    {
+      "label": "General Venables",
+      "properties": {
+        "commander": "British invasion of Jamaica"
+      }
+    },
+    {
+      "label": "Charles II",
+      "properties": {
+        "King of England": "Restoration of Charles II"
+      }
+    },
+    {
+      "label": "Earthquake",
+      "properties": {
+        "date": "7 June 1692",
+        "deaths": "5000"
+      }
+    },
+    {
+      "label": "Falmouth Post",
+      "properties": {
+        "type": "Newspaper"
+      }
+    },
+    {
+      "label": "Jeremiah D. Murphy",
+      "properties": {
+        "diver": "Royal Navy"
+      }
+    },
+    {
+      "label": "Edwin Link",
+      "properties": {
+        "inventor": "Treasure Hunter"
+      }
+    },
+    {
+      "label": "Norman Scott",
+      "properties": {
+        "explorer": "Port Royal"
+      }
+    },
+    {
+      "label": "Robert Marx",
+      "properties": {
+        "explorer": "Port Royal"
+      }
+    },
+    {
+      "label": "Alexi Dupont",
+      "properties": {
+        "couple": "American"
+      }
+    },
+    {
+      "label": "Philip Mayes",
+      "properties": {
+        "archaeologist": "British"
+      }
+    },
+    {
+      "label": "Richard Priddy",
+      "properties": {
+        "archaeologist": "British"
+      }
+    },
+    {
+      "label": "Donny Hamilton",
+      "properties": {
+        "archaeologist": "American"
+      }
+    },
+    {
+      "label": "Texas A&M University",
+      "properties": {
+        "university": "USA"
+      }
+    },
+    {
+      "label": "Jamaica National Heritage Trust",
+      "properties": {
+        "organization": "Jamaica"
+      }
+    },
+    {
+      "label": "British Ministry of Overseas Development",
+      "properties": {
+        "organization": "UK"
+      }
+    },
+    {
+      "label": "UNESCO",
+      "properties": {
+        "organization": "International"
+      }
+    },
+    {
+      "label": "Caribbean Meeting on the Protection of Underwater Cultural Heritage",
+      "properties": {
+        "event": "May 2011"
+      }
+    },
+    {
+      "label": "Morgan’s Harbour Hotel",
+      "properties": {
+        "location": "Port Royal"
+      }
+    },
+    {
+      "label": "2001 Convention on the Protection of the Underwater Cultural Heritage",
+      "properties": {
+        "document": "UNESCO"
+      }
+    },
+    {
+      "label": "World Heritage Site",
+      "properties": {
+        "status": "UNESCO"
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "startNode": "Port Royal",
+      "endNode": "Tainos",
+      "type": "USED_BY",
+      "properties": {
+        "date": "16th Century"
+      }
+    },
+    {
+      "startNode": "Port Royal",
+      "endNode": "Admiral Penn",
+      "type": "CONQUERED_BY",
+      "properties": {
+        "date": "May 1655"
+      }
+    },
+    {
+      "startNode": "Port Royal",
+      "endNode": "General Venables",
+      "type": "CONQUERED_BY",
+      "properties": {
+        "date": "May 1655"
+      }
+    },
+    {
+      "startNode": "Port Royal",
+      "endNode": "Charles II",
+      "type": "RENAMED_BY",
+      "properties": {
+        "date": "Restoration of Charles II"
+      }
+    },
+    {
+      "startNode": "Port Royal",
+      "endNode": "Earthquake",
+      "type": "DESTROYED_BY",
+      "properties": {
+        "date": "7 June 1692"
+      }
+    },
+    {
+      "startNode": "Jeremiah D. Murphy",
+      "endNode": "Falmouth Post",
+      "type": "WROTE_FOR",
+      "properties": {
+        "date": "1859"
+      }
+    },
+    {
+      "startNode": "Edwin Link",
+      "endNode": "Port Royal",
+      "type": "EXPLORED_BY",
+      "properties": {
+        "date": "1956"
+      }
+    },
+    {
+      "startNode": "Norman Scott",
+      "endNode": "Port Royal",
+      "type": "EXPLORED_BY",
+      "properties": {
+        "date": "1960s"
+      }
+    },
+    {
+      "startNode": "Robert Marx",
+      "endNode": "Port Royal",
+      "type": "EXPLORED_BY",
+      "properties": {
+        "date": "1960s"
+      }
+    },
+    {
+      "startNode": "Alexi Dupont",
+      "endNode": "Port Royal",
+      "type": "EXPLORED_BY",
+      "properties": {
+        "date": "1954"
+      }
+    },
+    {
+      "startNode": "Philip Mayes",
+      "endNode": "Port Royal",
+      "type": "EXCAVATED_BY",
+      "properties": {
+        "date": "1968-1971"
+      }
+    },
+    {
+      "startNode": "Richard Priddy",
+      "endNode": "Port Royal",
+      "type": "EXCAVATED_BY",
+      "properties": {
+        "date": "1971-1981"
+      }
+    },
+    {
+      "startNode": "Donny Hamilton",
+      "endNode": "Port Royal",
+      "type": "EXCAVATED_BY",
+      "properties": {
+        "date": "1981-1990, 1992"
+      }
+    },
+    {
+      "startNode": "Texas A&M University",
+      "endNode": "Port Royal",
+      "type": "RESEARCHED_BY",
+      "properties": {
+        "date": "2012"
+      }
+    },
+    {
+      "startNode": "Jamaica National Heritage Trust",
+      "endNode": "Port Royal",
+      "type": "PROTECTED_BY",
+      "properties": {
+        "date": "1990"
+      }
+    },
+    {
+      "startNode": "British Ministry of Overseas Development",
+      "endNode": "Port Royal",
+      "type": "FUNDED_BY",
+      "properties": {
+        "date": "1968"
+      }
+    },
+    {
+      "startNode": "UNESCO",
+      "endNode": "Port Royal",
+      "type": "PROTECTED_BY",
+      "properties": {
+        "date": "2011"
+      }
+    },
+    {
+      "startNode": "Caribbean Meeting on the Protection of Underwater Cultural Heritage",
+      "endNode": "Port Royal",
+    }

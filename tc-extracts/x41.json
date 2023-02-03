@@ -1,0 +1,161 @@
+{"nodes": [
+
+    {
+
+      "label": "Laguna de los Cóndores",
+
+      "properties": {
+
+        "location": "Amazonas, Peru"
+
+      }
+
+    },
+
+    {
+
+      "label": "Chachapoya",
+
+      "properties": {
+
+        "region": "Marañón and Huallaga Rivers, Andean cloud forest"
+
+      }
+
+    },
+
+    {
+
+      "label": "Tupac Inca Yupanqui",
+
+      "properties": {
+
+        "date": "1470 AD"
+
+      }
+
+    },
+
+    {
+
+      "label": "Julio Ullilén",
+
+      "properties": {
+
+        "occupation": "Cattle rancher"
+
+      }
+
+    },
+
+    {
+
+      "label": "Peter Lerche",
+
+      "properties": {
+
+        "occupation": "Archaeologist"
+
+      }
+
+    },
+
+    {
+
+      "label": "Museo Leymebamba",
+
+      "properties": {
+
+        "location": "Leymebamba, Peru"
+
+      }
+
+    }
+
+  ],
+
+  "relationships": [
+
+    {
+
+      "startNode": "Laguna de los Cóndores",
+
+      "endNode": "Chachapoya",
+
+      "type": "USED_BY",
+
+      "properties": {
+
+        "date": "800 AD - 1470 AD"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Tupac Inca Yupanqui",
+
+      "endNode": "Chachapoya",
+
+      "type": "CONQUERED_BY",
+
+      "properties": {
+
+        "date": "1470 AD"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Julio Ullilén",
+
+      "endNode": "Laguna de los Cóndores",
+
+      "type": "DISCOVERED_BY",
+
+      "properties": {
+
+        "date": "1996"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Peter Lerche",
+
+      "endNode": "Laguna de los Cóndores",
+
+      "type": "SURVEYED_BY",
+
+      "properties": {
+
+        "date": "April 1997"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Museo Leymebamba",
+
+      "endNode": "Laguna de los Cóndores",
+
+      "type": "HOUSES",
+
+      "properties": {
+
+        "date": "1997"
+
+      }
+
+    }
+
+  ]
+
+}

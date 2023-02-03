@@ -1,0 +1,311 @@
+{"nodes": [
+
+    {
+
+      "label": "Peru's National Museum",
+
+      "properties": {
+
+        "location": "Lima"
+
+      }
+
+    },
+
+    {
+
+      "label": "Textile",
+
+      "properties": {
+
+        "date": "2000-year-old",
+
+        "size": "3.5m x 1.5m"
+
+      }
+
+    },
+
+    {
+
+      "label": "Julio Tello",
+
+      "properties": {
+
+        "occupation": "archaeologist"
+
+      }
+
+    },
+
+    {
+
+      "label": "Paracas Culture Mummy Bundles",
+
+      "properties": {
+
+        "number": "400"
+
+      }
+
+    },
+
+    {
+
+      "label": "Paracas Archaeology Research Resource",
+
+      "properties": {
+
+        "website": "https://paracas.org"
+
+      }
+
+    },
+
+    {
+
+      "label": "US-based dealer",
+
+      "properties": {
+
+        "location": "London"
+
+      }
+
+    },
+
+    {
+
+      "label": "Australian National Gallery",
+
+      "properties": {
+
+        "name": "National Gallery of Australia"
+
+      }
+
+    },
+
+    {
+
+      "label": "Jane Dwyer",
+
+      "properties": {
+
+        "occupation": "expert in Peruvian textiles"
+
+      }
+
+    },
+
+    {
+
+      "label": "Peruvian Government",
+
+      "properties": {
+
+        "country": "Peru"
+
+      }
+
+    },
+
+    {
+
+      "label": "Australian Government",
+
+      "properties": {
+
+        "country": "Australia"
+
+      }
+
+    },
+
+    {
+
+      "label": "Protection of Movable Cultural Heritage Act",
+
+      "properties": {
+
+        "date": "1986"
+
+      }
+
+    },
+
+    {
+
+      "label": "Clyde Holding",
+
+      "properties": {
+
+        "occupation": "Australian Arts Minister"
+
+      }
+
+    },
+
+    {
+
+      "label": "Ann H. Peters",
+
+      "properties": {
+
+        "occupation": "archaeologist"
+
+      }
+
+    }
+
+  ],
+
+  "relationships": [
+
+    {
+
+      "startNode": "Textile",
+
+      "endNode": "Peru's National Museum",
+
+      "type": "STOLEN_FROM",
+
+      "properties": {
+
+        "date": "1973"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Textile",
+
+      "endNode": "Australian National Gallery",
+
+      "type": "BOUGHT_BY",
+
+      "properties": {
+
+        "date": "1974"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Julio Tello",
+
+      "endNode": "Paracas Culture Mummy Bundles",
+
+      "type": "EXCAVATED",
+
+      "properties": {
+
+        "date": "1927"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Paracas Archaeology Research Resource",
+
+      "endNode": "Textile",
+
+      "type": "DOCUMENTED",
+
+      "properties": {
+
+        "date": "late 1960s"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Jane Dwyer",
+
+      "endNode": "Peruvian Government",
+
+      "type": "NOTIFIED",
+
+      "properties": {
+
+        "date": "1982"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Peruvian Government",
+
+      "endNode": "Australian National Gallery",
+
+      "type": "ASKED_FOR_RETURN",
+
+      "properties": {
+
+        "date": "1982"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Australian Government",
+
+      "endNode": "Peruvian Government",
+
+      "type": "AGREED_TO_RETURN",
+
+      "properties": {
+
+        "date": "1989"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Clyde Holding",
+
+      "endNode": "Peruvian Government",
+
+      "type": "RETURNED_TO",
+
+      "properties": {
+
+        "date": "1989"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Ann H. Peters",
+
+      "endNode": "Textile",
+
+      "type": "PROVIDED_IMAGE",
+
+      "properties": {
+
+        "date": "late 1960s"
+
+      }
+
+    }
+
+  ]
+
+}

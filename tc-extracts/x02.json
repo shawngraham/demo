@@ -1,0 +1,259 @@
+{"nodes": [
+    {
+      "label": "San Andrés de Machaca",
+      "properties": {
+        "location": "Bolivia",
+        "population": 6299,
+        "ethnicity": "Aymara",
+        "language": "Aymara",
+        "poverty": "High"
+      }
+    },
+    {
+      "label": "Fancisco Coillo",
+      "properties": {
+        "occupation": "Architect"
+      }
+    },
+    {
+      "label": "Supreme Decree No 06137",
+      "properties": {
+        "date": "15 June 1962"
+      }
+    },
+    {
+      "label": "Christmas Eve 1997",
+      "properties": {
+        "date": "24 December 1997"
+      }
+    },
+    {
+      "label": "14 August 2008",
+      "properties": {
+        "date": "14 August 2008"
+      }
+    },
+    {
+      "label": "April 2010",
+      "properties": {
+        "date": "April 2010"
+      }
+    },
+    {
+      "label": "Mario Andrade Morales",
+      "properties": {
+        "name": "Edgar Quiroz Soliz"
+      }
+    },
+    {
+      "label": "Felipe Perez Paco",
+      "properties": {
+        "name": "Felipe Perez Paco"
+      }
+    },
+    {
+      "label": "Nicomedes Blanco Paco",
+      "properties": {
+        "name": "Nicomedes Blanco Paco"
+      }
+    },
+    {
+      "label": "Villa Remedios",
+      "properties": {
+        "location": "El Alto, Bolivia"
+      }
+    },
+    {
+      "label": "Fuerza Especial de Lucha Contra el Crimen (FELCC)",
+      "properties": {
+        "name": "FELCC"
+      }
+    },
+    {
+      "label": "Felix Segales",
+      "properties": {
+        "occupation": "City Commander of Police"
+      }
+    },
+    {
+      "label": "Interpol",
+      "properties": {
+        "name": "Interpol"
+      }
+    },
+    {
+      "label": "Washington-based art dealer",
+      "properties": {
+        "name": "Washington-based art dealer"
+      }
+    },
+    {
+      "label": "American collector",
+      "properties": {
+        "name": "American collector"
+      }
+    },
+    {
+      "label": "London",
+      "properties": {
+        "location": "London"
+      }
+    },
+    {
+      "label": "Santa Rosa de Viterbo",
+      "properties": {
+        "name": "Santa Rosa de Viterbo"
+      }
+    },
+    {
+      "label": "San Agustín",
+      "properties": {
+        "name": "San Agustín"
+      }
+    },
+    {
+      "label": "Archangel Arcabucero",
+      "properties": {
+        "measurement": "100 cm by 90 cm",
+        "medium": "Oil on canvas"
+      }
+    },
+    {
+      "label": "Saint Rose of Lima",
+      "properties": {
+        "measurement": "165 cm by 110 cm",
+        "medium": "Oil on canvas"
+      }
+    },
+    {
+      "label": "Saint Francis Protecting the Laics",
+      "properties": {
+        "measurement": "200 cm by 140 cm",
+        "medium": "Oil on canvas"
+      }
+    },
+    {
+      "label": "The holy Family",
+      "properties": {
+        "measurement": "170 cm by 110 cm",
+        "medium": "Oil on canvas"
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "startNode": "San Andrés de Machaca",
+      "endNode": "Fancisco Coillo",
+      "type": "DIRECTED_BY",
+      "properties": {}
+    },
+    {
+      "startNode": "San Andrés de Machaca",
+      "endNode": "Supreme Decree No 06137",
+      "type": "DECREED_BY",
+      "properties": {}
+    },
+    {
+      "startNode": "San Andrés de Machaca",
+      "endNode": "Christmas Eve 1997",
+      "type": "ROBBED_ON",
+      "properties": {}
+    },
+    {
+      "startNode": "San Andrés de Machaca",
+      "endNode": "14 August 2008",
+      "type": "ROBBED_ON",
+      "properties": {}
+    },
+    {
+      "startNode": "San Andrés de Machaca",
+      "endNode": "April 2010",
+      "type": "ROBBED_ON",
+      "properties": {}
+    },
+    {
+      "startNode": "Mario Andrade Morales",
+      "endNode": "Villa Remedios",
+      "type": "ARRESTED_IN",
+      "properties": {}
+    },
+    {
+      "startNode": "Felipe Perez Paco",
+      "endNode": "Villa Remedios",
+      "type": "ARRESTED_IN",
+      "properties": {}
+    },
+    {
+      "startNode": "Nicomedes Blanco Paco",
+      "endNode": "Villa Remedios",
+      "type": "ARRESTED_IN",
+      "properties": {}
+    },
+    {
+      "startNode": "San Andrés de Machaca",
+      "endNode": "Fuerza Especial de Lucha Contra el Crimen (FELCC)",
+      "type": "RECOVERED_BY",
+      "properties": {}
+    },
+    {
+      "startNode": "San Andrés de Machaca",
+      "endNode": "Felix Segales",
+      "type": "ARRESTED_BY",
+      "properties": {}
+    },
+    {
+      "startNode": "San Andrés de Machaca",
+      "endNode": "Interpol",
+      "type": "LISTED_BY",
+      "properties": {}
+    },
+    {
+      "startNode": "Washington-based art dealer",
+      "endNode": "American collector",
+      "type": "CONSULTED_BY",
+      "properties": {}
+    },
+    {
+      "startNode": "San Andrés de Machaca",
+      "endNode": "London",
+      "type": "RECOVERED_IN",
+      "properties": {}
+    },
+    {
+      "startNode": "San Andrés de Machaca",
+      "endNode": "Santa Rosa de Viterbo",
+      "type": "MISSING_PAINTING",
+      "properties": {}
+    },
+    {
+      "startNode": "San Andrés de Machaca",
+      "endNode": "San Agustín",
+      "type": "MISSING_PAINTING",
+      "properties": {}
+    },
+    {
+      "startNode": "San Andrés de Machaca",
+      "endNode": "Archangel Arcabucero",
+      "type": "MISSING_PAINTING",
+      "properties": {}
+    },
+    {
+      "startNode": "San Andrés de Machaca",
+      "endNode": "Saint Rose of Lima",
+      "type": "MISSING_PAINTING",
+      "properties": {}
+    },
+    {
+      "startNode": "San Andrés de Machaca",
+      "endNode": "Saint Francis Protecting the Laics",
+      "type": "MISSING_PAINTING",
+      "properties": {}
+    },
+    {
+      "startNode": "San Andrés de Machaca",
+      "endNode": "The holy Family",
+      "type": "MISSING_PAINTING",
+      "properties": {}
+    }
+  ]
+}

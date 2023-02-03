@@ -1,0 +1,143 @@
+{"nodes": [
+    {
+      "label": "Aidonia Treasure",
+      "properties": {
+        "location": "Nemea, Greece"
+      }
+    },
+    {
+      "label": "Mycenaean",
+      "properties": {
+        "date": "fifteenth-century BC"
+      }
+    },
+    {
+      "label": "Archaiokapiloi",
+      "properties": {}
+    },
+    {
+      "label": "Greek Archaeological Service",
+      "properties": {}
+    },
+    {
+      "label": "Michael Ward Gallery",
+      "properties": {
+        "location": "New York"
+      }
+    },
+    {
+      "label": "Jack Ogden",
+      "properties": {
+        "affiliation": "Cambridge Centre for Precious Metal Research"
+      }
+    },
+    {
+      "label": "Greek Ministry of Culture",
+      "properties": {}
+    },
+    {
+      "label": "New York Times",
+      "properties": {
+        "location": "New York"
+      }
+    },
+    {
+      "label": "Ricardo Elia",
+      "properties": {
+        "occupation": "Archaeologist"
+      }
+    },
+    {
+      "label": "James Wright",
+      "properties": {
+        "occupation": "Archaeologist"
+      }
+    },
+    {
+      "label": "Society for the Preservation of the Greek Heritage",
+      "properties": {
+        "location": "US"
+      }
+    },
+    {
+      "label": "Nemea",
+      "properties": {
+        "location": "Peloponnesian district of Corinthia, Greece"
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "startNode": "Mycenaean",
+      "endNode": "Aidonia Treasure",
+      "type": "CONTAINS",
+      "properties": {}
+    },
+    {
+      "startNode": "Archaiokapiloi",
+      "endNode": "Aidonia Treasure",
+      "type": "EXCAVATED",
+      "properties": {}
+    },
+    {
+      "startNode": "Greek Archaeological Service",
+      "endNode": "Aidonia Treasure",
+      "type": "GUARDED",
+      "properties": {
+        "date": "November 1977"
+      }
+    },
+    {
+      "startNode": "Michael Ward Gallery",
+      "endNode": "Aidonia Treasure",
+      "type": "OFFERED_FOR_SALE",
+      "properties": {
+        "price": "$1.5 million"
+      }
+    },
+    {
+      "startNode": "Jack Ogden",
+      "endNode": "Aidonia Treasure",
+      "type": "ANALYZED",
+      "properties": {}
+    },
+    {
+      "startNode": "Greek Ministry of Culture",
+      "endNode": "Aidonia Treasure",
+      "type": "CONFIRMED",
+      "properties": {
+        "date": "1992"
+      }
+    },
+    {
+      "startNode": "Ricardo Elia",
+      "endNode": "Aidonia Treasure",
+      "type": "ALERTED",
+      "properties": {
+        "date": "April 1993"
+      }
+    },
+    {
+      "startNode": "James Wright",
+      "endNode": "Aidonia Treasure",
+      "type": "SUSPECTED",
+      "properties": {
+        "date": "April 1993"
+      }
+    },
+    {
+      "startNode": "Society for the Preservation of the Greek Heritage",
+      "endNode": "Aidonia Treasure",
+      "type": "RETURNED",
+      "properties": {
+        "date": "1996"
+      }
+    },
+    {
+      "startNode": "Nemea",
+      "endNode": "Aidonia Treasure",
+      "type": "NEARBY",
+      "properties": {}
+    }
+  ]
+}

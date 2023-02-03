@@ -1,0 +1,101 @@
+{"nodes": [
+    {
+      "label": "Inka Empire",
+      "properties": {}
+    },
+    {
+      "label": "Cerro El Plomo",
+      "properties": {}
+    },
+    {
+      "label": "Museum Nacional de Historia Natural",
+      "properties": {}
+    },
+    {
+      "label": "Guillermo Chacón Carrasco",
+      "properties": {}
+    },
+    {
+      "label": "Luis Gerardo Ríos Barrueto",
+      "properties": {}
+    },
+    {
+      "label": "Jaime Ríos Abarca",
+      "properties": {}
+    },
+    {
+      "label": "Grete Mostny",
+      "properties": {}
+    },
+    {
+      "label": "Humberto Fuenzalida",
+      "properties": {}
+    },
+    {
+      "label": "Inka Child",
+      "properties": {
+        "age": "8",
+        "hairStyle": "200 small braids",
+        "facePaint": "red and ochre stripes",
+        "clothing": "red wool shirt, red wool mantel, leather embroidered moccasins, silver armband, black wool headdress with condor feathers",
+        "bag": "locks of his hair, nail clippings, baby teeth"
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "startNode": "Inka Empire",
+      "endNode": "Inka Child",
+      "type": "SACRIFICED_AT",
+      "properties": {}
+    },
+    {
+      "startNode": "Cerro El Plomo",
+      "endNode": "Inka Child",
+      "type": "FOUND_BY",
+      "properties": {
+        "date": "1954"
+      }
+    },
+    {
+      "startNode": "Museum Nacional de Historia Natural",
+      "endNode": "Inka Child",
+      "type": "BOUGHT_BY",
+      "properties": {
+        "date": "1954"
+      }
+    },
+    {
+      "startNode": "Guillermo Chacón Carrasco",
+      "endNode": "Inka Child",
+      "type": "HIDDEN_BY",
+      "properties": {}
+    },
+    {
+      "startNode": "Luis Gerardo Ríos Barrueto",
+      "endNode": "Inka Child",
+      "type": "HIDDEN_BY",
+      "properties": {}
+    },
+    {
+      "startNode": "Jaime Ríos Abarca",
+      "endNode": "Inka Child",
+      "type": "HIDDEN_BY",
+      "properties": {}
+    },
+    {
+      "startNode": "Grete Mostny",
+      "endNode": "Inka Child",
+      "type": "SEARCHED_FOR",
+      "properties": {}
+    },
+    {
+      "startNode": "Humberto Fuenzalida",
+      "endNode": "Inka Child",
+      "type": "BOUGHT_BY",
+      "properties": {
+        "date": "1954"
+      }
+    }
+  ]
+}

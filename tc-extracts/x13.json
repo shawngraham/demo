@@ -1,0 +1,411 @@
+{"nodes": [
+
+    {
+
+      "label": "Wanborough Temple",
+
+      "properties": {
+
+        "location": "Surrey, England"
+
+      }
+
+    },
+
+    {
+
+      "label": "Roof Tile",
+
+      "properties": {
+
+        "date": "1969"
+
+      }
+
+    },
+
+    {
+
+      "label": "Small Excavation",
+
+      "properties": {
+
+        "date": "1979"
+
+      }
+
+    },
+
+    {
+
+      "label": "Metal Detector Users",
+
+      "properties": {
+
+        "date": "1983"
+
+      }
+
+    },
+
+    {
+
+      "label": "Silver and Gold Coins",
+
+      "properties": {
+
+        "date": "1983"
+
+      }
+
+    },
+
+    {
+
+      "label": "Treasure Trove",
+
+      "properties": {
+
+        "date": "1983"
+
+      }
+
+    },
+
+    {
+
+      "label": "Coroner's Inquest",
+
+      "properties": {
+
+        "date": "1984"
+
+      }
+
+    },
+
+    {
+
+      "label": "Nighthawking",
+
+      "properties": {
+
+        "date": "1984"
+
+      }
+
+    },
+
+    {
+
+      "label": "Dealers",
+
+      "properties": {
+
+        "date": "1984"
+
+      }
+
+    },
+
+    {
+
+      "label": "Treasure Hunting Magazines",
+
+      "properties": {
+
+        "date": "1984"
+
+      }
+
+    },
+
+    {
+
+      "label": "Artefacts",
+
+      "properties": {
+
+        "date": "1984"
+
+      }
+
+    },
+
+    {
+
+      "label": "Iron Age and Roman Coins",
+
+      "properties": {
+
+        "date": "1984"
+
+      }
+
+    },
+
+    {
+
+      "label": "Sceptre and Headdresses",
+
+      "properties": {
+
+        "date": "1984"
+
+      }
+
+    },
+
+    {
+
+      "label": "Police",
+
+      "properties": {
+
+        "date": "1984"
+
+      }
+
+    },
+
+    {
+
+      "label": "Antiquities Market",
+
+      "properties": {
+
+        "date": "1984"
+
+      }
+
+    },
+
+    {
+
+      "label": "Belgium, Switzerland and Germany",
+
+      "properties": {
+
+        "date": "1984"
+
+      }
+
+    },
+
+    {
+
+      "label": "New Zealand",
+
+      "properties": {
+
+        "date": "1984"
+
+      }
+
+    },
+
+    {
+
+      "label": "US Market",
+
+      "properties": {
+
+        "date": "1984"
+
+      }
+
+    },
+
+    {
+
+      "label": "Surrey Archaeological Society",
+
+      "properties": {
+
+        "date": "1986"
+
+      }
+
+    },
+
+    {
+
+      "label": "Well-Wisher",
+
+      "properties": {
+
+        "date": "1986"
+
+      }
+
+    },
+
+    {
+
+      "label": "Treasure Act 1996",
+
+      "properties": {
+
+        "date": "1996"
+
+      }
+
+    },
+
+    {
+
+      "label": "Fines and Confiscation of a Metal Detector",
+
+      "properties": {
+
+        "date": "1984"
+
+      }
+
+    },
+
+    {
+
+      "label": "1997",
+
+      "properties": {
+
+        "date": "1997"
+
+      }
+
+    },
+
+    {
+
+      "label": "2005",
+
+      "properties": {
+
+        "date": "2005"
+
+      }
+
+    }
+
+
+
+  ],
+
+  "relationships": [
+
+    {
+
+      "startNode": "Metal Detector Users",
+
+      "endNode": "Treasure Trove",
+
+      "type": "REPORTED_TO",
+
+      "properties": {
+
+        "date": "1983"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Metal Detector Users",
+
+      "endNode": "Guildford Museum",
+
+      "type": "REPORTED_TO",
+
+      "properties": {
+
+        "date": "1983"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Dealers",
+
+      "endNode": "Artefacts",
+
+      "type": "BOUGHT_BY",
+
+      "properties": {
+
+        "date": "1984"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Police",
+
+      "endNode": "Artefacts",
+
+      "type": "SEIZED_BY",
+
+      "properties": {
+
+        "date": "1984"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Surrey Archaeological Society",
+
+      "endNode": "Artefacts",
+
+      "type": "EXCAVATED_BY",
+
+      "properties": {
+
+        "date": "1986"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Well-Wisher",
+
+      "endNode": "Artefacts",
+
+      "type": "SENT_BY",
+
+      "properties": {
+
+        "date": "1986"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Treasure Act 1996",
+
+      "endNode": "Treasure Trove",
+
+      "type": "REPLACED_BY",
+
+      "properties": {
+
+        "date": "1996"
+
+      }
+
+    }
+
+  ]
+
+}

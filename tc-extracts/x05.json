@@ -1,0 +1,296 @@
+{"nodes": [
+
+    {
+
+      "label": "Sipan",
+
+      "properties": {
+
+        "location": "Peru"
+
+      }
+
+    },
+
+    {
+
+      "label": "Enrico Poli",
+
+      "properties": {
+
+        "location": "Lima"
+
+      }
+
+    },
+
+    {
+
+      "label": "Pereda",
+
+      "properties": {
+
+        "occupation": "Former policeman and artefact middleman"
+
+      }
+
+    },
+
+    {
+
+      "label": "Fred Drew",
+
+      "properties": {
+
+        "occupation": "Retired American diplomat"
+
+      }
+
+    },
+
+    {
+
+      "label": "David Swetnam",
+
+      "properties": {
+
+        "occupation": "US antiquities dealer"
+
+      }
+
+    },
+
+    {
+
+      "label": "Michael Kelly",
+
+      "properties": {
+
+        "occupation": "Member of the smuggling operation"
+
+      }
+
+    },
+
+    {
+
+      "label": "Miguel de Osma Berckemeyer",
+
+      "properties": {
+
+        "occupation": "Nephew of a former Peruvian ambassador to the US"
+
+      }
+
+    },
+
+    {
+
+      "label": "Fine Arts Services",
+
+      "properties": {
+
+        "occupation": "Bonded warehouse agent"
+
+      }
+
+    },
+
+    {
+
+      "label": "Benjamin Bishop Johnson",
+
+      "properties": {
+
+        "occupation": "Collector, dealer, and authenticator of Pre-Conquest antiquities"
+
+      }
+
+    },
+
+    {
+
+      "label": "Gaston Wallace",
+
+      "properties": {
+
+        "occupation": "US Customs agent"
+
+      }
+
+    },
+
+    {
+
+      "label": "Charles Craig",
+
+      "properties": {
+
+        "occupation": "Crocker Bank executive"
+
+      }
+
+    },
+
+    {
+
+      "label": "Santa Barbara Museum of Art",
+
+      "properties": {
+
+        "location": "Santa Barbara"
+
+      }
+
+    },
+
+  ],
+
+  "relationships": [
+
+    {
+
+      "startNode": "Sipan",
+
+      "endNode": "Enrico Poli",
+
+      "type": "INFORMED_OF",
+
+      "properties": {
+
+        "date": "1987"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Pereda",
+
+      "endNode": "Enrico Poli",
+
+      "type": "SOLD_TO",
+
+      "properties": {
+
+        "date": "1987"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Fred Drew",
+
+      "endNode": "David Swetnam",
+
+      "type": "WORKED_WITH",
+
+      "properties": {
+
+        "date": "20 years before Sipan looting"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Miguel de Osma Berckemeyer",
+
+      "endNode": "David Swetnam",
+
+      "type": "WORKED_WITH",
+
+      "properties": {
+
+        "date": "1987"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Fine Arts Services",
+
+      "endNode": "David Swetnam",
+
+      "type": "WORKED_WITH",
+
+      "properties": {
+
+        "date": "1987"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Michael Kelly",
+
+      "endNode": "David Swetnam",
+
+      "type": "WORKED_WITH",
+
+      "properties": {
+
+        "date": "1986"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Michael Kelly",
+
+      "endNode": "Gaston Wallace",
+
+      "type": "INFORMED_OF",
+
+      "properties": {
+
+        "date": "18 September 1987"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Charles Craig",
+
+      "endNode": "Santa Barbara Museum of Art",
+
+      "type": "CONNECTED_TO",
+
+      "properties": {
+
+        "date": "1988"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "David Swetnam",
+
+      "endNode": "Benjamin Bishop Johnson",
+
+      "type": "WORKED_WITH",
+
+      "properties": {
+
+        "date": "1988"
+
+      }
+
+    }
+
+  ]
+

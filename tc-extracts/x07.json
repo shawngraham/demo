@@ -1,0 +1,369 @@
+{"nodes": [
+
+    {
+
+      "label": "Uigwe",
+
+      "properties": {
+
+        "origin": "Korea",
+
+        "date": "1600s-early 1900s",
+
+        "function": "Royal Protocols or Rubrica for a State Ceremony",
+
+        "style": "Banchado"
+
+      }
+
+    },
+
+    {
+
+      "label": "Outer Gyujanggak Library",
+
+      "properties": {
+
+        "location": "Ganghwa-do Island",
+
+        "date": "1782"
+
+      }
+
+    },
+
+    {
+
+      "label": "Bibliothèque nationale de France",
+
+      "properties": {
+
+        "location": "France"
+
+      }
+
+    },
+
+    {
+
+      "label": "Park Byeong-sen",
+
+      "properties": {
+
+        "profession": "Librarian"
+
+      }
+
+    },
+
+    {
+
+      "label": "South Korea Embassy",
+
+      "properties": {
+
+        "location": "France"
+
+      }
+
+    },
+
+    {
+
+      "label": "Cultural Action",
+
+      "properties": {
+
+        "location": "Seoul"
+
+      }
+
+    },
+
+    {
+
+      "label": "François Mitterrand",
+
+      "properties": {
+
+        "profession": "French President"
+
+      }
+
+    },
+
+    {
+
+      "label": "Nicholas Sarkozy",
+
+      "properties": {
+
+        "profession": "French President"
+
+      }
+
+    },
+
+    {
+
+      "label": "Lee Myung-bak",
+
+      "properties": {
+
+        "profession": "South Korean President"
+
+      }
+
+    },
+
+    {
+
+      "label": "Itō Hirobumi",
+
+      "properties": {
+
+        "profession": "Governor-General of Colonial Japanese Korea"
+
+      }
+
+    },
+
+    {
+
+      "label": "Imperial Household Agency",
+
+      "properties": {
+
+        "location": "Tokyo"
+
+      }
+
+    },
+
+    {
+
+      "label": "Ven Hyemun",
+
+      "properties": {
+
+        "profession": "Monk"
+
+      }
+
+    }
+
+  ],
+
+  "relationships": [
+
+    {
+
+      "startNode": "Uigwe",
+
+      "endNode": "Outer Gyujanggak Library",
+
+      "type": "TRANSFERRED_TO",
+
+      "properties": {
+
+        "date": "1866"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Outer Gyujanggak Library",
+
+      "endNode": "Bibliothèque nationale de France",
+
+      "type": "SEIZED_BY",
+
+      "properties": {
+
+        "date": "1866"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Park Byeong-sen",
+
+      "endNode": "Bibliothèque nationale de France",
+
+      "type": "WORKED_AT",
+
+      "properties": {
+
+        "date": "1975"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "South Korea Embassy",
+
+      "endNode": "Bibliothèque nationale de France",
+
+      "type": "REQUESTED_RETURN_OF",
+
+      "properties": {
+
+        "date": "1992"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "François Mitterrand",
+
+      "endNode": "South Korea",
+
+      "type": "RETURNED_ONE_VOLUME_TO",
+
+      "properties": {
+
+        "date": "1993"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Cultural Action",
+
+      "endNode": "Paris Administrative Court",
+
+      "type": "FILED_A_LAWSUIT_TO",
+
+      "properties": {
+
+        "date": "2007"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Nicholas Sarkozy",
+
+      "endNode": "South Korea",
+
+      "type": "AGREED_TO_RETURN_UIGWE_ON_LOAN_TO",
+
+      "properties": {
+
+        "date": "2010"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Itō Hirobumi",
+
+      "endNode": "Japan",
+
+      "type": "SHIPPED_UIGWE_TO",
+
+      "properties": {
+
+        "date": "1922"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Imperial Household Agency",
+
+      "endNode": "Japan",
+
+      "type": "HOUSED_UIGWE_AT",
+
+      "properties": {
+
+        "date": "1922"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Ven Hyemun",
+
+      "endNode": "North Korea",
+
+      "type": "ISSUED_JOINT_REQUEST_FOR_RETURN_OF_DOCUMENTS_WITH",
+
+      "properties": {
+
+        "date": "2008"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Kan Naoto",
+
+      "endNode": "Japan",
+
+      "type": "ANNOUNCED_UIGWE_WOULD_BE_RETURNED_BY",
+
+      "properties": {
+
+        "date": "2010"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "Noda Yoshihiko",
+
+      "endNode": "South Korea",
+
+      "type": "BROUGHT_FIVE_UIGWE_VOLUMES_TO",
+
+      "properties": {
+
+        "date": "2011"
+
+      }
+
+    },
+
+    {
+
+      "startNode": "South Korean Cultural Heritage Administration",
+
+      "endNode": "Uigwe from Japan",
+
+      "type": "CLASSIFIED_AS_NATIONAL_CULTURAL_HERITAGE",
+
+      "properties": {
+
+        "date": "2011"
+
+      }
+
+    }
+
+  ]
+
+}

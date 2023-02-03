@@ -1,0 +1,92 @@
+{"nodes": [
+    {
+      "label": "Leonardo Patterson",
+      "properties": {
+        "associatedWith": ["La Mina headdress case", "El Manatí Olmec Busts case"],
+        "convicted": "yes"
+      }
+    },
+    {
+      "label": "Wayne Anderson",
+      "properties": {}
+    },
+    {
+      "label": "Donald Hales",
+      "properties": {
+        "location": "California"
+      }
+    },
+    {
+      "label": "Paul Clifford",
+      "properties": {
+        "location": "North Carolina"
+      }
+    },
+    {
+      "label": "Victoria National Gallery",
+      "properties": {
+        "location": "Australia"
+      }
+    },
+    {
+      "label": "Clemency Coggins",
+      "properties": {
+        "occupation": "archaeologist and art historian"
+      }
+    },
+    {
+      "label": "Ian Graham",
+      "properties": {
+        "occupation": "archaeologist"
+      }
+    },
+    {
+      "label": "Maya 'fresco'",
+      "properties": {
+        "date": "1984",
+        "price": "$250,000"
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "startNode": "Leonardo Patterson",
+      "endNode": "Wayne Anderson",
+      "type": "OFFERED_TO",
+      "properties": {
+        "date": "May 1984",
+        "price": "$100,000"
+      }
+    },
+    {
+      "startNode": "Leonardo Patterson",
+      "endNode": "Donald Hales",
+      "type": "ASKED_TO_AUTHENTICATE",
+      "properties": {}
+    },
+    {
+      "startNode": "Leonardo Patterson",
+      "endNode": "Paul Clifford",
+      "type": "ASKED_TO_AUTHENTICATE",
+      "properties": {}
+    },
+    {
+      "startNode": "Leonardo Patterson",
+      "endNode": "Victoria National Gallery",
+      "type": "IMPORTED_FOR",
+      "properties": {}
+    },
+    {
+      "startNode": "Leonardo Patterson",
+      "endNode": "Clemency Coggins",
+      "type": "SENT_TO",
+      "properties": {}
+    },
+    {
+      "startNode": "Leonardo Patterson",
+      "endNode": "Ian Graham",
+      "type": "SENT_TO",
+      "properties": {}
+    }
+  ]
+}
