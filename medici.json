@@ -1,0 +1,118 @@
+{
+  "nodes": [
+    {
+      "label": "Giacomo Medici",
+      "properties": {
+        "occupation": "Antiquities Dealer"
+      }
+    },
+    {
+      "label": "Robert Hecht",
+      "properties": {
+        "occupation": "US Dealer"
+      }
+    },
+    {
+      "label": "Antiquaria Romana",
+      "properties": {
+        "location": "Rome"
+      }
+    },
+    {
+      "label": "Euphronios Krater",
+      "properties": {
+        "madeIn": "Athens",
+        "date": "515 BC",
+        "potter": "Euxitheos",
+        "painter": "Euphronios",
+        "price": "$1 million"
+      }
+    },
+    {
+      "label": "Geneva Freeport",
+      "properties": {
+        "location": "Switzerland"
+      }
+    },
+    {
+      "label": "Carabinieri",
+      "properties": {
+        "organization": "Italian Police"
+      }
+    },
+    {
+      "label": "John Cooney",
+      "properties": {
+        "occupation": "Curator of Ancient Art at the Cleveland Museum of Art"
+      }
+    },
+    {
+      "label": "Cleveland Museum of Art",
+      "properties": {
+        "location": "Ohio"
+      }
+    },
+    {
+      "label": "Gianfranco Becchina",
+      "properties": {
+        "occupation": "Italian Dealer"
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "startNode": "Giacomo Medici",
+      "endNode": "Robert Hecht",
+      "type": "SUPPLIES_TO",
+      "properties": {}
+    },
+    {
+      "startNode": "Giacomo Medici",
+      "endNode": "Antiquaria Romana",
+      "type": "OWNS",
+      "properties": {}
+    },
+    {
+      "startNode": "Giacomo Medici",
+      "endNode": "Euphronios Krater",
+      "type": "BOUGHT_FROM",
+      "properties": {
+        "date": "December 1971"
+      }
+    },
+    {
+      "startNode": "Giacomo Medici",
+      "endNode": "Geneva Freeport",
+      "type": "STORED_AT",
+      "properties": {}
+    },
+    {
+      "startNode": "Carabinieri",
+      "endNode": "Giacomo Medici",
+      "type": "RAIDED",
+      "properties": {
+        "date": "September 1995"
+      }
+    },
+    {
+      "startNode": "John Cooney",
+      "endNode": "Cleveland Museum of Art",
+      "type": "WORKED_AT",
+      "properties": {}
+    },
+    {
+      "startNode": "John Cooney",
+      "endNode": "Robert Hecht",
+      "type": "DESCRIBED",
+      "properties": {}
+    },
+    {
+      "startNode": "Gianfranco Becchina",
+      "endNode": "Carabinieri",
+      "type": "RAIDED",
+      "properties": {
+        "date": "2002, 2005"
+      }
+    }
+  ]
+}
