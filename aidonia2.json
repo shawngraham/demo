@@ -1,32 +1,175 @@
-{ "nodes": [{"Name": "Aidonia Treasure","type": "Collection","robbedFrom": "cemetery at Aidonia","date": "late 1970s"},
-{"Name": "Aidonia","type": "Village","location": "northeastern Peloponnesian district of Corinthia in Greece","date": ""},
-{"Name": "Mycenaean","type": "Culture","date": "fifteenth-century BC","location": "Greece"},
-{"Name": "archaiokapiloi","type": "Looters","location": "Greece","date": ""},
-{"Name": "Greek Archaeological Service","type": "Organization","location": "Greece","date": ""},
-{"Name": "Michael Ward Gallery","type": "Gallery","location": "New York","date": "April 1993"},
-{"Name": "John Betts","type": "Archaeologist","location": "European collector","date": ""},
-{"Name": "Jack Ogden","type": "Researcher","location": "Cambridge Centre for Precious Metal Research","date": ""},
-{"Name": "Ricardo Elia","type": "Archaeologist","location": "","date": "April 1993"},
-{"Name": "James Wright","type": "Archaeologist","location": "Nemea","date": "April 1993"},
-{"Name": "Greek Ministry of Culture","type": "Organization","location": "Greece","date": ""},
-{"Name": "US District Court","type": "Court","location": "Southern District of New York","date": "May 1993"},
-{"Name": "Michael Ward","type": "Dealer","location": "New York","date": ""},
-{"Name": "Society for the Preservation of the Greek Heritage","type": "Organization","location": "US-based","date": ""},
-{"Name": "US$1.5 million","type": "Price","location": "","date": ""},
-{"Name": "US$150,000","type": "Price","location": "","date": ""}] }
-{ "edges": [{"startNode": "Aidonia Treasure","endNode": "Greece","type": "returned to","date": "1996"},
-{"startNode": "Aidonia Treasure","endNode": "Mycenaean","type": "collection of","date": ""},
-{"startNode": "Aidonia Treasure","endNode": "Michael Ward Gallery","type": "offered by","date": "April 1993"},
-{"startNode": "Michael Ward Gallery","endNode": "John Betts","type": "introduction and object descriptions by","date": ""},
-{"startNode": "Michael Ward Gallery","endNode": "Jack Ogden","type": "gold analyses conducted by","date": ""},
-{"startNode": "Michael Ward Gallery","endNode": "Greek Ministry of Culture","type": "confirmed by","date": ""},
-{"startNode": "Michael Ward Gallery","endNode": "US$1.5 million","type": "asking price","date": ""},
-{"startNode": "Ricardo Elia","endNode": "Consul General of Greece","type": "alerted","date": "April 1993"},
-{"startNode": "James Wright","endNode": "Greek Archaeological Service","type": "informed","date": "April 1993"},
-{"startNode": "Greek Ministry of Culture","endNode": "committee of experts","type": "convened","date": ""},
-{"startNode": "Greek Ministry of Culture","endNode": "Michael Ward","type": "notified","date": "May 1993"},
-{"startNode": "US District Court","endNode": "Michael Ward","type": "injunction against","date": "May 1993"},
-{"startNode": "Michael Ward","endNode": "Society for the Preservation of the Greek Heritage","type": "donated to","date": "December 1993"},
-{"startNode": "Michael Ward","endNode": "US$150,000","type": "tax deduction for","date": ""},
-{"startNode": "Society for the Preservation of the Greek Heritage","endNode": "Greece","type": "returned to","date": "1996"}]}
-
+{
+	"nodes": [{
+			"Name": "Aidonia Treasure",
+			"type": "Object",
+			"returnedTo": "Greece",
+			"date": "1996"
+		},
+		{
+			"Name": "Mycenaean gold and jewelry",
+			"type": "Object"
+		},
+		{
+			"Name": "Aidonia",
+			"type": "Place",
+			"location": "Northeastern Peloponnesian district of Corinthia in Greece"
+		},
+		{
+			"Name": "Mycenaean",
+			"type": "Object",
+			"date": "fifteenth-century BC"
+		},
+		{
+			"Name": "archaiokapiloi",
+			"type": "Organization",
+			"role": "looters"
+		},
+		{
+			"Name": "Greek Archaeological Service",
+			"type": "Organization"
+		},
+		{
+			"Name": "watermelons",
+			"type": "Object"
+		},
+		{
+			"Name": "Michael Ward Gallery",
+			"type": "Organization"
+		},
+		{
+			"Name": "John Betts",
+			"type": "Individual",
+			"role": "archaeologist"
+		},
+		{
+			"Name": "Jack Ogden",
+			"type": "Individual",
+			"role": "Cambridge Centre for Precious Metal Research"
+		},
+		{
+			"Name": "Greek Ministry of Culture",
+			"type": "Organization"
+		},
+		{
+			"Name": "Ricardo Elia",
+			"type": "Individual",
+			"role": "archaeologist"
+		},
+		{
+			"Name": "James Wright",
+			"type": "Individual",
+			"role": "archaeologist"
+		},
+		{
+			"Name": "New York Times",
+			"type": "Organization"
+		},
+		{
+			"Name": "Society for the Preservation of the Greek Heritage",
+			"type": "Organization"
+		},
+		{
+			"Name": "US District Court, Southern District of New York",
+			"type": "Organization"
+		},
+		{
+			"Name": "Athenian lawyer",
+			"type": "Individual"
+		},
+		{
+			"Name": "US$1. 5 million",
+			"type": "Object"
+		}
+	],
+	"edges": [{
+			"startNode": "Aidonia Treasure",
+			"endNode": "Greece",
+			"type": "returned to",
+			"date": "1996"
+		},
+		{
+			"startNode": "Mycenaean gold and jewelry",
+			"endNode": "Aidonia",
+			"type": "robbed from",
+			"date": "late 1970s"
+		},
+		{
+			"startNode": "Mycenaean",
+			"endNode": "Aidonia",
+			"type": "discovered",
+			"date": "November 1976"
+		},
+		{
+			"startNode": "archaiokapiloi",
+			"endNode": "Aidonia",
+			"type": "looted",
+			"date": "late 1970s"
+		},
+		{
+			"startNode": "Greek Archaeological Service",
+			"endNode": "Aidonia",
+			"type": "assigned guard to",
+			"date": "November 1977"
+		},
+		{
+			"startNode": "watermelons",
+			"endNode": "Greece",
+			"type": "smuggled out of",
+			"date": "late 1970s"
+		},
+		{
+			"startNode": "Michael Ward Gallery",
+			"endNode": "Mycenaean gold and jewelry",
+			"type": "offered on display for sale",
+			"date": "April 1993"
+		},
+		{
+			"startNode": "John Betts",
+			"endNode": "Mycenaean gold and jewelry",
+			"type": "introduction and object descriptions",
+			"date": "April 1993"
+		},
+		{
+			"startNode": "Jack Ogden",
+			"endNode": "Mycenaean gold and jewelry",
+			"type": "gold analyses conducted",
+			"date": "April 1993"
+		},
+		{
+			"startNode": "Greek Ministry of Culture",
+			"endNode": "Mycenaean gold and jewelry",
+			"type": "confirmed not stolen",
+			"date": "April 1993"
+		},
+		{
+			"startNode": "Ricardo Elia",
+			"endNode": "Mycenaean gold and jewelry",
+			"type": "alerted the Consul General of Greece in New York",
+			"date": "April 1993"
+		},
+		{
+			"startNode": "James Wright",
+			"endNode": "Mycenaean gold and jewelry",
+			"type": "informed the Greek Archaeological Service of suspicion",
+			"date": "April 1993"
+		},
+		{
+			"startNode": "New York Times",
+			"endNode": "Mycenaean gold and jewelry",
+			"type": "described as 'rare gold baubles'",
+			"date": "April 1993"
+		},
+		{
+			"startNode": "Society for the Preservation of the Greek Heritage",
+			"endNode": "Mycenaean gold and jewelry",
+			"type": "returned to Greece",
+			"date": "1996"
+		},
+		{
+			"startNode": "US District Court, Southern District of New York",
+			"endNode": "Mycenaean gold and jewelry",
+			"type": "prevented sale or transport out of state",
+			"date": "May 1993"
+		}
+	]
+}
