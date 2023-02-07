@@ -289,7 +289,7 @@
 {"Name": "Circuit Court", "type": "Organization"},
 {"Name": "Cist", "type": "Object", "location": "Sarmizegetusa Regia"},
 {"Name": "City University of New York", "type": "Organization"},
-"Name": "Clarence Pilling", "type": "Individual", "location": "Range Creek, Utah", "date": "1950", "seller": "Unknown", "price": "Unknown"},
+{"Name": "Clarence Pilling", "type": "Individual", "location": "Range Creek, Utah", "date": "1950", "seller": "Unknown", "price": "Unknown"},
 {"Name": "Clarence Pilling", "type": "Individual", "location": "Range Creek, Utah", "date": "1950"},
 {"Name": "Classic Maya pottery", "type": "Object"},
 {"Name": "Classic Maya Site", "type": "Place"},
