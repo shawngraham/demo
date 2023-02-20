@@ -1,0 +1,43 @@
+{
+	"nodes": [{
+		"urn": "urn:p-lod:id:luna_img_PPM1_495",
+		"label": "PPM1_495",
+		"best_image": "true",
+		"l_record": "507",
+		"l_media": "1340753",
+		"l_batch": "4275",
+		"l_description": "24. Sacello iliac (s), S wall, the central section. The episode, which is the center of all figuration, of Hector by Achilles landed. IV style.\n13 AFS C608\n\n",
+		"l_img_url": "http:\/\/umassamherst.lunaimaging.com\/MediaManager\/srvr?mediafile=\/Size3\/umass~16~16\/4275\/PPM1_495.jpg",
+		"feature": "urn:p-lod:id:ARC_031655"
+	}, {
+		"urn": "urn:p-lod:id:luna_img_PPM1_496",
+		"label": "PPM1_496",
+		"best_image": "true",
+		"l_record": "508",
+		"l_media": "1340752",
+		"l_batch": "4275",
+		"l_description": "26. Sacello iliac (s), S wall section E. The Achilles wagon. IV style.\n13 AFS C615\n\n\n\n\n\n",
+		"l_img_url": "http:\/\/umassamherst.lunaimaging.com\/MediaManager\/srvr?mediafile=\/Size3\/umass~16~16\/4275\/PPM1_496.jpg",
+		"feature": "urn:p-lod:id:ARC_031655"
+	}, {
+		"urn": "urn:p-lod:id:luna_img_PPM8_321",
+		"label": "PPM8_321",
+		"best_image": "true",
+		"l_record": "15362",
+		"l_media": "1355971",
+		"l_batch": "4278",
+		"l_description": "23. Triclinio (k), Wall N: the decoration of this environment is in a simple style and IV rather heavy in the vertical subdivision of the wall in which predominate the white and yellow of the middle zone on the red socket. In this are the central panel with the edge of the carpet squares and the side with plants separated by narrow compartments with a disc hanging knotted bandages. In the middle area, the center is a tense yellow carpet in front of which there was a picture of Achille\nto Sciro of which only retained a minimum fragment with the upper right part of the figure of the hero with spit and shield. The side panels are in central squares with competitive vessels and are separated from the central one by a white architectural views with yellow partitions. 79N54721\n",
+		"l_img_url": "http:\/\/umassamherst.lunaimaging.com\/MediaManager\/srvr?mediafile=\/Size3\/umass~16~16\/4278\/PPM8_321.jpg",
+		"feature": "urn:p-lod:id:ARC_036903"
+	}, {
+		"urn": "urn:p-lod:id:luna_img_PPM11_938",
+		"label": "PPM11_938",
+		"best_image": "true",
+		"l_record": "3281",
+		"l_media": "1345528",
+		"l_batch": "4275",
+		"l_description": "189. VII 3, 29 House of M. spurious us MESOR.\nPencil on paper; 515 x 370.\nUnder the frame left: Painting of Pompeii 1867 Nicola La Volpe Im second cam opposite the Casa dei Marmi; right, added the other hand: Regio VII, Island 3, 29, L\nArchaeological Superintendency of Naples ADS 567. The\nThe big picture with Achilles and Penthesilea, or Theseus and Hippolyta, was detached from the wall of the triclinium N (L) and taken to the Naples Museum (inv. 120085). The fresco area is pretty worn and the details of the faces are not visible; the figures can be identified by color variations not being well traced even the outline drawing; the crenellated walls that form the background appear as a single defensive wall; probably at the time of the discovery La Volpe saw some detail over and maybe I interpret\u00f2 others.\n\n",
+		"l_img_url": "http:\/\/umassamherst.lunaimaging.com\/MediaManager\/srvr?mediafile=\/Size3\/umass~16~16\/4275\/PPM11_938.jpg",
+		"feature": "urn:p-lod:id:ARC_059375"
+	}]
+}
