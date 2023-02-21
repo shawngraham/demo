@@ -1,0 +1,160 @@
+{
+	"nodes":
+
+		[{
+			"urn": "urn:p-lod:id:luna_img_PALP_40708",
+			"label": "PALP_40708",
+			"l_record": "146329",
+			"l_media": "1307966",
+			"l_batch": "4262",
+			"l_img_url": "http:\/\/umassamherst.lunaimaging.com\/MediaManager\/srvr?mediafile=\/Size3\/umass~14~14\/4226\/image40708.jpg",
+			"feature": "urn:p-lod:id:ARC_031655",
+			"l_description": "I.6.4 Pompeii, 1968. Detail from south wall. Photo by Stanley A. Jashemski.\nSource: The Wilhelmina and Stanley A. Jashemski archive in the University of Maryland Library, Special Collections (See collection page) and made available under the Creative Commons Attribution-Non Commercial License v.4. See Licence and use details.\nJ68f0593"
+		}, {
+			"urn": "urn:p-lod:id:luna_img_PALP_40706",
+			"label": "PALP_40706",
+			"l_record": "146321",
+			"l_media": "1307970",
+			"l_batch": "4262",
+			"l_img_url": "http:\/\/umassamherst.lunaimaging.com\/MediaManager\/srvr?mediafile=\/Size3\/umass~14~14\/4226\/image40706.jpg",
+			"feature": "urn:p-lod:id:ARC_031655",
+			"l_description": "I.6.4 Pompeii, 1968. Upper rear (south) wall. Photo by Stanley A. Jashemski.\nSource: The Wilhelmina and Stanley A. Jashemski archive in the University of Maryland Library, Special Collections (See collection page) and made available under the Creative Commons Attribution-Non Commercial License v.4. See Licence and use details.\nJ68f0591"
+		}, {
+			"urn": "urn:p-lod:id:luna_img_PALP_40707",
+			"label": "PALP_40707",
+			"l_record": "146325",
+			"l_media": "1307968",
+			"l_batch": "4262",
+			"l_img_url": "http:\/\/umassamherst.lunaimaging.com\/MediaManager\/srvr?mediafile=\/Size3\/umass~14~14\/4226\/image40707.jpg",
+			"feature": "urn:p-lod:id:ARC_031655",
+			"l_description": "I.6.4 Pompeii, 1968. Looking towards south-west corner. Photo by Stanley A. Jashemski.\nSource: The Wilhelmina and Stanley A. Jashemski archive in the University of Maryland Library, Special Collections (See collection page) and made available under the Creative Commons Attribution-Non Commercial License v.4. See Licence and use details.\nJ68f0592"
+		}, {
+			"urn": "urn:p-lod:id:luna_img_PALP_19335",
+			"label": "PALP_19335",
+			"l_record": "117350",
+			"l_media": "1289732",
+			"l_batch": "4259",
+			"l_img_url": "http:\/\/umassamherst.lunaimaging.com\/MediaManager\/srvr?mediafile=\/Size3\/umass~14~14\/4202\/image19335.jpg",
+			"feature": "urn:p-lod:id:ARC_031655",
+			"l_description": "I.6.4 Pompeii. March 2009. Room 16, Sacellum."
+		}, {
+			"urn": "urn:p-lod:id:luna_img_PALP_19340",
+			"label": "PALP_19340",
+			"l_record": "117365",
+			"l_media": "1289723",
+			"l_batch": "4259",
+			"l_img_url": "http:\/\/umassamherst.lunaimaging.com\/MediaManager\/srvr?mediafile=\/Size3\/umass~14~14\/4202\/image19340.jpg",
+			"feature": "urn:p-lod:id:ARC_031655",
+			"l_description": "I.6.4 Pompeii. March 2009. Room 16, Sacellum. Rear wall."
+		}, {
+			"urn": "urn:p-lod:id:luna_img_PALP_19339",
+			"label": "PALP_19339",
+			"l_record": "117361",
+			"l_media": "1289725",
+			"l_batch": "4259",
+			"l_img_url": "http:\/\/umassamherst.lunaimaging.com\/MediaManager\/srvr?mediafile=\/Size3\/umass~14~14\/4202\/image19339.jpg",
+			"feature": "urn:p-lod:id:ARC_031662",
+			"l_description": "I.6.4 Pompeii. March 2009. Room 16, Sacellum. East side. Frieze showing scenes from the Iliad."
+		}, {
+			"urn": "urn:p-lod:id:luna_img_PALP_40703",
+			"label": "PALP_40703",
+			"l_record": "146313",
+			"l_media": "1307977",
+			"l_batch": "4262",
+			"l_img_url": "http:\/\/umassamherst.lunaimaging.com\/MediaManager\/srvr?mediafile=\/Size3\/umass~14~14\/4226\/image40703.jpg",
+			"feature": "urn:p-lod:id:ARC_031662",
+			"l_description": "I.6.4 Pompeii, 1968. Centre of east side of vault of sacellum. Photo by Stanley A. Jashemski.\nSource: The Wilhelmina and Stanley A. Jashemski archive in the University of Maryland Library, Special Collections (See collection page) and made available under the Creative Commons Attribution-Non Commercial License v.4. See Licence and use details.\nJ68f0588"
+		}, {
+			"urn": "urn:p-lod:id:luna_img_PALP_19341",
+			"label": "PALP_19341",
+			"l_record": "117368",
+			"l_media": "1289721",
+			"l_batch": "4259",
+			"l_img_url": "http:\/\/umassamherst.lunaimaging.com\/MediaManager\/srvr?mediafile=\/Size3\/umass~14~14\/4202\/image19341.jpg",
+			"feature": "urn:p-lod:id:ARC_031662",
+			"l_description": "I.6.4 Pompeii. March 2009. Room 16, Sacellum. Outer east side."
+		}, {
+			"urn": "urn:p-lod:id:luna_img_PPM1_496",
+			"label": "PPM1_496",
+			"l_record": "508",
+			"l_media": "1340752",
+			"l_batch": "4275",
+			"l_img_url": "http:\/\/umassamherst.lunaimaging.com\/MediaManager\/srvr?mediafile=\/Size3\/umass~16~16\/4275\/PPM1_496.jpg",
+			"feature": "urn:p-lod:id:ARC_031655",
+			"l_description": "26. Sacello iliac (s), S wall section E. The Achilles wagon. IV style.\n13 AFS C615\n\n\n\n\n\n"
+		}, {
+			"urn": "urn:p-lod:id:luna_img_PPM1_494",
+			"label": "PPM1_494",
+			"l_record": "506",
+			"l_media": "1340754",
+			"l_batch": "4275",
+			"l_img_url": "http:\/\/umassamherst.lunaimaging.com\/MediaManager\/srvr?mediafile=\/Size3\/umass~16~16\/4275\/PPM1_494.jpg",
+			"feature": "urn:p-lod:id:ARC_031655",
+			"l_description": "25. Sacello iliac (s), S wall, stretch O. The Greeks warriors that assist to combat. IV style.\n13 AFSC614-\n"
+		}, {
+			"urn": "urn:p-lod:id:luna_img_PPM1_495",
+			"label": "PPM1_495",
+			"l_record": "507",
+			"l_media": "1340753",
+			"l_batch": "4275",
+			"l_img_url": "http:\/\/umassamherst.lunaimaging.com\/MediaManager\/srvr?mediafile=\/Size3\/umass~16~16\/4275\/PPM1_495.jpg",
+			"feature": "urn:p-lod:id:ARC_031655",
+			"l_description": "24. Sacello iliac (s), S wall, the central section. The episode, which is the center of all figuration, of Hector by Achilles landed. IV style.\n13 AFS C608\n\n"
+		}, {
+			"urn": "urn:p-lod:id:luna_img_PPM1_493",
+			"label": "PPM1_493",
+			"l_record": "505",
+			"l_media": "1340755",
+			"l_batch": "4275",
+			"l_img_url": "http:\/\/umassamherst.lunaimaging.com\/MediaManager\/srvr?mediafile=\/Size3\/umass~16~16\/4275\/PPM1_493.jpg",
+			"feature": "urn:p-lod:id:ARC_031655",
+			"l_description": "23. Sacello iliac (s), S wall, stretch E. Ettore and the group of Trojans warriors assister that the duel. IV style.\n13 AFS C600\n"
+		}, {
+			"urn": "urn:p-lod:id:luna_img_PPM1_492",
+			"label": "PPM1_492",
+			"l_record": "504",
+			"l_media": "1340756",
+			"l_batch": "4275",
+			"l_img_url": "http:\/\/umassamherst.lunaimaging.com\/MediaManager\/srvr?mediafile=\/Size3\/umass~16~16\/4275\/PPM1_492.jpg",
+			"feature": "urn:p-lod:id:ARC_031655",
+			"l_description": "22. Sacello iliac (s), S wall, stretch E. Hera and Aphrodite assist to combat. The parts of the figuration in the background are finished in white. IV style.\n13 AFSC610\n"
+		}, {
+			"urn": "urn:p-lod:id:luna_img_PPM1_506",
+			"label": "PPM1_506",
+			"l_record": "518",
+			"l_media": "1340742",
+			"l_batch": "4275",
+			"l_img_url": "http:\/\/umassamherst.lunaimaging.com\/MediaManager\/srvr?mediafile=\/Size3\/umass~16~16\/4275\/PPM1_506.jpg",
+			"feature": "urn:p-lod:id:ARC_031662",
+			"l_description": "36. Sacello iliac (s), wall E, section N. The narrative continues on this wall with the figuration of the gifts under the tent eli Achilles. IV style.\n13 AFSC622\n"
+		}, {
+			"urn": "urn:p-lod:id:luna_img_PPM1_508",
+			"label": "PPM1_508",
+			"l_record": "520",
+			"l_media": "1340740",
+			"l_batch": "4275",
+			"l_img_url": "http:\/\/umassamherst.lunaimaging.com\/MediaManager\/srvr?mediafile=\/Size3\/umass~16~16\/4275\/PPM1_508.jpg",
+			"feature": "urn:p-lod:id:ARC_031662",
+			"l_description": "38. Sacello iliac (s), wall E, N. tract Priam, led by Hermes, reports to Troy his son's body. IV style.\n13 AFS C619\n"
+		}, {
+			"urn": "urn:p-lod:id:luna_img_PPM1_507",
+			"label": "PPM1_507",
+			"l_record": "519",
+			"l_media": "1340741",
+			"l_batch": "4275",
+			"l_img_url": "http:\/\/umassamherst.lunaimaging.com\/MediaManager\/srvr?mediafile=\/Size3\/umass~16~16\/4275\/PPM1_507.jpg",
+			"feature": "urn:p-lod:id:ARC_031662",
+			"l_description": "37. Sacello iliac (s), wall E, section N. The wagon pulled by mules back to Troy the corpse of Hector. IV style.\n13 AFS C595\n\n\n\n\n\n"
+		}, {
+			"urn": "urn:p-lod:id:luna_img_PPM1_491",
+			"label": "PPM1_491",
+			"l_record": "503",
+			"l_media": "1340757",
+			"l_batch": "4275",
+			"l_img_url": "http:\/\/umassamherst.lunaimaging.com\/MediaManager\/srvr?mediafile=\/Size3\/umass~16~16\/4275\/PPM1_491.jpg",
+			"feature": "urn:p-lod:id:ARC_031662",
+			"l_description": "21. Sacello iliac (s), wall E, S. Ettore tract, accompanied by Parca, goes to fight. IV style.\n13 AFS C598\n"
+		}]
+
+
+}
