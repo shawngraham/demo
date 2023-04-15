@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ncx xmlns:ncx="http://www.daisy.org/z3986/2005/ncx/" xmlns="http://www.daisy.org/z3986/2005/ncx/"
+version="2005-1" xml:lang="en">
+<head>
+<meta name="dtb:uid" content="com.robinsloan.archaeologies-of-the-near-future"/>
+</head>
+<docTitle>
+<text>Archaeologies of the Near Future</text>
+</docTitle>
+<navMap>
+<navPoint id="brushstrokes">
+<navLabel>
+<text>Brushstrokes</text>
+</navLabel>
+<content src="archaeologies-of-the-near-future-content.xhtml#brushstrokes"/>
+</navPoint>
+<navPoint id="the_site_diary_of_an_interplanetary_heritage_officer">
+<navLabel>
+<text>The site diary of an Interplanetary Heritage Officer</text>
+</navLabel>
+<content src="archaeologies-of-the-near-future-content.xhtml#the_site_diary_of_an_interplanetary_heritage_officer"/>
+</navPoint>
+<navPoint id="future_forests">
+<navLabel>
+<text>Future Forests</text>
+</navLabel>
+<content src="archaeologies-of-the-near-future-content.xhtml#future_forests"/>
+</navPoint>
+
+</navMap>
+</ncx>
