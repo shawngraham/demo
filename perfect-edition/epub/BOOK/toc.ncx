@@ -8,6 +8,18 @@ version="2005-1" xml:lang="en">
 <text>Archaeologies of the Near Future</text>
 </docTitle>
 <navMap>
+<navPoint id="note_to_readers">
+<navLabel>
+<text>Note to Readers</text>
+</navLabel>
+<content src="archaeologies-of-the-near-future-content.xhtml#note_to_readers"/>
+</navPoint>
+<navPoint id="future_archaeologies">
+<navLabel>
+<text>Future Archaeologies</text>
+</navLabel>
+<content src="archaeologies-of-the-near-future-content.xhtml#future_archaeologies"/>
+</navPoint>
 <navPoint id="brushstrokes">
 <navLabel>
 <text>Brushstrokes</text>
