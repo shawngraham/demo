@@ -1,0 +1,1 @@
+- info here about flagpole distribution in anytown usa 1932
