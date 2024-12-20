@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF OCR Knowledge Graph</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+    <style>
+        #graph {
+            width: 100%;
+            height: 600px;
+            border: 1px solid black;
+            margin-top: 20px;
+        }
+        
+        #myModal {
+            display: none;
+            position: fixed; 
+            z-index: 1; 
+            left: 0;
+            top: 0;
+            width: 100%; 
+            height: 100%;
+            overflow: auto; 
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.4);
+        }
+        
+        #modal-content {
+            background-color: #fefefe;
+            margin: 15% auto; 
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>PDF OCR Knowledge Graph</h1>
+        <form>
+            <div class="form-group">
+                <label for="pdfFile">Upload PDF File:</label>
+                <input type="file" id="pdfFile" accept=".pdf">
+            </div>
+            <div class="form-group">
+                <label for="schema">Select Schema:</label>
+                <select id="schema" multiple>
+                    <option value="person">Person</option>
+                    <option value="organization">Organization</option>
+                    <option value="location">Location</option>
+                    <option value="date">Date</option>
+                    <option value="event">Event</option>
+                </select>
+            </div>
+            <button type="button" id="processButton" class="btn btn-primary">Process</button>
+        </form>
+        <div id="myModal">
+            <div id="modal-content">
+                <div id="graph"></div>
+                <button type="button" id="closeButton" class="btn btn-secondary">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/tesseract.js@2.1.4/dist/tesseract.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/d3@7.2.1/dist/d3.min.js"></script>
+    <script>
+        const processButton = document.getElementById('processButton');
+        const pdfFileInput = document.getElementById('pdfFile');
+        const schemaSelect = document.getElementById('schema');
+        const graphDiv = document.getElementById('graph');
+        const myModal = document.getElementById('myModal');
+        const closeButton = document.getElementById('closeButton');
+
+        processButton.addEventListener('click', async () => {
+            const pdfFile = pdfFileInput.files[0];
+            const schema = Array.from(schemaSelect.selectedOptions, option => option.value);
+
+            if (!pdfFile || !schema.length) return;
+
+            const pdfText = await extractTextFromPdf(pdfFile);
+            const graphData = createGraphData(pdfText, schema);
+            renderGraph(graphData);
+            myModal.style.display = "block";
+        });
+
+        closeButton.addEventListener('click', () => {
+            myModal.style.display = "none";
+        });
+
+        async function extractTextFromPdf(pdfFile) {
+            return new Promise((resolve, reject) => {
+                Tesseract.recognize(
+                    pdfFile,
+                    'eng',
+                    { logger: m => console.log(m) }
+                ).then(({ data: { text } }) => {
+                    resolve(text);
+                }).catch(err => {
+                    reject(err);
+                });
+            });
+        }
+
+        function createGraphData(pdfText, schema) {
+            const graphData = { nodes: [], links: [] };
+
+            schema.forEach(selectedSchema => {
+                if (selectedSchema === 'person') {
+                    const personRegex = /([A-Za-z]+ [A-Za-z]+)/g;
+                    const persons = pdfText.match(personRegex);
+
+                    if (persons) {
+                        persons.forEach(person => {
+                            graphData.nodes.push({ id: person, type: 'person' });
+                        });
+                    }
+                } else if (selectedSchema === 'organization') {
+                    const organizationRegex = /([A-Za-z]+ Inc\.|[A-Za-z]+ Corp\.)/g;
+                    const organizations = pdfText.match(organizationRegex);
+
+                    if (organizations) {
+                        organizations.forEach(organization => {
+                            graphData.nodes.push({ id: organization, type: 'organization' });
+                        });
+                    }
+                } else if (selectedSchema === 'location') {
+                    const locationRegex = /(London|New York|Paris|Tokyo|[A-Za-z]+ City)/g;
+                    const locations = pdfText.match(locationRegex);
+
+                    if (locations) {
+                        locations.forEach(location => {
+                            graphData.nodes.push({ id: location, type: 'location' });
+                        });
+                    }
+                } else if (selectedSchema === 'date') {
+                    const dateRegex = /(\d{2}\/\d{2}\/\d{4}|\d{2} [A-Za-z]+ \d{4})/g;
+                    const dates = pdfText.match(dateRegex);
+
+                    if (dates) {
+                        dates.forEach(date => {
+                            graphData.nodes.push({ id: date, type: 'date' });
+                        });
+                    }
+                } else if (selectedSchema === 'event') {
+                    const eventRegex = /(conference|meeting|workshop|seminar)/gi;
+                    const events = pdfText.match(eventRegex);
+
+                    if (events) {
+                        events.forEach(event => {
+                            const eventId = event + ' event';
+                            graphData.nodes.push({ id: eventId, type: 'event' });
+
+                            const sentenceRegex = new RegExp(`[^.!?]*${event}[^.!?]*`, 'gi');
+                            const sentences = pdfText.match(sentenceRegex);
+
+                            if (sentences) {
+                                sentences.forEach(sentence => {
+                                    const sentenceId = sentence;
+                                    graphData.nodes.push({ id: sentenceId, type: 'sentence' });
+                                    graphData.links.push({ source: sentenceId, target: eventId });
+                                });
+                            }
+                        });
+                    }
+                }
+            });
+
+            return graphData;
+        }
+
+        function renderGraph(graphData) {
+            const width = graphDiv.offsetWidth;
+            const height = graphDiv.offsetHeight;
+
+            const svg = d3.select(graphDiv)
+                .append('svg')
+                .attr('width', width)
+                .attr('height', height);
+
+            const nodes = svg.selectAll('circle')
+                .data(graphData.nodes)
+                .enter()
+                .append('circle')
+                .attr('cx', (d, i) => i * 100 + 50)
+                .attr('cy', height / 2)
+                .attr('r', 20);
+
+            const links = svg.selectAll('line')
+                .data(graphData.links)
+                .enter()
+                .append('line')
+                .attr('x1', (d, i) => graphData.nodes.findIndex(node => node.id === d.source) * 100 + 50)
+                .attr('y1', height / 2)
+                .attr('x2', (d, i) => graphData.nodes.findIndex(node => node.id === d.target) * 100 + 50)
+                .attr('y2', height / 2);
+        }
+    </script>
+</body>
+</html>
