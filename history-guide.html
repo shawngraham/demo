@@ -1,0 +1,1309 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>History at Carleton: an interactive guide</title>
+<meta name="description" content="An unofficial interactive guide to the undergraduate History programs at Carleton University, with free-text matching of your interests to courses.">
+<style>:root {
+  --bg: #f6f1e7; --paper: #fffdf8; --ink: #1d2433; --muted: #5a6275; --rule: #ded6c4;
+  --accent: #a3282b; --accent-ink: #ffffff; --accent-soft: #f3dcd9; --link: #8c1f22;
+  --ok: #2d6a4f; --tag: #e8e2d2; --focus: #1a5fb4;
+  --serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+  --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #14171f; --paper: #1b1f2a; --ink: #ece7da; --muted: #a0a7b8; --rule: #2e3445;
+    --accent: #e0585b; --accent-ink: #14171f; --accent-soft: #3a2326; --link: #f08a8c;
+    --ok: #6fcf97; --tag: #2a3042; --focus: #7db3ff;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 18px/1.62 var(--serif); }
+a { color: var(--link); text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible, textarea:focus-visible, select:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+.topbar { background: var(--paper); border-bottom: 1px solid var(--rule); position: sticky; top: 0; z-index: 5; }
+.topbar .in { max-width: 46rem; margin: 0 auto; padding: .6rem 1rem; display: flex; gap: .9rem; align-items: center; flex-wrap: wrap; font: 600 .82rem var(--sans); }
+.topbar .brand { flex: 1 1 auto; letter-spacing: .02em; color: var(--muted); }
+.topbar a { text-decoration: none; padding: .25rem .1rem; border-bottom: 2px solid transparent; }
+.topbar a:hover { border-bottom-color: var(--accent); }
+main { max-width: 46rem; margin: 0 auto; padding: 1.5rem 1rem 3rem; outline: none; }
+#passage > :first-child { margin-top: 0; }
+h1, h2, h3, h4 { font-family: var(--serif); line-height: 1.2; font-weight: 700; }
+h1 { font-size: clamp(1.9rem, 5vw, 2.6rem); margin: .2em 0 .25em; letter-spacing: -.01em; }
+h2 { font-size: 1.25rem; color: var(--muted); font-weight: 500; margin: 0 0 1.2rem; }
+h3 { font-size: 1.15rem; margin: 1.4rem 0 .4rem; }
+h4 { font-size: 1.02rem; margin: 0; }
+p, li { max-width: 40rem; }
+ul, ol { padding-left: 1.2rem; }
+li { margin: .35rem 0; }
+blockquote { margin: 1.2rem 0; padding: .6rem 1rem; background: var(--paper); border-left: 4px solid var(--accent); font-size: .93rem; color: var(--muted); border-radius: 0 6px 6px 0; }
+blockquote p { margin: .3rem 0; }
+hr { border: 0; border-top: 1px solid var(--rule); margin: 1.5rem 0; }
+.passage a.plink { font-weight: 600; }
+.widget { background: var(--paper); border: 1px solid var(--rule); border-radius: 10px; padding: 1rem; margin: 1.2rem 0; }
+.qlabel { display: block; font: 700 .95rem var(--sans); margin-bottom: .4rem; }
+textarea, select { width: 100%; font: 1rem/1.5 var(--sans); padding: .65rem .75rem; border: 1px solid var(--rule); border-radius: 8px; background: var(--bg); color: var(--ink); }
+textarea { resize: vertical; min-height: 5.2rem; }
+.chips { display: flex; flex-wrap: wrap; gap: .4rem; margin: .7rem 0; }
+.chip { font: .8rem var(--sans); padding: .3rem .65rem; border: 1px solid var(--rule); border-radius: 999px; background: var(--tag); color: var(--ink); cursor: pointer; }
+.chip:hover { border-color: var(--accent); }
+.btn { font: 700 .9rem var(--sans); padding: .55rem 1.05rem; border: 2px solid var(--accent); background: var(--accent); color: var(--accent-ink); border-radius: 8px; cursor: pointer; }
+.btn:hover { filter: brightness(1.08); }
+.btn.small { font-size: .78rem; padding: .3rem .7rem; margin-top: .4rem; background: transparent; color: var(--link); }
+.btn.small[aria-pressed="true"] { background: var(--accent-soft); }
+.btn.ghost { background: transparent; color: var(--link); }
+.btn:disabled { opacity: .6; cursor: default; }
+.results { margin-top: 1rem; }
+.lead { font-size: 1rem; }
+.subhead { font: 700 .8rem var(--sans); text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin: 1.3rem 0 .4rem; }
+.card { border: 1px solid var(--rule); border-radius: 10px; padding: .8rem 1rem; margin: .7rem 0; background: var(--bg); }
+.card header { display: flex; flex-direction: column; gap: .15rem; }
+.card p { margin: .4rem 0; font-size: .96rem; max-width: none; }
+.code { font: 700 .8rem var(--sans); color: var(--accent); letter-spacing: .02em; margin-right: .3rem; }
+.sched { font: .78rem var(--sans); color: var(--muted); }
+.sched.off { font-style: italic; }
+.tags { display: flex; flex-wrap: wrap; gap: .3rem; margin: .3rem 0; }
+.tag { font: 600 .7rem var(--sans); background: var(--tag); padding: .15rem .5rem; border-radius: 4px; }
+.why, .note, .engine { font: .8rem/1.45 var(--sans); color: var(--muted); }
+.cluster { font: .95rem var(--sans); background: var(--accent-soft); padding: .6rem .8rem; border-radius: 8px; }
+.after { font: .88rem var(--sans); }
+.reqlist { list-style: none; padding: 0; }
+.reqlist li { display: flex; gap: .5rem; align-items: baseline; font-size: .97rem; }
+.box { font-family: var(--sans); color: var(--muted); }
+.box.ok { color: var(--ok); font-weight: 800; }
+.covered { color: var(--ok); font: .78rem var(--sans); }
+.gsec { border-top: 1px solid var(--rule); padding-top: .4rem; }
+.actions { display: flex; gap: .6rem; flex-wrap: wrap; margin-top: 1.4rem; }
+.plist li { margin: .6rem 0; }
+.peek { margin-top: .6rem; }
+footer { max-width: 46rem; margin: 0 auto; padding: 1rem 1rem 2.5rem; font: .8rem/1.5 var(--sans); color: var(--muted); border-top: 1px solid var(--rule); }
+footer p { margin: .4rem 0; max-width: none; }
+footer .btn { font-size: .75rem; padding: .3rem .7rem; background: transparent; color: var(--link); }
+.skip { position: absolute; left: -999px; } .skip:focus { left: 1rem; top: 1rem; background: var(--paper); padding: .5rem; z-index: 10; }
+.nochat { margin-left: .4rem; }
+.similar:not(:empty) { margin-top: .6rem; padding-left: .8rem; border-left: 3px solid var(--rule); }
+.card.fac { border-left: 4px solid var(--accent); }
+.ls-wrap { border: 1px solid var(--rule); border-radius: 10px; background: var(--paper); overflow: hidden; touch-action: none; }
+#ls-svg { width: 100%; height: auto; display: block; cursor: grab; }
+.ls-row { display: flex; gap: .5rem; flex-wrap: wrap; } .ls-row input { flex: 1 1 14rem; font: 1rem var(--sans); padding: .55rem .7rem; border: 1px solid var(--rule); border-radius: 8px; background: var(--bg); color: var(--ink); }
+.ls-ctl { display: flex; gap: .4rem 1rem; flex-wrap: wrap; align-items: center; font: .82rem var(--sans); margin: .8rem 0; } .ls-ctl select { width: auto; font-size: .82rem; padding: .2rem .4rem; } .ls-zoom { margin-left: auto; display: flex; gap: .3rem; }
+.ls-lab { font: 700 13px var(--sans); paint-order: stroke; stroke: var(--paper); stroke-width: 4px; stroke-linejoin: round; pointer-events: none; }
+.pt { cursor: pointer; } .pt.dim { opacity: .18; } .pt:hover circle, .pt:focus circle, .pt:hover path, .pt:focus path { stroke-width: 3; } .pt:focus { outline: none; } .pt:focus-visible circle, .pt:focus-visible path { stroke: var(--focus); stroke-width: 3.5; }
+.pt.hit circle, .pt.hit path { stroke: #E6B800; stroke-width: 3.5; }
+.ls-link { stroke: var(--ink); stroke-width: 1.2; stroke-dasharray: 4 3; opacity: .7; pointer-events: none; }
+#ls-legend details { border-top: 1px solid var(--rule); padding: .35rem 0; font: .88rem var(--sans); } #ls-legend summary { cursor: pointer; } #ls-legend ul { columns: 2 16rem; padding-left: 1rem; }
+.ls-sw { display: inline-block; width: .8rem; height: .8rem; border-radius: 50%; margin-right: .45rem; vertical-align: -1px; } .ls-n { color: var(--muted); font-size: .78rem; }
+.linkbtn { background: none; border: 0; padding: 0; font: inherit; color: var(--link); text-decoration: underline; cursor: pointer; text-align: left; }
+@media print {
+  .topbar, footer, .btn, .chips, .widget .qlabel { display: none !important; }
+  body { background: #fff; color: #000; font-size: 11pt; } .card { break-inside: avoid; border-color: #999; }
+}
+@media (max-width: 520px) { body { font-size: 17px; } .topbar .brand { flex-basis: 100%; } }
+@media (prefers-reduced-motion: no-preference) { .passage { animation: fade .25s ease-out; } @keyframes fade { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; } } }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to the story</a>
+<div class="topbar"><div class="in">
+  <span class="brand">History at Carleton &middot; interactive guide (unofficial; not a chatbot)</span>
+  <a href="#" id="nav-back">&larr; Back</a>
+  <a href="#" id="nav-hub">Hallway</a>
+  <a href="#" id="nav-ask">Ask</a>
+  <a href="#" id="nav-map">Landscape</a>
+  <a href="#" id="nav-guide">Your guide <span id="gcount"></span></a>
+</div></div>
+<main id="main" tabindex="-1"><div id="passage" class="passage"></div></main>
+<footer>
+  <p><strong>Not a chatbot.</strong> This page does not generate text or hold a conversation. It ranks passages already written by the department (course, faculty, and program descriptions) against what you type. The optional semantic model converts text to numbers for comparison only.</p>
+  <p><strong>Semantic matching.</strong> <span id="sem-status"></span> <button class="btn" id="sem-btn" type="button">Turn on semantic matching</button></p>
+  <p>Unofficial prototype built from public pages of the Carleton University Department of History and the undergraduate calendar. It is not affiliated with or endorsed by the university. Course offerings are the department&rsquo;s 2026&ndash;27 list (subject to change). Confirm everything against the <a href="https://calendar.carleton.ca/undergrad/undergradprograms/history/" target="_blank" rel="noopener">calendar</a>. Your answers stay in this browser.</p>
+</footer>
+<script>/* Data for the History @ Carleton interactive guide.
+   Sources: carleton.ca/history (programs, courses, co-op, careers pages) and the
+   Carleton undergraduate calendar (History entry). Schedule = 2026-27 list posted on
+   carleton.ca/history/courses/ ("subject to change"). */
+window.GUIDE_DATA = (function () {
+
+  // [id, title, term, delivery, instructor, areas, description]
+  // term: F fall 2026, W winter 2027, FW full year, FW/W etc; "" = in calendar, not on 2026-27 schedule
+  // delivery: ip in-person, ou online unscheduled, os online scheduled, "" unknown
+  var C = [
+    ["FYSM 1405A", "Playing History (First-Year Seminar)", "FW", "ip", "P. Walker", "pub culture", "A small first-year seminar built around play and history: learning how historians work in a hands-on, discussion-based class."],
+    ["FYSM 1405B", "Doing History: A Global History of WWII (First-Year Seminar)", "FW", "ip", "H. Goldman", "war glob", "A small first-year seminar on how historians work, taking the Second World War as a global subject."],
+    ["HIST 1003A", "Empire, War, and Revolution in Europe, 1850-1939", "F", "ip", "S. Eedy", "eur war", "Europe from the mid-nineteenth century to the 1930s: how nation-building, empire, war, and revolution transformed politics, culture, society, and Europe's relationship to the world."],
+    ["HIST 1004A", "Europe in War and Cold War", "W", "ip", "S. Eedy", "eur war", "Europe from the Second World War through the Cold War: occupation and resistance, the Holocaust, Cold War divisions and memory, decolonization and migration, youth cultures and protest, the collapse of communism."],
+    ["HIST 1301A", "Conflict and Change in Early Canadian History", "F", "ou", "D. Marshall", "can ind", "How colonialism and conflict altered peoples, cultures, and places in what came to be called Canada: imperialism, Indigenous-settler relations, slavery, migration, and government."],
+    ["HIST 1302A", "Rethinking Modern Canadian History", "W", "ip", "L. Madokoro", "can", "Modern Canada from the late 1800s to the present: colonialism, redress and reconciliation, race relations, migration and urbanization, globalization, technology, and the environment."],
+    ["HIST 1701A", "History of the Global South, 1400-1850", "F", "ip", "C. Jangam", "glob asia afr lat", "How global connections, movements, and trends shaped the world from 1400 to the mid-nineteenth century, with emphasis on the non-western world."],
+    ["HIST 1702A", "History of the Global South, 1850 to the Present", "W", "ip", "A. Diptee", "glob asia afr lat", "The global community from the mid-nineteenth century to now, with emphasis on the non-western world."],
+    ["HIST 1900A", "Topics in History: History of the Internet", "W", "ip", "S. Graham", "dig culture", "A topics course on the history of the internet: networks, platforms, and the digital culture we live inside."],
+    ["HIST 1900B", "Topics in History: From Trudeau to Trump", "W", "ou", "K. Recaj", "can us politics", "A topics course on politics in Canada and the United States from the Trudeau era to the Trump era."],
+    ["HIST 1900C", "Topics in History: Legacies of War", "F", "ou", "S. Barron", "war memory", "A topics course on how wars leave legacies: memory, trauma, commemoration, and consequences."],
+
+    ["HIST 2003A", "The Early Medieval World: 300-1000", "F", "ou", "S. Keeshan", "med glob rel", "Medieval societies across Europe, Asia and Africa as an 'Age of Experiment': fragmenting, transforming, and diversifying politics, culture, and religion, read through sources in translation."],
+    ["HIST 2004A", "The Late Medieval World: 1000-1500", "W", "ou", "S. Keeshan", "med glob rel", "Medieval societies across Europe, Asia and Africa as an 'Age of Connection': communication, co-operation, and conflict, read through sources in translation."],
+    ["HIST 2204A", "Early Modern Europe 1350-1650", "F", "ip", "P. Nelles", "eur early", "Major social, political, and cultural developments in continental Europe from the fourteenth to the seventeenth centuries."],
+    ["HIST 2301A", "Canadian Political History", "W", "ip", "M. Bellamy", "can politics", "An historical survey of political experiences in Canada."],
+    ["HIST 2308A", "Colonial Latin America", "F", "ip", "S. Lipsett-Rivera", "lat early empire", "From ancient civilizations to Independence: conquest, colonization, and the development of national identity in Latin America."],
+    ["HIST 2309A", "Modern Latin America", "W", "ip", "G. Escalante-Rengifo", "lat politics", "From the Wars of Independence to the end of the twentieth century: nations, economies, politics, culture, and international relations in Latin America."],
+    ["HIST 2312A", "History of the Indian Ocean World", "W", "ip", "C. Jangam", "ind glob asia afr trade", "The Indian Ocean as one of humanity's oldest maritime highways and an epicentre of the pre-modern global economy; non-western antecedents of modern global history."],
+    ["HIST 2314A", "Home, Work, and Play in Modern Canada", "W", "ip", "J. Opp", "can culture everyday", "Histories of everyday life in twentieth-century Canada: home, work, leisure, and play."],
+    ["HIST 2401A", "History of the United States to 1865", "F", "ou", "H. Goldman", "us", "United States politics and society from the American Revolution to the Civil War."],
+    ["HIST 2402A", "History of the United States from 1865", "W", "ou", "H. Goldman", "us", "United States politics and society from Reconstruction to the era of globalization."],
+    ["HIST 2506A", "Introduction to Women's and Gender History", "W", "ip", "P. Walker", "gen", "Women's and gender history: sexuality, masculinity, women's activism, consumer culture, religion, and reproductive rights. Geographic and temporal focus varies."],
+    ["HIST 2510A", "19th-Century Germany", "F", "ip", "S. Eedy", "eur", "Social, cultural, and political history of German nationhood: social democracy, feminist movements, empire-building, scientific racism, sexology, and the emancipation of German Jews."],
+    ["HIST 2511A", "20th-Century Germany", "W", "ip", "J. Evans", "eur war", "Social, cultural, and political tensions in Germany from the First World War to the fall of the Berlin Wall."],
+    ["HIST 2512A", "Britain and Empire, 1914-Present", "W", "ip", "D. Kinsey", "eur empire", "Britain and empire through the long twentieth century: decolonization, devolution, and Brexit."],
+    ["HIST 2706A", "Ancient and Pre-Colonial Africa", "W", "ip", "R. Raber", "afr early trade", "Ancient African cultures and civilizations, the trans-Saharan trade, and the trans-Atlantic and Indian Ocean slave trades, 600 BCE to the nineteenth century."],
+    ["HIST 2710A", "Introduction to Caribbean History", "F", "ou", "A. Diptee", "car empire race", "The Caribbean: Indigenous populations, colonialism and slavery in plantation societies, emancipation, and the post-emancipation Caribbean."],
+    ["HIST 2806A", "Introduction to the History of the Civilization of Japan (full year)", "FW", "ip", "J. Kovalio", "asia", "A survey of Japanese history from its legendary beginnings to the end of the Second World War."],
+    ["HIST 2809A", "The Historian's Craft", "F", "ip", "L. Madokoro", "method", "Lectures and workshops on historical methods: finding, evaluating, and analyzing documents, non-documentary evidence, statistics, and bibliographical tools. Required for History majors."],
+    ["HIST 2809B", "The Historian's Craft", "W", "ip", "M. Hogue", "method", "Lectures and workshops on historical methods: finding, evaluating, and analyzing documents, non-documentary evidence, statistics, and bibliographical tools. Required for History majors."],
+    ["HIST 2811A", "Public History: From Memory to Museums", "F", "ip", "J. Walsh", "pub memory culture", "Historical representation in the public arena and public engagement with the past: archives, museums, films, novels, and video games, with collaborative projects and field trips."],
+    ["HIST 2902A", "Origins of the Greeks (with Classics)", "F", "os", "Classics", "anc", "The history of ancient Greece from the Bronze Age through the Archaic period. Cross-listed with CLCV 2902."],
+    ["HIST 2903A", "Democracy to Alexander (with Classics)", "W", "os", "Classics", "anc", "Ancient Greece from the Classical period to Alexander. Cross-listed with CLCV 2903."],
+    ["HIST 2904A", "Rise of the Roman Empire (with Classics)", "F", "os", "Classics", "anc", "Ancient Rome from early Rome to the end of the Republic. Cross-listed with CLCV 2904."],
+    ["HIST 2915A", "History of the Modern Middle East", "W", "ip", "H. Ahmed", "me politics", "From the Ottoman Empire and how WWI drew the map, through Zionism, political Islam, wars, and revolutions, to the Arab Spring."],
+
+    ["HIST 3000A", "Topics in Ancient History: Intro to Digital Archaeology", "F", "ip", "S. Graham", "anc dig", "Digital methods applied to the ancient past. Cross-listed with CLCV 3000A and DIGH 3700B."],
+    ["HIST 3001A", "History at the Movies", "F", "ip", "E. Henry", "pub film culture memory", "How feature films represent the past: historical themes, cinematic uses of the past, and the role of film in shaping public memory."],
+    ["HIST 3010A", "The Later Roman Empire (with Classics)", "F", "ip", "Classics", "anc rel", "Administrative, ecclesiastical, cultural, and societal developments of the later Roman Empire. Cross-listed with CLCV 3010."],
+    ["HIST 3102A", "Queer(ing) Archives", "W", "ip", "Feminist Institute of Social Transformation", "gen pub archives", "The archival turn with an emphasis on sexuality, race, and gender in queer, trans, and colonial archives. Cross-listed with SXST 3106."],
+    ["HIST 3106A", "Social History of Sexuality", "W", "ip", "J. Evans", "gen body", "Sexuality in Western society from the Middle Ages to the present: attitudes, regulation, gender, prostitution, pornography, and the politics of sex. Cross-listed with SXST."],
+    ["HIST 3109A", "Social History of Alcohol", "W", "ip", "R. Phillips", "food everyday culture", "Alcohol in Western society from ancient times to the present: production, trade, consumption, drinking cultures, temperance, and prohibition."],
+    ["HIST 3110A", "The Cultural History of Food", "W", "ip", "C. Hocevar", "food culture everyday", "Food from late antiquity to the nineteenth century: production, distribution, health, manners, religion, art, the restaurant, and the birth of gastronomy."],
+    ["HIST 3113A", "Society and Revolution in France, 1789-1799", "F", "ip", "R. Phillips", "eur politics", "The French Revolution: attempts to regenerate France through political, economic, and cultural reform; nationalism, violence, legal reform, gender, and religion."],
+    ["HIST 3116A", "History of Disability", "W", "ip", "C. Chisholm", "body culture", "How disability has been represented, understood, and experienced across changing cultural contexts. Cross-listed with CDNS 3901."],
+    ["HIST 3205A", "Canadian Business History: The Brewing Industry, 1670-2026", "F", "ip", "M. Bellamy", "can business food", "The place of business in Canadian society, economics, and politics, through the brewing industry. Cross-listed with BUSI 4608."],
+    ["HIST 3206A", "Place, Politics, and the Resettling of the Prairie West", "F", "ip", "M. Hogue", "can ind", "Selected topics in the history of a Canadian region: the settling of the Prairie West and the politics of place."],
+    ["HIST 3305A", "Crime and State in History (with Law)", "W", "os", "Law and Legal Studies", "crime law", "The relationship between the criminal law system and society, medieval to early nineteenth-century England and nineteenth to early twentieth-century Canada. Cross-listed with LAWS 3305."],
+    ["HIST 3510A", "Indigenous Peoples of Canada", "F", "ip", "M. Hogue", "ind can", "Indigenous histories in northern North America from earliest times: pre-contact histories, encounters with newcomers, settler colonialism, and the struggle over decolonization. Cross-listed with INDG 3901."],
+    ["HIST 3511A", "Themes in Indigenous History: The Red Atlantic", "W", "ip", "M. Hogue", "ind glob", "Trans-Atlantic journeys by Indigenous peoples. Cross-listed with INDG 3901."],
+    ["HIST 3516A", "The Wilsonian Moment: Diplomacy and the Post-Ottoman Middle East", "F", "ip", "H. Ahmed", "me politics empire", "The impact of Woodrow Wilson's advocacy of self-determination and of the League of Nations on the post-Ottoman Middle East; the Mandate system."],
+    ["HIST 3708A", "Reformation Europe (with Religion)", "W", "ip", "Religion", "eur early rel", "The Protestant and Catholic Reformations of the sixteenth century: theological disputes and their social, political, and cultural impact. Cross-listed with RELI 3220."],
+    ["HIST 3805A", "China since the Twentieth Century", "F", "ip", "J. Kovalio", "asia politics", "China's evolution from Republicanism through Maoism to 'socialism with Chinese characteristics': Sun Yat-sen, Mao, Deng, and Xi."],
+    ["HIST 3806A", "Japan Since 1945", "W", "ip", "J. Kovalio", "asia politics", "A political, intellectual, and economic history of Japan in the twentieth century, concentrating on the period after the Pacific War."],
+    ["HIST 3807", "Practicum in History", "F W", "", "J. Walsh", "pub method work", "A historical research project at a museum or public institution in the Ottawa area, supervised by the host institution and the Department; about one day a week."],
+    ["HIST 3809A", "Historical Representations", "W", "ip", "J. Walsh", "pub memory", "How historical narratives are produced in relation to sites of public memory: museum exhibits, commemorations, and popular culture."],
+    ["HIST 3820A", "Explorations in Historical Theory: The Russian Revolution", "F", "ou", "E. Fraser", "method eur politics", "How historians apply theory to a specific topic, here the Russian Revolution."],
+    ["HIST 3820B", "Explorations in Historical Theory: Youth and History", "W", "ip", "S. Whitney", "method culture", "How historians apply theory to a specific topic, here youth and history."],
+    ["HIST 3902A", "Topics in European History: Medieval and Early Modern Past", "W", "ip", "P. Nelles", "med early eur", "A topics lecture course on the medieval and early modern past, cross-listed with MEMS 3001."],
+    ["HIST 3904A", "Topics in U.S. History: US Culture", "F", "ip", "A. Johnston", "us culture", "A topics lecture course on United States culture."],
+    ["HIST 3906A", "Topics in World History: Africa", "W", "ip", "S. Kudjawu", "afr", "A topics lecture course on African history."],
+    ["HIST 3907A", "Transnational Topic: Global Governance, War, and Resistance, 1880-1929", "W", "ip", "A. Johnston", "glob war politics", "A transnational approach to global governance, war, and resistance between 1880 and 1929."],
+    ["HIST 3908A", "Thematic Topic: Outwit, Outplay, Outlast the Past", "F", "ip", "P. Walker", "pub culture play", "A thematic topics course in the 'Playing History' vein, with play, games, and competition as ways of thinking about the past."],
+    ["HIST 3909A", "Topic in Public History: History Through Comic Books", "F", "ou", "A. Wright", "pub culture film", "A public history topic: how comic books and graphic storytelling represent the past."],
+    ["HIST 3909B", "Topic in Public History: Oral History", "W", "ou", "G. Escalante-Rengifo", "pub memory method", "A public history topic on oral history: interviewing, listening, and making history with people's memories."],
+
+    ["HIST 4100A", "Seminar in Early Modern European History: Living, Loving, and Dying in Europe (full year)", "FW", "ip", "R. Phillips", "eur early sem everyday", "Honours seminar on life, love, and death in early modern Europe, 1500-1800."],
+    ["HIST 4201A", "Modern European History: Paris in the Jazz Age and Beyond", "W", "ip", "S. Whitney", "eur culture sem", "Honours seminar on Paris in the Jazz Age and after. Cross-listed with EURR 4201B and 5201W."],
+    ["HIST 4210A", "Topics in Ancient History: Gnosticism, Ancient and Modern (with Classics)", "F", "ip", "Classics", "anc rel sem", "Honours-level seminar on Gnosticism in antiquity and today. Cross-listed with CLCV 4210 and RELI."],
+    ["HIST 4303A", "Society and Culture in Canada: Pacific Canada", "W", "ip", "L. Madokoro", "can sem", "Honours seminar on society and culture in Pacific Canada."],
+    ["HIST 4305A", "Political History in Canada: The History of Beer, Brewing and Drinking in Canada", "W", "ip", "M. Bellamy", "can food politics sem", "Honours seminar on the politics and culture of beer, brewing, and drinking in Canada."],
+    ["HIST 4401A", "United States History: America as Empire", "F", "ip", "A. Johnston", "us empire sem", "Honours seminar on the United States as an imperial power."],
+    ["HIST 4500A", "Seminar in British History: Histories of Shopping (full year)", "FW", "ip", "D. Kinsey", "eur business culture sem", "Honours seminar on how shopping has been practised, understood, and represented."],
+    ["HIST 4606A", "Contemporary Europe: Past and Present (with EURUS)", "F", "ip", "European, Russian and Eurasian Studies", "eur sem", "Honours seminar on contemporary Europe. Cross-listed with EURR."],
+    ["HIST 4608A", "The Soviet Union (with EURUS)", "W", "ip", "European, Russian and Eurasian Studies", "eur politics sem", "The rise of the Soviet Union to a global power and the tensions behind its collapse: Stalinism, the Second World War, the Thaw, Brezhnev and Gorbachev, seen through the USSR's citizens."],
+    ["HIST 4704A", "Caribbean and Latin American History: How to Change the World, Lessons from History", "F", "ip", "A. Diptee", "car lat politics sem", "Honours seminar asking what history teaches about changing the world. Cross-listed with LACS 4001B."],
+    ["HIST 4806A", "Playing History: Sport, Culture, and Power from Antiquity to the Present", "F", "ip", "M. Bellamy", "play culture glob sem", "Honours seminar on sport as culture and power across history."],
+    ["HIST 4915A", "Topics in History: Trans History", "F", "ip", "J. Evans", "gen body sem", "Honours seminar on trans history."],
+    ["HIST 4915B", "Topics in History: Anti-Colonial Resistance in the Modern Middle East", "W", "ip", "H. Ahmed", "me empire politics sem", "Honours seminar on anti-colonial resistance in the modern Middle East."],
+    ["HIST 4915C", "Topics in History: Race in the US", "W", "ip", "A. Johnston", "us race sem", "Honours seminar on race in United States history."],
+    ["HIST 4916A", "Topic in Public History: Material Culture of the 1980s in Canada", "F", "ip", "J. Opp", "pub can culture sem", "Honours public history seminar: object-based research with authentic artifacts from a national museum's collection (developed with Ingenium through the Students as Partners Program), 'From Walkmans to West Edmonton Mall'."],
+    ["HIST 4916B", "Topic in Public History: Indigenous Customary Arts", "F", "ip", "A. Nahwegahbow", "pub ind culture sem", "Honours public history seminar on Indigenous customary arts. Cross-listed with ARTH 4005."],
+
+    // In the calendar but not on the 2026-27 fall/winter schedule
+    ["HIST 1901", "History of Sport", "", "", "", "play culture glob", "The evolution of sport from antiquity to the present: how sport reflects and shapes politics and society, class, gender, race, nationalism, imperialism, doping, and celebrity."],
+    ["HIST 2206", "Early Modern Europe 1600-1800", "", "", "", "eur early", "Social, political, and cultural developments in continental Europe in the seventeenth and eighteenth centuries."],
+    ["HIST 2311", "Environmental History of Canada", "", "", "", "can env", "Canadian history through nature, landscape, and geography: energy regimes and climate change, Indigenous ecological knowledge, colonization, resource extraction, and environmental movements."],
+    ["HIST 2313", "Home, Work, and Play in Early Canada", "", "", "", "can everyday culture", "Histories of everyday life in Canada from the late eighteenth to the early twentieth century."],
+    ["HIST 2508", "War, Politics, and Society in Twentieth-Century Global France", "", "", "", "eur war empire", "France in global context: the World Wars, colonialism and decolonization, the Algerian War, youth culture and protest, memory and commemoration."],
+    ["HIST 2707", "Modern Africa", "", "", "", "afr empire politics", "The colonization of Africa, wars of decolonization, and the emergence of independent African nations."],
+    ["HIST 2804", "War and Society", "", "", "", "war culture", "A thematic study of the experience of war and its consequences."],
+    ["HIST 2812", "Special Subject in Public History", "", "", "", "pub", "A lecture course on a special topic in public history."],
+    ["HIST 2905", "Rome of the Caesars (with Classics)", "", "", "", "anc", "Ancient Rome from the end of the Republic to the coming of Islam."],
+    ["HIST 2906", "Kyivan Rus' and the Russian Empire to 1801", "", "", "", "eur med early", "The East Slavic world from Kyivan Rus' and the Mongol conquests to Russia's eighteenth-century monarchs, with attention to ordinary lives."],
+    ["HIST 2907", "Life in Imperial Russia, 1801-1917", "", "", "", "eur everyday", "The Russian empire in the nineteenth century through the lives of ordinary people: cities and villages, serfdom, resistance, religion, gender, education, and migration."],
+    ["HIST 2912", "Science and Technology in History", "", "", "", "env method", "The role of science and technology in the past; topic and period vary."],
+    ["HIST 2913", "History of Oil: Science, Technology, Culture and Conflict", "", "", "", "env glob business", "A transnational history of oil from the ancient world to today (offered in summer 2026)."],
+    ["HIST 3005", "Medieval Aristocratic Life", "", "", "", "med eur", "European ruling elites from the ninth to the thirteenth century (offered in summer 2026)."],
+    ["HIST 3006", "Medieval Religious Life", "", "", "", "med rel", "European religious life from the fourth to the fourteenth century: monks, nuns, and clerics."],
+    ["HIST 3009", "Studies in Greek History", "", "", "", "anc", "A period or theme in Greek history. Cross-listed with CLCV 3201."],
+    ["HIST 3101", "Studies in Roman History", "", "", "", "anc", "A period or theme in Roman history. Cross-listed with CLCV 3202."],
+    ["HIST 3105", "Renaissance Europe", "", "", "", "eur early culture", "The political and cultural history of Europe in the fourteenth to sixteenth centuries, emphasizing the Italian Renaissance."],
+    ["HIST 3111", "History of Humanitarian Aid", "", "", "", "glob politics", "Humanitarian activities and agencies, with attention to Canadian involvement: the Red Cross, Oxfam, Save the Children, UNICEF."],
+    ["HIST 3115", "Childhood and Youth in History", "", "", "", "gen culture", "Children and young people in modern history: work, education, play, sexuality, the welfare state, war, and popular culture."],
+    ["HIST 3120", "History of the Body", "", "", "", "body gen culture", "How the human body has been viewed, controlled, healed, exercised, measured, clothed, and reproduced."],
+    ["HIST 3121", "Sports in the Cold War", "", "", "", "play war politics", "Sport as a lens on Cold War societies and rivalries: nationalism, ideology, gender, race, the Olympics, drug use, and boycotts."],
+    ["HIST 3122", "Antisemitism, Then and Now", "", "", "", "rel culture", "The long history of antisemitism and how its forms have endured and evolved. Cross-listed with RELI 3142."],
+    ["HIST 3218", "Histories of Shopping", "", "", "", "business culture", "How shopping has been understood, practised, and represented: consumerism, fashion, credit, advertising, department stores, boycotts."],
+    ["HIST 3301", "Quebec Since 1800", "", "", "", "can politics culture", "A social, economic, political, cultural, and intellectual history of Quebec and Quebec nationalism."],
+    ["HIST 3304", "Canada-United States Relations", "", "", "", "can us politics", "Diplomatic, economic, cultural, and military relations between Canada and the United States."],
+    ["HIST 3306", "Canada's International Policies", "", "", "", "can politics glob", "Canadian attitudes and policies toward international affairs in the twentieth century."],
+    ["HIST 3310", "Animals in History", "", "", "", "env culture", "Relations between humans and other animals: domestication, hunting, zoos, animal welfare, companion species, and animal agency."],
+    ["HIST 3406", "African-American Women", "", "", "", "us gen race", "The social, cultural, and political history of African-American women since the eighteenth century."],
+    ["HIST 3410", "Popular Culture in the U.S.", "", "", "", "us culture film", "How music, theatre, movies, and television shaped and reflected American history."],
+    ["HIST 3414", "The United States in the World", "", "", "", "us glob empire", "The United States in global context: revolutions, imperialism, immigration, capitalism, international law, and the environment."],
+    ["HIST 3500", "Migration and Diaspora in Canada", "", "", "", "can everyday", "Migration and settlement in Canada from the seventeenth century to the present."],
+    ["HIST 3505", "Women in Canada", "", "", "", "can gen", "Women and war, Indigenous women's history, sexuality, the women's movement, immigration, and motherhood in Canada."],
+    ["HIST 3515", "Madness in Modern Times", "", "", "", "body culture", "The history of madness since the eighteenth century: treatments, patients' experiences, representations, and the asylum."],
+    ["HIST 3517", "History of Modern Egypt", "", "", "", "me empire", "Modern Egypt through the lives of particular Egyptians: responses to colonialism, Islamic reformism, feminism, the Muslim Brotherhood, and the 2011 Revolution."],
+    ["HIST 3604", "Gender and Sexuality in Modern Europe", "", "", "", "eur gen", "Gender, sexuality, and women's history in modern Europe."],
+    ["HIST 3704", "Aztecs", "", "", "", "lat early rel", "Aztec social system, culture, religion, and philosophy before and after the Spanish conquest."],
+    ["HIST 3710", "Themes in Caribbean History", "", "", "", "car race empire", "Slavery and emancipation, Indian and Chinese migration, colonialism, independence, and race relations in the Caribbean."],
+    ["HIST 3712", "Mexico: Aztecs to Narcos", "", "", "", "lat culture", "The social and cultural history of Mexico from indigenous cultures to the problems of the twentieth century."],
+    ["HIST 3713", "Gender and Sexuality in Latin America", "", "", "", "lat gen", "Gender and sexualities in Latin America from the pre-conquest period to the end of the twentieth century."],
+    ["HIST 3714", "The Holocaust: Historical and Religious Dimensions", "", "", "", "eur war rel memory", "The foundations, perpetration, and consequences of the Nazi Final Solution, using primary sources including survivor testimony. Cross-listed with RELI 3140."],
+    ["HIST 3715", "Themes in South Asian History", "", "", "", "asia empire", "The Mughal empire, the British colonial era, and the creation of India, Pakistan, Bangladesh, and Sri Lanka."],
+    ["HIST 3717", "Gender and Sexuality in Africa", "", "", "", "afr gen", "Gender and sexualities in Africa from the beginning of colonial rule to the early twenty-first century."],
+    ["HIST 3720", "The Soviet Union, 1917-1991", "", "", "", "eur politics", "Russian history around the first Marxist revolution: ideology, society, and control, and how ordinary people lived with, supported, and resisted the regime."],
+    ["HIST 3812", "Digital History", "", "", "", "dig pub", "The digital representation of history: gaming, virtual environments, digital research tools, and public digital history. Cross-listed with DIGH 3812."],
+    ["HIST 3813", "Problems in Global and Transnational Histories", "", "", "", "glob method", "Historical encounters across regions and how historians study them: imperialism, postcolonialism, environment, migration, trade, religion, disease."],
+    ["HIST 3814", "Crafting Digital History", "", "", "", "dig pub", "Creative use of information and media technologies for public historians: web-scraping, data mining, research databases, and visual storytelling. Cross-listed with DIGH 3814."],
+    ["HIST 3815", "Group Practicum", "", "", "", "pub work", "A class-based group research project with an external institution, about one full day per week."],
+    ["HIST 4910", "Honours Research Project (1.0 credit)", "", "", "", "sem method", "Original research done independently under a faculty supervisor, presented as a research paper, a documentary film, or a web-based project."],
+    ["HIST 4917", "Directed Study", "", "", "", "sem method", "Independent study of a historical topic under a faculty supervisor, for fourth-year students with a minimum 9.0 History GPA."],
+    ["HIST 4920", "Seminar in Public History (1.0 credit)", "", "", "", "pub sem", "The full-year public history seminar; topic varies. Counts toward the Concentration in Public History."]
+  ];
+
+  var SETS = {
+    b1800: "2003 2004 2204 2206 2902 2903 2904 2905 3005 3006 3009 3010 3101 3105 3708".split(" "),
+    b1800pub: ["2906"],
+    region: "2308 2309 2312 2706 2707 2710 2915 3516 3517 3704 3710 3712 3713 3715 3717 3805 3806".split(" "),
+    theme: "2311 2506 2804 2912 2913 3106 3109 3110 3111 3115 3116 3120 3121 3122 3205 3218 3305 3310 3500 3510 3511 3515 3604".split(" "),
+    craft: ["2809"],
+    theory: ["3810", "3820"],
+    pubcore: ["2811", "3809"],
+    practicum: ["3807", "3815"],
+    pubelect: "2812 3001 3807 3812 3814 3815 3909".split(" "),
+    canada: "1301 1302 2301 2311 2313 2314".split(" ")
+  };
+
+  // Requirement outlines (calendar). cat -> checks saved courses against SETS.
+  var REQ = {
+    ba: {
+      name: "BA History", credits: "15.0 credits · about three years",
+      note: "7.0 credits in History count toward the major CGPA; the department's page lists a minimum 4.0 CGPA in History courses.",
+      lines: [
+        { t: "1.0 credit at the 1000-level (or FYSM 1405)", lvl: [1], cr: 1, fysm: 1 },
+        { t: "1.5 credits at the 2000-level", lvl: [2], cr: 1.5 },
+        { t: "1.5 credits at the 3000-level", lvl: [3], cr: 1.5 },
+        { t: "0.5 further credit in HIST", pool: [1,2,3,4], cr: 0.5 },
+        { t: "0.5 credit in History before 1800", cat: "b1800", cr: 0.5 },
+        { t: "0.5 credit in Asian, African, Latin American, or Caribbean history", cat: "region", cr: 0.5 },
+        { t: "0.5 credit in Themes in History", cat: "theme", cr: 0.5 },
+        { t: "HIST 2809 The Historian's Craft", cat: "craft", cr: 0.5 },
+        { t: "0.5 credit from HIST 3810 Historical Theory or HIST 3820 Explorations in Historical Theory", cat: "theory", cr: 0.5 },
+        { t: "6.0 credits outside HIST, plus 2.0 free electives" }
+      ]
+    },
+    honours: {
+      name: "BA Honours History", credits: "20.0 credits · four years",
+      note: "10.0 credits count toward the major CGPA (the department's page lists a minimum 6.5 CGPA in History; confirm in the calendar). The requirements change if you add the Honours Research Project.",
+      lines: [
+        { t: "1.0 credit at the 1000-level (or FYSM 1405)", lvl: [1], cr: 1, fysm: 1 },
+        { t: "1.5 credits at the 2000-level", lvl: [2], cr: 1.5 },
+        { t: "2.0 credits at the 3000-level", lvl: [3], cr: 2 },
+        { t: "1.0 further credit in HIST", pool: [1,2,3,4], cr: 1 },
+        { t: "0.5 credit in History before 1800", cat: "b1800", cr: 0.5 },
+        { t: "0.5 credit in Asian, African, Latin American, or Caribbean history", cat: "region", cr: 0.5 },
+        { t: "0.5 credit in Themes in History", cat: "theme", cr: 0.5 },
+        { t: "HIST 2809 The Historian's Craft", cat: "craft", cr: 0.5 },
+        { t: "0.5 credit from HIST 3810 or HIST 3820 (historical theory)", cat: "theory", cr: 0.5 },
+        { t: "2.0 credits in 4000-level History seminars (limited enrolment; Honours students get priority)", lvl: [4], sem: 1, cr: 2 },
+        { t: "8.0 credits of electives outside HIST, plus 2.0 free electives" }
+      ]
+    },
+    combined: {
+      name: "BA Combined Honours (History + another discipline)", credits: "20.0 credits · four years",
+      note: "6.0 credits are in History; the other 14.0 satisfy the other discipline plus free electives.",
+      lines: [
+        { t: "1.0 credit at the 1000-level (or FYSM 1405)", lvl: [1], cr: 1, fysm: 1 },
+        { t: "1.0 credit at the 2000-level", lvl: [2], cr: 1 },
+        { t: "0.5 credit at the 3000-level", lvl: [3], cr: 0.5 },
+        { t: "0.5 credit in History before 1800", cat: "b1800", cr: 0.5 },
+        { t: "0.5 credit in Asian, African, Latin American, or Caribbean history", cat: "region", cr: 0.5 },
+        { t: "0.5 credit in Themes in History", cat: "theme", cr: 0.5 },
+        { t: "HIST 2809 The Historian's Craft", cat: "craft", cr: 0.5 },
+        { t: "0.5 credit from HIST 3810 or HIST 3820 (historical theory)", cat: "theory", cr: 0.5 },
+        { t: "1.0 credit in 4000-level History seminar(s)", lvl: [4], sem: 1, cr: 1 },
+        { t: "The requirements of the other discipline, plus free electives to reach 20.0 credits" }
+      ]
+    },
+    publichistory: {
+      name: "BA Honours with Concentration in Public History", credits: "20.0 credits · four years",
+      note: "11.0 credits count toward the major CGPA. Coordinator: Prof. James Opp.",
+      lines: [
+        { t: "1.0 credit at the 1000-level (or FYSM 1405)", lvl: [1], cr: 1, fysm: 1 },
+        { t: "0.5 credit from HIST 1301, 1302, 2301, 2311, 2313, or 2314 (Canadian history)", cat: "canada", cr: 0.5 },
+        { t: "1.5 credits at the 3000-level", lvl: [3], cr: 1.5 },
+        { t: "0.5 credit in History before 1800 (HIST 2906 also counts here)", cat: "b1800", cr: 0.5 },
+        { t: "0.5 credit in Asian, African, Latin American, or Caribbean history", cat: "region", cr: 0.5 },
+        { t: "0.5 credit in Themes in History", cat: "theme", cr: 0.5 },
+        { t: "HIST 2809 The Historian's Craft", cat: "craft", cr: 0.5 },
+        { t: "0.5 credit from HIST 3810 or HIST 3820 (historical theory)", cat: "theory", cr: 0.5 },
+        { t: "1.0 credit from HIST 2811 Public History: From Memory to Museums and HIST 3809 Historical Representations", cat: "pubcore", cr: 1 },
+        { t: "0.5 credit from HIST 3807 Practicum or HIST 3815 Group Practicum", cat: "practicum", cr: 0.5 },
+        { t: "1.5 credits from public-history electives (e.g. HIST 3001, 3812, 3814, 3909, 2812; or ANTH 3580, CDNS 2400, 2510, 3700)", cat: "pubelect", cr: 1.5 },
+        { t: "2.0 credits in 4000-level seminars, at least 0.5 from HIST 4916 Topic in Public History or HIST 4920 Seminar in Public History", lvl: [4], sem: 1, cr: 2 },
+        { t: "8.0 credits outside HIST, plus 1.0 free elective" }
+      ]
+    },
+    minor: {
+      name: "Minor in History", credits: "4.0 credits · added to another degree",
+      note: "Open to degree students not in History programs. A minor CGPA of 4.00 or higher is needed at graduation.",
+      lines: [
+        { t: "1.0 credit in HIST at the 1000-level (or FYSM 1405)", lvl: [1], cr: 1, fysm: 1 },
+        { t: "1.0 credit in HIST at the 2000-level", lvl: [2], cr: 1 },
+        { t: "1.0 credit in HIST at the 3000-level", lvl: [3], cr: 1 },
+        { t: "1.0 credit in HIST from any combination at the 2000, 3000, or 4000-level", pool: [2,3,4], cr: 1 }
+      ]
+    },
+    bgins: {
+      name: "Specialization in Global and Transnational History (BGInS)", credits: "20.0 credits Honours, or a 15.0-credit stream",
+      note: "Within the Bachelor of Global and International Studies. Includes international-experience and language requirements.",
+      lines: [
+        { t: "Core GINS courses (Global History, International Law and Politics, Ethnography, Ethics, Economics, Global Literatures, and more)" },
+        { t: "HIST 1701 or 1702 History of the Global South" },
+        { t: "1.0 credit of Regional History: the Global South" },
+        { t: "1.0 credit of Regional History: Europe and the World (Honours)" },
+        { t: "HIST 2809 The Historian's Craft" },
+        { t: "Themes in History courses; historical theory (HIST 3810 or 3820)" },
+        { t: "1.5 credits of Honours seminars (Honours specialization)" }
+      ]
+    }
+  };
+
+  var FAQ = [
+    { q: "How many credits is the BA in History and how long does it take?", a: "The BA is 15.0 credits and normally takes three years. 7.0 of those credits are in History. The department's page lists a minimum 4.0 CGPA in History courses.", go: "ba" },
+    { q: "What is the difference between the BA and the BA Honours?", a: "The Honours degree is 20.0 credits over four years, adds fourth-year seminars with small classes and supervised research, and keeps the door open to graduate school. The BA is 15.0 credits over three years.", go: "honours" },
+    { q: "Can I combine History with another subject? Combined Honours, double major.", a: "Yes. Combined Honours is 20.0 credits: 6.0 in History and the rest in your other discipline. The department highlights Political Science, Journalism, Geography and Environmental Studies, and English, plus interdisciplinary programs such as Great Books, European, Russian and Eurasian Studies, and African Studies. You can also do History Honours with a minor in another subject.", go: "combine" },
+    { q: "What is the minor in History and who can take it?", a: "A 4.0-credit minor open to degree students who are not in History programs: 1.0 credit each at the 1000, 2000 and 3000 levels, plus 1.0 at the 2000-4000 level. You need a minor CGPA of 4.00 or higher.", go: "minor" },
+    { q: "How does co-op work? paid work terms, internships, jobs during my degree", a: "Co-op students alternate study terms with paid work terms. For the Honours co-op designation you complete the normal Honours requirements plus three paid work terms of four months each. You can apply from high school or CEGEP, or during first year. History students start their first work term in the fall of third year. You need 5.0 or more credits that count towards your degree and the minimum CGPA, and you take the zero-credit COOP 1000 online course first. Employment is not guaranteed.", go: "coop" },
+    { q: "What is the practicum? HIST 3807, working in a museum or archive", a: "Each winter, eligible third- and fourth-year students spend about one day a week working in the city as a historian, often at a museum, Library and Archives Canada, or the City of Ottawa Archives. HIST 3807 needs third-year standing in a History program, a History CGPA of 9.00 or better, and permission of the Department.", go: "practicum" },
+    { q: "What is the Concentration in Public History?", a: "An option for BA Honours students on how the past is represented and used in museums, archives, film, monuments, games, and digital platforms. It builds skills in oral history, digital history, storytelling, research, and community engagement, with a practicum. Coordinator: Prof. James Opp.", go: "publichistory" },
+    { q: "Who could supervise my Honours research project or Directed Study? Which professors study my topic? faculty research areas", a: "Supervision requires a faculty member willing to take the project on. The Faculty research section lists each person\u2019s published research areas from public department profiles and can be searched with a topic in plain words. A match is a starting point for contacting the department, not a statement that someone is available.", go: "faculty" },
+    { q: "Can I do my own research project in fourth year? Honours thesis.", a: "Yes. The Honours Research Project (HIST 4910, 1.0 credit) is independent research under a faculty supervisor, presented as a research paper, a documentary film, or a web-based project. It needs fourth-year Honours standing, a 9.0 (B+) History GPA, a supervisor, an approved topic, and permission of the Undergraduate Supervisor.", go: "research" },
+    { q: "Can I go to graduate school with a History degree? master's, MA, PhD", a: "The Honours degree is the route to graduate work, and the department encourages students with sufficient CGPAs to enrol in it. Public History students can also continue to Carleton's MA in Public History.", go: "honours" },
+    { q: "Can I study abroad or go on exchange?", a: "Yes. The department points students to Carleton's Study Abroad Program and Exchange Program.", go: "experience" },
+    { q: "What is a first-year seminar (FYSM)?", a: "A small-class first-year seminar. Degree students are strongly encouraged to take one in their first 4.0 credits, limited to 1.0 credit of FYSM, and only while in first-year standing. For 2026-27 the History seminars are 'Playing History' and 'Doing History: A Global History of WWII'.", go: "who" },
+    { q: "What is the breadth requirement? courses outside my major", a: "BA students must present 3.0 breadth credits that include 1.0 credit in three of the four breadth areas. History counts in the Humanities area. Credits that satisfy your major can also count toward breadth.", go: "requirements" },
+    { q: "I haven't picked a program. Can I be undeclared?", a: "In the BA, 'Undeclared' students must apply to enter a program upon or before completing 3.5 credits. Changing program is done online through Carleton Central with a Change of Program Elements (COPE) application, and you normally need to be Eligible to Continue in the new program.", go: "contact" },
+    { q: "Who do I contact with questions about the undergraduate program?", a: "The Department of History: 613-520-2828 or history@carleton.ca. For 1000-4000-level courses the department lists its Undergraduate Administrator as the contact (Michelle Coutts, acting). For the Concentration in Public History, Prof. James Opp.", go: "contact" },
+    { q: "Are there courses I can take online?", a: "Some. The 2026-27 schedule lists online unscheduled sections (campus presence not required), online scheduled sections, and in-person sections. Check each course on Carleton Central because delivery can change.", go: "interests" },
+    { q: "What can I do with a History degree? jobs and careers", a: "Graduates work in heritage and museums, archives and libraries, government and policy, law and paralegal work, communications, education, non-profits, business, and data. Skills: research, analysis, writing, and communication.", go: "careers" },
+    { q: "What are the 'fields' History before 1800, Asia/Africa/Latin America/Caribbean, Themes?", a: "History programs require a half credit from each of three lists: History before 1800 (medieval, ancient, early modern), Asian, African, Latin American or Caribbean history, and Themes in History. Courses in the guide are tagged with the list they satisfy.", go: "requirements" },
+    { q: "What are the prerequisites for 3000-level courses?", a: "Most 3000-level courses need a 2000-level History course, or third-year standing and 1.0 credit in History. HIST 2809 is open only to History majors with at least second-year standing, and 4000-level seminars generally need HIST 3810 or 3820 and fourth-year Honours standing.", go: "requirements" },
+    { q: "Can I take 4000-level seminars if I am not in Honours?", a: "4000-level seminars have limited enrolment, and priority goes to History Honours and Combined Honours students. Topics change yearly.", go: "honours" },
+    { q: "Are there awards or scholarships for History students?", a: "Yes. The department keeps a page listing awards, prizes, and scholarships for History students.", go: "contact" },
+    { q: "Can I do part of my degree in French? Mention francais", a: "Students in certain BA programs can earn the diploma notation Mention : français by completing part of the program in French and studying the history and culture of French Canada. Details are in the calendar.", go: "contact" },
+    { q: "Is there a global or international option? Bachelor of Global and International Studies", a: "Yes. BGInS students can take a Specialization (Honours) or Stream in Global and Transnational History, with core GINS courses, the HIST 1701/1702 Global South sequence, regional history, themes, plus language and international-experience requirements.", go: "bgins" },
+    { q: "Is there a limit on first-year History courses?", a: "To avoid courses counting as Extra to Degree, do not exceed 2.0 credits of 1000-level HIST/FYSM for Honours, 1.0 for Combined Honours, and 1.5 for the BA.", go: "requirements" },
+    { q: "How do I apply to Carleton for History?", a: "Applications go through Carleton's undergraduate admissions: admissions.carleton.ca/programs/history. The department itself handles program questions at 613-520-2828.", go: "contact" }
+  ];
+
+  var CAREERS = [
+    { id: "heritage", t: "Museums, heritage, and curation", d: "Museum manager, curator, collections technician, collections and gallery assistant, curatorial intern, coordinator of art collection and exhibitions. Alumni work at the Canadian Museum of History, Diefenbunker, National Air Force Museum of Canada, Peel Art Gallery, Museum and Archives, and local museums. museum exhibits objects artifacts collections curator heritage public history memory", progs: ["publichistory", "coop"], courses: ["HIST 2811A", "HIST 3809A", "HIST 3807", "HIST 4916A", "HIST 3001A"] },
+    { id: "archives", t: "Archives, libraries, and information", d: "Digital and audiovisual archivist, librarian, cataloguing and acquisitions officer, records, City of Ottawa Archives, Library and Archives Canada. archive records library catalogue digitization preserve documents information", progs: ["publichistory", "coop"], courses: ["HIST 3102A", "HIST 3807", "HIST 3000A", "HIST 3909B"] },
+    { id: "government", t: "Government, policy, and public service", d: "Policy and project officer, program manager, executive communications officer, emergency management analyst, public servant at House of Commons, Transport Canada, Public Health Agency of Canada, Legislative Assembly of Ontario, Canadian Coast Guard, City of Ottawa. government federal civil service policy politics public sector diplomacy", progs: ["coop", "combined"], courses: ["HIST 2301A", "HIST 3516A", "HIST 3907A", "HIST 4704A", "HIST 1302A"] },
+    { id: "law", t: "Law and legal careers", d: "Lawyer, litigator, paralegal; a History degree is a common pathway to law school. Alumni at law firms and the Indigenous Bar Association. law legal court justice rights crime litigation lawyer paralegal", progs: ["honours", "combined"], courses: ["HIST 3305A", "HIST 3510A", "HIST 2301A", "HIST 3820A"] },
+    { id: "comms", t: "Communications, journalism, and media", d: "Executive communications officer, writer, YouTuber, storytelling for non-academic audiences, visual and digital storytelling. writing journalist media communications storytelling film video podcast comics", progs: ["combined", "publichistory"], courses: ["HIST 3001A", "HIST 3909A", "HIST 3909B", "HIST 1900A"] },
+    { id: "education", t: "Education, research, and academia", d: "Teaching, research assistant, graduate study in history, public history, archival studies, museum studies, or Carleton's MA in Public History; curatorial research assistant at Ingenium. teacher education research scholar professor graduate school master PhD thesis", progs: ["honours", "publichistory"], courses: ["HIST 2809A", "HIST 3820A", "HIST 3820B", "HIST 4910"] },
+    { id: "politics", t: "Politics, advocacy, and non-profits", d: "Ward councillor, Member of Provincial Parliament, programs officer, director of partnerships and governance, Canadian Museums Association, Habitat for Humanity, Volleyball Canada, Canadian Association for Graduate Studies. politics advocacy activism non-profit charity community organizer elected office social justice human rights", progs: ["combined", "coop"], courses: ["HIST 4704A", "HIST 3510A", "HIST 4915B", "HIST 2506A", "HIST 3111"] },
+    { id: "business", t: "Business, consulting, and data", d: "Consultant, data analyst, project manager, documentation engineer, private companies such as Geomedia and Lockheed Martin Canada, self-employed. business consulting analyst data entrepreneur technology company market research", progs: ["combined", "minor"], courses: ["HIST 3205A", "HIST 1900A", "HIST 3000A", "HIST 3218"] }
+  ];
+
+  var PARTNERS = [
+    { id: "polisci", t: "Political Science", d: "The department's most popular combined honours partner: politics, government, public policy, elections, democracy, international relations, diplomacy, law and public service." },
+    { id: "journalism", t: "Journalism", d: "Combined honours with the School of Journalism and Communication: writing, reporting, media, storytelling, communications, news, documentary, research for public audiences." },
+    { id: "geography", t: "Geography and Environmental Studies", d: "Combined honours with Geography: maps, GIS, places, landscape, environment, climate, resources, cities, spatial history." },
+    { id: "english", t: "English", d: "Combined honours with English: literature, novels, poetry, writing, language, culture, stories, criticism, theatre." },
+    { id: "greatbooks", t: "Bachelor of Humanities (Great Books)", d: "An interdisciplinary program centred on major texts: classics, philosophy, ancient and medieval ideas, literature, religion, art, big questions." },
+    { id: "eurus", t: "European, Russian and Eurasian Studies", d: "Interdisciplinary: Russia, Eastern and Central Europe, the Soviet Union, the Balkans, the European Union, language, culture, politics." },
+    { id: "africa", t: "African Studies", d: "Interdisciplinary: African history, politics, cultures, development, colonialism, diaspora." },
+    { id: "bgins", t: "Global and International Studies (BGInS): Specialization in Global and Transnational History", d: "A different degree, with History inside it: global history, international law and politics, economics, ethnography, languages, an international experience requirement, transnational and Global South history, empire, migration, trade." },
+    { id: "minor", t: "Honours History with a minor in another subject", d: "Stay in History Honours and add a minor in another subject: any field, from computer science to business, philosophy, psychology, or art history, keeping History as the main focus." }
+  ];
+
+  // Faculty and instructors. Source: carleton.ca/history/contact/faculty-listing/ and individual profile pages
+  // (fetched Nov 2026). Research text is as published (lightly condensed); nothing is inferred.
+  // [id, name, short (as used in course schedule), title, research areas, profile path]
+  var F = [
+    ["ahmed", "Hussam R. Ahmed", "H. Ahmed", "Assistant Professor", "The Middle East; social and cultural history.", "hussam-ahmed"],
+    ["bellamy", "Matthew J. Bellamy", "M. Bellamy", "Professor", "Business history; the brewing industry; culture of consumption; branding and brand management; lobbying; entrepreneurship and innovation; sports entrepreneurship and culture.", "matthew-j-bellamy"],
+    ["diptee", "Audra A. Diptee", "A. Diptee", "Associate Professor", "Africa and the Caribbean, slavery, race relations; critical applied history, memory, and historical consciousness; humanitarianism and human rights discourses (Caribbean); childhood and children; slavery and human trafficking; race and racism.", "audra-a-diptee"],
+    ["evans", "Jennifer V. Evans", "J. Evans", "Professor", "Twentieth-century social history; Germany and East Central Europe; history of sexuality; comparative nationalisms; Cold War, national identity, and everyday life; visual culture including social media and photography; social and cultural theory; historical subjectivity; the spatial, visual, and digital turns; 'other victims' of the Holocaust; the Sexual Revolution.", "jennifer-v-evans"],
+    ["fraser", "Erica Fraser", "E. Fraser", "Associate Professor", "Russian and Soviet history; gender history; Cold War culture; military cultures and postwar societies; daily life, popular culture, sports and leisure in communist states.", "erica-l-fraser"],
+    ["graham", "Shawn Graham", "S. Graham", "Professor", "Digital humanities methods; digital media for exploring and representing archaeology and history; computational creativity.", "shawn-graham"],
+    ["hassim", "Shireen Hassim", "S. Hassim", "Canada 150 Research Chair in Gender and African Politics", "Feminist theory, politics, social movements, and collective action; gender and African politics.", "shireen-hassim"],
+    ["hogue", "Michel Hogue", "M. Hogue", "Associate Professor", "Canada and the United States in the nineteenth and twentieth centuries; Métis and First Nations histories; North American borderlands; the Great Plains.", "michel-hogue"],
+    ["jangam", "Chinnaiah Jangam", "C. Jangam", "Associate Professor", "Social and intellectual history of Dalits in modern South Asia; marginalization and resistance and anti-caste epistemology; Dalit life writing and intellectual and political engagement; the everyday experience of the educated Dalit middle class; a long-run history of caste; the rise of Hindu fascism; anti-Muslim and caste-based violence; Dalit and caste Hindu diaspora in North America.", "chinnaiah-jangam"],
+    ["johnston", "Andrew M. Johnston", "A. Johnston", "Associate Professor", "Late nineteenth- to twentieth-century United States history; imperialism and foreign relations; humanitarian intervention, human rights, and ideologies of 'the human'; liberalism and pluralism in American social thought; history of international thought; transnational history of the social sciences; nuclear strategy; international feminist pacifism; Pragmatism, feminism, and social theory.", "andrew-m-johnston"],
+    ["kinsey", "Danielle Kinsey", "D. Kinsey", "Associate Professor", "Nineteenth-century Britain and empire; global commodity chains, and gold and diamond rushes from a global perspective; mining history (Brazil, India, South Africa, Cornwall); trade, consumption, shopping, material culture, and sensory paradigms; imperial, colonial, postcolonial, and transnational studies; histories of the body, the senses, women, and gender; historical thinking and online teaching.", "danielle-kinsey"],
+    ["kovalio", "Jacob Kovalio", "J. Kovalio", "Associate Professor", "Modern Japan, diplomatic and political; Japanese and Asian nationalism, racism, and antisemitism; Japan, East Asia, and Islam in modern times; Pan-Asianism and Asian international relations; Japan and the Indo-Pacific in the twenty-first century.", "jacob-kovalio"],
+    ["lipsett", "Sonya Lipsett-Rivera", "S. Lipsett-Rivera", "Professor and Chair", "Eighteenth- and nineteenth-century Latin America, especially Mexico; environmental and social history; gender and family; popular culture and violence; origins of gender violence in Latin America; masculinity in colonial Mexico.", "sonya-lipsett-rivera"],
+    ["madokoro", "Laura Madokoro", "L. Madokoro", "Professor", "Migration, humanitarianism, settler colonialism, and Active History.", "laura-madokoro"],
+    ["marshall", "Dominique Marshall", "D. Marshall", "Professor", "Nineteenth- and twentieth-century Quebec; social policy, welfare, and family history; children's rights and humanitarian aid to Africa, 1920-1965; the League of Nations' Child Welfare Committee; early history of Oxfam in Canada; history of science and technology; history of disability.", "dominique-marshall"],
+    ["nahwegahbow", "Alexandra Nahwegahbow", "A. Nahwegahbow", "Lecturer", "Visual and material culture of the Great Lakes region; material histories of Indigenous childcare and the roles of children and young people in Indigenous communities; care, visiting, relationality, and customary arts.", "alex-nahwegahbow"],
+    ["nelles", "Paul Nelles", "P. Nelles", "Associate Professor", "Sixteenth- to eighteenth-century France and Italy; intellectual and cultural history; religious cultures; book history; library history; history of communication; early modern Catholicism, especially the Jesuits; food history.", "paul-nelles"],
+    ["opp", "James Opp", "J. Opp", "Professor", "Cultural history of modern Canada; photography and visual culture, including material histories of the photograph and commercial photography; history of the body and gender; history of archives; place, memory, and storytelling; cultural history of the 1980s; the Canadian Prairies; religion, gender, and the body in nineteenth- and twentieth-century Canada. Coordinator of the Concentration in Public History.", "james-opp"],
+    ["phillips", "Rod Phillips", "R. Phillips", "Professor", "History of the family, alcohol, and food; France in the eighteenth century and the Revolution; cats.", "roderick-phillips"],
+    ["saurette", "Marc Saurette", "M. Saurette", "Associate Professor", "Medieval history; historical game studies; digital manuscript studies; history of Christianity, especially ascetic and monastic communities; history of affectivity and emotions; the Middle Ages in popular culture and medievalisms; the twelfth-century monks of Cluny.", "marc-saurette"],
+    ["walker", "Pamela J. Walker", "P. Walker", "Professor", "Modern Britain; gender and women's history; history of Christianity and missions; history of race and racial identity; modern European history; history of religion; African American history; a Reacting to the Past game about British suffragists.", "pamela-j-walker"],
+    ["walsh", "John C. Walsh", "J. Walsh", "Associate Professor and Co-director of the Carleton Centre for Public History", "Eighteenth- to twentieth-century social history; public history; governmentality; space and place; cartography.", "john-c-walsh"],
+    ["whitney", "Susan Whitney", "S. Whitney", "Associate Professor", "Modern France; twentieth-century social, cultural, and political history; global youth history; women's and gender history.", "susan-b-whitney"],
+    ["gentile", "Patrizia Gentile", "P. Gentile", "Professor (cross-appointed)", "Canadian history of sexuality and gender; history of the body; history of beauty contests.", "patrizia-gentile-cross-appointment"],
+    ["hillmer", "Norman Hillmer", "N. Hillmer", "Distinguished Research Professor", "International history; Canadian foreign and defence policy; Canada and the United States; British-Canadian relations and the Commonwealth; peace operations and conflict resolution; Canadian politics; political leadership and political culture.", "norman-hillmer"],
+    ["dean", "David Dean", "D. Dean", "Distinguished Research Professor and Professor Emeritus", "Public history, including historical representations in film, theatre, and museums, historical controversies in the public sphere, transnational public history, living and virtual history sites, heritage (especially food), and collecting; early modern England, including early modern theatre, witchcraft, and political culture.", "david-dean"],
+    ["elliott", "Bruce S. Elliott", "B. Elliott", "Professor Emeritus", "Gravestones, cemeteries, and monuments; the North American monument industry; the heritage movement and urban history in Ottawa; social, economic, and political history of March Township, Ontario; English and Irish emigration to British North America before Confederation; emigrant letters.", "bruce-s-elliott"],
+    ["muhammedi", "Shezan Muhammedi", "S. Muhammedi", "Adjunct Research Professor", "History of migration; Canadian refugee history; oral history, migration, and ethnic relations.", "shezan-muhammedi"],
+    ["robertson", "Beth Robertson", "B. Robertson", "Adjunct Research Professor and Postdoctoral Fellow", "Late nineteenth- and twentieth-century Canada and North America; technology; gender; disability; science and pseudoscience; medicine; the body and the senses; interwar and postwar culture; conflict and displacement; queer theory; visual and material culture; public history.", "beth-robertson"],
+    ["pagnotta", "Sarafina Pagnotta", "S. Pagnotta", "Adjunct Research Professor", "Canadian war art history; military history; twentieth-century Canada; museum and archival studies; curatorial studies; material culture; twentieth-century Canadian cultural nationalism; memory and commemoration.", "sarafina-pagnotta"],
+    ["goldman", "Hal Goldman", "H. Goldman", "Adjunct Professor", "Social and cultural history of the United States in the 1800s and 1900s; gender, women, and sexuality in the U.S.; legal and constitutional history of the U.S.; American foreign policy; Western civilization; the Holocaust.", "hal-goldman"],
+    ["eedy", "Sean Eedy", "S. Eedy", "Contract Instructor", "East German popular culture for children, including GDR comic books and DEFA animated films; East German underground comix as resistance; the Holocaust in GDR comics; time travel and the representation of history in comics.", "sean-eedy"],
+    ["escalante", "Guadalupe Escalante Rengifo", "G. Escalante-Rengifo", "Contract Instructor", "Latin American history, colonial and contemporary; Latin American migration in the Global North and Latino studies; forced migration, human rights, and memory; media studies and Hispanic literatures; digital humanities and educational technology.", "guadalupe-escalante-rengifo"],
+    ["chisholm", "Christine Chisholm", "C. Chisholm", "Contract Instructor", "Medicine, disability, rehabilitation, women, gender, and sexuality.", "christine-chisholm"],
+    ["henry", "Eugene Henry", "E. Henry", "Ph.D. candidate and course instructor", "French and American history; environmental history; transnational history; history of wine and terroir; place; sensory history; food history; commodity regimes; labour history.", "eugene-henry"],
+    ["wright", "Amie Wright", "A. Wright", "Ph.D. candidate in History (Concentration in Public History) and course instructor", "Comic books and graphic novels; censorship; visual and popular culture; public history; archives and critical librarianship; digital humanities; youth reading; library history; intellectual freedom.", "amie-wright"],
+    ["hocevar", "Casarina Hocevar", "C. Hocevar", "Ph.D. candidate and course instructor", "Food history; environmental history; agriculture and horticulture education; community gardens; diaspora studies; migration and immigration; labour history; food and identity; public memory; heritage sites; micro-histories; sensory studies. Doctoral work on food practices, gardening, and identity among Chinese, Italian, and Ukrainian settler communities in the Edmonton area, 1930-1980.", "casarina-hocevar"]
+  ];
+
+  return { COURSES: C, FACULTY: F, SETS: SETS, REQ: REQ, FAQ: FAQ, CAREERS: CAREERS, PARTNERS: PARTNERS };
+})();
+</script>
+<script>window.GUIDE_PASSAGES = {"Start": {"title": "Welcome", "text": "# History at Carleton\n## An interactive guide to the undergraduate program\n\nThe Department of History offers courses from Roman antiquity to the present day, on Africa, Asia, Canada, the Caribbean, Europe, Latin America, and the United States, plus themes that cut across all of them: the history of sexuality, alcohol, sport, slavery, the environment, big business, and digital worlds.\n\nThis guide is an interactive explorer rather than a brochure. A few prompts follow. Sometimes the choice is a list; sometimes the prompt is a box for **your own words** (what history you are drawn to, what you imagine doing afterwards, what you might combine it with). The guide then compares what was written against the course list, faculty research areas, career pathways, and program options, and displays what fits, with the reason for each match.\n\n> **This is not a chatbot.** Nothing here is generated, and there is no AI assistant answering in sentences. Every passage, course, and faculty description is text written by the department or taken from its public pages. Matching only *ranks* that existing text against what you type. The optional semantic model turns text into numbers for comparison; it cannot write or converse. Questions the sources do not answer receive no answer.\n\n> **How your words are used.** Everything runs in your browser. Answers are saved in your browser only so that the guide survives a page reload; nothing is sent to a server. By default, matching uses keywords and a concept map. A small semantic embedding model can be switched on from the footer. That downloads the model once from a public CDN; the text you type still stays on your device.\n\n> **Unofficial prototype.** Built from the department's public web pages and the undergraduate calendar. Course offerings are the 2026–27 list posted by the department, which it notes is subject to change. Always confirm requirements in the [undergraduate calendar](https://calendar.carleton.ca/undergrad/undergradprograms/history/).\n\n[[Step inside|who]]"}, "who": {"title": "Where are you?", "text": "# Who walks in?\n\nThe department is hopping today; new students are everywhere! You make your way down the hallway past the hustle and bustle of the History Undergraduate Society towards the main office. A noticeboard of posters (public history, co-op placements, a first-year seminar about playing history) wraps one wall. Before you look around:\n\n**Choose the statement that fits best:**\n\n- [[I’m thinking about applying to Carleton|hub|stage=applicant]]\n- [[I’m in my first year (in History or elsewhere)|hub|stage=first]]\n- [[I’m already in a History program|hub|stage=current]]\n- [[I’m transferring, or coming back as a mature student|hub|stage=transfer]]\n- [[I’m in another program and wondering about History|hub|stage=other]]\n- [[Just browsing|hub|stage=browsing]]"}, "hub": {"title": "The hallway", "text": "# The hallway\n\n{{if stage=applicant}}\nYou are weighing History as a way into university. Good news: you can ask for **co-op** directly from high school or CEGEP, and the BA and Honours share the same first-year core, so you don’t have to commit to everything on day one.\n{{/if}}\n{{if stage=first}}\nYou are early enough that almost everything is still open. First-year students are strongly encouraged to take a **First-Year Seminar** in their first 4.0 credits, and the BA, Honours, and Combined Honours all start from the same 1000-level courses.\n{{/if}}\n{{if stage=current}}\nYou are already in. The most useful doors for you are probably the requirements checker, the fourth-year seminars and the Honours Research Project, and the practicum.\n{{/if}}\n{{if stage=transfer}}\nTransfer credits and a delayed start are both common. Co-op eligibility starts once you have completed 5.0 credits that count toward your degree. Ask the department how your credits will land in the History lists.\n{{/if}}\n{{if stage=other}}\nIf you are already in another program, the **Minor in History** (4.0 credits) or a **Combined Honours** may fit around what you are doing.\n{{/if}}\n{{if stage=browsing}}\nWander freely. There is no wrong order.\n{{/if}}\n\nNine doors open off the hallway:\n\n- [[**What kind of history pulls at you?** Describe it in your own words and the course list is searched|interests]]\n- [[**The programs, laid out.** BA, Honours, Combined Honours, Public History, Minor|programs]]\n- [[**Beyond the classroom.** Co-op, practicum, research projects, study abroad|experience]]\n- [[**Who researches what?** Faculty research areas, matched to your interests|faculty]]\n- [[**What do people do with this degree?** Describe an imagined job or field|careers]]\n- [[**History and something else.** What would you pair it with?|combine]]\n- [[**The landscape.** A map of the department's teaching and research, laid out by similarity|landscape]]\n- [[**Check the requirements.** See what the lists ask for, and which of your saved courses fit|requirements]]\n- [[**A question about the program.** Ask in plain language; matching passages are returned|ask]]\n\n{{if saved}}\nYou have saved {{var savedCount}} course(s). [[Open your guide|guide]]\n{{else}}\nYour guide fills in as you explore. [[See it as it stands|guide]]\n{{/if}}"}, "interests": {"title": "What kind of history?", "text": "# What kind of history pulls at you?\n\nDon’t think about course titles. Think about what you would binge-read or wander into a museum for. A period, a place, a question, a kind of person, a thing you wonder about. Two sentences is plenty.\n\nWhat you write is compared with every undergraduate course in the department’s list (the 2026–27 schedule plus other courses in the calendar) and with faculty research areas. The closest matches are displayed, with the matched terms. Save the ones you like to your guide.\n\n{{search kind=\"courses\" prompt=\"What kind of history are you interested in?\" placeholder=\"e.g. I love video games and want to know how people played in the past, and I'm curious about how museums tell stories.\" button=\"Match courses\" chips=\"Video games, play, and sport|Indigenous histories and colonialism|Medieval and ancient worlds|Gender, sexuality, and the body|Empire, slavery, and decolonization|Food, drink, and everyday life|War, memory, and commemoration|Digital tools, archives, and the internet|The modern Middle East|Canada’s past\"}}\n\n[[Back to the hallway|hub]]"}, "programs": {"title": "The programs", "text": "# The programs\n\nThe department offers several ways in. They share a core of History courses, then diverge by length, depth, and add-ons.\n\n- [[**BA History**|ba]]: 15.0 credits, about three years. A sound introduction to the discipline.\n- [[**BA Honours History**|honours]]: 20.0 credits, four years. Adds fourth-year seminars, supervised research, and the door to graduate school.\n- [[**Combined Honours**|combined]]: History plus another discipline (Political Science, Journalism, Geography, English, and more).\n- [[**Concentration in Public History**|publichistory]]: an Honours add-on about museums, archives, film, monuments, games, and digital storytelling.\n- [[**Honours Co-op**|coop]]: Honours plus three paid four-month work terms.\n- [[**Minor in History**|minor]]: 4.0 credits to add to another degree.\n- [[**Global and Transnational History**|bgins]], inside the Bachelor of Global and International Studies.\n\nNot sure which? [[Describe your interests and see which programs the matches point toward|interests]], or see [[the requirements side by side|requirements]]."}, "ba": {"title": "BA History", "text": "# BA History\n\nThe BA provides a sound introduction to the discipline and can normally be completed in **three years**. Graduation takes **15.0 credits**, of which **7.0 are in History**, with a minimum 4.0 cumulative GPA in History courses (per the department’s page).\n\nIt includes one course from each of three lists: History before 1800; Asian, African, Latin American, or Caribbean history; and Themes in History, plus The Historian’s Craft (HIST 2809) and a historical-theory course.\n\n**Good fit if** you want a solid History degree in three years, or want History plus lots of room for electives.\n\n**Consider the Honours instead if** graduate school, a fourth-year research project, or the Concentration in Public History appeals. The department encourages students with sufficient CGPAs to move into the four-year Honours.\n\n[[See the full requirements|requirements|reqProgram=ba]] · [[Back to programs|programs]] · [[Back to the hallway|hub]]"}, "honours": {"title": "BA Honours", "text": "# BA Honours History\n\nThe Honours degree is **20.0 credits over four years**. The extra year is a year of advanced study: small **fourth-year seminars** and independent research under a faculty member. It is the standard route to graduate work in History, and the department points out that most universities in North America are moving toward four-year degrees.\n\n**What it looks like:** 10.0 credits in History count toward the major CGPA, including 2.0 credits of 4000-level seminars, the same three field lists as the BA, The Historian’s Craft, and historical theory (HIST 3810 or 3820). The rest is electives.\n\n**Fourth-year seminars** have limited enrolment and priority goes to Honours students. Topics change yearly; for 2026–27 they include early modern Europe, Paris in the Jazz Age, the history of beer and drinking in Canada, America as empire, trans history, anti-colonial resistance in the Middle East, material culture of the 1980s, and Indigenous customary arts.\n\n**The Honours Research Project** (HIST 4910) lets you spend a year on your own research as a paper, a documentary film, or a web-based project. [[More on that|research]].\n\n**Add-ons:** [[Concentration in Public History|publichistory]] · [[Co-op|coop]] · [[a minor or Combined Honours|combine]].\n\n**Supervision:** the Honours Research Project and Directed Study need a faculty member whose interests fit. [[See faculty research areas|faculty]].\n\n[[See the full requirements|requirements|reqProgram=honours]] · [[Back to programs|programs]] · [[Back to the hallway|hub]]"}, "combined": {"title": "Combined Honours", "text": "# Combined Honours\n\nCombine History with another discipline in a 20.0-credit Honours degree: **6.0 credits in History** (including one 4000-level seminar), the other discipline’s requirements, and free electives.\n\nPopular pairings named by the department: **Political Science, Journalism, Geography and Environmental Studies, English.** Students also combine with interdisciplinary programs such as the **Bachelor of Humanities (Great Books)**, **European, Russian and Eurasian Studies**, and **African Studies**. A different route is an Honours History degree **with a minor** in another subject.\n\nNot sure what to pair? [[Describe what else you like|combine]].\n\n[[See the full requirements|requirements|reqProgram=combined]] · [[Back to programs|programs]] · [[Back to the hallway|hub]]"}, "publichistory": {"title": "Public History", "text": "# Concentration in Public History\n\nPublic history is about how the past is connected to the present, and how it is represented and experienced in **museums, archives, films, theatre, walking tours, monuments and memorials, historical novels, graphic novels, video games, family photograph albums, and digital platforms.** Public historians do not just study representations; they create history, usually in collaboration with others.\n\nIt is an option for **BA Honours** students and builds skills in oral history, digital history, storytelling, historical research, and community engagement, with a practicum in a real workplace.\n\n**Core courses:** HIST 2811 Public History: From Memory to Museums; HIST 3809 Historical Representations; a practicum (HIST 3807 or 3815); electives such as HIST 3001 History at the Movies, HIST 3812 Digital History, HIST 3814 Crafting Digital History, and HIST 3909 Topics in Public History (this year: comic books, oral history); and a fourth-year public history seminar (HIST 4916 or 4920).\n\n**After it:** historical consultants, museum professionals, archivists, policy advisors, communication specialists, educators, and researchers, or graduate study such as Carleton’s MA in Public History. Coordinator: Prof. James Opp.\n\n[[See the full requirements|requirements|reqProgram=publichistory]] · [[Beyond the classroom|experience]] · [[Back to programs|programs]]"}, "minor": {"title": "Minor in History", "text": "# Minor in History\n\nA **4.0-credit minor** for degree students who are not in a History program: 1.0 credit in History at the 1000-level (or a First-Year Seminar), 1.0 at the 2000-level, 1.0 at the 3000-level, and 1.0 from any mix of 2000, 3000, and 4000-level. You need a minor CGPA of 4.00 or higher at graduation.\n\nA minor works well as the companion to a program in another field (politics, law, English, science, business) when you want the historian’s habits of research and argument without changing majors. Students can request it through a Change of Program Elements (COPE) application on Carleton Central.\n\n[[See the full requirements|requirements|reqProgram=minor]] · [[Back to programs|programs]]"}, "bgins": {"title": "Global and Transnational History", "text": "# Global and Transnational History (BGInS)\n\nIn the **Bachelor of Global and International Studies** you can take a **Specialization** (20.0-credit Honours) or **Stream** (15.0-credit) in Global and Transnational History. It combines core GINS courses with History: the Global South sequence (HIST 1701 and 1702), regional history of the Global South and of Europe and the World, The Historian’s Craft, Themes in History, and Honours seminars. The degree also has an **international experience** requirement and a **language** requirement.\n\n[[See the outline|requirements|reqProgram=bgins]] · [[Back to programs|programs]]"}, "experience": {"title": "Beyond the classroom", "text": "# Beyond the classroom\n\nHistory at Carleton is built to get you out of the lecture hall.\n\n- [[**Co-op**|coop]]: paid work terms alternating with study terms.\n- [[**The practicum**|practicum]]: one day a week working as a historian in Ottawa.\n- [[**The Honours Research Project**|research]]: a year on your own research.\n- **Study abroad and exchange:** the department points students to Carleton’s [Study Abroad Program](http://carleton.ca/isso/international-opportunities/) and [Exchange Program](https://carleton.ca/myexchange/).\n- **Object-based and community-engaged courses.** For example, an Honours public history seminar on the material culture of 1980s Canada was designed with a student partner and works with authentic objects from a national museum’s collection.\n\nLooking for something particular? [[Describe it and search the course list|interests]].\n\n[[Back to the hallway|hub]]"}, "coop": {"title": "Co-op", "text": "# Co-op\n\nCo-operative education alternates study terms with **paid work terms**. For the co-op designation on your transcript and diploma you complete the normal BA Honours requirements and **three paid work terms of four months each**.\n\n**How you get in.** You can apply directly from high school or CEGEP, or during first year at Carleton. History students would normally start their first work term in the **fall of third year**. After admission you complete the zero-credit online course COOP 1000 before your first work term. The calendar requires 5.0 or more credits that count toward your degree and the minimum CGPA for the co-op option. No placement is guaranteed; the job search is competitive.\n\n**Where students have worked** includes Global Affairs Canada, Indigenous and Northern Affairs Canada, Library and Archives Canada, Canadian Heritage, Public Services and Procurement Canada, Canada’s Sports Hall of Fame, and the Archives and Research Collections at Carleton’s library.\n\n[[The practicum, a different kind of experience|practicum]] · [[Back to experience|experience]] · [[Back to the hallway|hub]]"}, "practicum": {"title": "The practicum", "text": "# The practicum (HIST 3807)\n\nEach winter, eligible third- and fourth-year students spend **about one day a week** working in the city **as a historian**: researching collections for a future museum exhibit, answering a research question for a non-profit at Library and Archives Canada or the City of Ottawa Archives, or applying research, data analysis, and communication in a mix of tasks.\n\nRecent hosts include the Canadian War Museum, Library and Archives Canada, the Canada Science and Technology Museum, Bytown Museum, Archives and Research Collections at Carleton, the Canadian Federation for the Humanities and Social Sciences, Skate Canada, the National Capital Commission, Indigenous and Northern Affairs Canada, and the City of Ottawa’s Heritage Conservation Division.\n\n**Eligibility:** third-year standing in a History program, a History CGPA of 9.00 or better, and permission of the Department. It counts toward the [[Concentration in Public History|publichistory]].\n\n[[Back to experience|experience]] · [[Back to the hallway|hub]]"}, "research": {"title": "Honours Research Project", "text": "# The Honours Research Project (HIST 4910)\n\nA full-year (1.0 credit) piece of **original historical research** carried out independently under a faculty supervisor. You present it as a **research paper, a documentary film, or a web-based project.** It does not count toward the fourth-year seminar requirement and the Honours requirements change when you include it.\n\n**Eligibility:** fourth-year Honours standing, a History GPA of at least 9.0 (B+), a faculty supervisor, an approved topic and mode of presentation, and permission of the Undergraduate Supervisor. The department notes it can only be undertaken with the permission of a faculty member willing to supervise.\n\nDirected Study (HIST 4917) is a half-credit option for independent study in an area no seminar covers.\n\nA supervisor has to be a faculty member willing to take the project on. [[Search faculty research areas|faculty]] to see whose work overlaps with a topic. Listed interests are not a promise of availability to supervise.\n\n[[Honours program|honours]] · [[Back to experience|experience]]"}, "faculty": {"title": "Faculty research", "text": "# Who researches what?\n\nThe department’s faculty list research areas on their public profiles: modern Japan and the Middle East, the brewing industry, Dalit history, trans and queer history, digital methods and computational creativity, medieval monks, Indigenous material culture, the history of sexuality, migration and humanitarianism, and much more. Instructors who teach undergraduate courses are included.\n\nDescribe a topic, a question, or a kind of work. Faculty whose published research areas sit closest are ranked, along with the 2026–27 courses they teach.\n\n{{search kind=\"faculty\" prompt=\"What would you like to research, or learn from someone who researches it?\" placeholder=\"e.g. How games and play shape people's understanding of the past, or the history of migration and refugees in Canada.\" button=\"Match research areas\" chips=\"Digital methods and games|Indigenous histories|Migration and refugees|Gender and sexuality|Medieval religion|Empire and the Middle East|Business and consumption|Public history and memory\"}}\n\n> **Read this as a map, not a promise.** Research areas are copied from public department profiles (Nov 2026) and condensed. Appearing in a list does not mean a person is available to supervise, take students, or teach a given course. Contact the department first. Full profiles: [Faculty listing](https://carleton.ca/history/contact/faculty-listing/).\n\n[[Back to the hallway|hub]]"}, "careers": {"title": "After the degree", "text": "# What do people do with this degree?\n\nHistorians learn **how to think**: to analyze, communicate, write, organize, and create. The department’s alumni profiles show careers across heritage, government, law, communications, business, and politics, and many students use the degree as a pathway to further training such as law school.\n\nDescribe a day in an imagined job. It does not need a name yet. The description is compared with the pathways graduates take, and linked to programs and courses.\n\n{{search kind=\"careers\" prompt=\"What do you imagine doing afterwards?\" placeholder=\"e.g. Maybe working in a museum, or somewhere that uses research and writing to shape policy. I don't want to be locked into teaching.\" button=\"Show pathways\" chips=\"Working in a museum or archive|Law school|Government and public policy|Teaching or graduate school|Journalism, podcasts, or film|Working for a non-profit|Something with data and technology|I have no idea\"}}\n\n[[Where alumni actually work|alumni]] · [[Back to the hallway|hub]]"}, "alumni": {"title": "Where alumni work", "text": "# Where alumni actually work\n\n**Some job titles held by Carleton History graduates:** programs officer, ward councillor, paralegal, collections project lead, librarian, data analyst, program manager, projects officer, president, coordinator of art collection and exhibitions, digital and audiovisual archivist, litigator, Member of Provincial Parliament, consultant, museum manager, collections and gallery assistant, YouTuber, cataloguing and acquisitions officer, director of partnerships and governance, curator/manager, executive communications officer, collections technician, emergency management analyst, curatorial intern, documentation engineer.\n\n**Some places they work:**\n\n- **Government:** Canadian Coast Guard, City of Ottawa, House of Commons, Indigenous and Northern Affairs Canada, Legislative Assembly of Ontario, Transport Canada, Public Health Agency of Canada\n- **Museums and culture:** Canadian Museum of History, City of Ottawa Archives, Diefenbunker, National Air Force Museum of Canada, Peel Art Gallery, Museum and Archive\n- **Non-profits:** Canadian Museums Association, Habitat for Humanity, Volleyball Canada\n- **Private sector:** law firms, Geomedia, Lockheed Martin Canada, self-employed\n- **Education:** George Brown College, James Madison University\n\nSource: the department’s [What can you do with a History degree?](https://carleton.ca/history/our-programs/undergraduate/what-can-you-do-with-a-history-degree/) page.\n\n[[Back to pathways|careers]] · [[Back to the hallway|hub]]"}, "combine": {"title": "History and something else", "text": "# History and something else\n\nHistory pairs well with almost anything. The department highlights Combined Honours with **Political Science, Journalism, Geography and Environmental Studies, and English**, interdisciplinary programs such as **Great Books, European, Russian and Eurasian Studies, and African Studies**, and Honours History **with a minor** in another subject.\n\nDescribe what else interests you, and pairings are suggested to raise with an advisor.\n\n{{search kind=\"partners\" prompt=\"What else do you love, or what are you studying?\" placeholder=\"e.g. I'm also into computer science and maps, and I want to understand how cities change.\" button=\"Show pairings\" chips=\"Politics and law|Writing and media|Maps and the environment|Literature|Philosophy and the classics|Russia and Eastern Europe|Africa|Something global\"}}\n\n[[Back to the hallway|hub]]"}, "requirements": {"title": "Requirements", "text": "# Check the requirements\n\nPick a program to see its requirement outline from the calendar. Courses added to your guide are counted by level and credit (so a 0.5-credit 2000-level course counts toward a “1.0 credit at the 2000-level” line) and against the category lists (History before 1800; Asia, Africa, Latin America, and the Caribbean; Themes; the Historian’s Craft; historical theory; and the Public History lists).\n\n{{reqs}}\n\n[[Find more courses|interests]] · [[Open your guide|guide]] · [[Back to the hallway|hub]]"}, "ask": {"title": "Ask a question", "text": "# Question search\n\nType a question in plain words: credits, co-op, graduate school, prerequisites, who to call. The prepared notes, drawn from the department’s pages and the calendar, are searched, and the closest passages are returned with a pointer to the source. This is retrieval, not conversation: a question with no matching note returns no answer.\n\n{{search kind=\"faq\" prompt=\"What would you like to know?\" placeholder=\"e.g. Can I do a practicum if I'm not in Honours?\" button=\"Search the notes\" chips=\"How many credits is the BA?|Can I go to graduate school?|How does co-op work?|Can I study abroad?|What is the breadth requirement?|Who do I contact?\"}}\n\n[[Back to the hallway|hub]]"}, "contact": {"title": "Contacts and next steps", "text": "# Contacts and next steps\n\n**Department of History, Carleton University**\n\n- Phone 613-520-2828, email [history@carleton.ca](mailto:history@carleton.ca)\n- Undergraduate courses (1000–4000 level): the department’s Undergraduate Administrator (listed as Michelle Coutts, acting, on the courses page)\n- Concentration in Public History: Prof. James Opp\n- [Admissions for History](https://admissions.carleton.ca/programs/history/) · [Undergraduate calendar: History](https://calendar.carleton.ca/undergrad/undergradprograms/history/) · [Courses](https://carleton.ca/history/courses/) · [Co-op](https://carleton.ca/co-op/) · [Awards, prizes, and scholarships](https://carleton.ca/history/awards-prizes-and-scholarships-for-history-students/)\n\n**Changing or adding a program:** done online through Carleton Central with a Change of Program Elements (COPE) application; students are normally expected to be Eligible to Continue. **Undeclared** BA students must apply to enter a program upon or before completing 3.5 credits.\n\n[[Back to the hallway|hub]]"}, "guide": {"title": "Your guide", "text": "# Your guide\n\n{{guide}}\n\n[[Back to the hallway|hub]]"}, "landscape": {"title": "The landscape", "text": "# The landscape of teaching and research\n\nEvery course description and every faculty member’s published research areas, placed on one map. Points that sit close together use similar language (or, with semantic matching switched on, similar meaning). Circles are courses; diamonds are faculty. Hollow circles are courses not on the 2026–27 schedule. Click a point for details, drag to pan, and use the clusters list beneath for a text version.\n\n{{landscape}}\n\n[[Find courses by describing your interests|interests]] · [[Who researches what?|faculty]] · [[Back to the hallway|hub]]"}};</script>
+<script>/* History @ Carleton interactive guide: engine.
+   A tiny passage engine (twee-style passages), a lexical matcher that always works,
+   and an optional in-browser embedding model (transformers.js, MiniLM) that blends in
+   when the visitor switches it on. No data leaves the browser. */
+(function () {
+  "use strict";
+  var D = window.GUIDE_DATA, P = window.GUIDE_PASSAGES;
+  var KEY = "hist-guide-v1";
+
+  /* ---------- state ---------- */
+  function defaults() { return { stage: "", queries: [], saved: [], careerQ: [], careers: [], comboQ: [], combos: [], asked: [], areas: {}, faculty: [], savedFaculty: [], facultyQ: [], current: "Start" }; }
+  var state = (function () {
+    try { var s = JSON.parse(localStorage.getItem(KEY) || "null"); if (s) return Object.assign(defaults(), s); } catch (e) {}
+    return defaults();
+  })();
+  function save() { try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {} }
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
+
+  /* ---------- course helpers ---------- */
+  var COURSES = D.COURSES.map(function (r) {
+    var num = (r[0].match(/\d{4}/) || [""])[0];
+    var full = r[2] === "FW" || /full year|1\.0 credit/i.test(r[1]) || num === "4910" || num === "4920";
+    return { id: r[0], num: num, title: r[1], term: r[2], deliv: r[3], prof: r[4], areas: r[5], desc: r[6], level: +num[0], cr: full ? 1 : 0.5, hist: /^HIST/.test(r[0]) };
+  });
+  var BYID = {}; COURSES.forEach(function (c) { BYID[c.id] = c; });
+  var FACULTY = (D.FACULTY || []).map(function (r) { return { id: r[0], name: r[1], short: r[2], title: r[3], areas: r[4], url: "https://carleton.ca/history/people/" + r[5] + "/" }; });
+  var FBYID = {}, FBYSHORT = {};
+  FACULTY.forEach(function (f) { FBYID[f.id] = f; FBYSHORT[f.short] = f; f.teaches = COURSES.filter(function (c) { return c.term && c.prof === f.short; }); });
+  function clip(s, n) { return s.length > n ? s.slice(0, n).replace(/[;,]?\s+\S*$/, "") + "\u2026" : s; }
+  function termLabel(t) {
+    if (t === "FW") return "Full year 2026–27";
+    if (t === "F") return "Fall 2026";
+    if (t === "W") return "Winter 2027";
+    if (t === "F W") return "Fall 2026 and Winter 2027";
+    return "Not on the 2026–27 schedule";
+  }
+  function delivLabel(d) { return { ip: "In person", ou: "Online, unscheduled", os: "Online, scheduled" }[d] || ""; }
+  function cats(c) {
+    var out = [];
+    if (D.SETS.b1800.indexOf(c.num) >= 0) out.push(["before 1800", "b1800"]);
+    if (D.SETS.region.indexOf(c.num) >= 0) out.push(["Asia / Africa / Latin America / Caribbean", "region"]);
+    if (D.SETS.theme.indexOf(c.num) >= 0) out.push(["Themes", "theme"]);
+    if (D.SETS.craft.indexOf(c.num) >= 0) out.push(["required: Historian's Craft", "craft"]);
+    if (D.SETS.theory.indexOf(c.num) >= 0) out.push(["historical theory", "theory"]);
+    if (D.SETS.pubcore.indexOf(c.num) >= 0 || D.SETS.pubelect.indexOf(c.num) >= 0 || /\bpub\b/.test(c.areas)) out.push(["public history", "pub"]);
+    return out;
+  }
+
+  /* ---------- text matching ---------- */
+  var STOP = {}; ("a an and are as at be but by for from has have i in is it its me my of on or so that the this to want was we what with you your about like into more some can could would should also really very much any all just not no do does did if than then there their them they these those who whom which while how when where why am been being were will up out over such own same too get got going interested interest history historical past learn study studying love enjoy").split(" ").forEach(function (w) { STOP[w] = 1; });
+  function stem(w) {
+    if (w.length > 4) {
+      if (/ies$/.test(w)) w = w.replace(/ies$/, "y");
+      else if (/(ing|ed)$/.test(w) && w.length > 5) w = w.replace(/(ing|ed)$/, "");
+      else if (/[^s]s$/.test(w)) w = w.slice(0, -1);
+    } else if (/[^s]s$/.test(w) && w.length > 3) w = w.slice(0, -1);
+    return w.slice(0, 7);
+  }
+  function tokens(s) {
+    return (s.toLowerCase().replace(/[’']/g, "").match(/[a-z0-9à-ÿ]+/g) || [])
+      .filter(function (w) { return !STOP[w] && w.length > 1; }).map(stem);
+  }
+  // concept expansions: [regex over the raw query, extra words]
+  var SYN = [
+    [/video ?games?|gaming|\bgames?\b|\bplay(ing)?\b|simulation|board ?games?|\btabletop|rpg/, "game play sport simulation digital internet culture"],
+    [/queer|lgbt|gay\b|lesbian|\btrans\b|transgender|nonbinary|sexualit/, "sexuality gender trans queer body"],
+    [/indigenous|first nations?|inuit|m[eé]tis|native|aboriginal|treat(y|ies)/, "indigenous colonial treaty land canada decolonization"],
+    [/pirates?|\bships?\b|\bsea\b|ocean|maritime|sailing|navy|naval/, "ocean maritime trade empire caribbean indian atlantic"],
+    [/medieval|middle ages|knights?|castles?|vikings?|crusade|feudal|monk/, "medieval early late europe religion"],
+    [/ancient|\brome\b|roman|greek|greece|classics|egypt(ian)? pharaoh|archaeolog/, "ancient greece rome archaeology classical"],
+    [/\bwars?\b|military|battles?|soldiers?|combat|army|veteran/, "war conflict military memory"],
+    [/ww2|wwii|ww1|wwi|world war|second world war|nazi|hitler|holocaust/, "war europe holocaust germany global"],
+    [/food|cook(ing)?|\beat(ing)?|beer|brew|drink|alcohol|wine|restaurant|cuisine|chef/, "food alcohol drinking brewing culture everyday"],
+    [/museum|archive|heritage|monument|memorial|exhibit|curat|artifact|artefact|object|collection/, "public history museum archive memory heritage material culture"],
+    [/film|movie|cinema|television|\btv\b|comic|graphic novel|documentary|podcast|storytell|stories|story/, "film movie comic media public history representation oral"],
+    [/code|coding|programming|data|digital|computer|\bai\b|internet|\bweb\b|software|algorithm|tech(nology)?/, "digital internet data archaeology technology"],
+    [/photo(graph)?|image|picture|visual|art\b|artist|painting/, "photography material culture visual art"],
+    [/women|feminis|gender|girls?|mothers?|\bmasculin/, "women gender feminist"],
+    [/\brace\b|racism|racial|\bblack\b|slave|slavery|civil rights|segregation|diaspora/, "race slavery caribbean african american empire diaspora"],
+    [/environment|climate|nature|animals?|ecolog|energy|\boil\b|forest|landscape|geograph/, "environment climate animals nature energy oil landscape"],
+    [/politic|government|election|democra|diplomacy|diplomat|policy|international relations|\bun\b|league of nations/, "political politics diplomacy government international"],
+    [/empire|imperial|colonial|decoloni|colony|colonies|postcolonial/, "empire colonial decolonization imperial"],
+    [/china|chinese|japan|japanese|korea|asia|india\b|south asia|pakistan|mughal|samurai|anime/, "asia china japan south asian indian"],
+    [/africa|african|ghana|nigeria|kenya|congo|sahara/, "africa african"],
+    [/latin america|mexic|brazil|argentin|aztec|maya|inca|spanish america|cuba|caribbean|jamaica|haiti/, "latin america mexico aztec caribbean colonial"],
+    [/middle east|arab|ottoman|islam|muslim|israel|palestin|iran|turk|persian/, "middle east ottoman egypt islam modern"],
+    [/russia|soviet|ussr|ukrain|eastern europe|balkan|stalin|lenin|cold war|communis/, "russia soviet revolution eastern europe cold war"],
+    [/canad|ottawa|quebec|prairie|pacific coast|atlantic canada/, "canada canadian"],
+    [/america(n)?\b|united states|\bus\b|\busa\b|u\.s\./, "united states american"],
+    [/religio|church|christian|jewish|\bjews?\b|\bgnostic|reformation|theolog|spiritual|\bgod\b/, "religion reformation church jewish antisemitism"],
+    [/sport|olympic|hockey|athlet|football|soccer|baseball|basketball/, "sport olympics play game"],
+    [/business|money|econom|shopping|consum|capital|finance|trade|market|industry/, "business shopping consumer economic industry"],
+    [/health|medicine|medical|mental|disab|madness|illness|disease|pandemic|body|bodies/, "disability madness body health medicine"],
+    [/crime|criminal|police|prison|justice|\blaw\b|legal|court/, "crime law state justice"],
+    [/child|youth|teen|kids|school|young people/, "childhood youth"],
+    [/\boral\b|interview|memor(y|ies)|remember|commemorat|trauma/, "oral history memory commemoration"],
+    [/revolution|rebellion|resistance|protest|uprising|activis/, "revolution resistance protest french russian"],
+    [/europe|france|french|german|brit(ain|ish)|england|english history|italy|renaissance/, "europe european"],
+    [/everyday life|daily life|ordinary people|social history|home|family|work/, "everyday life home work play social"],
+    [/migration|immigra|refugee|diaspora/, "migration diaspora canada"]
+  ];
+  function expand(q) {
+    var l = q.toLowerCase(), extra = [];
+    SYN.forEach(function (s) { if (s[0].test(l)) extra.push(s[1]); });
+    return extra.join(" ");
+  }
+
+  var corpora = {};
+  function corpus(name) {
+    if (corpora[name]) return corpora[name];
+    var items;
+    if (name === "courses") items = COURSES.map(function (c) { var inst = FBYSHORT[c.prof]; var ir = inst ? inst.areas : ""; return { ref: c, text: c.title + " " + c.title + " " + c.title + " " + c.desc + " " + c.areas.replace(/\bpub\b/, "public history museums").replace(/\bsem\b/, "seminar") + " " + c.prof + " " + ir, sem: c.id + ". " + c.title + ". " + c.desc + (ir ? " Instructor research: " + clip(ir, 160) : "") }; });
+    else if (name === "faculty") items = FACULTY.filter(function (f) { return f.areas; }).map(function (f) { var tt = f.teaches.map(function (c) { return c.title; }).join(" "); return { ref: f, text: f.name + " " + f.title + " " + f.areas + " " + f.areas + " " + tt, sem: f.name + ", " + f.title + ". Research areas: " + f.areas + (tt ? " Teaches: " + tt : "") }; });
+    else if (name === "careers") items = D.CAREERS.map(function (c) { return { ref: c, text: c.t + " " + c.t + " " + c.d, sem: c.t + ". " + c.d }; });
+    else if (name === "partners") items = D.PARTNERS.map(function (c) { return { ref: c, text: c.t + " " + c.t + " " + c.d, sem: c.t + ". " + c.d }; });
+    else items = D.FAQ.map(function (c) { return { ref: c, text: c.q + " " + c.q + " " + c.a, sem: c.q + " " + c.a }; });
+    var df = {}, total = 0;
+    items.forEach(function (it) {
+      var tk = tokens(it.text), tf = {};
+      tk.forEach(function (t) { tf[t] = (tf[t] || 0) + 1; });
+      it.tf = tf; it.len = tk.length; total += tk.length;
+      Object.keys(tf).forEach(function (t) { df[t] = (df[t] || 0) + 1; });
+    });
+    corpora[name] = { items: items, df: df, avg: total / items.length, n: items.length, emb: null };
+    return corpora[name];
+  }
+  function lexScores(cp, q) {
+    var qt = tokens(q), et = tokens(expand(q)), w = {};
+    qt.forEach(function (t) { w[t] = Math.max(w[t] || 0, 1); });
+    et.forEach(function (t) { if (!w[t]) w[t] = 0.45; });
+    var k = 1.4, b = 0.7;
+    return cp.items.map(function (it) {
+      var s = 0, why = [];
+      Object.keys(w).forEach(function (t) {
+        var f = it.tf[t]; if (!f) return;
+        var idf = Math.log(1 + (cp.n - (cp.df[t] || 0) + 0.5) / ((cp.df[t] || 0) + 0.5));
+        s += w[t] * idf * (f * (k + 1)) / (f + k * (1 - b + b * it.len / cp.avg));
+        if (w[t] === 1 && why.indexOf(t) < 0) why.push(t);
+      });
+      return { it: it, lex: s, why: why };
+    });
+  }
+
+  /* ---------- optional semantic model ---------- */
+  var MODEL = "Xenova/all-MiniLM-L6-v2";
+  var sem = { status: "off", pipe: null, msg: "", pct: null };
+  function semUI() {
+    var el = document.getElementById("sem-status"); if (!el) return;
+    var btn = document.getElementById("sem-btn");
+    var loadMsg = "Downloading the embedding model" + (sem.pct != null ? " (" + sem.pct + "%)" : "") + "\u2026 about 25 MB, cached by the browser afterwards.";
+    var t = { off: "Matching: keywords + concept map (works offline).", loading: loadMsg, on: "Matching: semantic embeddings blended with keywords. The model only compares text; it generates none.", failed: "The model could not be loaded (" + esc(sem.msg) + "). Matching continues with keywords + concept map." };
+    el.textContent = t[sem.status];
+    btn.textContent = sem.status === "on" ? "Turn off semantic matching" : sem.status === "loading" ? "Loading\u2026" : "Turn on semantic matching";
+    btn.disabled = sem.status === "loading";
+  }
+  function embedFn() {
+    if (window.__embedOverride) return window.__embedOverride;
+    return async function (texts) {
+      var out = [];
+      for (var i = 0; i < texts.length; i++) { var t = await sem.pipe(texts[i], { pooling: "mean", normalize: true }); out.push(Array.prototype.slice.call(t.data)); }
+      return out;
+    };
+  }
+  async function toggleSemantic() {
+    if (sem.status === "on") { sem.status = "off"; semUI(); if (LS.refresh) LS.refresh(); return; }
+    sem.status = "loading"; sem.pct = null; semUI();
+    try {
+      if (!window.__embedOverride) {
+        var mod = await import("https://cdn.jsdelivr.net/npm/@xenova/transformers@2.17.2");
+        mod.env.allowLocalModels = false;
+        sem.pipe = await mod.pipeline("feature-extraction", MODEL, { progress_callback: function (p) { if (p && p.status === "progress" && typeof p.progress === "number") { sem.pct = Math.round(p.progress); semUI(); } } });
+      }
+      sem.status = "on";
+    } catch (e) { sem.status = "failed"; sem.msg = (e && e.message) ? e.message.slice(0, 60) : "network"; }
+    semUI();
+    if (LS.refresh) LS.refresh();
+  }
+  // document embeddings are cached in IndexedDB, keyed by model + a hash of the texts, so a second visit is instant
+  function hash(s) { var h = 5381; for (var i = 0; i < s.length; i++) h = ((h << 5) + h + s.charCodeAt(i)) | 0; return (h >>> 0).toString(36); }
+  function idb() { return new Promise(function (res, rej) { try { var r = indexedDB.open("hist-guide-emb", 1); r.onupgradeneeded = function () { r.result.createObjectStore("e"); }; r.onsuccess = function () { res(r.result); }; r.onerror = function () { rej(r.error); }; } catch (e) { rej(e); } }); }
+  function idbGet(k) { return idb().then(function (db) { return new Promise(function (res) { var q = db.transaction("e").objectStore("e").get(k); q.onsuccess = function () { res(q.result || null); }; q.onerror = function () { res(null); }; }); }).catch(function () { return null; }); }
+  function idbSet(k, v) { return idb().then(function (db) { return new Promise(function (res) { var tx = db.transaction("e", "readwrite"); tx.objectStore("e").put(v, k); tx.oncomplete = res; tx.onerror = res; }); }).catch(function () {}); }
+  async function docEmbeddings(name, cp, emb) {
+    var texts = cp.items.map(function (i) { return i.sem; });
+    var key = (window.__embedOverride ? "test" : MODEL) + ":" + name + ":" + hash(texts.join("\n"));
+    var hit = await idbGet(key);
+    if (hit && hit.length === texts.length) { sem.cacheHits = (sem.cacheHits || 0) + 1; return hit; }
+    var v = await emb(texts); await idbSet(key, v); return v;
+  }
+  function cosine(a, b) { var s = 0; for (var i = 0; i < a.length; i++) s += a[i] * b[i]; return s; }
+
+  async function match(name, q, opts) {
+    opts = opts || {};
+    var cp = corpus(name), rows = lexScores(cp, q);
+    var rawMax = Math.max.apply(null, rows.map(function (r) { return r.lex; }));
+    var maxLex = rawMax || 1;
+    rows.forEach(function (r) { r.lexN = r.lex / maxLex; r.score = r.lexN; });
+    var used = "lexical", maxCos = null, semW = 0;
+    if (sem.status === "on") {
+      try {
+        var emb = embedFn();
+        if (!cp.emb) cp.emb = await docEmbeddings(name, cp, emb);
+        var qv = (await emb([q]))[0];
+        rows.forEach(function (r, i) { r.cos = cosine(qv, cp.emb[i]); });
+        var cs = rows.map(function (r) { return r.cos; }), lo = Math.min.apply(null, cs), hi = Math.max.apply(null, cs);
+        maxCos = hi;
+        // The fewer query words a corpus recognises literally, the more weight goes to the embedding.
+        var qt = tokens(q), cov = qt.length ? qt.filter(function (t) { return cp.df[t]; }).length / qt.length : 0;
+        semW = 0.55 + 0.35 * (1 - cov);
+        rows.forEach(function (r) { var cn = hi > lo ? (r.cos - lo) / (hi - lo) : 0; r.score = semW * cn + (1 - semW) * r.lexN; });
+        used = "hybrid";
+      } catch (e) { sem.status = "failed"; sem.msg = "embedding error"; semUI(); }
+    }
+    if (opts.exclude) rows = rows.filter(function (r) { return r.it.ref.id !== opts.exclude; });
+    if (opts.adjust) rows.forEach(function (r) { r.score *= opts.adjust(r.it.ref); });
+    rows.sort(function (a, b) { return b.score - a.score; });
+    return { rows: rows, used: used, semW: semW, weak: rawMax < 1 && (used !== "hybrid" || maxCos < 0.25) };
+  }
+
+  /* ---------- program leanings ---------- */
+  var PROGS = {
+    ba: { name: "BA History", go: "ba" }, honours: { name: "BA Honours History", go: "honours" },
+    combined: { name: "Combined Honours with another discipline", go: "combined" },
+    publichistory: { name: "Honours with the Concentration in Public History", go: "publichistory" },
+    coop: { name: "Honours Co-op", go: "coop" }, minor: { name: "Minor in History", go: "minor" },
+    bgins: { name: "Global and Transnational History (BGInS)", go: "bgins" }
+  };
+  function leanings() {
+    var s = { ba: 1, honours: 1 }, why = {};
+    function add(k, n, r) { s[k] = (s[k] || 0) + n; (why[k] = why[k] || []).push(r); }
+    var a = state.areas || {};
+    if ((a.pub || 0) >= 2) { add("publichistory", 3, "your interests keep landing on public history (museums, memory, film, archives)"); add("honours", 1, "the Concentration sits on top of Honours"); }
+    if ((a.dig || 0) >= 1) add("publichistory", 1, "digital history courses count toward the Concentration");
+    if ((a.glob || 0) + (a.asia || 0) + (a.afr || 0) + (a.lat || 0) + (a.car || 0) + (a.me || 0) >= 4) add("bgins", 2, "your interests run global and transnational");
+    var allq = (state.queries.concat(state.careerQ, state.asked, state.comboQ)).join(" ").toLowerCase();
+    if (/graduate|grad school|master|phd|thesis|research|professor|academic|teach/.test(allq)) { add("honours", 3, "you mentioned research, graduate school, or teaching; Honours adds fourth-year seminars and supervised research"); }
+    if (/co-?op|paid|work experience|job|internship|career/.test(allq)) add("coop", 3, "you mentioned work experience; co-op adds paid, four-month work terms");
+    if (/minor|side|another (program|major|degree)|double/.test(allq)) add("minor", 1, "you asked about adding History alongside something else");
+    state.careers.forEach(function (id) {
+      var c = D.CAREERS.filter(function (x) { return x.id === id; })[0];
+      if (c) c.progs.forEach(function (p) { add(p, 2, "it's a common route toward " + c.t.toLowerCase()); });
+    });
+    state.combos.forEach(function (id) {
+      if (id === "minor") add("minor", 1, "you picked a minor-style combination");
+      else if (id === "bgins") add("bgins", 3, "you picked the BGInS specialization");
+      else add("combined", 3, "you picked " + (D.PARTNERS.filter(function (x) { return x.id === id; })[0] || { t: "another subject" }).t + " as a partner");
+    });
+    if (state.stage === "other") add("minor", 2, "you're in another program and curious");
+    if (state.stage === "browsing") add("ba", 1, "the BA is the lighter-weight way in");
+    if (state.stage === "applicant") { add("coop", 1, "co-op can be requested directly from high school or CEGEP"); }
+    return Object.keys(s).map(function (k) { return { k: k, score: s[k], why: why[k] || [] }; }).sort(function (x, y) { return y.score - x.score; }).slice(0, 3);
+  }
+  function noteAreas(rows) {
+    rows.slice(0, 5).forEach(function (r) {
+      r.it.ref.areas.split(" ").forEach(function (a) { state.areas[a] = (state.areas[a] || 0) + 1; });
+    });
+  }
+
+  /* ---------- rendering of results ---------- */
+  function courseCard(c, r, mini) {
+    var saved = state.saved.indexOf(c.id) >= 0;
+    var cs = cats(c).map(function (x) { return '<span class="tag tag-' + x[1] + '">' + esc(x[0]) + "</span>"; }).join("");
+    var pct = r && r.cos != null ? Math.round(Math.max(0, r.cos) * 100) : null;
+    var why = r && r.why && r.why.length ? '<p class="why">Matched on: ' + r.why.slice(0, 5).map(esc).join(", ") + (pct != null ? " \u00b7 semantic similarity " + pct + "%" : "") + "</p>" : (pct != null ? '<p class="why">Semantic similarity ' + pct + "%</p>" : "");
+    var sched = c.term ? "<span class='sched'>" + termLabel(c.term) + (c.deliv ? " \u00b7 " + delivLabel(c.deliv) : "") + (c.prof ? " \u00b7 " + esc(c.prof) : "") + "</span>" : "<span class='sched off'>" + termLabel("") + "</span>";
+    var note = c.level === 4 ? '<p class="note">4000-level seminars are small and give priority to Honours students.</p>' : "";
+    var inst = FBYSHORT[c.prof], irow = inst && inst.areas ? '<p class="why">Instructor\u2019s published research areas: ' + esc(clip(inst.areas, 150)) + ' (<a href="' + inst.url + '" target="_blank" rel="noopener">profile</a>)</p>' : "";
+    return '<article class="card"><header><h4><span class="code">' + esc(c.id) + "</span> " + esc(c.title) + "</h4>" + sched + "</header><p>" + esc(c.desc) + "</p>" + note + '<div class="tags">' + cs + "</div>" + irow + why +
+      '<button class="btn small save" data-save="' + esc(c.id) + '" aria-pressed="' + saved + '">' + (saved ? "\u2713 Saved to your guide" : "+ Save to your guide") + "</button>" +
+      (mini ? "" : ' <button class="btn small" data-similar="' + esc(c.id) + '">Find similar courses</button><div class="similar"></div>') + "</article>";
+  }
+  function facultyCard(f, r, mini) {
+    var saved = state.savedFaculty.indexOf(f.id) >= 0;
+    var teaches = f.teaches.length ? '<p class="why">Teaches in 2026\u201327: ' + f.teaches.map(function (c) { return esc(c.id + " " + c.title.split(":")[0]); }).join("; ") + "</p>" : "";
+    var pct = r && r.cos != null ? " \u00b7 semantic similarity " + Math.round(Math.max(0, r.cos) * 100) + "%" : "";
+    var why = r && r.why && r.why.length ? '<p class="why">Matched on: ' + r.why.slice(0, 5).map(esc).join(", ") + pct + "</p>" : (pct ? '<p class="why">' + pct.slice(3) + "</p>" : "");
+    return '<article class="card fac"><header><h4>' + esc(f.name) + "</h4><span class='sched'>" + esc(f.title) + "</span></header><p>" + esc(mini ? clip(f.areas, 190) : f.areas) + "</p>" + teaches + why +
+      '<p class="after"><a href="' + f.url + '" target="_blank" rel="noopener">Department profile</a></p>' +
+      '<button class="btn small fsave" data-fsave="' + f.id + '" aria-pressed="' + saved + '">' + (saved ? "\u2713 Saved to your guide" : "+ Save to your guide") + "</button></article>";
+  }
+  function progLink(id) { var p = PROGS[id]; return p ? '<a href="#" data-go="' + p.go + '">' + esc(p.name) + "</a>" : esc(id); }
+
+  async function renderResults(kind, res, box, q) {
+    var rows = res.rows, html = "", top;
+    var badge = '<p class="engine">' + (res.used === "hybrid" ? "Ranked with semantic embeddings blended with keywords." : "Ranked with keywords and a concept map.") + "</p>";
+    if (kind === "courses") {
+      top = rows.filter(function (r) { return r.score > 0.12; }).slice(0, 8);
+      if (res.weak || !top.length) html += '<p class="lead">No strong match was found. Try naming a place, a period, or a theme (for example "Caribbean slavery", "Cold War sport", "museums"). The nearest entries:</p>', top = rows.slice(0, 4);
+      else html += '<p class="lead">Closest matches for <em>“' + esc(q) + "”</em>:</p>";
+      var sched = top.filter(function (r) { return r.it.ref.term; }), other = top.filter(function (r) { return !r.it.ref.term; });
+      html += sched.map(function (r) { return courseCard(r.it.ref, r); }).join("");
+      if (other.length) html += '<p class="subhead">In the calendar, but not on the 2026–27 schedule (check Carleton Central for future terms)</p>' + other.map(function (r) { return courseCard(r.it.ref, r); }).join("");
+      var ar = {}; top.forEach(function (r) { r.it.ref.areas.split(" ").forEach(function (a) { ar[a] = (ar[a] || 0) + 1; }); });
+      var names = { can: "Canada", eur: "Europe", us: "the United States", lat: "Latin America", car: "the Caribbean", afr: "Africa", asia: "Asia", me: "the Middle East", anc: "the ancient world", med: "the medieval world", early: "early modern history", ind: "Indigenous history", glob: "global history", pub: "public history", dig: "digital history", gen: "gender and sexuality", war: "war and memory", culture: "culture", env: "environment", food: "food and drink", body: "the body", politics: "politics", empire: "empire", business: "business", play: "games and sport" };
+      var tops = Object.keys(ar).filter(function (k) { return names[k] && ar[k] >= 2; }).sort(function (a, b) { return ar[b] - ar[a]; }).slice(0, 4);
+      if (tops.length) html += '<p class="cluster">Your matches cluster around: <strong>' + tops.map(function (k) { return names[k]; }).join(", ") + ".</strong></p>";
+      var fres = await match("faculty", q);
+      var ft = fres.weak ? [] : fres.rows.filter(function (r) { return r.score > 0.3; }).slice(0, 3);
+      if (ft.length) {
+        html += '<p class="subhead">Faculty whose published research areas overlap</p>' + ft.map(function (r) { return facultyCard(r.it.ref, r, true); }).join("");
+        state.faculty = uniq(ft.map(function (r) { return r.it.ref.id; }).concat(state.faculty)).slice(0, 6);
+      }
+      html += badge;
+      html += '<p class="after"><a href="#" data-go="requirements">See which requirements your saved courses cover</a> · <a href="#" data-go="guide">Open your guide</a></p>';
+      noteAreas(top); state.queries = uniq(state.queries.concat([q])).slice(-5);
+    } else if (kind === "careers") {
+      top = rows.filter(function (r) { return r.score > 0.15; }).slice(0, 3);
+      if (!top.length) top = rows.slice(0, 2), html += '<p class="lead">No close pathway matched, so these are the nearest. Graduates also end up in places nobody predicted.</p>';
+      else html += '<p class="lead">Pathways that fit <em>“' + esc(q) + "”</em>:</p>";
+      html += top.map(function (r) {
+        var c = r.it.ref;
+        var shown = c.d.slice(0, c.d.lastIndexOf(". ") + 1); // text after the last full stop is search-only keywords
+        return '<article class="card"><header><h4>' + esc(c.t) + "</h4></header><p>" + esc(shown) + '</p><p class="why">Programs to look at: ' + c.progs.map(progLink).join(" · ") + '</p><p class="why">Courses to try: ' + c.courses.map(function (id) { var cc = BYID[id]; return cc ? '<a href="#" data-peek="' + esc(id) + '">' + esc(id + " " + cc.title.split(":")[0]) + "</a>" : ""; }).join(" · ") + "</p></article>";
+      }).join("") + badge;
+      state.careers = uniq(top.map(function (r) { return r.it.ref.id; }).concat(state.careers)).slice(0, 4); state.careerQ = uniq(state.careerQ.concat([q])).slice(-3);
+      html += '<p class="after"><a href="#" data-go="alumni">Where alumni actually work</a> · <a href="#" data-go="guide">Open your guide</a></p>';
+    } else if (kind === "faculty") {
+      top = rows.filter(function (r) { return r.score > 0.2; }).slice(0, 6);
+      if (res.weak || !top.length) { html += '<p class="lead">No faculty research area matched those words closely. Try naming a place, period, method, or theme. The nearest entries:</p>'; top = rows.slice(0, 3); }
+      else html += '<p class="lead">Published research areas closest to <em>\u201c' + esc(q) + "\u201d</em>:</p>";
+      html += top.map(function (r) { return facultyCard(r.it.ref, r); }).join("") + badge;
+      html += '<p class="why">Research areas are condensed from public department profiles. A match does not imply availability to supervise or teach; contact the department.</p>';
+      state.faculty = uniq(top.slice(0, 4).map(function (r) { return r.it.ref.id; }).concat(state.faculty)).slice(0, 6); state.facultyQ = uniq(state.facultyQ.concat([q])).slice(-3);
+    } else if (kind === "partners") {
+      top = rows.filter(function (r) { return r.score > 0.15; }).slice(0, 3); if (!top.length) top = rows.slice(0, 3);
+      html += '<p class="lead">Pairings worth a conversation with the undergraduate advisor:</p>' + top.map(function (r) {
+        var c = r.it.ref; var target = c.id === "bgins" ? "bgins" : c.id === "minor" ? "minor" : "combined";
+        return '<article class="card"><header><h4>' + esc(c.t) + "</h4></header><p>" + esc(c.d) + '</p><button class="btn small pick" data-pick="' + c.id + '">Interested in this</button> <a href="#" data-go="' + target + '">How it works</a></article>';
+      }).join("") + badge + '<p class="why">The department highlights these combinations; other subjects may also work, so confirm with an advisor.</p>';
+      state.comboQ = uniq(state.comboQ.concat([q])).slice(-3);
+    } else {
+      top = rows.filter(function (r) { return r.score > 0.2; }).slice(0, 3);
+      if (!top.length) html += '<p class="lead">No prepared note answers that. The department office can: <a href="#" data-go="contact">contact details</a>.</p>', top = [];
+      html += top.map(function (r) { var c = r.it.ref; return '<article class="card"><header><h4>' + esc(c.q) + "</h4></header><p>" + esc(c.a) + '</p><p class="after"><a href="#" data-go="' + c.go + '">Take me there</a></p></article>'; }).join("") + (top.length ? badge : "");
+      state.asked = uniq(state.asked.concat([q])).slice(-5);
+    }
+    save(); box.innerHTML = html; updateCounter();
+  }
+  function uniq(a) { return a.filter(function (x, i) { return a.indexOf(x) === i; }); }
+
+  /* ---------- widgets ---------- */
+  function widgetSearch(el) {
+    var kind = el.dataset.kind, id = el.id, chips = (el.dataset.chips || "").split("|").filter(Boolean);
+    el.innerHTML = '<label for="q-' + id + '" class="qlabel">' + esc(el.dataset.prompt) + '</label><textarea id="q-' + id + '" rows="3" placeholder="' + esc(el.dataset.placeholder || "") + '"></textarea>' +
+      (chips.length ? '<div class="chips" aria-label="Examples">' + chips.map(function (c) { return '<button class="chip" type="button">' + esc(c) + "</button>"; }).join("") + "</div>" : "") +
+      '<button class="btn go" type="button">' + esc(el.dataset.button || "Search") + '</button> <span class="engine nochat">Ranks existing text only. Nothing is generated.</span><div class="results" aria-live="polite"></div>';
+    var ta = el.querySelector("textarea"), box = el.querySelector(".results");
+    var run = async function () {
+      var q = ta.value.trim(); if (!q) { ta.focus(); return; }
+      box.innerHTML = '<p class="why">Searching\u2026</p>';
+      var adjust = null;
+      if (kind === "courses") adjust = function (c) { var m = c.term ? 1 : 0.88; if (/applicant|first|transfer|browsing|other/.test(state.stage)) { if (c.level === 4) m *= 0.7; } return m; };
+      var res = await match(kind, q, { adjust: adjust });
+      await renderResults(kind, res, box, q);
+    };
+    el.querySelector(".go").onclick = run;
+    ta.addEventListener("keydown", function (e) { if (e.key === "Enter" && (e.ctrlKey || e.metaKey)) run(); });
+    Array.prototype.forEach.call(el.querySelectorAll(".chip"), function (b) { b.onclick = function () { ta.value = b.textContent; run(); }; });
+    var last = { courses: state.queries, careers: state.careerQ, partners: state.comboQ, faq: state.asked, faculty: state.facultyQ }[kind] || [];
+    if (last.length) ta.placeholder = "Last time you wrote: “" + last[last.length - 1] + "”";
+  }
+
+  function fmtCr(x) { return (Math.round(x * 10) / 10).toFixed(1); }
+  /* Credit-aware requirement check. Level and pool lines draw credit from saved courses
+     (each credit counted once); category lines may overlap with level lines, as in the calendar. */
+  function evalReq(R) {
+    var saved = state.saved.map(function (id) { return BYID[id]; }).filter(Boolean);
+    var left = {}; saved.forEach(function (c) { left[c.id] = c.cr; });
+    var out = R.lines.map(function () { return null; });
+    function take(line, pred) {
+      var got = [], have = 0;
+      saved.forEach(function (c) {
+        if (have >= line.cr - 1e-9 && line.cap !== false) return;
+        if (left[c.id] <= 0 || !pred(c)) return;
+        var use = Math.min(left[c.id], line.cr - have); left[c.id] -= use; have += use; got.push({ c: c, cr: use });
+      });
+      return { have: have, got: got };
+    }
+    R.lines.forEach(function (l, i) {
+      if (!l.lvl) return;
+      out[i] = take(l, function (c) {
+        if (l.lvl.indexOf(c.level) < 0) return false;
+        if (c.level === 4 && (c.num === "4910" || c.num === "4917")) return false;
+        return c.hist || (l.fysm && /^FYSM/.test(c.id));
+      });
+    });
+    R.lines.forEach(function (l, i) {
+      if (!l.pool) return;
+      out[i] = take(l, function (c) { return c.hist && l.pool.indexOf(c.level) >= 0; });
+    });
+    R.lines.forEach(function (l, i) {
+      if (!l.cat) return;
+      var set = D.SETS[l.cat] || []; if (l.cat === "b1800") set = set.concat(D.SETS.b1800pub);
+      var got = [], have = 0;
+      saved.forEach(function (c) { if (c.hist && set.indexOf(c.num) >= 0) { got.push({ c: c, cr: c.cr }); have += c.cr; } });
+      out[i] = { have: have, got: got };
+    });
+    return out;
+  }
+  function checkCats(cat) {
+    var set = D.SETS[cat] || []; if (cat === "b1800") set = set.concat(D.SETS.b1800pub);
+    return state.saved.filter(function (id) { var c = BYID[id]; return c && set.indexOf(c.num) >= 0; });
+  }
+  function widgetReqs(el) {
+    var which = el.dataset.program || state.reqProgram || "honours";
+    var opts = Object.keys(D.REQ).map(function (k) { return '<option value="' + k + '"' + (k === which ? " selected" : "") + ">" + esc(D.REQ[k].name) + "</option>"; }).join("");
+    function draw() {
+      var R = D.REQ[which];
+      var ev = evalReq(R);
+      var lines = R.lines.map(function (l, i) {
+        var r = ev[i];
+        if (!r) return "<li><span class='box'>□</span> " + esc(l.t) + "</li>";
+        var done = r.have >= l.cr - 1e-9;
+        var mark = "<span class='box" + (done ? " ok'>✓" : "'>□") + "</span>";
+        var names = r.got.map(function (x) { return esc(x.c.id) + (x.cr !== 0.5 ? " (" + fmtCr(x.cr) + ")" : ""); }).join(", ");
+        var prog = r.got.length ? '<span class="covered"> ← ' + fmtCr(Math.min(r.have, l.cr)) + " of " + fmtCr(l.cr) + " credit" + (l.cr === 1 ? "" : "s") + " from your saved: " + names + "</span>" : "";
+        return "<li>" + mark + " " + esc(l.t) + prog + "</li>";
+      }).join("");
+      var n = state.saved.length;
+      el.querySelector(".reqbody").innerHTML = "<h3>" + esc(R.name) + '</h3><p class="lead">' + esc(R.credits) + "</p><ul class='reqlist'>" + lines + "</ul><p class='why'>" + esc(R.note) + "</p><p class='why'>" + (n ? "Your " + n + " saved course(s) are counted by level and credit weight (0.5 per course; full-year courses 1.0); each credit counts once toward level lines, while category lines (before 1800, Themes, and so on) may overlap with them. This is a planning aid, not a degree audit; confirm with the calendar." : "Add courses to your guide from the interests page and they will tick off the lists above.") + '</p><p class="why">Authoritative source: <a href="https://calendar.carleton.ca/undergrad/undergradprograms/history/" target="_blank" rel="noopener">the undergraduate calendar</a>.</p>';
+    }
+    el.innerHTML = '<label for="rp" class="qlabel">Choose a program</label><select id="rp">' + opts + '</select><div class="reqbody"></div>';
+    el.querySelector("select").onchange = function (e) { which = e.target.value; state.reqProgram = which; save(); draw(); };
+    draw();
+  }
+
+  function guideText() {
+    var parts = [];
+    var st = { applicant: "thinking about applying", first: "in first year", current: "already in a History program", transfer: "transferring or returning", other: "in another program", browsing: "browsing" }[state.stage];
+    parts.push("GUIDE TO HISTORY AT CARLETON, assembled from the choices made (unofficial prototype; verify against the undergraduate calendar)\n");
+    if (st) parts.push("Stage: " + st + ".");
+    if (state.queries.length) parts.push("Interests described: " + state.queries.map(function (q) { return "“" + q + "”"; }).join("; ") + ".");
+    var L = leanings();
+    parts.push("\nPrograms worth a look:");
+    L.forEach(function (x) { parts.push("- " + PROGS[x.k].name + (x.why.length ? " (" + x.why.slice(0, 2).join("; ") + ")" : "")); });
+    if (state.saved.length) {
+      parts.push("\nSaved courses:");
+      state.saved.forEach(function (id) { var c = BYID[id]; if (c) parts.push("- " + c.id + " " + c.title + " [" + termLabel(c.term) + "]" + (cats(c).length ? " (" + cats(c).map(function (x) { return x[0]; }).join(", ") + ")" : "")); });
+    }
+    var fi = uniq(state.savedFaculty.concat(state.faculty)).slice(0, 4);
+    if (fi.length) parts.push("\nFaculty with overlapping published research areas (not a statement of availability):\n" + fi.map(function (id) { return "- " + FBYID[id].name + ", " + FBYID[id].title + " (" + FBYID[id].url + ")"; }).join("\n"));
+    if (state.careers.length) parts.push("\nCareer directions: " + state.careers.map(function (id) { return (D.CAREERS.filter(function (c) { return c.id === id; })[0] || {}).t; }).join("; ") + ".");
+    if (state.combos.length) parts.push("Combinations to explore: " + state.combos.map(function (id) { return (D.PARTNERS.filter(function (c) { return c.id === id; })[0] || {}).t; }).join("; ") + ".");
+    parts.push("\nNext steps:\n- Talk to the department: 613-520-2828, history@carleton.ca\n- Check requirements in the calendar: calendar.carleton.ca/undergrad/undergradprograms/history/\n- Check course terms on Carleton Central (the schedule is subject to change)\n- Admissions: admissions.carleton.ca/programs/history/");
+    return parts.join("\n");
+  }
+  function widgetGuide(el) {
+    var L = leanings(), h = "";
+    var st = { applicant: "thinking about applying to Carleton", first: "in first year", current: "already in a History program", transfer: "transferring or returning to university", other: "in another program, curious about History", browsing: "browsing" }[state.stage];
+    if (!st && !state.queries.length && !state.saved.length && !state.careers.length) {
+      el.innerHTML = '<p class="lead">The guide is empty so far. It fills in as you explore: describe what kind of history interests you, what you hope to do afterwards, or what you want to combine it with.</p><p><a href="#" data-go="hub">Back to the hallway</a></p>';
+      return;
+    }
+    var facIds = uniq(state.savedFaculty.concat(state.faculty)).slice(0, 4);
+    h += '<section class="gsec"><h3>Where you are</h3><p>' + (st ? "You said you are " + esc(st) + "." : "You haven’t said where you are in your studies.") + (state.queries.length ? " You wrote about: " + state.queries.map(function (q) { return "<em>“" + esc(q) + "”</em>"; }).join(", ") + "." : "") + "</p></section>";
+    h += '<section class="gsec"><h3>Programs worth a look</h3><ol class="plist">' + L.map(function (x) { return "<li><strong>" + progLink(x.k) + "</strong>" + (x.why.length ? "<br><span class='why'>Because " + x.why.slice(0, 2).map(esc).join(", and ") + ".</span>" : "") + "</li>"; }).join("") + "</ol></section>";
+    if (state.saved.length) {
+      h += '<section class="gsec"><h3>Courses you saved</h3>' + state.saved.map(function (id) { var c = BYID[id]; return c ? courseCard(c) : ""; }).join("") +
+        '<p class="after"><a href="#" data-go="requirements">Check these against the requirement lists</a></p></section>';
+    } else h += '<section class="gsec"><h3>Courses</h3><p>None are saved yet. <a href="#" data-go="interests">Describe what you\u2019re drawn to</a> and save courses that look good.</p></section>';
+    if (facIds.length) h += '<section class="gsec"><h3>Faculty whose research areas overlap</h3>' + facIds.map(function (id) { return FBYID[id] ? facultyCard(FBYID[id], null, true) : ""; }).join("") + '<p class="why">Published research areas only; not a statement about availability. <a href="#" data-go="faculty">Search faculty research</a></p></section>';
+    if (state.careers.length) h += '<section class="gsec"><h3>Career directions</h3><ul>' + state.careers.map(function (id) { var c = D.CAREERS.filter(function (x) { return x.id === id; })[0]; return c ? "<li>" + esc(c.t) + "</li>" : ""; }).join("") + "</ul></section>";
+    if (state.combos.length) h += '<section class="gsec"><h3>Combinations to explore</h3><ul>' + state.combos.map(function (id) { var c = D.PARTNERS.filter(function (x) { return x.id === id; })[0]; return c ? "<li>" + esc(c.t) + "</li>" : ""; }).join("") + "</ul></section>";
+    h += '<section class="gsec"><h3>Next steps</h3><ul><li>Talk to the department: 613-520-2828 or <a href="mailto:history@carleton.ca">history@carleton.ca</a>.</li><li>Confirm requirements in <a href="https://calendar.carleton.ca/undergrad/undergradprograms/history/" target="_blank" rel="noopener">the undergraduate calendar</a>.</li><li>Check terms and delivery on Carleton Central; the course schedule is subject to change.</li><li><a href="https://admissions.carleton.ca/programs/history/" target="_blank" rel="noopener">Admissions information for History</a>.</li></ul></section>';
+    h += '<p class="actions"><button class="btn" id="copyguide">Copy as text</button> <button class="btn" id="printguide">Print</button> <button class="btn ghost" id="clearguide">Clear your guide and start over</button></p><p class="why" id="copymsg"></p>';
+    el.innerHTML = h;
+    var cg = el.querySelector("#copyguide");
+    cg.onclick = function () {
+      var t = guideText(), m = el.querySelector("#copymsg");
+      (navigator.clipboard && navigator.clipboard.writeText ? navigator.clipboard.writeText(t) : Promise.reject()).then(function () { m.textContent = "Copied."; }, function () {
+        var ta = document.createElement("textarea"); ta.value = t; document.body.appendChild(ta); ta.select();
+        try { document.execCommand("copy"); m.textContent = "Copied."; } catch (e) { m.textContent = "Select and copy the page instead."; } ta.remove();
+      });
+    };
+    el.querySelector("#printguide").onclick = function () { window.print(); };
+    el.querySelector("#clearguide").onclick = function () { if (confirm("Clear everything you have told the guide?")) { state = defaults(); save(); go("Start"); } };
+  }
+
+  /* ---------- passage rendering ---------- */
+  function inline(s) {
+    s = s.replace(/\[\[([^\]]+)\]\]/g, function (m, body) {
+      var parts = body.split("|"), text = parts[0], target = parts[1] || parts[0], acts = parts[2] || "";
+      return '<a href="#" class="plink" data-go="' + esc(target) + '"' + (acts ? ' data-act="' + esc(acts) + '"' : "") + ">" + text + "</a>";
+    });
+    s = s.replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>").replace(/(^|[^*])\*([^*\n]+)\*/g, "$1<em>$2</em>");
+    s = s.replace(/\[([^\]]+)\]\((https?:[^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>');
+    return s;
+  }
+  function markdown(src) {
+    src = src.replace(/^(#{1,3} .*)$/gm, "\n$1\n"); // headings always form their own block
+    var blocks = src.split(/\n{2,}/), out = [];
+    blocks.forEach(function (b) {
+      b = b.replace(/^\s+|\s+$/g, ""); if (!b) return;
+      if (/^</.test(b)) { out.push(b); return; }
+      var m;
+      if ((m = b.match(/^(#{1,3}) (.*)$/))) { out.push("<h" + m[1].length + ">" + inline(m[2]) + "</h" + m[1].length + ">"); return; }
+      if (/^---+$/.test(b)) { out.push("<hr>"); return; }
+      if (/^(- |\d+\. )/.test(b)) {
+        var ordered = /^\d+\. /.test(b), items = b.split(/\n(?=- |\d+\. )/).map(function (l) { return "<li>" + inline(l.replace(/^(- |\d+\. )/, "")) + "</li>"; });
+        out.push((ordered ? "<ol>" : "<ul>") + items.join("") + (ordered ? "</ol>" : "</ul>")); return;
+      }
+      if (/^> /.test(b)) { out.push("<blockquote>" + inline(b.replace(/^> ?/gm, "")) + "</blockquote>"); return; }
+      if (/^\{\{menu\}\}/.test(b)) { return; }
+      out.push("<p>" + inline(b.replace(/\n/g, "<br>")) + "</p>");
+    });
+    return out.join("\n");
+  }
+  function cond(expr) {
+    expr = expr.trim();
+    var neg = false; if (expr[0] === "!") { neg = true; expr = expr.slice(1); }
+    var r, m = expr.match(/^(\w+)=(.+)$/);
+    if (m) r = m[2].split("|").indexOf(String(state[m[1]] == null ? "" : state[m[1]])) >= 0;
+    else if (expr === "saved") r = state.saved.length > 0;
+    else r = !!state[expr] && (!Array.isArray(state[expr]) || state[expr].length > 0);
+    return neg ? !r : r;
+  }
+  function preprocess(txt) {
+    txt = txt.replace(/\{\{if ([^}]+)\}\}([\s\S]*?)\{\{\/if\}\}/g, function (m, c, body) {
+      var parts = body.split("{{else}}"); return cond(c) ? parts[0] : (parts[1] || "");
+    });
+    txt = txt.replace(/\{\{var (\w+)\}\}/g, function (m, k) { return k === "savedCount" ? String(state.saved.length) : esc(state[k] == null ? "" : state[k]); });
+    txt = txt.replace(/\{\{(search|reqs|guide|landscape)([^}]*)\}\}/g, function (m, kind, attrs) {
+      var data = "";
+      attrs.replace(/(\w+)="([^"]*)"/g, function (mm, k, v) { data += ' data-' + k + '="' + esc(v) + '"'; return mm; });
+      return "\n\n<div class=\"widget\" data-w=\"" + kind + "\"" + data + " id=\"w-" + kind + "-" + Math.random().toString(36).slice(2, 6) + "\"></div>\n\n";
+    });
+    return txt;
+  }
+
+  var root, titleEl;
+  var history = [];
+  function go(name, acts) {
+    if (!P[name]) { name = "Start"; }
+    if (acts) acts.split(";").forEach(function (a) { var kv = a.split("="); if (kv[0]) state[kv[0].trim()] = (kv[1] || "").trim(); });
+    state.current = name; save();
+    if (history[history.length - 1] !== name) history.push(name);
+    render(name);
+    window.scrollTo(0, 0);
+    try { document.getElementById("main").focus(); } catch (e) {}
+  }
+  function render(name) {
+    var p = P[name];
+    root.className = "passage p-" + name.replace(/\W/g, "");
+    root.innerHTML = markdown(preprocess(p.text));
+    Array.prototype.forEach.call(root.querySelectorAll(".widget"), function (w) {
+      var k = w.dataset.w;
+      if (k === "search") widgetSearch(w); else if (k === "reqs") widgetReqs(w); else if (k === "guide") widgetGuide(w); else if (k === "landscape") widgetLandscape(w);
+    });
+    document.title = (name === "Start" ? "" : p.title ? p.title + " · " : "") + "History at Carleton: an interactive guide";
+    updateCounter();
+  }
+  function updateCounter() { var c = document.getElementById("gcount"); if (c) c.textContent = state.saved.length ? "(" + state.saved.length + ")" : ""; }
+
+  /* ---------- landscape: a 2-D map of courses and faculty research ---------- */
+  var LS = { cache: {}, refresh: null };
+  var LS_COLORS = ["#0072B2", "#D55E00", "#009E73", "#CC79A7", "#E69F00", "#56B4E9", "#7A5195", "#8C564B", "#5F6B7A", "#B8A100"];
+  function lsItems() {
+    var cc = corpus("courses"), fc = corpus("faculty"), out = [];
+    cc.items.forEach(function (it) { out.push({ kind: "c", ref: it.ref, key: it.ref.id, label: it.ref.id + " " + it.ref.title, tf: it.tf }); });
+    fc.items.forEach(function (it) { out.push({ kind: "f", ref: it.ref, key: "f:" + it.ref.id, label: it.ref.name, tf: it.tf }); });
+    return out;
+  }
+  function lsSimilarity(items, vecs) {
+    var N = items.length, S = [], i, j, d;
+    for (i = 0; i < N; i++) S.push(new Float64Array(N));
+    if (vecs.dense) {
+      for (i = 0; i < N; i++) for (j = i; j < N; j++) { S[i][j] = S[j][i] = cosine(vecs.v[i], vecs.v[j]); }
+    } else {
+      for (i = 0; i < N; i++) for (j = i; j < N; j++) {
+        var a = vecs.v[i], b = vecs.v[j], s = 0; if (Object.keys(a).length > Object.keys(b).length) { var t = a; a = b; b = t; }
+        for (var k in a) if (b[k]) s += a[k] * b[k];
+        S[i][j] = S[j][i] = s;
+      }
+    }
+    return S;
+  }
+  function lsLexVectors(items) {
+    var N = items.length, df = {};
+    items.forEach(function (it) { Object.keys(it.tf).forEach(function (t) { df[t] = (df[t] || 0) + 1; }); });
+    var v = items.map(function (it) {
+      var o = {}, n = 0;
+      Object.keys(it.tf).forEach(function (t) { if (df[t] >= 2 && df[t] <= N * 0.5) { var w = (1 + Math.log(it.tf[t])) * Math.log(N / df[t]); o[t] = w; n += w * w; } });
+      n = Math.sqrt(n) || 1; Object.keys(o).forEach(function (t) { o[t] /= n; }); return o;
+    });
+    return { v: v, dense: false, df: df };
+  }
+  function lsEigen(S, K) {
+    var N = S.length, rm = new Float64Array(N), tm = 0, i, j;
+    for (i = 0; i < N; i++) { for (j = 0; j < N; j++) rm[i] += S[i][j]; tm += rm[i]; rm[i] /= N; } tm /= N * N;
+    var M = S.map(function (row, a) { var r = new Float64Array(N); for (var b = 0; b < N; b++) r[b] = row[b] - rm[a] - rm[b] + tm; return r; });
+    var seed = 7, rnd = function () { seed = (seed * 16807) % 2147483647; return seed / 2147483647 - 0.5; };
+    var vals = [], vecs = [];
+    for (var k = 0; k < K; k++) {
+      var u = new Float64Array(N).map(rnd), lam = 0;
+      for (var it = 0; it < 80; it++) {
+        var w = new Float64Array(N), n = 0;
+        for (i = 0; i < N; i++) { var s = 0, row = M[i]; for (j = 0; j < N; j++) s += row[j] * u[j]; w[i] = s; n += s * s; }
+        n = Math.sqrt(n) || 1; lam = n; for (i = 0; i < N; i++) u[i] = w[i] / n;
+      }
+      vals.push(lam); vecs.push(u);
+      for (i = 0; i < N; i++) for (j = 0; j < N; j++) M[i][j] -= lam * u[i] * u[j];
+    }
+    return vecs.map(function (u, k) { var sc = Math.sqrt(Math.max(vals[k], 0)); return Array.prototype.map.call(u, function (x) { return x * sc; }); });
+  }
+  function lsLayout(S, E) {
+    var N = S.length, D = E.length, P = [], i, j;
+    var minx = Infinity, maxx = -Infinity, miny = Infinity, maxy = -Infinity;
+    for (i = 0; i < N; i++) { minx = Math.min(minx, E[0][i]); maxx = Math.max(maxx, E[0][i]); miny = Math.min(miny, E[1][i]); maxy = Math.max(maxy, E[1][i]); }
+    for (i = 0; i < N; i++) P.push([(E[0][i] - minx) / (maxx - minx || 1) * 2 - 1, (E[1][i] - miny) / (maxy - miny || 1) * 2 - 1]);
+    var KN = 6, edges = [];
+    for (i = 0; i < N; i++) {
+      var idx = []; for (j = 0; j < N; j++) if (j !== i) idx.push(j);
+      idx.sort(function (a, b) { return S[i][b] - S[i][a]; });
+      idx.slice(0, KN).forEach(function (j) { edges.push([i, j, Math.max(S[i][j], 0.02)]); });
+    }
+    var T = 300;
+    for (var t = 0; t < T; t++) {
+      var temp = 1 - t / T, F = P.map(function () { return [0, 0]; });
+      for (i = 0; i < N; i++) for (j = i + 1; j < N; j++) {
+        var dx = P[i][0] - P[j][0], dy = P[i][1] - P[j][1], d2 = dx * dx + dy * dy + 0.002, r = 0.00045 / d2;
+        F[i][0] += dx * r; F[i][1] += dy * r; F[j][0] -= dx * r; F[j][1] -= dy * r;
+      }
+      edges.forEach(function (e) {
+        var a = e[0], b = e[1], dx = P[a][0] - P[b][0], dy = P[a][1] - P[b][1], k = 0.9 * e[2];
+        F[a][0] -= dx * k * 0.1; F[a][1] -= dy * k * 0.1; F[b][0] += dx * k * 0.1; F[b][1] += dy * k * 0.1;
+      });
+      var cap = 0.03 * temp + 0.002;
+      for (i = 0; i < N; i++) { var fx = F[i][0], fy = F[i][1], m = Math.sqrt(fx * fx + fy * fy) || 1, s = Math.min(m, cap) / m; P[i][0] += fx * s; P[i][1] += fy * s; }
+    }
+    minx = miny = Infinity; maxx = maxy = -Infinity;
+    P.forEach(function (p) { minx = Math.min(minx, p[0]); maxx = Math.max(maxx, p[0]); miny = Math.min(miny, p[1]); maxy = Math.max(maxy, p[1]); });
+    return P.map(function (p) { return [40 + (p[0] - minx) / (maxx - minx || 1) * 820, 36 + (p[1] - miny) / (maxy - miny || 1) * 528]; });
+  }
+  function lsCluster(E, K) {
+    var N = E[0].length, X = [], i, k, d;
+    for (i = 0; i < N; i++) X.push(E.slice(0, 8).map(function (e) { return e[i]; }));
+    var dist = function (a, b) { var s = 0; for (var q = 0; q < a.length; q++) s += (a[q] - b[q]) * (a[q] - b[q]); return s; };
+    var cen = [X[0].slice()], best = 0;
+    while (cen.length < K) {
+      var far = -1, fd = -1;
+      for (i = 0; i < N; i++) { var m = Infinity; cen.forEach(function (c) { m = Math.min(m, dist(X[i], c)); }); if (m > fd) { fd = m; far = i; } }
+      cen.push(X[far].slice());
+    }
+    var asg = new Array(N).fill(0);
+    for (var it = 0; it < 25; it++) {
+      for (i = 0; i < N; i++) { var bd = Infinity; for (k = 0; k < K; k++) { var dd = dist(X[i], cen[k]); if (dd < bd) { bd = dd; asg[i] = k; } } }
+      for (k = 0; k < K; k++) {
+        var mem = []; for (i = 0; i < N; i++) if (asg[i] === k) mem.push(i);
+        if (mem.length) cen[k] = cen[k].map(function (_, q) { var s = 0; mem.forEach(function (i) { s += X[i][q]; }); return s / mem.length; });
+      }
+    }
+    return asg;
+  }
+  function lsLabels(items, asg, K, df) {
+    var N = items.length, words = {}, out = [];
+    var generic = { hist: 1, histori: 1, cours: 1, student: 1, studi: 1, seminar: 1, topic: 1, introduct: 1, explor: 1, examin: 1 };
+    items.forEach(function (it) {
+      var txt = it.kind === "c" ? it.ref.title + " " + it.ref.desc : it.ref.areas;
+      (txt.toLowerCase().match(/[a-z]{3,}/g) || []).forEach(function (w) { var s = tokens(w)[0]; if (s && (!words[s] || w.length < words[s].length)) words[s] = w; });
+    });
+    for (var k = 0; k < K; k++) {
+      var mem = items.filter(function (_, i) { return asg[i] === k; }), cnt = {};
+      mem.forEach(function (it) { Object.keys(it.tf).forEach(function (t) { cnt[t] = (cnt[t] || 0) + 1; }); });
+      var sc = Object.keys(cnt).filter(function (t) { return words[t] && !generic[t] && df[t] <= N * 0.3 && cnt[t] >= Math.min(2, mem.length); })
+        .map(function (t) { return [t, (cnt[t] / mem.length) * Math.log(1 + N / df[t])]; }).sort(function (a, b) { return b[1] - a[1]; });
+      var pick = []; sc.forEach(function (x) { var w = words[x[0]]; if (pick.length < 3 && !pick.some(function (q) { return q.slice(0, 5) === w.slice(0, 5); })) pick.push(w); }); out.push(pick);
+    }
+    return out;
+  }
+  async function lsCompute(useSem) {
+    var key = useSem ? "sem" : "lex"; if (LS.cache[key]) return LS.cache[key];
+    var items = lsItems(), vecs;
+    if (useSem) {
+      var emb = embedFn(), cc = corpus("courses"), fc = corpus("faculty");
+      var ce = await docEmbeddings("courses", cc, emb), fe = await docEmbeddings("faculty", fc, emb);
+      vecs = { v: ce.concat(fe), dense: true, df: lsLexVectors(items).df };
+    } else vecs = lsLexVectors(items);
+    var S = lsSimilarity(items, vecs), E = lsEigen(S, 8), P = lsLayout(S, E), K = 9, asg = lsCluster(E, K);
+    var res = { items: items, P: P, asg: asg, K: K, labels: lsLabels(items, asg, K, lsLexVectors(items).df), mode: useSem ? "sem" : "lex" };
+    LS.cache[key] = res; return res;
+  }
+  function widgetLandscape(el) {
+    var st = { color: "cluster", c: true, f: true, only: false, focus: null, sel: null, hl: null, star: null, vb: [0, 0, 900, 600] };
+    var data = null;
+    el.innerHTML =
+      '<p class="why" id="ls-mode"></p>' +
+      '<form class="ls-q" role="search"><label for="ls-in" class="qlabel">Place an interest on the map</label><div class="ls-row"><input id="ls-in" type="text" placeholder="e.g. museums and the history of play" autocomplete="off"><button class="btn" type="submit">Place it</button><button class="btn ghost" type="button" id="ls-clear">Clear</button></div></form>' +
+      '<div class="ls-ctl"><label><input type="checkbox" id="ls-c" checked> Courses (circles)</label><label><input type="checkbox" id="ls-f" checked> Faculty research (diamonds)</label><label><input type="checkbox" id="ls-o"> Offered 2026–27 only</label>' +
+      '<label>Colour by <select id="ls-col"><option value="cluster">Cluster</option><option value="level">Course level</option></select></label>' +
+      '<span class="ls-zoom"><button type="button" class="btn small" id="ls-zi" aria-label="Zoom in">+</button><button type="button" class="btn small" id="ls-zo" aria-label="Zoom out">−</button><button type="button" class="btn small" id="ls-zr">Reset</button></span></div>' +
+      '<div class="ls-wrap"><svg id="ls-svg" viewBox="0 0 900 600" role="group" aria-label="Map of courses and faculty research areas; use the lists below for a text version"></svg></div>' +
+      '<div id="ls-found"></div><div id="ls-detail" aria-live="polite"></div>' +
+      '<p class="why">Nearby points use similar words' + '<span id="ls-how"></span>. The map is a flattened picture of a many-dimensional comparison, so distances are approximate, and position is not a ranking of anyone. Only people with published research areas appear, and faculty are placed from their profile text alone.</p>' +
+      '<div id="ls-legend"></div>';
+    var $ = function (s) { return el.querySelector(s); }, svg = $("#ls-svg");
+    function colorOf(i) {
+      var it = data.items[i];
+      if (st.color === "level") return it.kind === "c" ? ["#9ecae1", "#4292c6", "#2171b5", "#08306b"][Math.min(Math.max(it.ref.level, 1), 4) - 1] : "#C0392B";
+      return LS_COLORS[data.asg[i] % LS_COLORS.length];
+    }
+    function visible(i) {
+      var it = data.items[i];
+      if (it.kind === "c" && (!st.c || (st.only && !it.ref.term))) return false;
+      if (it.kind === "f" && !st.f) return false;
+      return true;
+    }
+    function link(i) {
+      var it = data.items[i], out = [];
+      if (it.kind === "f") it.ref.teaches.forEach(function (c) { var j = data.index[c.id]; if (j != null) out.push(j); });
+      else { var f = FBYSHORT[it.ref.prof]; if (f && data.index["f:" + f.id] != null) out.push(data.index["f:" + f.id]); }
+      return out;
+    }
+    function draw() {
+      var s = "", links = st.sel != null ? link(st.sel) : [], hl = st.hl;
+      data.labels.forEach(function (l, k) {
+        var pts = data.P.filter(function (_, i) { return data.asg[i] === k; }); if (!pts.length || st.color !== "cluster") return;
+        var cx = pts.reduce(function (a, p) { return a + p[0]; }, 0) / pts.length, cy = pts.reduce(function (a, p) { return a + p[1]; }, 0) / pts.length;
+        cx = Math.max(95, Math.min(805, cx)); s += '<text class="ls-lab" x="' + cx.toFixed(1) + '" y="' + cy.toFixed(1) + '" text-anchor="middle" fill="' + LS_COLORS[k % LS_COLORS.length] + '">' + esc(l.join(" · ")) + "</text>";
+      });
+      if (st.sel != null) links.forEach(function (j) { s += '<line class="ls-link" x1="' + data.P[st.sel][0].toFixed(1) + '" y1="' + data.P[st.sel][1].toFixed(1) + '" x2="' + data.P[j][0].toFixed(1) + '" y2="' + data.P[j][1].toFixed(1) + '"/>'; });
+      data.items.forEach(function (it, i) {
+        if (!visible(i)) return;
+        var p = data.P[i], dim = (st.focus != null && data.asg[i] !== st.focus) || (hl && !hl[i] && st.sel !== i), col = colorOf(i);
+        var off = it.kind === "c" && !it.ref.term, sel = st.sel === i || links.indexOf(i) >= 0;
+        var shape = it.kind === "f" ? '<path d="M0,-8 L8,0 L0,8 L-8,0 Z" fill="' + col + '" stroke="var(--ink)" stroke-width="1"/>' : '<circle r="' + (sel ? 7 : 5) + '" fill="' + (off ? "var(--paper)" : col) + '" stroke="' + col + '" stroke-width="2"/>';
+        s += '<g class="pt' + (dim ? " dim" : "") + (hl && hl[i] ? " hit" : "") + (sel ? " sel" : "") + '" data-i="' + i + '" transform="translate(' + p[0].toFixed(1) + "," + p[1].toFixed(1) + ')" tabindex="0" role="button" aria-label="' + esc(it.label) + '"><title>' + esc(it.label) + "</title>" + shape + "</g>";
+      });
+      if (st.star) s += '<g class="ls-star" transform="translate(' + st.star[0].toFixed(1) + "," + st.star[1].toFixed(1) + ')"><path d="M0,-13 L4,-4 13,-4 6,2 9,12 0,6 -9,12 -6,2 -13,-4 -4,-4Z" fill="#E6B800" stroke="var(--ink)" stroke-width="1.5"/><text y="-18" text-anchor="middle" class="ls-lab" fill="var(--ink)">your interest</text></g>';
+      svg.innerHTML = s; svg.setAttribute("viewBox", st.vb.join(" "));
+      Array.prototype.forEach.call(el.querySelectorAll("#ls-legend summary[data-cl]"), function (sm) { var k = +sm.dataset.cl, n = sm.querySelector(".ls-n"); n.textContent = n.dataset.n + (st.focus === k ? " \u00b7 highlighted" : ""); });
+    }
+    function legend() {
+      var h = "";
+      data.labels.forEach(function (l, k) {
+        var mem = data.items.map(function (it, i) { return i; }).filter(function (i) { return data.asg[i] === k; });
+        h += '<details><summary data-cl="' + k + '"><span class="ls-sw" style="background:' + LS_COLORS[k % LS_COLORS.length] + '"></span>' + esc(l.join(", ") || "other") + ' <span class="ls-n" data-n="' + mem.length + '">' + mem.length + "</span></summary><ul>" +
+          mem.map(function (i) { var it = data.items[i]; return '<li><button type="button" class="linkbtn" data-ls="' + i + '">' + (it.kind === "f" ? "◆ " : "") + esc(it.label) + "</button></li>"; }).join("") + "</ul></details>";
+      });
+      $("#ls-legend").innerHTML = '<p class="subhead">Clusters (text version of the map)</p>' + h;
+    }
+    function select(i) {
+      st.sel = i; var it = data.items[i];
+      $("#ls-detail").innerHTML = '<p class="subhead">Selected</p>' + (it.kind === "c" ? courseCard(it.ref, null, true) : facultyCard(it.ref, null, true)) +
+        (link(i).length ? '<p class="why">' + (it.kind === "f" ? "Lines on the map join this person to the courses they teach in 2026–27." : "A line on the map joins this course to its instructor.") + "</p>" : "");
+      draw();
+    }
+    async function place(q) {
+      var cr = await match("courses", q), fr = await match("faculty", q), hl = {}, sx = 0, sy = 0, sw = 0;
+      var pick = cr.rows.slice(0, 6).concat(fr.rows.slice(0, 3)).filter(function (r) { return r.score > 0.25; });
+      if ((cr.weak && fr.weak) || !pick.length) { st.star = null; st.hl = null; $("#ls-found").innerHTML = '<p class="lead">No strong match. Try naming a place, a period, a method, or a theme.</p>'; draw(); return; }
+      pick.forEach(function (r) { var key = r.it.ref.areas !== undefined && r.it.ref.name ? "f:" + r.it.ref.id : r.it.ref.id, i = data.index[key]; if (i == null) return; hl[i] = 1; var w = r.score * r.score; sx += data.P[i][0] * w; sy += data.P[i][1] * w; sw += w; });
+      st.hl = hl; st.star = sw ? [sx / sw, sy / sw] : null;
+      $("#ls-found").innerHTML = '<p class="subhead">Nearest to what you wrote</p><ul>' + Object.keys(hl).map(function (i) { var it = data.items[i]; return '<li><button type="button" class="linkbtn" data-ls="' + i + '">' + (it.kind === "f" ? "◆ " : "") + esc(it.label) + "</button></li>"; }).join("") + "</ul>";
+      draw();
+    }
+    function zoom(f) { var b = st.vb, cx = b[0] + b[2] / 2, cy = b[1] + b[3] / 2, w = Math.min(900, Math.max(150, b[2] / f)), h = w * 600 / 900; st.vb = [Math.max(0, Math.min(900 - w, cx - w / 2)), Math.max(0, Math.min(600 - h, cy - h / 2)), w, h]; svg.setAttribute("viewBox", st.vb.join(" ")); }
+    async function load() {
+      var useSem = sem.status === "on"; $("#ls-mode").textContent = "Computing the map…";
+      try { data = await lsCompute(useSem); } catch (e) { data = await lsCompute(false); useSem = false; }
+      if (!data.index) { data.index = {}; data.items.forEach(function (it, i) { data.index[it.key] = i; }); }
+      $("#ls-mode").innerHTML = data.mode === "sem" ? "Layout from <strong>semantic embeddings</strong> (all-MiniLM-L6-v2, computed in this browser)." : 'Layout from <strong>keyword vectors</strong> (TF-IDF over course descriptions and research areas). <button type="button" class="btn small" id="ls-semgo">Re-draw with semantic embeddings</button>';
+      var b = $("#ls-semgo"); if (b) b.onclick = function () { if (sem.status !== "on") toggleSemantic(); };
+      $("#ls-how").textContent = data.mode === "sem" ? " or meaning" : "";
+      st.sel = null; st.hl = null; st.star = null; $("#ls-detail").innerHTML = ""; $("#ls-found").innerHTML = ""; legend(); draw();
+    }
+    LS.refresh = function () { if (document.body.contains(el)) load(); };
+    $(".ls-q").onsubmit = function (e) { e.preventDefault(); var q = $("#ls-in").value.trim(); if (q) place(q); };
+    $("#ls-clear").onclick = function () { st.star = null; st.hl = null; st.sel = null; st.focus = null; $("#ls-in").value = ""; $("#ls-found").innerHTML = ""; $("#ls-detail").innerHTML = ""; draw(); };
+    ["c", "f", "o"].forEach(function (k) { $("#ls-" + k).onchange = function (e) { st[k === "o" ? "only" : k] = e.target.checked; draw(); }; });
+    $("#ls-col").onchange = function (e) { st.color = e.target.value; draw(); };
+    $("#ls-zi").onclick = function () { zoom(1.5); }; $("#ls-zo").onclick = function () { zoom(1 / 1.5); }; $("#ls-zr").onclick = function () { st.vb = [0, 0, 900, 600]; svg.setAttribute("viewBox", "0 0 900 600"); };
+    svg.addEventListener("click", function (e) { var g = e.target.closest(".pt"); if (g) select(+g.dataset.i); });
+    svg.addEventListener("keydown", function (e) { if ((e.key === "Enter" || e.key === " ") && e.target.closest(".pt")) { e.preventDefault(); select(+e.target.closest(".pt").dataset.i); } });
+    var drag = null;
+    svg.addEventListener("pointerdown", function (e) { if (e.target.closest(".pt")) return; drag = { x: e.clientX, y: e.clientY, vb: st.vb.slice() }; svg.setPointerCapture(e.pointerId); });
+    svg.addEventListener("pointermove", function (e) { if (!drag) return; var r = svg.getBoundingClientRect(), k = drag.vb[2] / r.width; var w = drag.vb[2], h = drag.vb[3]; st.vb = [Math.max(0, Math.min(900 - w, drag.vb[0] - (e.clientX - drag.x) * k)), Math.max(0, Math.min(600 - h, drag.vb[1] - (e.clientY - drag.y) * k)), w, h]; svg.setAttribute("viewBox", st.vb.join(" ")); });
+    svg.addEventListener("pointerup", function () { drag = null; });
+    el.addEventListener("click", function (e) {
+      var b = e.target.closest("[data-ls]"); if (b) { select(+b.dataset.ls); $("#ls-detail").scrollIntoView({ block: "nearest" }); return; }
+      var s = e.target.closest("summary[data-cl]"); if (s) { var k = +s.dataset.cl; st.focus = st.focus === k ? null : k; draw(); }
+    });
+    load();
+  }
+
+  /* ---------- events ---------- */
+  document.addEventListener("click", function (e) {
+    var t = e.target.closest("[data-go],[data-save],[data-pick],[data-peek],[data-fsave],[data-similar]"); if (!t) return;
+    if (t.dataset.fsave) {
+      var fid = t.dataset.fsave, fi = state.savedFaculty.indexOf(fid);
+      if (fi >= 0) state.savedFaculty.splice(fi, 1); else state.savedFaculty.push(fid);
+      save(); t.setAttribute("aria-pressed", fi < 0); t.textContent = fi < 0 ? "\u2713 Saved to your guide" : "+ Save to your guide"; return;
+    }
+    if (t.dataset.similar) {
+      var sc = BYID[t.dataset.similar], box = t.closest(".card").querySelector(".similar");
+      if (box.innerHTML) { box.innerHTML = ""; return; }
+      box.innerHTML = '<p class="why">Searching\u2026</p>';
+      match("courses", sc.title + ". " + sc.desc, { exclude: sc.id, adjust: function (c) { return c.term ? 1 : 0.88; } }).then(function (res) {
+        box.innerHTML = '<p class="subhead">Closest to ' + esc(sc.id) + "</p>" + res.rows.slice(0, 4).map(function (r) { return courseCard(r.it.ref, r, true); }).join("");
+      });
+      return;
+    }
+    if (t.dataset.go) { e.preventDefault(); go(t.dataset.go, t.dataset.act); return; }
+    if (t.dataset.save) {
+      var id = t.dataset.save, i = state.saved.indexOf(id);
+      if (i >= 0) state.saved.splice(i, 1); else state.saved.push(id);
+      save(); var on = i < 0; t.setAttribute("aria-pressed", on); t.textContent = on ? "\u2713 Saved to your guide" : "+ Save to your guide"; updateCounter(); return;
+    }
+    if (t.dataset.pick) { var j = state.combos.indexOf(t.dataset.pick); if (j < 0) state.combos.push(t.dataset.pick); save(); t.textContent = "\u2713 Noted in your guide"; return; }
+    if (t.dataset.peek) {
+      e.preventDefault(); var c = BYID[t.dataset.peek]; if (!c) return;
+      var host = t.closest(".card"), ex = host.querySelector(".peek"); if (ex) { ex.remove(); return; }
+      var d = document.createElement("div"); d.className = "peek"; d.innerHTML = courseCard(c); host.appendChild(d);
+    }
+  });
+
+  window.addEventListener("DOMContentLoaded", function () {
+    root = document.getElementById("passage");
+    document.getElementById("sem-btn").onclick = toggleSemantic; semUI();
+    document.getElementById("nav-hub").onclick = function (e) { e.preventDefault(); go("hub"); };
+    document.getElementById("nav-guide").onclick = function (e) { e.preventDefault(); go("guide"); };
+    document.getElementById("nav-map").onclick = function (e) { e.preventDefault(); go("landscape"); };
+    document.getElementById("nav-ask").onclick = function (e) { e.preventDefault(); go("ask"); };
+    document.getElementById("nav-back").onclick = function (e) { e.preventDefault(); if (history.length > 1) { history.pop(); var n = history.pop(); go(n); } };
+    go(state.current && P[state.current] ? state.current : "Start");
+  });
+
+  // exposed for tests
+  window.__guide = { FACULTY: FACULTY, semInfo: function () { return sem; }, match: match, state: function () { return state; }, tokens: tokens, go: go, setSem: function (s) { sem.status = s; } };
+})();
+</script>
+</body>
+</html>
