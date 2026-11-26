@@ -1,0 +1,2168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sentence Embedding Explorer — How AI Turns Text into Geometry</title>
+  <style>
+    :root {
+      --bg: #f6f8fc;
+      --surface: #ffffff;
+      --surface-alt: #f1f5f9;
+      --border: #e2e8f0;
+      --text: #0f172a;
+      --muted: #475569;
+      --subtle: #94a3b8;
+      --accent: #2563eb;
+      --accent-soft: #eff6ff;
+      --teal: #0d9488;
+      --coral: #e11d48;
+      --amber: #d97706;
+      --green: #16a34a;
+      --radius: 12px;
+      --shadow: 0 1px 3px rgba(15, 23, 42, 0.06), 0 6px 16px rgba(15, 23, 42, 0.04);
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      --sans: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: var(--sans);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Header */
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 20;
+    }
+    .header-inner {
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 14px 24px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .brand h1 {
+      margin: 0;
+      font-size: 1.2rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .brand p {
+      margin: 2px 0 0;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+    .status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 500;
+      background: var(--surface-alt);
+      border: 1px solid var(--border);
+      color: var(--muted);
+    }
+    .status-dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--amber);
+      animation: pulse 1.3s infinite ease-in-out;
+    }
+    .status-pill.ready .status-dot {
+      background: var(--green);
+      animation: none;
+    }
+    .status-pill.error .status-dot {
+      background: var(--coral);
+      animation: none;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 0.4; transform: scale(0.9); }
+      50% { opacity: 1; transform: scale(1.15); }
+    }
+
+    .load-bar-wrap {
+      height: 3px;
+      background: var(--border);
+      width: 100%;
+      overflow: hidden;
+      display: none;
+    }
+    .load-bar-wrap.active { display: block; }
+    .load-bar {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, var(--accent), var(--teal));
+      transition: width 0.2s ease;
+    }
+
+    main {
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 22px 24px 56px;
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 20px;
+    }
+    .card-header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+    .card-title {
+      margin: 0;
+      font-size: 1.05rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .step-badge {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 2px 7px;
+      border-radius: 6px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      border: 1px solid #bfdbfe;
+    }
+    .card-subtitle {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+    }
+    .grid-input {
+      display: grid;
+      grid-template-columns: 1.25fr 1fr;
+      gap: 20px;
+    }
+    @media (max-width: 960px) {
+      .grid-2, .grid-input { grid-template-columns: 1fr; }
+    }
+
+    button {
+      font-family: inherit;
+      font-size: 0.85rem;
+      font-weight: 600;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text);
+      padding: 7px 13px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    button:hover:not(:disabled) {
+      border-color: #cbd5e1;
+      background: var(--surface-alt);
+    }
+    button:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+    button.primary {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #fff;
+    }
+    button.primary:hover:not(:disabled) {
+      background: #1d4ed8;
+    }
+    button.chip {
+      font-size: 0.78rem;
+      padding: 5px 10px;
+      border-radius: 999px;
+      font-weight: 500;
+    }
+    button.chip.active {
+      background: var(--accent-soft);
+      border-color: #93c5fd;
+      color: var(--accent);
+    }
+
+    .preset-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 7px;
+      margin-bottom: 10px;
+    }
+    .preset-label {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-right: 4px;
+    }
+
+    /* Guided Inquiry Callout */
+    .guide-banner {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 10px 14px;
+      border-radius: 9px;
+      background: #fffbeb;
+      border: 1px solid #fde68a;
+      color: #78350f;
+      font-size: 0.83rem;
+      margin-bottom: 14px;
+    }
+    .guide-banner.limitation {
+      background: #fff1f2;
+      border-color: #fecdd3;
+      color: #881337;
+    }
+    .guide-banner strong {
+      font-weight: 700;
+    }
+
+    /* Dropzone + Textarea */
+    .drop-wrap {
+      position: relative;
+      border: 2px dashed #cbd5e1;
+      border-radius: 10px;
+      background: #fafcff;
+      transition: border-color 0.15s, background 0.15s;
+      padding: 10px;
+    }
+    .drop-wrap.dragover {
+      border-color: var(--accent);
+      background: var(--accent-soft);
+    }
+    textarea {
+      width: 100%;
+      min-height: 175px;
+      border: none;
+      background: transparent;
+      resize: vertical;
+      font-family: var(--sans);
+      font-size: 0.92rem;
+      line-height: 1.55;
+      color: var(--text);
+      outline: none;
+    }
+    .drop-footer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      padding-top: 8px;
+      border-top: 1px solid var(--border);
+      margin-top: 6px;
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+    .action-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+    }
+
+    /* Sentence List + Query Probe */
+    .probe-box {
+      background: var(--surface-alt);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px;
+      margin-bottom: 14px;
+    }
+    .probe-box label {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+    .probe-input-row {
+      display: flex;
+      gap: 8px;
+    }
+    .probe-input-row input {
+      flex: 1;
+      padding: 8px 11px;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      font-family: inherit;
+      font-size: 0.88rem;
+      background: #fff;
+      outline: none;
+    }
+    .probe-input-row input:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+    }
+
+    .sentence-pills {
+      max-height: 190px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      padding-right: 4px;
+    }
+    .sent-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 7px 10px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: #fff;
+      cursor: pointer;
+      font-size: 0.84rem;
+      transition: all 0.12s;
+    }
+    .sent-item:hover { border-color: #94a3b8; }
+    .sent-item.selected {
+      border-color: var(--accent);
+      background: var(--accent-soft);
+    }
+    .sent-left {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      min-width: 0;
+    }
+    .sent-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .sent-text {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .sent-score {
+      font-family: var(--mono);
+      font-size: 0.76rem;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 5px;
+      background: var(--surface-alt);
+      color: var(--muted);
+      flex-shrink: 0;
+    }
+
+    /* Pipeline Anatomy */
+    .pipeline-stages {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .stage-box {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px;
+      background: #fafcff;
+    }
+    .stage-head {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+    .stage-head h3 {
+      margin: 0;
+      font-size: 0.92rem;
+      font-weight: 700;
+    }
+    .stage-note {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    /* Transformer Bridge Diagram */
+    .transformer-bridge {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 10px 14px;
+      border-radius: 10px;
+      background: linear-gradient(90deg, #eff6ff, #f0fdfa);
+      border: 1px solid #bfdbfe;
+      font-size: 0.8rem;
+      color: #1e3a8a;
+    }
+    .bridge-flow {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--mono);
+      font-size: 0.76rem;
+      font-weight: 700;
+    }
+    .bridge-node {
+      background: #fff;
+      border: 1px solid #93c5fd;
+      padding: 3px 8px;
+      border-radius: 6px;
+      color: var(--text);
+    }
+    .bridge-desc {
+      flex: 1 1 320px;
+      color: var(--muted);
+      font-size: 0.79rem;
+    }
+
+    .token-stream {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+    }
+    .token-chip {
+      position: relative;
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 5px 9px;
+      border-radius: 8px;
+      background: #fff;
+      border: 1px solid #cbd5e1;
+      cursor: default;
+      transition: transform 0.1s, border-color 0.1s;
+    }
+    .token-chip:hover, .token-chip.active {
+      border-color: var(--accent);
+      background: var(--accent-soft);
+      transform: translateY(-1px);
+    }
+    .token-chip.special {
+      background: #f1f5f9;
+      border-style: dashed;
+      color: var(--muted);
+    }
+    .token-chip.has-peer {
+      border-color: var(--teal);
+      cursor: pointer;
+    }
+    .token-chip.peer-selected {
+      background: #ccfbf1;
+      border: 2px solid var(--teal);
+    }
+    .peer-pill {
+      font-size: 0.63rem;
+      font-family: var(--mono);
+      font-weight: 700;
+      color: var(--teal);
+      margin-top: 1px;
+    }
+    .token-str {
+      font-family: var(--mono);
+      font-size: 0.82rem;
+      font-weight: 700;
+    }
+    .token-id {
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      color: var(--subtle);
+    }
+
+    /* Context Comparison Sub-box */
+    .context-compare-box {
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px dashed #cbd5e1;
+    }
+    .context-compare-header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 8px;
+      font-size: 0.82rem;
+    }
+
+    /* Matrix + Barcode Canvas */
+    .matrix-scroll {
+      overflow-x: auto;
+      padding-bottom: 4px;
+    }
+    canvas.viz-canvas {
+      display: block;
+      width: 100%;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: #fff;
+    }
+    .hover-readout {
+      margin-top: 6px;
+      font-family: var(--mono);
+      font-size: 0.76rem;
+      color: var(--muted);
+      min-height: 18px;
+    }
+    .micro-note {
+      margin-top: 6px;
+      font-size: 0.78rem;
+      color: var(--muted);
+      background: var(--surface-alt);
+      padding: 6px 10px;
+      border-radius: 7px;
+      border-left: 3px solid #94a3b8;
+    }
+
+    /* 2D Scatter Plot */
+    .scatter-wrap {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: #ffffff;
+      overflow: hidden;
+    }
+    svg.scatter-svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+    .scatter-controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      margin-top: 10px;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+    .scatter-controls label {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      cursor: pointer;
+    }
+    .floating-tip {
+      position: absolute;
+      pointer-events: none;
+      background: rgba(15, 23, 42, 0.94);
+      color: #fff;
+      font-size: 0.78rem;
+      padding: 7px 10px;
+      border-radius: 7px;
+      max-width: 260px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+      opacity: 0;
+      transition: opacity 0.1s;
+      z-index: 10;
+    }
+
+    /* Similarity Matrix */
+    .sim-matrix-wrap {
+      overflow: auto;
+      max-height: 430px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+    }
+    table.sim-table {
+      border-collapse: collapse;
+      width: 100%;
+      font-size: 0.76rem;
+    }
+    table.sim-table th, table.sim-table td {
+      border: 1px solid #e2e8f0;
+      padding: 6px 5px;
+      text-align: center;
+      min-width: 44px;
+    }
+    table.sim-table th {
+      background: var(--surface-alt);
+      font-weight: 600;
+      color: var(--muted);
+      position: sticky;
+      top: 0;
+      z-index: 2;
+    }
+    table.sim-table th.row-head {
+      text-align: left;
+      max-width: 150px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      position: sticky;
+      left: 0;
+      z-index: 1;
+      background: var(--surface-alt);
+      padding: 6px 8px;
+    }
+    table.sim-table td.sim-cell {
+      font-family: var(--mono);
+      font-weight: 600;
+      cursor: pointer;
+      transition: outline 0.1s;
+    }
+    table.sim-table td.sim-cell:hover {
+      outline: 2px solid var(--text);
+      outline-offset: -2px;
+    }
+    table.sim-table td.sim-cell.active-pair {
+      outline: 2.5px solid var(--accent);
+      outline-offset: -2px;
+    }
+
+    /* Cosine Anatomy */
+    .pair-selectors {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      margin-bottom: 14px;
+    }
+    .pair-selectors select {
+      flex: 1;
+      min-width: 220px;
+      padding: 7px 10px;
+      border-radius: 8px;
+      border: 1px solid #cbd5e1;
+      font-family: inherit;
+      font-size: 0.85rem;
+      background: #fff;
+    }
+    .cos-score-banner {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 14px;
+      border-radius: 9px;
+      background: var(--surface-alt);
+      border: 1px solid var(--border);
+      font-family: var(--mono);
+      font-size: 0.88rem;
+      font-weight: 700;
+    }
+    .legend-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin-top: 8px;
+    }
+    .legend-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .swatch {
+      width: 12px;
+      height: 12px;
+      border-radius: 3px;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="brand">
+      <h1>
+        <span>🧭</span>
+        Sentence Embedding Explorer
+      </h1>
+      <p>Drop text in to watch how a contrastive Transformer converts language into geometry — running 100% locally in your browser.</p>
+    </div>
+    <div id="statusPill" class="status-pill">
+      <span class="status-dot"></span>
+      <span id="statusText">Initializing model…</span>
+    </div>
+  </div>
+  <div id="loadBarWrap" class="load-bar-wrap active">
+    <div id="loadBar" class="load-bar"></div>
+  </div>
+</header>
+
+<main>
+  <!-- 1. INPUT & QUERY STUDIO -->
+  <section class="card">
+    <div class="card-header">
+      <div>
+        <h2 class="card-title"><span class="step-badge">INPUT</span> Drop Text or Choose an Experiment</h2>
+        <p class="card-subtitle">Each line becomes one unit vector (384 dimensions) in <code>Xenova/all-MiniLM-L6-v2</code>.</p>
+      </div>
+    </div>
+
+    <div class="preset-row">
+      <span class="preset-label">Experiments:</span>
+      <button class="chip active" data-preset="clusters">1. Topic Clusters</button>
+      <button class="chip" data-preset="polysemy">2. Same Word, Different Meaning</button>
+      <button class="chip" data-preset="syntax">3. Word Order &amp; Negation (Limitation)</button>
+      <button class="chip" data-preset="paraphrase">4. Paraphrases vs. Distractors</button>
+    </div>
+
+    <div id="guideBanner" class="guide-banner">
+      <span>💡</span>
+      <div id="guideText"></div>
+    </div>
+
+    <div class="grid-input">
+      <div>
+        <div id="dropZone" class="drop-wrap">
+          <textarea id="textInput" spellcheck="false" placeholder="Type or paste sentences (one per line), or drag & drop a .txt file here…"></textarea>
+          <div class="drop-footer">
+            <span>💡 Drag &amp; drop any <code>.txt</code> / <code>.md</code> file here, or edit lines directly.</span>
+            <div class="action-row">
+              <button id="splitBtn" title="Split paragraphs into separate sentences at punctuation">Split Paragraphs</button>
+              <button id="embedBtn" class="primary" disabled>Embed Sentences</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="probe-box">
+          <label for="probeInput">🔎 Live Semantic Search Query (optional)</label>
+          <div class="probe-input-row">
+            <input id="probeInput" type="text" placeholder="e.g. A puppy chasing a kitten" />
+            <button id="probeBtn" disabled>Plot Query</button>
+          </div>
+          <div style="font-size: 0.76rem; color: var(--muted); margin-top: 6px;">
+            Projects a new query onto the existing 2D map and ranks all sentences by 384-D cosine similarity.
+          </div>
+        </div>
+
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+          <span style="font-size:0.8rem; font-weight:700; color:var(--muted);">EMBEDDED SENTENCES (click to inspect)</span>
+          <span id="sentCountBadge" style="font-size:0.76rem; color:var(--subtle);">0 sentences</span>
+        </div>
+        <div id="sentenceList" class="sentence-pills"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. MODEL PIPELINE ANATOMY -->
+  <section class="card">
+    <div class="card-header">
+      <div>
+        <h2 class="card-title"><span class="step-badge">ANATOMY</span> What the Embedding Model Does to One Sentence</h2>
+        <p id="inspectedLabel" class="card-subtitle">Select any sentence above to inspect its tokens, self-attention outputs, mean pooling, and normalization.</p>
+      </div>
+    </div>
+
+    <div class="pipeline-stages">
+      <!-- Stage 1 -->
+      <div class="stage-box">
+        <div class="stage-head">
+          <h3>Stage 1 — WordPiece Tokenization</h3>
+          <span class="stage-note">Subwords (<code>##</code> = word continuation) wrapped with <code>[CLS]</code> &amp; <code>[SEP]</code>. <strong style="color:var(--teal);">Teal-bordered tokens</strong> appear in multiple sentences — click one below to test context!</span>
+        </div>
+        <div id="tokenStream" class="token-stream"></div>
+      </div>
+
+      <!-- Transformer Middle Bridge -->
+      <div class="transformer-bridge">
+        <div class="bridge-flow">
+          <span class="bridge-node">Token IDs</span>
+          <span>→</span>
+          <span class="bridge-node">Token + Position Lookup</span>
+          <span>→</span>
+          <span class="bridge-node">6× Self-Attention Layers</span>
+          <span>→</span>
+          <span class="bridge-node">Contextual Token Vectors</span>
+        </div>
+        <div class="bridge-desc">
+          <strong>Why doesn't one token ID always get the same vector?</strong> Across 6 self-attention layers, every token mixes signals from all neighboring tokens. Plus, <code>all-MiniLM-L6-v2</code> was fine-tuned via <em>contrastive learning</em> on ~1B sentence pairs so similar meanings align in cosine space.
+        </div>
+      </div>
+
+      <!-- Stage 2 -->
+      <div class="stage-box">
+        <div class="stage-head">
+          <h3>Stage 2 — Contextual Token Vectors → Mean Pooling → L2 Normalization</h3>
+          <span class="stage-note">Showing dims <code>0–63</code> (of 384). <strong>Raw Mean Pool</strong> uses the exact same <code>±1.2</code> color scale as the tokens so you can visually verify the vertical column average.</span>
+        </div>
+        <div class="matrix-scroll">
+          <canvas id="tokenMatrixCanvas" class="viz-canvas" height="190"></canvas>
+        </div>
+        <div id="tokenMatrixReadout" class="hover-readout">Hover over any cell in the token matrix to inspect its activation value.</div>
+
+        <!-- Contextual Token Proof Panel -->
+        <div id="contextCompareBox" class="context-compare-box">
+          <div class="context-compare-header">
+            <strong id="contextCompareTitle">🔬 Proof of Self-Attention: Same Token Across Contexts</strong>
+            <span id="contextCompareNote" class="stage-note"></span>
+          </div>
+          <div id="contextCompareContent"></div>
+        </div>
+      </div>
+
+      <!-- Stage 3 -->
+      <div class="stage-box">
+        <div class="stage-head">
+          <h3>Stage 3 — Final Normalized Sentence Vector (384 Dimensions)</h3>
+          <span class="stage-note">L2-normalized so vector length = <code>1.000</code>. Similar sentences produce visibly similar barcode patterns.</span>
+        </div>
+        <canvas id="barcodeCanvas" class="viz-canvas" height="72"></canvas>
+        <div id="barcodeReadout" class="hover-readout">Hover across the 384 bars to inspect each dimension's value.</div>
+        <div class="micro-note">
+          <strong>Careful:</strong> Individual dimensions (<code>#0…#383</code>) do <em>not</em> mean single human concepts (e.g. Dim #42 is not "animals"). Meaning is encoded <em>distributed</em> across patterns of all 384 dimensions working together.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. 2D VECTOR SPACE + SIMILARITY MATRIX -->
+  <section class="grid-2">
+    <div class="card">
+      <div class="card-header">
+        <div>
+          <h2 class="card-title"><span class="step-badge">GEOMETRY</span> 2D Map of Vector Space (Centered PCA)</h2>
+          <p id="pcaVarianceText" class="card-subtitle">Compressing 384 dimensions down to 2D around the corpus mean.</p>
+        </div>
+      </div>
+
+      <div id="scatterWrap" class="scatter-wrap">
+        <svg id="scatterSvg" class="scatter-svg" viewBox="0 0 600 450"></svg>
+        <div id="scatterTip" class="floating-tip"></div>
+      </div>
+
+      <div class="scatter-controls">
+        <label><input type="checkbox" id="toggleNearest" checked /> Highlight 384-D closest match for selected</label>
+        <label><input type="checkbox" id="toggleLabels" checked /> Show short labels</label>
+        <label><input type="checkbox" id="toggleLinks" checked /> Connect query to top 3 matches</label>
+      </div>
+
+      <div class="micro-note">
+        <strong>About this map:</strong> PCA centers the plot at the <em>average of your sentences</em> (not the 384-D origin), so angles around the center are <em>not</em> cosine similarity. Points that look close in 2D can also be far apart along the hidden 382 dimensions—check the matrix for exact distances.
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div>
+          <h2 class="card-title"><span class="step-badge">SIMILARITY</span> Cosine Similarity Matrix (Exact 384-D)</h2>
+          <p class="card-subtitle"><code>+1.00</code> = identical direction, <code>0.00</code> = orthogonal (unrelated), <code>−1.00</code> = opposite. Click any cell to compare below.</p>
+        </div>
+      </div>
+
+      <div id="simMatrixWrap" class="sim-matrix-wrap"></div>
+    </div>
+  </section>
+
+  <!-- 4. COSINE SIMILARITY ANATOMY -->
+  <section class="card">
+    <div class="card-header">
+      <div>
+        <h2 class="card-title"><span class="step-badge">COMPARE</span> Why Are Two Sentences Similar? (Dot-Product Anatomy)</h2>
+        <p class="card-subtitle">Because sentence vectors have length 1, <code>cosine_similarity(A, B) = Σ (A[d] × B[d])</code> across all 384 dimensions.</p>
+      </div>
+    </div>
+
+    <div class="pair-selectors">
+      <select id="selectA" aria-label="Sentence A"></select>
+      <span style="font-weight:700; color:var(--muted);">vs.</span>
+      <select id="selectB" aria-label="Sentence B"></select>
+      <div id="cosBanner" class="cos-score-banner">Cosine Similarity: —</div>
+    </div>
+
+    <canvas id="compareCanvas" class="viz-canvas" height="190"></canvas>
+    <div id="compareReadout" class="hover-readout">Hover over any dimension to see Sentence A, Sentence B, and their product A[d] × B[d].</div>
+
+    <div class="legend-row">
+      <span class="legend-item"><span class="swatch" style="background:#0d9488;"></span> Positive vector value (+d)</span>
+      <span class="legend-item"><span class="swatch" style="background:#e11d48;"></span> Negative vector value (−d)</span>
+      <span class="legend-item"><span class="swatch" style="background:#16a34a;"></span> Bottom row (green): same sign → increases similarity</span>
+      <span class="legend-item"><span class="swatch" style="background:#dc2626;"></span> Bottom row (red): opposite signs → decreases similarity</span>
+    </div>
+  </section>
+</main>
+
+<script type="module">
+  import { pipeline } from 'https://cdn.jsdelivr.net/npm/@huggingface/transformers@3.7.1';
+
+  // ---------- Presets & Guided Inquiry ----------
+  const PRESETS = {
+    clusters: [
+      "The golden retriever chased a tennis ball across the park.",
+      "A sleepy tabby cat curled up on the warm windowsill.",
+      "Dolphins communicate underwater using clicks and whistles.",
+      "Astronauts aboard the space station photographed Earth at sunrise.",
+      "A powerful telescope revealed galaxies billions of light-years away.",
+      "Rockets need immense thrust to escape Earth's gravity.",
+      "Sauté garlic and onions in olive oil until fragrant.",
+      "Fresh basil and mozzarella make a classic Margherita pizza.",
+      "Simmer the tomato sauce slowly for rich Italian pasta."
+    ],
+    polysemy: [
+      "I walked to the bank to deposit my paycheck.",
+      "Online banking lets you transfer money between accounts.",
+      "We had a picnic on the grassy river bank.",
+      "Floodwaters overflowed the muddy banks of the creek.",
+      "Apple unveiled a faster laptop chip at its annual keynote.",
+      "I sliced a crisp red apple for my afternoon snack.",
+      "A nocturnal bat flew silently through the dark cave.",
+      "The baseball player swung his wooden bat for a home run."
+    ],
+    syntax: [
+      "The dog chased the cat down the street.",
+      "The cat chased the dog down the street.",
+      "A canine pursued a feline along the road.",
+      "The dog did not chase the cat down the street.",
+      "Yesterday, the cheerful puppy ran after a kitty.",
+      "Quantum computers use qubits instead of classical bits."
+    ],
+    paraphrase: [
+      "How do I reset a forgotten password on my account?",
+      "I can't remember my login credentials and need to recover access.",
+      "Steps to change your password if you are locked out.",
+      "What is the weather forecast for Toronto this weekend?",
+      "Will it rain in southern Ontario on Saturday and Sunday?",
+      "Photosynthesis converts sunlight into chemical energy in plants."
+    ]
+  };
+
+  const GUIDES = {
+    clusters: {
+      isLimitation: false,
+      html: `<strong>What to notice (Topic Clusters):</strong> Three distinct themes (animals, space, cooking) share almost no keywords, yet form clean blocks in the <strong>Similarity Matrix</strong> and separate islands on the <strong>2D Map</strong>. Try probing <em>"A puppy playing fetch"</em> or <em>"Baking garlic bread"</em>.`
+    },
+    polysemy: {
+      isLimitation: false,
+      html: `<strong>What to notice (Contextual Meaning):</strong> Compare <em>"deposit at the bank"</em> vs. <em>"river bank"</em>, or <em>"Apple laptop"</em> vs. <em>"red apple"</em>. Look at Stage 2 below: the exact same WordPiece token (<code>bank</code> or <code>apple</code>) receives a visibly different contextual vector depending on its neighbors!`
+    },
+    syntax: {
+      isLimitation: true,
+      html: `<strong>Known Model Limitation (Word Order &amp; Negation):</strong> Look at the Similarity Matrix! <em>"The dog chased the cat"</em>, <em>"The cat chased the dog"</em>, and <em>"The dog did not chase the cat"</em> all score surprisingly high (~0.75–0.90). Dense bi-encoder embeddings capture overall topic &amp; actors well, but often miss negation and subject/object swaps.`
+    },
+    paraphrase: {
+      isLimitation: false,
+      html: `<strong>What to notice (Paraphrases vs. Distractors):</strong> Sentences #1 and #2 share almost zero words (<em>"reset a forgotten password"</em> vs. <em>"recover login credentials"</em>), yet score high similarity because contrastive training aligns paraphrases in the same direction.`
+    },
+    custom: {
+      isLimitation: false,
+      html: `<strong>Custom Text Mode:</strong> Test your own hypotheses! Try pairs with synonyms, opposite meanings, negation (<em>"not"</em>), or identical words used in different senses—then click any cell in the matrix to inspect how the 384 dimensions agree or disagree.`
+    }
+  };
+
+  const STOP_TOKENS = new Set([
+    '[CLS]', '[SEP]', '[PAD]', 'the', 'a', 'an', 'to', 'in', 'on', 'of', 'and',
+    'or', 'is', 'it', 'for', 'at', 'my', 'by', 'as', 'with', 'from', 'that', 'this'
+  ]);
+
+  const PALETTE = [
+    "#2563eb", "#0d9488", "#d97706", "#e11d48", "#7c3aed",
+    "#059669", "#dc2626", "#0284c7", "#9333ea", "#ca8a04",
+    "#4f46e5", "#16a34a", "#be123c", "#0369a1", "#b45309"
+  ];
+
+  // ---------- App State ----------
+  let extractor = null;
+  let items = []; // { id, text, tokens, tokenVectors, rawMeanVec, rawNorm, vector, color }
+  let probeItem = null; // { text, vector, x, y }
+  let pcaModel = null;
+  let inspectedIdx = 0;
+  let pairA = 0;
+  let pairB = 1;
+  let hoveredTokenIdx = -1;
+  let activePresetKey = 'clusters';
+  let selectedContextToken = null;
+  let sharedTokenMap = new Map(); // tokenStr -> Array<{ sentIdx, tokIdx }>
+
+  // ---------- DOM Elements ----------
+  const statusPill = document.getElementById('statusPill');
+  const statusText = document.getElementById('statusText');
+  const loadBarWrap = document.getElementById('loadBarWrap');
+  const loadBar = document.getElementById('loadBar');
+
+  const guideBanner = document.getElementById('guideBanner');
+  const guideText = document.getElementById('guideText');
+
+  const textInput = document.getElementById('textInput');
+  const dropZone = document.getElementById('dropZone');
+  const splitBtn = document.getElementById('splitBtn');
+  const embedBtn = document.getElementById('embedBtn');
+  const probeInput = document.getElementById('probeInput');
+  const probeBtn = document.getElementById('probeBtn');
+  const sentenceList = document.getElementById('sentenceList');
+  const sentCountBadge = document.getElementById('sentCountBadge');
+
+  const inspectedLabel = document.getElementById('inspectedLabel');
+  const tokenStream = document.getElementById('tokenStream');
+  const tokenMatrixCanvas = document.getElementById('tokenMatrixCanvas');
+  const tokenMatrixReadout = document.getElementById('tokenMatrixReadout');
+  const contextCompareNote = document.getElementById('contextCompareNote');
+  const contextCompareContent = document.getElementById('contextCompareContent');
+  const barcodeCanvas = document.getElementById('barcodeCanvas');
+  const barcodeReadout = document.getElementById('barcodeReadout');
+
+  const scatterSvg = document.getElementById('scatterSvg');
+  const scatterTip = document.getElementById('scatterTip');
+  const pcaVarianceText = document.getElementById('pcaVarianceText');
+  const toggleNearest = document.getElementById('toggleNearest');
+  const toggleLabels = document.getElementById('toggleLabels');
+  const toggleLinks = document.getElementById('toggleLinks');
+
+  const simMatrixWrap = document.getElementById('simMatrixWrap');
+  const selectA = document.getElementById('selectA');
+  const selectB = document.getElementById('selectB');
+  const cosBanner = document.getElementById('cosBanner');
+  const compareCanvas = document.getElementById('compareCanvas');
+  const compareReadout = document.getElementById('compareReadout');
+
+  // ---------- Math Helpers ----------
+  function dot(a, b) {
+    let s = 0;
+    for (let i = 0; i < a.length; i++) s += a[i] * b[i];
+    return s;
+  }
+
+  function cosine(a, b) {
+    let d = 0, na = 0, nb = 0;
+    for (let i = 0; i < a.length; i++) {
+      d += a[i] * b[i];
+      na += a[i] * a[i];
+      nb += b[i] * b[i];
+    }
+    const denom = Math.sqrt(na) * Math.sqrt(nb);
+    return denom > 0 ? d / denom : 0;
+  }
+
+  function l2Norm(vec) {
+    let sumSq = 0;
+    for (let i = 0; i < vec.length; i++) sumSq += vec[i] * vec[i];
+    return Math.sqrt(sumSq);
+  }
+
+  function l2Normalize(vec) {
+    const norm = l2Norm(vec) || 1;
+    const out = new Float32Array(vec.length);
+    for (let i = 0; i < vec.length; i++) out[i] = vec[i] / norm;
+    return out;
+  }
+
+  function computePCA(vectors) {
+    const N = vectors.length;
+    if (N === 0) return null;
+    const D = vectors[0].length;
+
+    const mean = new Float32Array(D);
+    for (let i = 0; i < N; i++) {
+      for (let d = 0; d < D; d++) mean[d] += vectors[i][d];
+    }
+    for (let d = 0; d < D; d++) mean[d] /= N;
+
+    if (N === 1) {
+      return {
+        mean,
+        axes: [new Float32Array(D), new Float32Array(D)],
+        coords: [[0, 0]],
+        varExp: [1, 0]
+      };
+    }
+
+    const Xc = Array.from({ length: N }, (_, i) => {
+      const row = new Float32Array(D);
+      for (let d = 0; d < D; d++) row[d] = vectors[i][d] - mean[d];
+      return row;
+    });
+
+    const K = Array.from({ length: N }, () => new Float64Array(N));
+    for (let i = 0; i < N; i++) {
+      for (let j = i; j < N; j++) {
+        let s = 0;
+        for (let d = 0; d < D; d++) s += Xc[i][d] * Xc[j][d];
+        K[i][j] = s;
+        K[j][i] = s;
+      }
+    }
+
+    const A = K.map(r => Float64Array.from(r));
+    const V = Array.from({ length: N }, (_, i) => {
+      const r = new Float64Array(N);
+      r[i] = 1;
+      return r;
+    });
+
+    const maxIter = 60 * N * N;
+    for (let iter = 0; iter < maxIter; iter++) {
+      let p = 0, q = 1, maxVal = 0;
+      for (let i = 0; i < N; i++) {
+        for (let j = i + 1; j < N; j++) {
+          const val = Math.abs(A[i][j]);
+          if (val > maxVal) { maxVal = val; p = i; q = j; }
+        }
+      }
+      if (maxVal < 1e-11) break;
+
+      const app = A[p][p], aqq = A[q][q], apq = A[p][q];
+      const tau = (aqq - app) / (2 * apq);
+      const t = (tau >= 0 ? 1 : -1) / (Math.abs(tau) + Math.sqrt(1 + tau * tau));
+      const c = 1 / Math.sqrt(1 + t * t);
+      const s = t * c;
+
+      A[p][p] = app - t * apq;
+      A[q][q] = aqq + t * apq;
+      A[p][q] = 0;
+      A[q][p] = 0;
+
+      for (let r = 0; r < N; r++) {
+        if (r !== p && r !== q) {
+          const arp = A[r][p], arq = A[r][q];
+          A[r][p] = A[p][r] = c * arp - s * arq;
+          A[r][q] = A[q][r] = s * arp + c * arq;
+        }
+        const vrp = V[r][p], vrq = V[r][q];
+        V[r][p] = c * vrp - s * vrq;
+        V[r][q] = s * vrp + c * vrq;
+      }
+    }
+
+    const pairs = [];
+    let totalVar = 0;
+    for (let i = 0; i < N; i++) {
+      const lam = Math.max(0, A[i][i]);
+      totalVar += lam;
+      pairs.push({ lam, idx: i });
+    }
+    pairs.sort((a, b) => b.lam - a.lam);
+
+    const k1 = pairs[0];
+    const k2 = pairs[1] || { lam: 0, idx: 0 };
+
+    const axes = [new Float32Array(D), new Float32Array(D)];
+    [k1, k2].forEach((kObj, axIdx) => {
+      if (kObj.lam > 1e-9) {
+        const invSqrt = 1 / Math.sqrt(kObj.lam);
+        for (let i = 0; i < N; i++) {
+          const u = V[i][kObj.idx] * invSqrt;
+          for (let d = 0; d < D; d++) {
+            axes[axIdx][d] += u * Xc[i][d];
+          }
+        }
+      }
+    });
+
+    const coords = Array.from({ length: N }, (_, i) => [
+      Math.sqrt(k1.lam) * V[i][k1.idx],
+      Math.sqrt(k2.lam) * V[i][k2.idx]
+    ]);
+
+    const varExp = totalVar > 1e-12
+      ? [k1.lam / totalVar, k2.lam / totalVar]
+      : [0, 0];
+
+    return { mean, axes, coords, varExp };
+  }
+
+  function projectQuery(vec, pca) {
+    if (!pca) return [0, 0];
+    const D = vec.length;
+    let x = 0, y = 0;
+    for (let d = 0; d < D; d++) {
+      const c = vec[d] - pca.mean[d];
+      x += c * pca.axes[0][d];
+      y += c * pca.axes[1][d];
+    }
+    return [x, y];
+  }
+
+  // ---------- Model Loading & Inference ----------
+  async function initModel() {
+    try {
+      const fileProgress = new Map();
+      extractor = await pipeline('feature-extraction', 'Xenova/all-MiniLM-L6-v2', {
+        progress_callback: (info) => {
+          if (info.status === 'progress' && info.file) {
+            fileProgress.set(info.file, info.progress || 0);
+            let sum = 0;
+            fileProgress.forEach(v => sum += v);
+            const avg = sum / Math.max(1, fileProgress.size);
+            loadBar.style.width = `${Math.min(100, avg).toFixed(0)}%`;
+            statusText.textContent = `Downloading model (${avg.toFixed(0)}%)…`;
+          } else if (info.status === 'initiate') {
+            statusText.textContent = `Fetching ${info.file || 'model weights'}…`;
+          }
+        }
+      });
+
+      loadBar.style.width = '100%';
+      setTimeout(() => loadBarWrap.classList.remove('active'), 400);
+      statusPill.classList.add('ready');
+      statusText.textContent = 'Model ready · all-MiniLM-L6-v2 (384-D)';
+      embedBtn.disabled = false;
+      probeBtn.disabled = false;
+
+      await runEmbedding();
+    } catch (err) {
+      console.error(err);
+      statusPill.classList.add('error');
+      statusText.textContent = 'Failed to load model (see console)';
+      loadBarWrap.classList.remove('active');
+    }
+  }
+
+  async function embedSingleSentence(text) {
+    const tokenizer = extractor.tokenizer;
+    const encoded = await tokenizer(text, { truncation: true });
+    const ids = Array.from(encoded.input_ids.data, x => Number(x));
+
+    let tokenStrings;
+    if (tokenizer.model && typeof tokenizer.model.convert_ids_to_tokens === 'function') {
+      tokenStrings = tokenizer.model.convert_ids_to_tokens(ids);
+    } else {
+      tokenStrings = ids.map(id => tokenizer.decode([id], { skip_special_tokens: false }));
+    }
+
+    const out = await extractor(text, { pooling: 'none', normalize: false });
+    const seqLen = out.dims[1];
+    const hidden = out.dims[2];
+    const data = out.data;
+
+    const tokenVectors = [];
+    const rawMeanVec = new Float32Array(hidden);
+    for (let t = 0; t < seqLen; t++) {
+      const offset = t * hidden;
+      const tv = data.slice(offset, offset + hidden);
+      tokenVectors.push(tv);
+      for (let d = 0; d < hidden; d++) rawMeanVec[d] += tv[d];
+    }
+    for (let d = 0; d < hidden; d++) rawMeanVec[d] /= Math.max(1, seqLen);
+
+    const rawNorm = l2Norm(rawMeanVec);
+    const vector = l2Normalize(rawMeanVec);
+    const tokens = tokenStrings.slice(0, seqLen).map((str, i) => ({
+      str,
+      id: ids[i] ?? 0
+    }));
+
+    return { text, tokens, tokenVectors, rawMeanVec, rawNorm, vector };
+  }
+
+  function buildSharedTokenMap() {
+    sharedTokenMap = new Map();
+    items.forEach((it, sentIdx) => {
+      const seenInSent = new Set();
+      it.tokens.forEach((tok, tokIdx) => {
+        if (STOP_TOKENS.has(tok.str) || /^[^\w]+$/.test(tok.str)) return;
+        if (!sharedTokenMap.has(tok.str)) sharedTokenMap.set(tok.str, []);
+        if (!seenInSent.has(tok.str)) {
+          seenInSent.add(tok.str);
+          sharedTokenMap.get(tok.str).push({ sentIdx, tokIdx });
+        }
+      });
+    });
+  }
+
+  function pickDefaultContextToken() {
+    const it = items[inspectedIdx];
+    if (!it) { selectedContextToken = null; return; }
+    // Keep existing if still present & shared in inspected sentence
+    if (selectedContextToken) {
+      const peers = sharedTokenMap.get(selectedContextToken);
+      if (peers && peers.length >= 2 && peers.some(p => p.sentIdx === inspectedIdx)) {
+        return;
+      }
+    }
+    // Otherwise pick first token in inspected sentence that appears in >=2 sentences
+    for (const tok of it.tokens) {
+      const peers = sharedTokenMap.get(tok.str);
+      if (peers && peers.length >= 2) {
+        selectedContextToken = tok.str;
+        return;
+      }
+    }
+    // Fallback: pick any shared token in the corpus
+    for (const [tokStr, peers] of sharedTokenMap.entries()) {
+      if (peers.length >= 2) {
+        selectedContextToken = tokStr;
+        return;
+      }
+    }
+    selectedContextToken = null;
+  }
+
+  async function runEmbedding() {
+    if (!extractor) return;
+    const lines = textInput.value
+      .split(/\r?\n/)
+      .map(s => s.trim())
+      .filter(Boolean)
+      .slice(0, 45);
+
+    if (lines.length === 0) return;
+
+    embedBtn.disabled = true;
+    probeBtn.disabled = true;
+    embedBtn.textContent = 'Embedding…';
+
+    const newItems = [];
+    for (let i = 0; i < lines.length; i++) {
+      const res = await embedSingleSentence(lines[i]);
+      newItems.push({
+        id: i,
+        ...res,
+        color: PALETTE[i % PALETTE.length]
+      });
+    }
+
+    items = newItems;
+    pcaModel = computePCA(items.map(it => it.vector));
+    inspectedIdx = Math.min(inspectedIdx, items.length - 1);
+    pairA = 0;
+    pairB = items.length > 1 ? 1 : 0;
+
+    buildSharedTokenMap();
+    pickDefaultContextToken();
+
+    if (probeInput.value.trim()) {
+      await runProbe(false);
+    } else {
+      probeItem = null;
+    }
+
+    embedBtn.disabled = false;
+    probeBtn.disabled = false;
+    embedBtn.textContent = 'Embed Sentences';
+
+    renderAll();
+  }
+
+  async function runProbe(reRender = true) {
+    const q = probeInput.value.trim();
+    if (!q || !extractor || items.length === 0) {
+      probeItem = null;
+      if (reRender) renderAll();
+      return;
+    }
+    const res = await embedSingleSentence(q);
+    const [x, y] = projectQuery(res.vector, pcaModel);
+    probeItem = { ...res, x, y };
+    if (reRender) renderAll();
+  }
+
+  // ---------- Color Scales ----------
+  function valToColor(v, maxAbs = 1.2) {
+    const t = Math.max(-1, Math.min(1, v / maxAbs));
+    if (t >= 0) {
+      const r = Math.round(255 - t * (255 - 13));
+      const g = Math.round(255 - t * (255 - 148));
+      const b = Math.round(255 - t * (255 - 136));
+      return `rgb(${r},${g},${b})`;
+    } else {
+      const k = -t;
+      const r = Math.round(255 - k * (255 - 225));
+      const g = Math.round(255 - k * (255 - 29));
+      const b = Math.round(255 - k * (255 - 72));
+      return `rgb(${r},${g},${b})`;
+    }
+  }
+
+  // Diverging matrix color scale: negative -> soft coral, 0 -> white, positive -> teal
+  function simToBg(sim) {
+    const clamped = Math.max(-1, Math.min(1, sim));
+    if (clamped >= 0) {
+      const t = clamped;
+      const r = Math.round(255 - t * 210);
+      const g = Math.round(255 - t * 90);
+      const b = Math.round(255 - t * 65);
+      return `rgb(${r},${g},${b})`;
+    } else {
+      const t = Math.min(1, -clamped * 2.2);
+      const r = 255;
+      const g = Math.round(255 - t * 70);
+      const b = Math.round(255 - t * 70);
+      return `rgb(${r},${g},${b})`;
+    }
+  }
+
+  // ---------- Rendering ----------
+  function renderGuide() {
+    const g = GUIDES[activePresetKey] || GUIDES.custom;
+    guideBanner.className = 'guide-banner' + (g.isLimitation ? ' limitation' : '');
+    guideText.innerHTML = g.html;
+  }
+
+  function renderAll() {
+    renderGuide();
+    renderSentenceList();
+    renderInspector();
+    renderScatter();
+    renderSimMatrix();
+    populateCompareSelects();
+    renderCompare();
+  }
+
+  function renderSentenceList() {
+    sentCountBadge.textContent = `${items.length} sentences`;
+    sentenceList.innerHTML = '';
+
+    const order = items.map((_, i) => i);
+    const scores = items.map(it => probeItem ? dot(it.vector, probeItem.vector) : null);
+    if (probeItem) {
+      order.sort((a, b) => scores[b] - scores[a]);
+    }
+
+    for (const idx of order) {
+      const it = items[idx];
+      const div = document.createElement('div');
+      div.className = 'sent-item' + (idx === inspectedIdx ? ' selected' : '');
+      div.innerHTML = `
+        <div class="sent-left">
+          <span class="sent-dot" style="background:${it.color}"></span>
+          <span class="sent-text" title="${escapeHtml(it.text)}"><strong>#${idx + 1}</strong> ${escapeHtml(it.text)}</span>
+        </div>
+        <span class="sent-score">${scores[idx] !== null ? (scores[idx] * 100).toFixed(1) + '% match' : it.tokens.length + ' tok'}</span>
+      `;
+      div.addEventListener('click', () => {
+        inspectedIdx = idx;
+        hoveredTokenIdx = -1;
+        pickDefaultContextToken();
+        renderSentenceList();
+        renderInspector();
+        renderScatter();
+      });
+      sentenceList.appendChild(div);
+    }
+  }
+
+  function renderInspector() {
+    const it = items[inspectedIdx];
+    if (!it) return;
+
+    inspectedLabel.innerHTML = `Inspecting <strong>#${inspectedIdx + 1}</strong>: "${escapeHtml(it.text)}"`;
+
+    // Stage 1: Tokens
+    tokenStream.innerHTML = '';
+    it.tokens.forEach((tok, tIdx) => {
+      const chip = document.createElement('div');
+      const isSpecial = tok.str === '[CLS]' || tok.str === '[SEP]' || tok.str === '[PAD]';
+      const peers = sharedTokenMap.get(tok.str);
+      const hasPeer = !isSpecial && peers && peers.length >= 2;
+      const isSelectedPeer = hasPeer && tok.str === selectedContextToken;
+
+      chip.className = 'token-chip'
+        + (isSpecial ? ' special' : '')
+        + (hasPeer ? ' has-peer' : '')
+        + (isSelectedPeer ? ' peer-selected' : '')
+        + (tIdx === hoveredTokenIdx ? ' active' : '');
+
+      chip.innerHTML = `
+        <span class="token-str">${escapeHtml(tok.str)}</span>
+        <span class="token-id">id:${tok.id}</span>
+        ${hasPeer ? `<span class="peer-pill">×${peers.length} sents</span>` : ''}
+      `;
+      chip.addEventListener('mouseenter', () => {
+        hoveredTokenIdx = tIdx;
+        drawTokenMatrix(it);
+      });
+      chip.addEventListener('mouseleave', () => {
+        hoveredTokenIdx = -1;
+        drawTokenMatrix(it);
+      });
+      if (hasPeer) {
+        chip.title = `Click to compare how "${tok.str}" changes vector across ${peers.length} sentences`;
+        chip.addEventListener('click', () => {
+          selectedContextToken = tok.str;
+          renderInspector();
+        });
+      }
+      tokenStream.appendChild(chip);
+    });
+
+    drawTokenMatrix(it);
+    renderContextCompare();
+    drawBarcode(it.vector);
+  }
+
+  function drawTokenMatrix(it) {
+    const canvas = tokenMatrixCanvas;
+    const dpr = window.devicePixelRatio || 1;
+    const showDims = 64;
+    const labelW = 112;
+    const cellW = Math.max(9, Math.floor((canvas.parentElement.clientWidth - labelW - 14) / showDims));
+    const width = labelW + showDims * cellW + 10;
+
+    const rowH = 16;
+    const headerH = 18;
+    const nTok = it.tokenVectors.length;
+    const rawPoolY = headerH + nTok * rowH + 14;
+    const normPoolY = rawPoolY + rowH + 22;
+    const height = normPoolY + rowH + 12;
+
+    canvas.style.width = width + 'px';
+    canvas.style.height = height + 'px';
+    canvas.width = width * dpr;
+    canvas.height = height * dpr;
+
+    const ctx = canvas.getContext('2d');
+    ctx.scale(dpr, dpr);
+    ctx.clearRect(0, 0, width, height);
+
+    const RAW_SCALE = 1.2;
+    const NORM_SCALE = 0.15;
+
+    ctx.font = '600 11px ui-monospace, SFMono-Regular, monospace';
+    ctx.fillStyle = '#64748b';
+    ctx.fillText('Dimensions 0 → 63 (of 384) · color scale: ±1.20', labelW, 12);
+
+    // Token rows
+    for (let t = 0; t < nTok; t++) {
+      const y = headerH + t * rowH;
+      const isHL = t === hoveredTokenIdx;
+      ctx.fillStyle = isHL ? '#2563eb' : '#334155';
+      ctx.font = (isHL ? '700 ' : '500 ') + '11px ui-monospace, monospace';
+      const label = it.tokens[t].str.slice(0, 12);
+      ctx.fillText(label, 6, y + 11);
+
+      const vec = it.tokenVectors[t];
+      for (let d = 0; d < showDims; d++) {
+        ctx.fillStyle = valToColor(vec[d], RAW_SCALE);
+        ctx.fillRect(labelW + d * cellW, y + 1, cellW - 1, rowH - 2);
+      }
+
+      if (isHL) {
+        ctx.strokeStyle = '#2563eb';
+        ctx.lineWidth = 1.5;
+        ctx.strokeRect(labelW - 1, y, showDims * cellW + 1, rowH);
+      }
+    }
+
+    // Dashed line before Raw Mean Pool
+    ctx.strokeStyle = '#94a3b8';
+    ctx.setLineDash([4, 3]);
+    ctx.beginPath();
+    ctx.moveTo(6, rawPoolY - 7);
+    ctx.lineTo(width - 8, rawPoolY - 7);
+    ctx.stroke();
+    ctx.setLineDash([]);
+
+    // Raw Mean Pool (EXACT SAME SCALE ±1.20!)
+    ctx.fillStyle = '#0f172a';
+    ctx.font = '700 10.5px ui-monospace, monospace';
+    ctx.fillText('RAW MEAN POOL', 6, rawPoolY + 12);
+
+    for (let d = 0; d < showDims; d++) {
+      ctx.fillStyle = valToColor(it.rawMeanVec[d], RAW_SCALE);
+      ctx.fillRect(labelW + d * cellW, rawPoolY + 1, cellW - 1, rowH - 1);
+    }
+
+    // Subheader for L2 Norm
+    ctx.fillStyle = '#64748b';
+    ctx.font = '600 10px ui-monospace, monospace';
+    ctx.fillText(`÷ ‖v‖ (${it.rawNorm.toFixed(2)}) → unit length 1.000 (color scale zoomed 8× to ±0.15)`, labelW, normPoolY - 5);
+
+    ctx.fillStyle = '#0d9488';
+    ctx.font = '700 10.5px ui-monospace, monospace';
+    ctx.fillText('L2 NORMALIZED', 6, normPoolY + 12);
+
+    for (let d = 0; d < showDims; d++) {
+      ctx.fillStyle = valToColor(it.vector[d], NORM_SCALE);
+      ctx.fillRect(labelW + d * cellW, normPoolY + 1, cellW - 1, rowH - 1);
+    }
+
+    canvas._meta = { labelW, cellW, showDims, headerH, rowH, rawPoolY, normPoolY, nTok, it };
+  }
+
+  tokenMatrixCanvas.addEventListener('mousemove', (e) => {
+    const m = tokenMatrixCanvas._meta;
+    if (!m) return;
+    const rect = tokenMatrixCanvas.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const d = Math.floor((x - m.labelW) / m.cellW);
+    if (d < 0 || d >= m.showDims) return;
+
+    if (y >= m.headerH && y < m.headerH + m.nTok * m.rowH) {
+      const t = Math.floor((y - m.headerH) / m.rowH);
+      const val = m.it.tokenVectors[t][d];
+      tokenMatrixReadout.textContent = `Token "${m.it.tokens[t].str}" · Dim #${d}: ${val >= 0 ? '+' : ''}${val.toFixed(4)}`;
+    } else if (y >= m.rawPoolY && y <= m.rawPoolY + m.rowH) {
+      const val = m.it.rawMeanVec[d];
+      tokenMatrixReadout.textContent = `Raw Mean Pool (exact column average) · Dim #${d}: ${val >= 0 ? '+' : ''}${val.toFixed(4)}`;
+    } else if (y >= m.normPoolY && y <= m.normPoolY + m.rowH) {
+      const val = m.it.vector[d];
+      tokenMatrixReadout.textContent = `L2 Normalized (÷ ${m.it.rawNorm.toFixed(2)}) · Dim #${d}: ${val >= 0 ? '+' : ''}${val.toFixed(4)}`;
+    }
+  });
+
+  function renderContextCompare() {
+    contextCompareContent.innerHTML = '';
+    if (!selectedContextToken || !sharedTokenMap.has(selectedContextToken)) {
+      contextCompareNote.textContent = '';
+      contextCompareContent.innerHTML = `<div class="stage-note">No shared content tokens found across multiple sentences yet. Try <strong>Preset 2 (Same Word, Different Meaning)</strong> or add two sentences containing the same word.</div>`;
+      return;
+    }
+
+    const peers = sharedTokenMap.get(selectedContextToken);
+    const baselinePeer = peers.find(p => p.sentIdx === inspectedIdx) || peers[0];
+    const baselineVec = items[baselinePeer.sentIdx].tokenVectors[baselinePeer.tokIdx];
+
+    contextCompareNote.textContent = `Comparing Token "${selectedContextToken}" (id:${items[baselinePeer.sentIdx].tokens[baselinePeer.tokIdx].id}) across ${peers.length} sentences (dims 0–63, scale ±1.20)`;
+
+    const canvas = document.createElement('canvas');
+    canvas.className = 'viz-canvas';
+    const dpr = window.devicePixelRatio || 1;
+    const showDims = 64;
+    const leftW = 240;
+    const rightW = 86;
+    const containerW = tokenMatrixCanvas.parentElement.clientWidth;
+    const cellW = Math.max(6, Math.floor((containerW - leftW - rightW - 14) / showDims));
+    const width = leftW + showDims * cellW + rightW + 10;
+    const rowH = 22;
+    const shownPeers = peers.slice(0, 6);
+    const height = shownPeers.length * rowH + 10;
+
+    canvas.style.width = width + 'px';
+    canvas.style.height = height + 'px';
+    canvas.width = width * dpr;
+    canvas.height = height * dpr;
+
+    const ctx = canvas.getContext('2d');
+    ctx.scale(dpr, dpr);
+
+    shownPeers.forEach((p, idx) => {
+      const y = 5 + idx * rowH;
+      const sent = items[p.sentIdx];
+      const vec = sent.tokenVectors[p.tokIdx];
+      const tokSim = cosine(baselineVec, vec);
+
+      ctx.fillStyle = p.sentIdx === baselinePeer.sentIdx ? '#0f172a' : '#475569';
+      ctx.font = (p.sentIdx === baselinePeer.sentIdx ? '700 ' : '500 ') + '11px Inter, sans-serif';
+      const snippet = `#${p.sentIdx + 1}: ${sent.text.slice(0, 31)}${sent.text.length > 31 ? '…' : ''}`;
+      ctx.fillText(snippet, 8, y + 14);
+
+      for (let d = 0; d < showDims; d++) {
+        ctx.fillStyle = valToColor(vec[d], 1.2);
+        ctx.fillRect(leftW + d * cellW, y + 3, cellW - 1, rowH - 6);
+      }
+
+      ctx.font = '700 10.5px ui-monospace, monospace';
+      ctx.fillStyle = p.sentIdx === baselinePeer.sentIdx ? '#0d9488' : (tokSim < 0.72 ? '#e11d48' : '#334155');
+      const simLbl = p.sentIdx === baselinePeer.sentIdx ? 'baseline' : `sim ${tokSim.toFixed(2)}`;
+      ctx.fillText(simLbl, leftW + showDims * cellW + 8, y + 14);
+    });
+
+    const wrap = document.createElement('div');
+    wrap.className = 'matrix-scroll';
+    wrap.appendChild(canvas);
+    contextCompareContent.appendChild(wrap);
+  }
+
+  function drawBarcode(vec) {
+    const canvas = barcodeCanvas;
+    const dpr = window.devicePixelRatio || 1;
+    const width = canvas.parentElement.clientWidth;
+    const height = 72;
+    canvas.style.width = width + 'px';
+    canvas.style.height = height + 'px';
+    canvas.width = width * dpr;
+    canvas.height = height * dpr;
+
+    const ctx = canvas.getContext('2d');
+    ctx.scale(dpr, dpr);
+    ctx.clearRect(0, 0, width, height);
+
+    const D = vec.length;
+    const barW = width / D;
+    const midY = height / 2;
+
+    ctx.strokeStyle = '#cbd5e1';
+    ctx.beginPath();
+    ctx.moveTo(0, midY);
+    ctx.lineTo(width, midY);
+    ctx.stroke();
+
+    for (let d = 0; d < D; d++) {
+      const v = vec[d];
+      const mag = Math.min(1, Math.abs(v) / 0.16);
+      const barH = Math.max(1.5, mag * (midY - 5));
+      ctx.fillStyle = v >= 0 ? '#0d9488' : '#e11d48';
+      const y = v >= 0 ? midY - barH : midY;
+      ctx.fillRect(d * barW, y, Math.max(1, barW - 0.35), barH);
+    }
+
+    canvas._vec = vec;
+  }
+
+  barcodeCanvas.addEventListener('mousemove', (e) => {
+    const vec = barcodeCanvas._vec;
+    if (!vec) return;
+    const rect = barcodeCanvas.getBoundingClientRect();
+    const d = Math.max(0, Math.min(vec.length - 1, Math.floor(((e.clientX - rect.left) / rect.width) * vec.length)));
+    const v = vec[d];
+    barcodeReadout.textContent = `Dimension #${d} of 384 → ${v >= 0 ? '+' : ''}${v.toFixed(5)}`;
+  });
+
+  // ---------- 2D PCA Scatter ----------
+  function renderScatter() {
+    const W = 600, H = 450, PAD = 48;
+    scatterSvg.innerHTML = '';
+    if (!pcaModel || items.length === 0) return;
+
+    const p1 = (pcaModel.varExp[0] * 100).toFixed(1);
+    const p2 = (pcaModel.varExp[1] * 100).toFixed(1);
+    const tot = ((pcaModel.varExp[0] + pcaModel.varExp[1]) * 100).toFixed(1);
+    pcaVarianceText.textContent = `PC1: ${p1}% · PC2: ${p2}% (${tot}% of total 384-D variance preserved in 2D).`;
+
+    const allPts = [...pcaModel.coords];
+    if (probeItem) allPts.push([probeItem.x, probeItem.y]);
+
+    let maxR = 0.25;
+    for (const [x, y] of allPts) {
+      maxR = Math.max(maxR, Math.abs(x), Math.abs(y));
+    }
+    maxR *= 1.18;
+
+    const cx = W / 2, cy = H / 2;
+    const scale = Math.min(W - PAD * 2, H - PAD * 2) / (2 * maxR);
+    const toSvg = ([x, y]) => [cx + x * scale, cy - y * scale];
+
+    const ns = 'http://www.w3.org/2000/svg';
+    const mk = (tag, attrs) => {
+      const el = document.createElementNS(ns, tag);
+      for (const [k, v] of Object.entries(attrs)) el.setAttribute(k, v);
+      return el;
+    };
+
+    // Centered PCA axes + Corpus Mean marker
+    scatterSvg.appendChild(mk('line', { x1: PAD, y1: cy, x2: W - PAD, y2: cy, stroke: '#e2e8f0', 'stroke-width': 1.5, 'stroke-dasharray': '4,4' }));
+    scatterSvg.appendChild(mk('line', { x1: cx, y1: PAD, x2: cx, y2: H - PAD, stroke: '#e2e8f0', 'stroke-width': 1.5, 'stroke-dasharray': '4,4' }));
+    scatterSvg.appendChild(mk('circle', { cx, cy, r: 3.5, fill: '#94a3b8' }));
+
+    const meanLbl = mk('text', { x: cx + 6, y: cy + 13, fill: '#94a3b8', 'font-size': 10, 'font-family': 'sans-serif' });
+    meanLbl.textContent = 'Corpus Mean';
+    scatterSvg.appendChild(meanLbl);
+
+    const lbl1 = mk('text', { x: W - PAD, y: cy - 6, 'text-anchor': 'end', fill: '#94a3b8', 'font-size': 11, 'font-family': 'monospace' });
+    lbl1.textContent = `PC1 (${p1}%)`;
+    scatterSvg.appendChild(lbl1);
+
+    const lbl2 = mk('text', { x: cx + 6, y: PAD + 10, fill: '#94a3b8', 'font-size': 11, 'font-family': 'monospace' });
+    lbl2.textContent = `PC2 (${p2}%)`;
+    scatterSvg.appendChild(lbl2);
+
+    // Highlight true 384-D nearest neighbor for the inspected sentence
+    if (toggleNearest.checked && items.length > 1) {
+      let bestIdx = -1, bestSim = -2;
+      items.forEach((other, j) => {
+        if (j !== inspectedIdx) {
+          const s = dot(items[inspectedIdx].vector, other.vector);
+          if (s > bestSim) { bestSim = s; bestIdx = j; }
+        }
+      });
+      if (bestIdx >= 0) {
+        const [x1, y1] = toSvg(pcaModel.coords[inspectedIdx]);
+        const [x2, y2] = toSvg(pcaModel.coords[bestIdx]);
+        scatterSvg.appendChild(mk('line', {
+          x1, y1, x2, y2,
+          stroke: items[inspectedIdx].color,
+          'stroke-width': 2,
+          'stroke-dasharray': '4,3',
+          opacity: 0.75
+        }));
+      }
+    }
+
+    // Query -> Top 3 matches dashed links
+    if (probeItem && toggleLinks.checked) {
+      const [qx, qy] = toSvg([probeItem.x, probeItem.y]);
+      const ranked = items
+        .map((it, idx) => ({ idx, sim: dot(it.vector, probeItem.vector) }))
+        .sort((a, b) => b.sim - a.sim)
+        .slice(0, 3);
+
+      ranked.forEach(({ idx }, rank) => {
+        const [px, py] = toSvg(pcaModel.coords[idx]);
+        scatterSvg.appendChild(mk('line', {
+          x1: qx, y1: qy, x2: px, y2: py,
+          stroke: '#0f172a',
+          'stroke-width': rank === 0 ? 2.2 : 1.3,
+          'stroke-dasharray': '5,4',
+          opacity: rank === 0 ? 0.85 : 0.45
+        }));
+      });
+    }
+
+    // Sentence points
+    items.forEach((it, idx) => {
+      const [px, py] = toSvg(pcaModel.coords[idx]);
+      const isInspected = idx === inspectedIdx;
+
+      if (isInspected) {
+        scatterSvg.appendChild(mk('circle', {
+          cx: px, cy: py, r: 12,
+          fill: 'none', stroke: it.color, 'stroke-width': 2, opacity: 0.55
+        }));
+      }
+
+      const circle = mk('circle', {
+        cx: px, cy: py, r: isInspected ? 8 : 6.5,
+        fill: it.color, stroke: '#fff', 'stroke-width': 2,
+        style: 'cursor:pointer'
+      });
+
+      circle.addEventListener('mouseenter', (e) => showScatterTip(e, `#${idx + 1}: ${it.text}`));
+      circle.addEventListener('mouseleave', hideScatterTip);
+      circle.addEventListener('click', () => {
+        inspectedIdx = idx;
+        pickDefaultContextToken();
+        renderSentenceList();
+        renderInspector();
+        renderScatter();
+      });
+      scatterSvg.appendChild(circle);
+
+      if (toggleLabels.checked) {
+        const short = `#${idx + 1} ` + it.text.split(/\s+/).slice(0, 3).join(' ') + '…';
+        const txt = mk('text', {
+          x: px + 9, y: py + 3,
+          fill: '#334155',
+          'font-size': 10.5,
+          'font-weight': isInspected ? '700' : '500',
+          style: 'pointer-events:none'
+        });
+        txt.textContent = short;
+        scatterSvg.appendChild(txt);
+      }
+    });
+
+    // Probe Star
+    if (probeItem) {
+      const [qx, qy] = toSvg([probeItem.x, probeItem.y]);
+      const star = mk('polygon', {
+        points: starPoints(qx, qy, 5, 11, 5),
+        fill: '#f59e0b',
+        stroke: '#0f172a',
+        'stroke-width': 1.8,
+        style: 'cursor:pointer'
+      });
+      star.addEventListener('mouseenter', (e) => showScatterTip(e, `QUERY: ${probeItem.text}`));
+      star.addEventListener('mouseleave', hideScatterTip);
+      scatterSvg.appendChild(star);
+
+      const qLbl = mk('text', {
+        x: qx + 12, y: qy + 4,
+        fill: '#b45309',
+        'font-size': 11,
+        'font-weight': '700'
+      });
+      qLbl.textContent = '★ Query';
+      scatterSvg.appendChild(qLbl);
+    }
+  }
+
+  function starPoints(cx, cy, spikes, outerR, innerR) {
+    const pts = [];
+    let rot = Math.PI / 2 * 3;
+    const step = Math.PI / spikes;
+    for (let i = 0; i < spikes; i++) {
+      pts.push(`${cx + Math.cos(rot) * outerR},${cy + Math.sin(rot) * outerR}`);
+      rot += step;
+      pts.push(`${cx + Math.cos(rot) * innerR},${cy + Math.sin(rot) * innerR}`);
+      rot += step;
+    }
+    return pts.join(' ');
+  }
+
+  function showScatterTip(e, text) {
+    const wrap = scatterSvg.parentElement.getBoundingClientRect();
+    scatterTip.textContent = text;
+    scatterTip.style.opacity = 1;
+    scatterTip.style.left = Math.min(wrap.width - 230, Math.max(8, e.clientX - wrap.left + 12)) + 'px';
+    scatterTip.style.top = Math.max(8, e.clientY - wrap.top - 32) + 'px';
+  }
+  function hideScatterTip() { scatterTip.style.opacity = 0; }
+
+  // ---------- Similarity Matrix ----------
+  function renderSimMatrix() {
+    simMatrixWrap.innerHTML = '';
+    if (items.length === 0) return;
+
+    const table = document.createElement('table');
+    table.className = 'sim-table';
+
+    const thead = document.createElement('thead');
+    const hRow = document.createElement('tr');
+    const corner = document.createElement('th');
+    corner.className = 'row-head';
+    corner.textContent = 'Sentence';
+    hRow.appendChild(corner);
+
+    items.forEach((_, j) => {
+      const th = document.createElement('th');
+      th.textContent = `#${j + 1}`;
+      th.title = items[j].text;
+      hRow.appendChild(th);
+    });
+    thead.appendChild(hRow);
+    table.appendChild(thead);
+
+    const tbody = document.createElement('tbody');
+    items.forEach((itA, i) => {
+      const tr = document.createElement('tr');
+      const rHead = document.createElement('th');
+      rHead.className = 'row-head';
+      rHead.innerHTML = `<span style="color:${itA.color}">●</span> #${i + 1} ${escapeHtml(itA.text)}`;
+      rHead.title = itA.text;
+      tr.appendChild(rHead);
+
+      items.forEach((itB, j) => {
+        const sim = dot(itA.vector, itB.vector);
+        const td = document.createElement('td');
+        const isActive = (i === pairA && j === pairB) || (i === pairB && j === pairA);
+        td.className = 'sim-cell' + (isActive ? ' active-pair' : '');
+        td.style.background = simToBg(sim);
+        td.style.color = sim > 0.58 ? '#ffffff' : '#0f172a';
+        td.textContent = sim.toFixed(2);
+        td.title = `#${i + 1} vs #${j + 1}: ${(sim * 100).toFixed(1)}% cosine similarity`;
+        td.addEventListener('click', () => {
+          pairA = i;
+          pairB = j;
+          selectA.value = String(i);
+          selectB.value = String(j);
+          renderSimMatrix();
+          renderCompare();
+        });
+        tr.appendChild(td);
+      });
+      tbody.appendChild(tr);
+    });
+
+    table.appendChild(tbody);
+    simMatrixWrap.appendChild(table);
+  }
+
+  // ---------- Pairwise Dot-Product Anatomy ----------
+  function populateCompareSelects() {
+    selectA.innerHTML = '';
+    selectB.innerHTML = '';
+    items.forEach((it, idx) => {
+      const optText = `#${idx + 1}: ${it.text.slice(0, 62)}${it.text.length > 62 ? '…' : ''}`;
+      selectA.add(new Option(optText, String(idx)));
+      selectB.add(new Option(optText, String(idx)));
+    });
+    selectA.value = String(pairA);
+    selectB.value = String(pairB);
+  }
+
+  function renderCompare() {
+    const a = items[pairA];
+    const b = items[pairB];
+    if (!a || !b) return;
+
+    const sim = dot(a.vector, b.vector);
+    cosBanner.textContent = `Cosine Similarity = ${sim.toFixed(4)} (${(sim * 100).toFixed(1)}%)`;
+    cosBanner.style.color = sim > 0.5 ? '#0f766e' : (sim < 0.15 ? '#be123c' : '#0f172a');
+
+    const canvas = compareCanvas;
+    const dpr = window.devicePixelRatio || 1;
+    const width = canvas.parentElement.clientWidth;
+    const height = 190;
+    canvas.style.width = width + 'px';
+    canvas.style.height = height + 'px';
+    canvas.width = width * dpr;
+    canvas.height = height * dpr;
+
+    const ctx = canvas.getContext('2d');
+    ctx.scale(dpr, dpr);
+    ctx.clearRect(0, 0, width, height);
+
+    const leftPad = 104;
+    const plotW = width - leftPad - 10;
+    const D = a.vector.length;
+    const barW = plotW / D;
+
+    const rows = [
+      { label: `Sent #${pairA + 1}`, yMid: 34, vec: a.vector, isProd: false },
+      { label: `Sent #${pairB + 1}`, yMid: 92, vec: b.vector, isProd: false },
+      { label: `A[d] × B[d]`, yMid: 154, vec: a.vector.map((v, d) => v * b.vector[d]), isProd: true }
+    ];
+
+    rows.forEach((row) => {
+      ctx.fillStyle = '#334155';
+      ctx.font = '700 11.5px ui-monospace, monospace';
+      ctx.fillText(row.label, 8, row.yMid + 4);
+
+      ctx.strokeStyle = '#cbd5e1';
+      ctx.beginPath();
+      ctx.moveTo(leftPad, row.yMid);
+      ctx.lineTo(width - 10, row.yMid);
+      ctx.stroke();
+
+      const scaleMax = row.isProd ? 0.025 : 0.16;
+      for (let d = 0; d < D; d++) {
+        const v = row.vec[d];
+        const mag = Math.min(1, Math.abs(v) / scaleMax);
+        const h = Math.max(1.2, mag * 22);
+        ctx.fillStyle = row.isProd
+          ? (v >= 0 ? '#16a34a' : '#dc2626')
+          : (v >= 0 ? '#0d9488' : '#e11d48');
+        const y = v >= 0 ? row.yMid - h : row.yMid;
+        ctx.fillRect(leftPad + d * barW, y, Math.max(1, barW - 0.35), h);
+      }
+    });
+
+    canvas._compareMeta = { leftPad, plotW, D, a, b };
+  }
+
+  compareCanvas.addEventListener('mousemove', (e) => {
+    const m = compareCanvas._compareMeta;
+    if (!m) return;
+    const rect = compareCanvas.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const d = Math.floor(((x - m.leftPad) / m.plotW) * m.D);
+    if (d < 0 || d >= m.D) return;
+
+    const va = m.a.vector[d];
+    const vb = m.b.vector[d];
+    const prod = va * vb;
+    compareReadout.textContent =
+      `Dim #${d}: A=${va >= 0 ? '+' : ''}${va.toFixed(4)}  ×  B=${vb >= 0 ? '+' : ''}${vb.toFixed(4)}  =  ${prod >= 0 ? '+' : ''}${prod.toFixed(5)} (${prod >= 0 ? 'agrees' : 'opposes'})`;
+  });
+
+  // ---------- Event Listeners ----------
+  document.querySelectorAll('[data-preset]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('[data-preset]').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      activePresetKey = btn.dataset.preset;
+      textInput.value = PRESETS[activePresetKey].join('\n');
+      probeInput.value = '';
+      selectedContextToken = null;
+      inspectedIdx = 0;
+      renderGuide();
+      if (extractor) runEmbedding();
+    });
+  });
+
+  textInput.addEventListener('input', () => {
+    if (activePresetKey !== 'custom') {
+      document.querySelectorAll('[data-preset]').forEach(b => b.classList.remove('active'));
+      activePresetKey = 'custom';
+      renderGuide();
+    }
+  });
+
+  splitBtn.addEventListener('click', () => {
+    const raw = textInput.value.trim();
+    if (!raw) return;
+    const sentences = raw
+      .replace(/\r?\n+/g, ' ')
+      .split(/(?<=[.!?])\s+/)
+      .map(s => s.trim())
+      .filter(Boolean);
+    textInput.value = sentences.join('\n');
+  });
+
+  embedBtn.addEventListener('click', runEmbedding);
+  probeBtn.addEventListener('click', () => runProbe(true));
+  probeInput.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') runProbe(true);
+  });
+
+  selectA.addEventListener('change', () => {
+    pairA = Number(selectA.value);
+    renderSimMatrix();
+    renderCompare();
+  });
+  selectB.addEventListener('change', () => {
+    pairB = Number(selectB.value);
+    renderSimMatrix();
+    renderCompare();
+  });
+
+  [toggleNearest, toggleLabels, toggleLinks].forEach(cb => cb.addEventListener('change', renderScatter));
+
+  ['dragenter', 'dragover'].forEach(evt => {
+    dropZone.addEventListener(evt, (e) => {
+      e.preventDefault();
+      dropZone.classList.add('dragover');
+    });
+  });
+  ['dragleave', 'drop'].forEach(evt => {
+    dropZone.addEventListener(evt, (e) => {
+      e.preventDefault();
+      dropZone.classList.remove('dragover');
+    });
+  });
+  dropZone.addEventListener('drop', async (e) => {
+    document.querySelectorAll('[data-preset]').forEach(b => b.classList.remove('active'));
+    activePresetKey = 'custom';
+    renderGuide();
+
+    const file = e.dataTransfer.files && e.dataTransfer.files[0];
+    if (file) {
+      const txt = await file.text();
+      const lines = txt.split(/\r?\n/).filter(l => l.trim().length > 0);
+      if (lines.length <= 2 && txt.length > 140) {
+        textInput.value = txt.replace(/\r?\n+/g, ' ').split(/(?<=[.!?])\s+/).join('\n');
+      } else {
+        textInput.value = lines.join('\n');
+      }
+      if (extractor) runEmbedding();
+    } else {
+      const droppedText = e.dataTransfer.getData('text/plain');
+      if (droppedText) {
+        textInput.value = droppedText;
+        if (extractor) runEmbedding();
+      }
+    }
+  });
+
+  window.addEventListener('resize', () => {
+    if (items.length > 0) {
+      renderInspector();
+      renderCompare();
+    }
+  });
+
+  function escapeHtml(s) {
+    return s.replace(/[&<>"']/g, c => ({
+      '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+    }[c]));
+  }
+
+  textInput.value = PRESETS.clusters.join('\n');
+  renderGuide();
+  initModel();
+</script>
+</body>
+</html>
